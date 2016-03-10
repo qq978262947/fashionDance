@@ -1,0 +1,41 @@
+//
+//  PrefixHeader.pch
+//  01-百思不得姐
+//
+//  Created by xiaomage on 15/7/22.
+//  Copyright (c) 2015年 小码哥. All rights reserved.
+//
+
+#ifndef _1_______PrefixHeader_pch
+#define _1_______PrefixHeader_pch
+
+#import "UIView+WJExtension.h"
+#import "UIBarButtonItem+WJExtension.h"
+#import "WJConst.h"
+#import "NSDate+WJExtension.h"
+
+#ifdef DEBUG
+#define WJLog(...) NSLog(__VA_ARGS__)
+#else
+#define WJLog(...)
+#endif
+
+#define WJLogFunc WJLog(@"%s", __func__)
+
+#define WJRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define WJNoteCenter [NSNotificationCenter defaultCenter]
+
+#define WJGlobalBg WJRGBColor(250, 250, 250)
+#define WJScreenW [UIScreen mainScreen].bounds.size.width
+#define WJScreenH [UIScreen mainScreen].bounds.size.height
+// 颜色
+#define WJColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+// name和日期的字体
+#define WJlabelFont [UIFont systemFontOfSize:14]
+// 是否为iOS7
+#define iOS8_3 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.3)
+
+#import <Masonry.h>
+
+
+#endif
