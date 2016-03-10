@@ -1,18 +1,18 @@
 //
-//  WJRecommendController.m
+//  WJTrainingController.m
 //  fashionDance
 //
 //  Created by 汪俊 on 16/3/8.
 //  Copyright © 2016年 汪俊. All rights reserved.
 //
 
-#import "WJRecommendController.h"
+#import "CarMineController.h"
 
-@interface WJRecommendController ()
+@interface CarMineController ()
 
 @end
 
-@implementation WJRecommendController
+@implementation CarMineController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

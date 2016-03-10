@@ -6,13 +6,13 @@
 //  Copyright © 2016年 汪俊. All rights reserved.
 //
 
-#import "WJShowsTopperController.h"
+#import "CarPreferentialController.h"
 
-@interface WJShowsTopperController ()
+@interface CarPreferentialController ()
 
 @end
 
-@implementation WJShowsTopperController
+@implementation CarPreferentialController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

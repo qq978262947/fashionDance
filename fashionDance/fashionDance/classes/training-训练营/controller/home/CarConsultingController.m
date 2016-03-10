@@ -6,7 +6,7 @@
 //  Copyright © 2016年 汪俊. All rights reserved.
 //
 
-#import "WJSpecialController.h"
+#import "CarConsultingController.h"
 #import "WJFitnessController.h"
 #import "WJMaquillageControler.h"
 #import "WJArrangeController.h"
@@ -14,9 +14,9 @@
 #import "WJContainerView.h"
 #import "UIImage+reSize.h"
 
-#define WJContainerViewW (WJScreenW - 80)
+#define WJContainerViewW (WJScreenW)
 
-@interface WJSpecialController () <WJContainerViewDelegate, UIScrollViewDelegate>
+@interface CarConsultingController () <WJContainerViewDelegate, UIScrollViewDelegate>
 // 标题
 @property (weak, nonatomic) WJContainerView *containerView;
 
@@ -26,7 +26,7 @@
 
 @end
 
-@implementation WJSpecialController
+@implementation CarConsultingController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -57,11 +57,11 @@
  *  设置标题
  */
 - (void)setupContainerView {
-    // 设置背景色
-    self.view.backgroundColor = WJGlobalBg;
-    
-    UIView *titleView = [[UIView alloc]init];
-    [self.view addSubview:titleView];
+//    // 设置背景色
+//    self.view.backgroundColor = WJGlobalBg;
+//    
+//    UIView *titleView = [[UIView alloc]init];
+//    [self.view addSubview:titleView];
     
     // 1 添加存放按钮点scrollview
     UIScrollView *scrollView = [[UIScrollView alloc]init];

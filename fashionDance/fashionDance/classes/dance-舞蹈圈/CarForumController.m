@@ -6,13 +6,13 @@
 //  Copyright © 2016年 汪俊. All rights reserved.
 //
 
-#import "WJDanceController.h"
+#import "CarForumController.h"
 
-@interface WJDanceController ()
+@interface CarForumController ()
 
 @end
 
-@implementation WJDanceController
+@implementation CarForumController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

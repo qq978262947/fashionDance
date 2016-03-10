@@ -43,14 +43,14 @@ const float buttonHeight = 30;
 - (void)awakeFromNib{
     [super awakeFromNib];
     [self setupButtonsView];
-    self.backgroundColor = [UIColor yellowColor];
+    self.backgroundColor = [UIColor clearColor];
     _index = 0;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self setupButtonsView];
-        self.backgroundColor = [UIColor yellowColor];
+        self.backgroundColor = [UIColor clearColor];
         _index = 0;
     }
     return self;
@@ -67,7 +67,7 @@ const float buttonHeight = 30;
     UIView *indicatorView = [[UIView alloc]init];
     [self addSubview:indicatorView];
     self.indicatorView = indicatorView;
-    indicatorView.backgroundColor = [UIColor blueColor];
+    indicatorView.backgroundColor = [UIColor clearColor];
     // 配置默认动画效果
     [self setupAnimation];
 }

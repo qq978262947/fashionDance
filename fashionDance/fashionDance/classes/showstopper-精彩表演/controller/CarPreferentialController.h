@@ -1,5 +1,5 @@
 //
-//  WJDanceController.h
+//  WJShowsTopperController.h
 //  fashionDance
 //
 //  Created by 汪俊 on 16/3/8.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WJDanceController : UIViewController
+@interface CarPreferentialController : UIViewController
 
 @end

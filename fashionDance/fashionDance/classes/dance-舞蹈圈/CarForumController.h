@@ -1,5 +1,5 @@
 //
-//  WJTrainingController.h
+//  WJDanceController.h
 //  fashionDance
 //
 //  Created by 汪俊 on 16/3/8.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WJTrainingController : UIViewController
+@interface CarForumController : UIViewController
 
 @end
