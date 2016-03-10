@@ -46,15 +46,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 添加子控制器
-    [self setupChildVc:[[WJSpecialController alloc] init] title:@"专题" imageName:@"module_12288" selectedImageName:@"module_12288_press"];
+    [self setupChildVc:[[WJSpecialController alloc] init] title:@"咨询" imageName:@"tab_forum_normal" selectedImageName:@"tab_forum_highlighted"];
     
-    [self setupChildVc:[[WJRecommendController alloc] init] title:@"推荐" imageName:@"module_99340" selectedImageName:@"module_99340_press"];
+    [self setupChildVc:[[WJRecommendController alloc] init] title:@"找车" imageName:@"tab_selectCar_normal" selectedImageName:@"tab_selectCar_highlighted"];
     
-    [self setupChildVc:[[WJShowsTopperController alloc] init] title:@"精彩表演" imageName:@"module_99341" selectedImageName:@"module_99341_press"];
+    [self setupChildVc:[[WJShowsTopperController alloc] init] title:@"特惠" imageName:@"tab_preferentialCar_normal" selectedImageName:@"tab_preferentialCar_highlighted"];
     
-    [self setupChildVc:[[WJDanceController alloc] init] title:@"舞蹈圈" imageName:@"module_12290" selectedImageName:@"module_12290_press"];
+    [self setupChildVc:[[WJDanceController alloc] init] title:@"论坛" imageName:@"tab_news_normal" selectedImageName:@"tab_news_highlighted"];
     
-    [self setupChildVc:[[WJTrainingController alloc] init] title:@"训练营" imageName:@"module_6944" selectedImageName:@"module_6944_press"];
+    [self setupChildVc:[[WJTrainingController alloc] init] title:@"我的" imageName:@"tab_mySpace_normal" selectedImageName:@"tab_mySpace_highlighted"];
     
     UIView *whiteView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WJScreenW, WJTopicCellBottomBarH)];
     whiteView.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.9];
@@ -80,12 +80,10 @@
     
     // 设置普通状态下图片
     UIImage *normalImage = [UIImage imageNamed:imageName];
-    normalImage = [UIImage scaleImage:normalImage toScale:0.2];
     vc.tabBarItem.image = normalImage;
     
     // 设置选中状态下图片
-    UIImage *selectedImage = [UIImage imageNamed:selectedImageName];
-    selectedImage = [[UIImage scaleImage:selectedImage toScale:0.21]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *selectedImage = [[UIImage imageNamed:selectedImageName]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc.tabBarItem.selectedImage = selectedImage;
     
     // 包装一个导航控制器, 添加导航控制器为tabbarcontroller的子控制器
