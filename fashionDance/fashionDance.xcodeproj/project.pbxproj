@@ -24,12 +24,15 @@
 		DA54AE931C8E7D6D000A7EA0 /* CarMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AE921C8E7D6D000A7EA0 /* CarMineController.m */; };
 		DA54AE961C8EA31C000A7EA0 /* UIImage+reSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AE951C8EA31C000A7EA0 /* UIImage+reSize.m */; };
 		DA54AE9C1C8EB2DB000A7EA0 /* WJContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AE9B1C8EB2DB000A7EA0 /* WJContainerView.m */; };
-		DA54AECA1C8EC27A000A7EA0 /* CarConsultingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AEBE1C8EC27A000A7EA0 /* CarConsultingController.m */; };
+		DA54AECA1C8EC27A000A7EA0 /* WJHotCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AEBE1C8EC27A000A7EA0 /* WJHotCarController.m */; };
 		DA54AECB1C8EC27A000A7EA0 /* WJArrangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AEC11C8EC27A000A7EA0 /* WJArrangeController.m */; };
 		DA54AECC1C8EC27A000A7EA0 /* WJBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AEC31C8EC27A000A7EA0 /* WJBaseController.m */; };
 		DA54AECD1C8EC27A000A7EA0 /* WJFitnessController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AEC51C8EC27A000A7EA0 /* WJFitnessController.m */; };
 		DA54AECE1C8EC27A000A7EA0 /* WJMaquillageControler.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AEC71C8EC27A000A7EA0 /* WJMaquillageControler.m */; };
 		DA54AECF1C8EC27A000A7EA0 /* WJTipsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AEC91C8EC27A000A7EA0 /* WJTipsController.m */; };
+		DA825B181C92521C000C5EE4 /* CarConsultingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825B171C92521C000C5EE4 /* CarConsultingController.m */; };
+		DA825B1B1C9253B6000C5EE4 /* WJConsultingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825B1A1C9253B6000C5EE4 /* WJConsultingTool.m */; };
+		DA825B1E1C925482000C5EE4 /* WJConsultingResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825B1D1C925482000C5EE4 /* WJConsultingResult.m */; };
 		DAE93A071C8E75B900F03A67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE93A061C8E75B900F03A67 /* main.m */; };
 		DAE93A0A1C8E75B900F03A67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE93A091C8E75B900F03A67 /* AppDelegate.m */; };
 		DAE93A101C8E75B900F03A67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE93A0E1C8E75B900F03A67 /* Main.storyboard */; };
@@ -102,8 +105,8 @@
 		DA54AE951C8EA31C000A7EA0 /* UIImage+reSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+reSize.m"; sourceTree = "<group>"; };
 		DA54AE9A1C8EB2DB000A7EA0 /* WJContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJContainerView.h; sourceTree = "<group>"; };
 		DA54AE9B1C8EB2DB000A7EA0 /* WJContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJContainerView.m; sourceTree = "<group>"; };
-		DA54AEBD1C8EC27A000A7EA0 /* CarConsultingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarConsultingController.h; sourceTree = "<group>"; };
-		DA54AEBE1C8EC27A000A7EA0 /* CarConsultingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarConsultingController.m; sourceTree = "<group>"; };
+		DA54AEBD1C8EC27A000A7EA0 /* WJHotCarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJHotCarController.h; sourceTree = "<group>"; };
+		DA54AEBE1C8EC27A000A7EA0 /* WJHotCarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJHotCarController.m; sourceTree = "<group>"; };
 		DA54AEC01C8EC27A000A7EA0 /* WJArrangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJArrangeController.h; sourceTree = "<group>"; };
 		DA54AEC11C8EC27A000A7EA0 /* WJArrangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJArrangeController.m; sourceTree = "<group>"; };
 		DA54AEC21C8EC27A000A7EA0 /* WJBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJBaseController.h; sourceTree = "<group>"; };
@@ -114,6 +117,12 @@
 		DA54AEC71C8EC27A000A7EA0 /* WJMaquillageControler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJMaquillageControler.m; sourceTree = "<group>"; };
 		DA54AEC81C8EC27A000A7EA0 /* WJTipsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJTipsController.h; sourceTree = "<group>"; };
 		DA54AEC91C8EC27A000A7EA0 /* WJTipsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJTipsController.m; sourceTree = "<group>"; };
+		DA825B161C92521C000C5EE4 /* CarConsultingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarConsultingController.h; sourceTree = "<group>"; };
+		DA825B171C92521C000C5EE4 /* CarConsultingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarConsultingController.m; sourceTree = "<group>"; };
+		DA825B191C9253B6000C5EE4 /* WJConsultingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJConsultingTool.h; sourceTree = "<group>"; };
+		DA825B1A1C9253B6000C5EE4 /* WJConsultingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJConsultingTool.m; sourceTree = "<group>"; };
+		DA825B1C1C925482000C5EE4 /* WJConsultingResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJConsultingResult.h; sourceTree = "<group>"; };
+		DA825B1D1C925482000C5EE4 /* WJConsultingResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJConsultingResult.m; sourceTree = "<group>"; };
 		DAE93A021C8E75B900F03A67 /* fashionDance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fashionDance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE93A061C8E75B900F03A67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAE93A081C8E75B900F03A67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -196,6 +205,8 @@
 				DA0C83E21C8FBC7B00F7D8D0 /* WJHttpTool.m */,
 				DA0C83F21C8FBCBC00F7D8D0 /* WJVideoTool.h */,
 				DA0C83F31C8FBCBC00F7D8D0 /* WJVideoTool.m */,
+				DA825B191C9253B6000C5EE4 /* WJConsultingTool.h */,
+				DA825B1A1C9253B6000C5EE4 /* WJConsultingTool.m */,
 			);
 			path = httptool;
 			sourceTree = "<group>";
@@ -216,6 +227,8 @@
 				DA0C83FB1C8FBE1600F7D8D0 /* WJSpecialListResult.m */,
 				DA0C83FD1C8FBE5900F7D8D0 /* WJSpecialList.h */,
 				DA0C83FE1C8FBE5900F7D8D0 /* WJSpecialList.m */,
+				DA825B1C1C925482000C5EE4 /* WJConsultingResult.h */,
+				DA825B1D1C925482000C5EE4 /* WJConsultingResult.m */,
 			);
 			path = result;
 			sourceTree = "<group>";
@@ -251,8 +264,10 @@
 		DA54AEBC1C8EC27A000A7EA0 /* home */ = {
 			isa = PBXGroup;
 			children = (
-				DA54AEBD1C8EC27A000A7EA0 /* CarConsultingController.h */,
-				DA54AEBE1C8EC27A000A7EA0 /* CarConsultingController.m */,
+				DA54AEBD1C8EC27A000A7EA0 /* WJHotCarController.h */,
+				DA54AEBE1C8EC27A000A7EA0 /* WJHotCarController.m */,
+				DA825B161C92521C000C5EE4 /* CarConsultingController.h */,
+				DA825B171C92521C000C5EE4 /* CarConsultingController.m */,
 			);
 			name = home;
 			path = "../../training-训练营/controller/home";
@@ -811,9 +826,11 @@
 				DAE93A881C8E7A9C00F03A67 /* ViewController.m in Sources */,
 				DAE93A071C8E75B900F03A67 /* main.m in Sources */,
 				DA0C84031C8FBF2000F7D8D0 /* WJExetensionTool.m in Sources */,
+				DA825B181C92521C000C5EE4 /* CarConsultingController.m in Sources */,
 				DA54AECF1C8EC27A000A7EA0 /* WJTipsController.m in Sources */,
 				DA0C83F41C8FBCBC00F7D8D0 /* WJVideoTool.m in Sources */,
 				DA54AE931C8E7D6D000A7EA0 /* CarMineController.m in Sources */,
+				DA825B1E1C925482000C5EE4 /* WJConsultingResult.m in Sources */,
 				DA0C83EB1C8FBC7B00F7D8D0 /* WJBaseTool.m in Sources */,
 				DAE93A851C8E7A9C00F03A67 /* UIImage+cirlcle.m in Sources */,
 				DA0C83ED1C8FBC7B00F7D8D0 /* WJHttpTool.m in Sources */,
@@ -826,7 +843,8 @@
 				DA54AE961C8EA31C000A7EA0 /* UIImage+reSize.m in Sources */,
 				DA54AECD1C8EC27A000A7EA0 /* WJFitnessController.m in Sources */,
 				DA54AECE1C8EC27A000A7EA0 /* WJMaquillageControler.m in Sources */,
-				DA54AECA1C8EC27A000A7EA0 /* CarConsultingController.m in Sources */,
+				DA54AECA1C8EC27A000A7EA0 /* WJHotCarController.m in Sources */,
+				DA825B1B1C9253B6000C5EE4 /* WJConsultingTool.m in Sources */,
 				DA54AE9C1C8EB2DB000A7EA0 /* WJContainerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
