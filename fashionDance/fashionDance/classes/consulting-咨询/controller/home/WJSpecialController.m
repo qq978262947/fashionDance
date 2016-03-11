@@ -7,10 +7,7 @@
 //
 
 #import "WJSpecialController.h"
-#import "WJFitnessController.h"
-#import "WJMaquillageControler.h"
 #import "WJArrangeController.h"
-#import "WJTipsController.h"
 #import "WJContainerView.h"
 
 @interface WJSpecialController () <WJContainerViewDelegate, UIScrollViewDelegate>
@@ -43,10 +40,10 @@
  *  初始化子控制器
  */
 - (void)setupChildControllers {
-    [self addChildVC:[[WJFitnessController alloc]init]];
-    [self addChildVC:[[WJMaquillageControler alloc]init]];
+//    [self addChildVC:[[WJFitnessController alloc]init]];
+//    [self addChildVC:[[WJMaquillageControler alloc]init]];
     [self addChildVC:[[WJArrangeController alloc]init]];
-    [self addChildVC:[[WJTipsController alloc]init]];
+//    [self addChildVC:[[WJTipsController alloc]init]];
 }
 
 /**
@@ -129,7 +126,7 @@
  *  @param index index
  */
 - (void)configChildView:(UIView *)view WithIndex:(NSInteger)index{
-    WJFitnessController *titleController = self.childViewControllers[index];
+    WJArrangeController *titleController = self.childViewControllers[index];
     // 如果是第一次调用,配置约束
     if (titleController.isConfigConstraint == NO) {
         [self.contentView addSubview:view];
@@ -151,7 +148,7 @@
     NSInteger index = scrollView.contentOffset.x / scrollView.width;
     
     // 取出子控制器
-    WJFitnessController *vc = self.childViewControllers[index];
+    WJArrangeController *vc = self.childViewControllers[index];
     [self configChildView:vc.view WithIndex:index];
     
     
