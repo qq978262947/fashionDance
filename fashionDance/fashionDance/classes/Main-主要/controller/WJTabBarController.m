@@ -11,8 +11,6 @@
 #import "CarConsultingController.h"
 #import "CarFindController.h"
 #import "CarPreferentialController.h"
-#import "CarForumController.h"
-#import "CarMineController.h"
 #import "UIImage+reSize.h"
 
 //#define WJImageSize CGSizeMake(25, 25)
@@ -54,7 +52,6 @@
     
     [self setupChildVc:[[CarForumController alloc] init] title:@"论坛" imageName:@"tab_news_normal" selectedImageName:@"tab_news_highlighted"];
     
-    [self setupChildVc:[[CarMineController alloc] init] title:@"我的" imageName:@"tab_mySpace_normal" selectedImageName:@"tab_mySpace_highlighted"];
     
     UIView *whiteView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WJScreenW, WJTopicCellBottomBarH)];
     whiteView.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.9];

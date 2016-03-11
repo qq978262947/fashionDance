@@ -39,7 +39,6 @@
 		DA825C8C1C92E943000C5EE4 /* LLCarTypeVersionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825C7B1C92E942000C5EE4 /* LLCarTypeVersionModel.m */; };
 		DA825C971C92EAD2000C5EE4 /* CarConsultingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825C941C92EAD2000C5EE4 /* CarConsultingController.m */; };
 		DA825C981C92EAD2000C5EE4 /* WJHotCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825C961C92EAD2000C5EE4 /* WJHotCarController.m */; };
-		DA825C9B1C92EB39000C5EE4 /* CarMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825C9A1C92EB39000C5EE4 /* CarMineController.m */; };
 		DA825C9E1C92EB7E000C5EE4 /* WJArrangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825C9D1C92EB7E000C5EE4 /* WJArrangeController.m */; };
 		DAE93A071C8E75B900F03A67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE93A061C8E75B900F03A67 /* main.m */; };
 		DAE93A0A1C8E75B900F03A67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE93A091C8E75B900F03A67 /* AppDelegate.m */; };
@@ -131,8 +130,6 @@
 		DA825C941C92EAD2000C5EE4 /* CarConsultingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarConsultingController.m; sourceTree = "<group>"; };
 		DA825C951C92EAD2000C5EE4 /* WJHotCarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJHotCarController.h; sourceTree = "<group>"; };
 		DA825C961C92EAD2000C5EE4 /* WJHotCarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJHotCarController.m; sourceTree = "<group>"; };
-		DA825C991C92EB39000C5EE4 /* CarMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarMineController.h; path = ../../../../../Documents/CarMineController.h; sourceTree = "<group>"; };
-		DA825C9A1C92EB39000C5EE4 /* CarMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarMineController.m; path = ../../../../../Documents/CarMineController.m; sourceTree = "<group>"; };
 		DA825C9C1C92EB7E000C5EE4 /* WJArrangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJArrangeController.h; sourceTree = "<group>"; };
 		DA825C9D1C92EB7E000C5EE4 /* WJArrangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJArrangeController.m; sourceTree = "<group>"; };
 		DAE93A021C8E75B900F03A67 /* fashionDance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fashionDance.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -400,8 +397,6 @@
 		DA825C031C92E86B000C5EE4 /* Mine-我的 */ = {
 			isa = PBXGroup;
 			children = (
-				DA825C991C92EB39000C5EE4 /* CarMineController.h */,
-				DA825C9A1C92EB39000C5EE4 /* CarMineController.m */,
 				DA825C041C92E86B000C5EE4 /* controller */,
 				DA825C071C92E86B000C5EE4 /* model */,
 				DA825C081C92E86B000C5EE4 /* view */,
@@ -841,7 +836,6 @@
 				DA825C1D1C92E86B000C5EE4 /* WJContainerView.m in Sources */,
 				DA825C201C92E86B000C5EE4 /* WJVerticalButton.m in Sources */,
 				DA825C221C92E86B000C5EE4 /* CarForumController.m in Sources */,
-				DA825C9B1C92EB39000C5EE4 /* CarMineController.m in Sources */,
 				DA825C801C92E943000C5EE4 /* NSString+StringFromNumber.m in Sources */,
 				DA825C871C92E943000C5EE4 /* WJNavgationController.m in Sources */,
 				DA825C211C92E86B000C5EE4 /* CarFindController.m in Sources */,
