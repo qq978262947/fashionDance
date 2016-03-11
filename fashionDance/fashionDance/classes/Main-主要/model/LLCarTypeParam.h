@@ -10,6 +10,6 @@
 
 @interface LLCarTypeParam : NSObject
 
-@property(nonatomic,strong)NSString * <#string#>;
+@property(nonatomic,strong)NSNumber * modelId;
 
 @end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A2C26251C92AB0A007C1B0E /* LLCarTypeInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C26241C92AB0A007C1B0E /* LLCarTypeInfoModel.m */; };
+		6A2C26281C92AB3A007C1B0E /* LLCarTypeDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C26271C92AB3A007C1B0E /* LLCarTypeDetailController.m */; };
+		6A2C262B1C92AB44007C1B0E /* LLCarTypeParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C262A1C92AB44007C1B0E /* LLCarTypeParam.m */; };
 		A68FAFEFF4F4A49290AF4C6D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2E3BD33B03E9DF56A54E8A /* libPods.a */; };
 		BC9FDD6C1C92987300F255A7 /* CarForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9FDD6B1C92987300F255A7 /* CarForumController.m */; };
 		DA0C83ED1C8FBC7B00F7D8D0 /* WJHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C83E21C8FBC7B00F7D8D0 /* WJHttpTool.m */; };
@@ -70,6 +73,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A2C26231C92AB0A007C1B0E /* LLCarTypeInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLCarTypeInfoModel.h; sourceTree = "<group>"; };
+		6A2C26241C92AB0A007C1B0E /* LLCarTypeInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCarTypeInfoModel.m; sourceTree = "<group>"; };
+		6A2C26261C92AB3A007C1B0E /* LLCarTypeDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLCarTypeDetailController.h; sourceTree = "<group>"; };
+		6A2C26271C92AB3A007C1B0E /* LLCarTypeDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCarTypeDetailController.m; sourceTree = "<group>"; };
+		6A2C26291C92AB44007C1B0E /* LLCarTypeParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLCarTypeParam.h; sourceTree = "<group>"; };
+		6A2C262A1C92AB44007C1B0E /* LLCarTypeParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCarTypeParam.m; sourceTree = "<group>"; };
 		6C2E3BD33B03E9DF56A54E8A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB5973FF1B297B050B1A609 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7CF344E4DA0F93C7E0B1D029 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +193,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A2C26201C92AAE8007C1B0E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				6A2C26291C92AB44007C1B0E /* LLCarTypeParam.h */,
+				6A2C262A1C92AB44007C1B0E /* LLCarTypeParam.m */,
+				6A2C26231C92AB0A007C1B0E /* LLCarTypeInfoModel.h */,
+				6A2C26241C92AB0A007C1B0E /* LLCarTypeInfoModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		6A2C26211C92AAE8007C1B0E /* tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tool;
+			sourceTree = "<group>";
+		};
+		6A2C26221C92AAE8007C1B0E /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		BC9FDD6D1C92989900F255A7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -552,12 +586,12 @@
 		DAE93A4D1C8E771200F03A67 /* Main-主要 */ = {
 			isa = PBXGroup;
 			children = (
+				6A2C26201C92AAE8007C1B0E /* model */,
+				6A2C26211C92AAE8007C1B0E /* tool */,
+				6A2C26221C92AAE8007C1B0E /* view */,
 				DA0C83DC1C8FBC7B00F7D8D0 /* httptool */,
 				DAE93A4E1C8E771200F03A67 /* category */,
 				DAE93A4F1C8E771200F03A67 /* controller */,
-				DAE93A501C8E771200F03A67 /* model */,
-				DAE93A511C8E771200F03A67 /* tool */,
-				DAE93A521C8E771200F03A67 /* view */,
 			);
 			path = "Main-主要";
 			sourceTree = "<group>";
@@ -589,33 +623,14 @@
 		DAE93A4F1C8E771200F03A67 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				6A2C26261C92AB3A007C1B0E /* LLCarTypeDetailController.h */,
+				6A2C26271C92AB3A007C1B0E /* LLCarTypeDetailController.m */,
 				DAE93A891C8E7AEB00F03A67 /* WJNavgationController.h */,
 				DAE93A8A1C8E7AEB00F03A67 /* WJNavgationController.m */,
 				DAE93A531C8E774800F03A67 /* WJTabBarController.h */,
 				DAE93A541C8E774800F03A67 /* WJTabBarController.m */,
 			);
 			path = controller;
-			sourceTree = "<group>";
-		};
-		DAE93A501C8E771200F03A67 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		DAE93A511C8E771200F03A67 /* tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = tool;
-			sourceTree = "<group>";
-		};
-		DAE93A521C8E771200F03A67 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 		F2244DFF8190D6B6DCCAF482 /* Pods */ = {
@@ -823,6 +838,7 @@
 				DA0C84071C8FC2A100F7D8D0 /* WJSpecialVideoCell.m in Sources */,
 				DA0C840F1C8FC91B00F7D8D0 /* WJProgressView.m in Sources */,
 				DA54AE8D1C8E7D43000A7EA0 /* CarPreferentialController.m in Sources */,
+				6A2C26251C92AB0A007C1B0E /* LLCarTypeInfoModel.m in Sources */,
 				DAE93A861C8E7A9C00F03A67 /* UIImageView+downloadImage.m in Sources */,
 				DA0C83FF1C8FBE5900F7D8D0 /* WJSpecialList.m in Sources */,
 				DA54AECB1C8EC27A000A7EA0 /* WJArrangeController.m in Sources */,
@@ -835,8 +851,10 @@
 				DAE93A851C8E7A9C00F03A67 /* UIImage+cirlcle.m in Sources */,
 				DA0C83ED1C8FBC7B00F7D8D0 /* WJHttpTool.m in Sources */,
 				DA825B2A1C92716F000C5EE4 /* WJContainerView.m in Sources */,
+				6A2C26281C92AB3A007C1B0E /* LLCarTypeDetailController.m in Sources */,
 				DA0C83FC1C8FBE1600F7D8D0 /* WJSpecialListResult.m in Sources */,
 				DAE93A831C8E7A9C00F03A67 /* NSString+StringFromNumber.m in Sources */,
+				6A2C262B1C92AB44007C1B0E /* LLCarTypeParam.m in Sources */,
 				DA0C83F91C8FBDDF00F7D8D0 /* WJSpecialVideoParam.m in Sources */,
 				DA825B2E1C9271A6000C5EE4 /* WJHeaderView.m in Sources */,
 				DAE93A821C8E7A9C00F03A67 /* NSDate+WJExtension.m in Sources */,
