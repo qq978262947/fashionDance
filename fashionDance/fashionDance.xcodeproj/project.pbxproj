@@ -23,7 +23,6 @@
 		DA54AE8D1C8E7D43000A7EA0 /* CarPreferentialController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AE8C1C8E7D43000A7EA0 /* CarPreferentialController.m */; };
 		DA54AE931C8E7D6D000A7EA0 /* CarMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AE921C8E7D6D000A7EA0 /* CarMineController.m */; };
 		DA54AE961C8EA31C000A7EA0 /* UIImage+reSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AE951C8EA31C000A7EA0 /* UIImage+reSize.m */; };
-		DA54AE9C1C8EB2DB000A7EA0 /* WJContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AE9B1C8EB2DB000A7EA0 /* WJContainerView.m */; };
 		DA54AECA1C8EC27A000A7EA0 /* WJHotCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AEBE1C8EC27A000A7EA0 /* WJHotCarController.m */; };
 		DA54AECB1C8EC27A000A7EA0 /* WJArrangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AEC11C8EC27A000A7EA0 /* WJArrangeController.m */; };
 		DA54AECC1C8EC27A000A7EA0 /* WJBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AEC31C8EC27A000A7EA0 /* WJBaseController.m */; };
@@ -33,6 +32,10 @@
 		DA825B181C92521C000C5EE4 /* CarConsultingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825B171C92521C000C5EE4 /* CarConsultingController.m */; };
 		DA825B1B1C9253B6000C5EE4 /* WJConsultingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825B1A1C9253B6000C5EE4 /* WJConsultingTool.m */; };
 		DA825B1E1C925482000C5EE4 /* WJConsultingResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825B1D1C925482000C5EE4 /* WJConsultingResult.m */; };
+		DA825B251C9261CF000C5EE4 /* WJConsultingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825B231C9261CF000C5EE4 /* WJConsultingCell.m */; };
+		DA825B261C9261CF000C5EE4 /* WJConsultingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA825B241C9261CF000C5EE4 /* WJConsultingCell.xib */; };
+		DA825B2A1C92716F000C5EE4 /* WJContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825B291C92716F000C5EE4 /* WJContainerView.m */; };
+		DA825B2E1C9271A6000C5EE4 /* WJHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825B2D1C9271A6000C5EE4 /* WJHeaderView.m */; };
 		DAE93A071C8E75B900F03A67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE93A061C8E75B900F03A67 /* main.m */; };
 		DAE93A0A1C8E75B900F03A67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE93A091C8E75B900F03A67 /* AppDelegate.m */; };
 		DAE93A101C8E75B900F03A67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE93A0E1C8E75B900F03A67 /* Main.storyboard */; };
@@ -103,8 +106,6 @@
 		DA54AE921C8E7D6D000A7EA0 /* CarMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarMineController.m; sourceTree = "<group>"; };
 		DA54AE941C8EA31C000A7EA0 /* UIImage+reSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+reSize.h"; sourceTree = "<group>"; };
 		DA54AE951C8EA31C000A7EA0 /* UIImage+reSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+reSize.m"; sourceTree = "<group>"; };
-		DA54AE9A1C8EB2DB000A7EA0 /* WJContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJContainerView.h; sourceTree = "<group>"; };
-		DA54AE9B1C8EB2DB000A7EA0 /* WJContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJContainerView.m; sourceTree = "<group>"; };
 		DA54AEBD1C8EC27A000A7EA0 /* WJHotCarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJHotCarController.h; sourceTree = "<group>"; };
 		DA54AEBE1C8EC27A000A7EA0 /* WJHotCarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJHotCarController.m; sourceTree = "<group>"; };
 		DA54AEC01C8EC27A000A7EA0 /* WJArrangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJArrangeController.h; sourceTree = "<group>"; };
@@ -123,6 +124,13 @@
 		DA825B1A1C9253B6000C5EE4 /* WJConsultingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJConsultingTool.m; sourceTree = "<group>"; };
 		DA825B1C1C925482000C5EE4 /* WJConsultingResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJConsultingResult.h; sourceTree = "<group>"; };
 		DA825B1D1C925482000C5EE4 /* WJConsultingResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJConsultingResult.m; sourceTree = "<group>"; };
+		DA825B221C9261CF000C5EE4 /* WJConsultingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJConsultingCell.h; sourceTree = "<group>"; };
+		DA825B231C9261CF000C5EE4 /* WJConsultingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJConsultingCell.m; sourceTree = "<group>"; };
+		DA825B241C9261CF000C5EE4 /* WJConsultingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WJConsultingCell.xib; sourceTree = "<group>"; };
+		DA825B281C92716F000C5EE4 /* WJContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJContainerView.h; sourceTree = "<group>"; };
+		DA825B291C92716F000C5EE4 /* WJContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJContainerView.m; sourceTree = "<group>"; };
+		DA825B2C1C9271A6000C5EE4 /* WJHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJHeaderView.h; sourceTree = "<group>"; };
+		DA825B2D1C9271A6000C5EE4 /* WJHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJHeaderView.m; sourceTree = "<group>"; };
 		DAE93A021C8E75B900F03A67 /* fashionDance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fashionDance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE93A061C8E75B900F03A67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAE93A081C8E75B900F03A67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -248,6 +256,9 @@
 				DA0C84051C8FC2A100F7D8D0 /* WJSpecialVideoCell.h */,
 				DA0C84061C8FC2A100F7D8D0 /* WJSpecialVideoCell.m */,
 				DA0C840A1C8FC72B00F7D8D0 /* WJSpecialVideoCell.xib */,
+				DA825B221C9261CF000C5EE4 /* WJConsultingCell.h */,
+				DA825B231C9261CF000C5EE4 /* WJConsultingCell.m */,
+				DA825B241C9261CF000C5EE4 /* WJConsultingCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -289,6 +300,24 @@
 			);
 			name = titleController;
 			path = "../../training-训练营/controller/titleController";
+			sourceTree = "<group>";
+		};
+		DA825B271C92716F000C5EE4 /* ContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				DA825B281C92716F000C5EE4 /* WJContainerView.h */,
+				DA825B291C92716F000C5EE4 /* WJContainerView.m */,
+			);
+			path = ContainerView;
+			sourceTree = "<group>";
+		};
+		DA825B2B1C92717F000C5EE4 /* headerView */ = {
+			isa = PBXGroup;
+			children = (
+				DA825B2C1C9271A6000C5EE4 /* WJHeaderView.h */,
+				DA825B2D1C9271A6000C5EE4 /* WJHeaderView.m */,
+			);
+			path = headerView;
 			sourceTree = "<group>";
 		};
 		DAE939F91C8E75B900F03A67 = {
@@ -505,10 +534,10 @@
 		DAE93A481C8E76D400F03A67 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				DA825B2B1C92717F000C5EE4 /* headerView */,
+				DA825B271C92716F000C5EE4 /* ContainerView */,
 				DA0C840C1C8FC91B00F7D8D0 /* progress */,
 				DA0C84041C8FC28000F7D8D0 /* cell */,
-				DA54AE9A1C8EB2DB000A7EA0 /* WJContainerView.h */,
-				DA54AE9B1C8EB2DB000A7EA0 /* WJContainerView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -734,6 +763,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA0C840B1C8FC72B00F7D8D0 /* WJSpecialVideoCell.xib in Resources */,
+				DA825B261C9261CF000C5EE4 /* WJConsultingCell.xib in Resources */,
 				DAE93A151C8E75B900F03A67 /* LaunchScreen.storyboard in Resources */,
 				DAE93A121C8E75B900F03A67 /* Assets.xcassets in Resources */,
 				DAE93A101C8E75B900F03A67 /* Main.storyboard in Resources */,
@@ -813,6 +843,7 @@
 				DA54AECC1C8EC27A000A7EA0 /* WJBaseController.m in Sources */,
 				DAE93A551C8E774800F03A67 /* WJTabBarController.m in Sources */,
 				DAE93A811C8E7A9C00F03A67 /* Foundation+Log.m in Sources */,
+				DA825B251C9261CF000C5EE4 /* WJConsultingCell.m in Sources */,
 				DAE93A0A1C8E75B900F03A67 /* AppDelegate.m in Sources */,
 				DAE93A8B1C8E7AEB00F03A67 /* WJNavgationController.m in Sources */,
 				DAE93A5B1C8E77A600F03A67 /* WJConst.m in Sources */,
@@ -834,9 +865,11 @@
 				DA0C83EB1C8FBC7B00F7D8D0 /* WJBaseTool.m in Sources */,
 				DAE93A851C8E7A9C00F03A67 /* UIImage+cirlcle.m in Sources */,
 				DA0C83ED1C8FBC7B00F7D8D0 /* WJHttpTool.m in Sources */,
+				DA825B2A1C92716F000C5EE4 /* WJContainerView.m in Sources */,
 				DA0C83FC1C8FBE1600F7D8D0 /* WJSpecialListResult.m in Sources */,
 				DAE93A831C8E7A9C00F03A67 /* NSString+StringFromNumber.m in Sources */,
 				DA0C83F91C8FBDDF00F7D8D0 /* WJSpecialVideoParam.m in Sources */,
+				DA825B2E1C9271A6000C5EE4 /* WJHeaderView.m in Sources */,
 				DAE93A821C8E7A9C00F03A67 /* NSDate+WJExtension.m in Sources */,
 				DAE93A841C8E7A9C00F03A67 /* UIBarButtonItem+WJExtension.m in Sources */,
 				DA54AE8A1C8E7D2B000A7EA0 /* CarFindController.m in Sources */,
@@ -845,7 +878,6 @@
 				DA54AECE1C8EC27A000A7EA0 /* WJMaquillageControler.m in Sources */,
 				DA54AECA1C8EC27A000A7EA0 /* WJHotCarController.m in Sources */,
 				DA825B1B1C9253B6000C5EE4 /* WJConsultingTool.m in Sources */,
-				DA54AE9C1C8EB2DB000A7EA0 /* WJContainerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

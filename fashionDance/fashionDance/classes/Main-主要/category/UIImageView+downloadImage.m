@@ -23,4 +23,11 @@
         self.image = image ? [image circleImage] : placeholderImage;
     }];
 }
+
+- (void)setNormalImagewithURL:(NSURL *)url placeholderImage:(UIImage *)placeholderImage completed:(void(^)(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL))completed {
+    [self sd_setImageWithURL:url placeholderImage:placeholderImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        self.image = image ? image : placeholderImage;
+    }];
+}
+
 @end

@@ -8,6 +8,10 @@
 
 #import "CarConsultingController.h"
 #import "WJConsultingTool.h"
+#import "WJConsultingCell.h"
+#import "WJHeaderView.h"
+#import <MJRefresh.h>
+
 
 @interface CarConsultingController ()
 
@@ -19,81 +23,73 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setupTableView];
     // 读区数据
-    [self loadData];
+    [self setupRefresh];
     
 }
 
-- (void)loadData {
+// 集成刷新控件,并加载最新数据
+- (void)setupRefresh
+{
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    // 自动改变透明度
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    [self.tableView.mj_header beginRefreshing];
+    
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+}
+
+
+// 初始化tableview
+- (void)setupTableView {
+    // 创建header
+    UIView *header = [[UIView alloc] init];
+    header.backgroundColor = [UIColor greenColor];
+    header.size = CGSizeMake(WJScreenW, 100);
+    // 设置header
+    self.tableView.tableHeaderView = header;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+}
+
+// 加载最新数据
+- (void)loadNewData {
     [[WJConsultingTool sharedTool]consultingWithParam:nil success:^(WJConsultingResult *result) {
-        self.listArray = result.result.list;
+        self.listArray = [NSMutableArray arrayWithArray:result.result.list];
         [self.tableView reloadData];
+        [self.tableView.mj_header endRefreshing];
     } failure:^(NSError *error) {
-        
+        [self.tableView.mj_header endRefreshing];
     }];
     
 }
 
+// 加载更多数据
+- (void)loadMoreData {
+    [self.tableView.mj_header endRefreshing];
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    self.tableView.mj_footer.hidden = self.listArray == 0;
     return self.listArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
-    if (nil == cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellID"];
-    }
+    WJConsultingCell *cell = [WJConsultingCell consultingCellWithTableView:tableView];
     WJList *list = self.listArray[indexPath.row];
-    cell.textLabel.text = list.title;
+    cell.list = list;
     return cell;
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 90;
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

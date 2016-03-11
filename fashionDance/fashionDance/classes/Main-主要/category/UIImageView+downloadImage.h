@@ -17,7 +17,7 @@
  */
 - (void)setHeader:(NSString *)url;
 /**
- *  图片下载的工具类
+ *  图片下载圆角处理的工具类
  *
  *  @param url 下载图片的url
  *  @param placeholderImage 占位图片
@@ -26,7 +26,13 @@
 - (void)setImagewithURL:(NSURL *)url placeholderImage:(UIImage *)placeholderImage completed:(void(^)(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL))completed;
 
 
-//- (void)setImageWithURL:[NSURL URLWithString:list.large_image] placeholderImage: options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize)
-
+/**
+ *  图片下载的工具类
+ *
+ *  @param url 下载图片的url
+ *  @param placeholderImage 占位图片
+ *  @param completed        完成下载调用的block
+ */
+- (void)setNormalImagewithURL:(NSURL *)url placeholderImage:(UIImage *)placeholderImage completed:(void(^)(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL))completed;
 
 @end
