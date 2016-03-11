@@ -10,9 +10,12 @@
 #import "WJHttpTool.h"
 #import <AFNetworking.h>
 #import <MJRefresh.h>
-#import "WJSpecialVideoCell.h"
+#import "WJSUVResult.h"
 #import <MJExtension.h>
-
+#import "WJSUVResult.h"
+#import "WJFindHotCell.h"
+//http://autoapp.auto.sohu.com/api/model/listHot/body_2_type_6_page_1
+//http://autoapp.auto.sohu.com/api/model/listHot/body_2_type_6_page_2
 
 @interface WJArrangeController () <UITableViewDataSource, UITableViewDelegate>
 // 数据源数组
@@ -35,9 +38,9 @@
 // 初始化tableview
 - (void)setupTableView {
     // 设置内边距
-    CGFloat bottom = WJTopicCellBottomBarH;
+//    CGFloat bottom = WJTopicCellBottomBarH;
     CGFloat top = WJTitilesViewY + WJTitilesViewH;
-    self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(top, 0, 0, 0);
     // 设置滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     
@@ -59,34 +62,36 @@
 
 // 读区最新数据
 - (void)loadData {
-//    WJSpecialVideoParam *param = [[WJSpecialVideoParam alloc]init];
-//    self.pageIndex = 1;
-//    param.aid = 1;
-//    [WJExetensionTool setupSpecialVideoMode];
-//    [[WJVideoTool sharedTool]videoWithParam:param success:^(WJSpecialListResult *result) {
-//        [self.tableView.mj_header endRefreshing];
-//        self.listArray = [NSMutableArray arrayWithArray:result.list];
-//        [self.tableView reloadData];
-//        self.pageIndex++;
-//    } failure:^(NSError *error) {
-//        [self.tableView.mj_header endRefreshing];
-//    }];
-    [self.tableView.mj_header endRefreshing];
+    self.pageIndex = 1;
+    [[WJHttpTool httpTool]get:@"http://autoapp.auto.sohu.com/api/model/listHot/body_2_type_6_page_1" params:nil success:^(NSDictionary *responseObj) {
+        WJSUVResult *result = [WJSUVResult mj_objectWithKeyValues:responseObj];
+        if (result != nil) {
+            self.listArray = [NSMutableArray arrayWithArray:result.items];
+            [self.tableView reloadData];
+        } else {
+            [self.tableView.mj_footer endRefreshingWithNoMoreData];
+        }
+        [self.tableView.mj_header endRefreshing];
+    } failure:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+    }];
 }
 
 // 读区更多数据
 - (void)loadMoreData {
-//    WJSpecialVideoParam *param = [[WJSpecialVideoParam alloc]init];
-//    param.aid = self.pageIndex;
-//    [WJExetensionTool setupSpecialVideoMode];
-//    [[WJVideoTool sharedTool]videoWithParam:param success:^(WJSpecialListResult *result) {
-//        [self.tableView.mj_header endRefreshing];
-//        [self.listArray addObjectsFromArray:result.list];
-//        [self.tableView reloadData];
-//        self.pageIndex++;
-//    } failure:^(NSError *error) {
-//        [self.tableView.mj_header endRefreshing];
-//    }];
+    NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/model/listHot/body_2_type_6_page_%li",++self.pageIndex];
+    [[WJHttpTool httpTool]get:urlString params:nil success:^(NSDictionary *responseObj) {
+        WJSUVResult *result = [WJSUVResult mj_objectWithKeyValues:responseObj];
+        if (result != nil) {
+            [self.listArray addObjectsFromArray:result.items];
+            [self.tableView reloadData];
+        } else {
+            [self.tableView.mj_footer endRefreshingWithNoMoreData];
+        }
+        [self.tableView.mj_header endRefreshing];
+    } failure:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+    }];
     [self.tableView.mj_header endRefreshing];
 }
 
@@ -95,27 +100,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-/**
- * 让当前控制器对应的状态栏是白色,兼容9.0以下系统
- */
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
 
 #pragma mark - <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (self.listArray.count > 2) {
-        return self.listArray.count - 2;
-    }
-    return 0;
+    self.tableView.mj_footer.hidden = self.listArray.count == 0;
+    return self.listArray.count;
 }
 
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    WJSpecialVideoCell *cell = [WJSpecialVideoCell specialCellWithTableView:tableView];
-    cell.list = self.listArray[indexPath.row + 2];
+    WJFindHotCell *cell = [WJFindHotCell findHotCellCellWithTableView:tableView];
+    WJCarModel *carModel = self.listArray[indexPath.row];
+    cell.carModel = carModel;
     return cell;
 }
 

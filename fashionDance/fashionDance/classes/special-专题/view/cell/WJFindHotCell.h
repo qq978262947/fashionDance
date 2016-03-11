@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WJSpecialList.h"
+#import "WJSUVResult.h"
 
-@interface WJSpecialVideoCell : UITableViewCell
+@interface WJFindHotCell : UITableViewCell
 
-+(id)specialCellWithTableView:(UITableView *)tableView;
++(id)findHotCellCellWithTableView:(UITableView *)tableView;
 
-@property (strong, nonatomic)WJSpecialList *list;
+@property (strong, nonatomic)WJCarModel *carModel;
 
 @end

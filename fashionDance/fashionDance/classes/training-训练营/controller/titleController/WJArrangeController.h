@@ -6,8 +6,10 @@
 //  Copyright © 2016年 汪俊. All rights reserved.
 //
 
-#import "WJBaseController.h"
+#import <UIKit/UIKit.h>
 
-@interface WJArrangeController : WJBaseController
+@interface WJArrangeController : UITableViewController
+
+@property (assign, nonatomic, getter=isConfigConstraint)BOOL configConstraint;
 
 @end

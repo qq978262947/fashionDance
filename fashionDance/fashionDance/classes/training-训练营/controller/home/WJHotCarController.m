@@ -7,10 +7,7 @@
 //
 
 #import "WJHotCarController.h"
-#import "WJFitnessController.h"
-#import "WJMaquillageControler.h"
 #import "WJArrangeController.h"
-#import "WJTipsController.h"
 #import "WJContainerView.h"
 #import "UIImage+reSize.h"
 
@@ -49,9 +46,9 @@
 - (void)setupChildControllers {
     // 多个可修改为类名发射
     [self addChildVC:[[WJArrangeController alloc]init]];
-    [self addChildVC:[[WJFitnessController alloc]init]];
-    [self addChildVC:[[WJMaquillageControler alloc]init]];
-    [self addChildVC:[[WJTipsController alloc]init]];
+//    [self addChildVC:[[WJFitnessController alloc]init]];
+//    [self addChildVC:[[WJMaquillageControler alloc]init]];
+//    [self addChildVC:[[WJTipsController alloc]init]];
 }
 
 /**
@@ -67,6 +64,7 @@
     [self configScrollView];
     scrollView.contentSize = CGSizeMake(1.5 * WJContainerViewW, 0);
     scrollView.showsHorizontalScrollIndicator = NO;
+    scrollView.bounces = NO;
     // 2 添加容器view,存放标题按钮的
     WJContainerView *containerView = [WJContainerView containerView];
     self.containerView = containerView;
@@ -110,8 +108,9 @@
     UIScrollView *contentView = [[UIScrollView alloc] init];
     contentView.delegate = self;
     contentView.pagingEnabled = YES;
+    contentView.bounces = NO;
     [self.view insertSubview:contentView atIndex:0];
-    contentView.contentSize = CGSizeMake(WJScreenW * self.childViewControllers.count, 0);
+    contentView.contentSize = CGSizeMake(WJScreenW * self.containerView.titles.count, 0);
     self.contentView = contentView;
     
     [self configContentView];
@@ -158,7 +157,7 @@
  *  @param index index
  */
 - (void)configChildView:(UIView *)view WithIndex:(NSInteger)index{
-    WJFitnessController *titleController = self.childViewControllers[index];
+    WJArrangeController *titleController = self.childViewControllers[index];
     // 如果是第一次调用,配置约束
     if (titleController.isConfigConstraint == NO) {
         [self.contentView addSubview:view];
@@ -192,7 +191,7 @@
     
     if (index > self.childViewControllers.count - 1) return;
     // 取出子控制器
-    WJFitnessController *vc = self.childViewControllers[index];
+    WJArrangeController *vc = self.childViewControllers[index];
     [self configChildView:vc.view WithIndex:index];
     
     

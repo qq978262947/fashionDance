@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="139" id="R2A-Hv-nH8" customClass="WJSpecialVideoCell">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="139" id="R2A-Hv-nH8" customClass="WJFindHotCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="139"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R2A-Hv-nH8" id="7tG-rW-8vM">
@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkd-K5-u0Q">
-                        <rect key="frame" x="2" y="2" width="316" height="21"/>
+                        <rect key="frame" x="2" y="5" width="316" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="fWP-1e-OTx"/>
                         </constraints>
@@ -24,18 +24,12 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4KX-7t-qzr">
-                        <rect key="frame" x="10" y="25" width="300" height="103.5"/>
+                        <rect key="frame" x="10" y="28" width="300" height="100.5"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erm-al-s6L">
-                        <rect key="frame" x="20" y="102.5" width="33" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3D-24-SUC">
-                        <rect key="frame" x="267" y="102.5" width="33" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="frame" x="20" y="113" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="0.9718211206896552" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACA-N7-Tz4" customClass="WJProgressView">
@@ -46,8 +40,8 @@
                             <constraint firstAttribute="height" constant="50" id="DJz-lK-rpt"/>
                         </constraints>
                     </view>
-                    <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVE-Xe-i40">
-                        <rect key="frame" x="0.0" y="137.5" width="320" height="1"/>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVE-Xe-i40">
+                        <rect key="frame" x="0.0" y="137" width="320" height="1"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="kw5-qw-qeq"/>
@@ -58,11 +52,9 @@
                     <constraint firstItem="erm-al-s6L" firstAttribute="leading" secondItem="7tG-rW-8vM" secondAttribute="leading" constant="20" id="2IV-xt-adm"/>
                     <constraint firstItem="Bkd-K5-u0Q" firstAttribute="leading" secondItem="7tG-rW-8vM" secondAttribute="leading" constant="2" id="6pR-ba-IWG"/>
                     <constraint firstItem="EVE-Xe-i40" firstAttribute="leading" secondItem="7tG-rW-8vM" secondAttribute="leading" id="ED2-uw-pfZ"/>
-                    <constraint firstItem="Bkd-K5-u0Q" firstAttribute="top" secondItem="7tG-rW-8vM" secondAttribute="top" constant="2" id="GbP-hT-zYb"/>
-                    <constraint firstAttribute="bottom" secondItem="m3D-24-SUC" secondAttribute="bottom" constant="20" id="Imi-UB-iY6"/>
-                    <constraint firstAttribute="trailing" secondItem="m3D-24-SUC" secondAttribute="trailing" constant="20" id="JQ4-vd-Nra"/>
+                    <constraint firstItem="Bkd-K5-u0Q" firstAttribute="top" secondItem="7tG-rW-8vM" secondAttribute="top" constant="5" id="GbP-hT-zYb"/>
                     <constraint firstAttribute="trailing" secondItem="Bkd-K5-u0Q" secondAttribute="trailing" constant="2" id="PPk-Vl-6SP"/>
-                    <constraint firstAttribute="bottom" secondItem="erm-al-s6L" secondAttribute="bottom" constant="20" id="Pk4-Kx-at4"/>
+                    <constraint firstAttribute="bottom" secondItem="erm-al-s6L" secondAttribute="bottom" constant="5" id="Pk4-Kx-at4"/>
                     <constraint firstItem="ACA-N7-Tz4" firstAttribute="centerY" secondItem="7tG-rW-8vM" secondAttribute="centerY" id="PwH-Hy-iiB"/>
                     <constraint firstAttribute="trailing" secondItem="EVE-Xe-i40" secondAttribute="trailing" id="bNb-lQ-xkw"/>
                     <constraint firstItem="4KX-7t-qzr" firstAttribute="top" secondItem="Bkd-K5-u0Q" secondAttribute="bottom" constant="2" id="bmA-RS-W23"/>
@@ -75,7 +67,6 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="VideoImageView" destination="4KX-7t-qzr" id="XXg-3q-Etv"/>
-                <outlet property="clickLabel" destination="m3D-24-SUC" id="301-e9-zq0"/>
                 <outlet property="favoritesLabel" destination="erm-al-s6L" id="fZx-gO-hji"/>
                 <outlet property="progressView" destination="ACA-N7-Tz4" id="yha-Ic-Arx"/>
                 <outlet property="titleLabel" destination="Bkd-K5-u0Q" id="ic8-fl-Lpb"/>

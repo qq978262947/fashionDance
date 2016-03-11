@@ -107,11 +107,14 @@
     NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/cmsnews/list_%lli_%lli.json", self.st ,self.et];
     [[WJHttpTool httpTool]get:urlString params:nil success:^(NSDictionary *responseObj) {
         WJConsultingResult *result = [WJConsultingResult mj_objectWithKeyValues:responseObj];
-        
-        self.st = result.result.st;
-        self.et = result.result.et;
-        [self.listArray addObjectsFromArray:result.result.list];
-        [self.tableView reloadData];
+        if (result != nil) {
+            self.st = result.result.st;
+            self.et = result.result.et;
+            [self.listArray addObjectsFromArray:result.result.list];
+            [self.tableView reloadData];
+        } else {
+            [self.tableView.mj_footer endRefreshingWithNoMoreData];
+        }
         [self.tableView.mj_footer endRefreshing];
     } failure:^(NSError *error) {
         [self.tableView.mj_footer endRefreshing];
