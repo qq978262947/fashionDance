@@ -8,7 +8,6 @@
 
 #import "WJArrangeController.h"
 #import "WJHttpTool.h"
-#import "WJExetensionTool.h"
 #import <AFNetworking.h>
 #import <MJRefresh.h>
 #import "WJSpecialVideoCell.h"

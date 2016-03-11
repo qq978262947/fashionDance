@@ -10,4 +10,9 @@
 
 @interface LLCarTypeDetailController : UIViewController
 
+/**
+ *初始化务必用此方法  by：需保证在网络请求前已传入modelID
+ */
++(LLCarTypeDetailController*)controllerWithModelId:(NSString*)modelID;
+
 @end
