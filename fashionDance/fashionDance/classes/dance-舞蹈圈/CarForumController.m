@@ -18,6 +18,11 @@
     [super viewDidLoad];
     // 设置背景色
     self.view.backgroundColor = WJGlobalBg;
+    
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,7 +8,6 @@
 
 #import "WJArrangeController.h"
 #import "WJHttpTool.h"
-#import "WJExetensionTool.h"
 #import <AFNetworking.h>
 #import <MJRefresh.h>
 #import "WJSpecialVideoCell.h"
@@ -70,11 +69,11 @@
 //    } failure:^(NSError *error) {
 //        [self.tableView.mj_header endRefreshing];
 //    }];
-    [[WJHttpTool httpTool]GET:@"" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-    }];
+//    [[WJHttpTool httpTool]GET:@"" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        
+//    }];
 }
 
 // 读区更多数据
