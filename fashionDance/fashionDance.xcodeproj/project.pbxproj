@@ -12,7 +12,6 @@
 		DA0C83F91C8FBDDF00F7D8D0 /* WJSpecialVideoParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C83F81C8FBDDF00F7D8D0 /* WJSpecialVideoParam.m */; };
 		DA0C83FC1C8FBE1600F7D8D0 /* WJSpecialListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C83FB1C8FBE1600F7D8D0 /* WJSpecialListResult.m */; };
 		DA0C83FF1C8FBE5900F7D8D0 /* WJSpecialList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C83FE1C8FBE5900F7D8D0 /* WJSpecialList.m */; };
-		DA0C84031C8FBF2000F7D8D0 /* WJExetensionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C84021C8FBF2000F7D8D0 /* WJExetensionTool.m */; };
 		DA0C84071C8FC2A100F7D8D0 /* WJSpecialVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C84061C8FC2A100F7D8D0 /* WJSpecialVideoCell.m */; };
 		DA0C840B1C8FC72B00F7D8D0 /* WJSpecialVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0C840A1C8FC72B00F7D8D0 /* WJSpecialVideoCell.xib */; };
 		DA0C840F1C8FC91B00F7D8D0 /* WJProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C840E1C8FC91B00F7D8D0 /* WJProgressView.m */; };
@@ -82,8 +81,6 @@
 		DA0C83FB1C8FBE1600F7D8D0 /* WJSpecialListResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJSpecialListResult.m; sourceTree = "<group>"; };
 		DA0C83FD1C8FBE5900F7D8D0 /* WJSpecialList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJSpecialList.h; sourceTree = "<group>"; };
 		DA0C83FE1C8FBE5900F7D8D0 /* WJSpecialList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJSpecialList.m; sourceTree = "<group>"; };
-		DA0C84011C8FBF2000F7D8D0 /* WJExetensionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJExetensionTool.h; sourceTree = "<group>"; };
-		DA0C84021C8FBF2000F7D8D0 /* WJExetensionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJExetensionTool.m; sourceTree = "<group>"; };
 		DA0C84051C8FC2A100F7D8D0 /* WJSpecialVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJSpecialVideoCell.h; sourceTree = "<group>"; };
 		DA0C84061C8FC2A100F7D8D0 /* WJSpecialVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJSpecialVideoCell.m; sourceTree = "<group>"; };
 		DA0C840A1C8FC72B00F7D8D0 /* WJSpecialVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WJSpecialVideoCell.xib; sourceTree = "<group>"; };
@@ -224,15 +221,6 @@
 				DA825B1D1C925482000C5EE4 /* WJConsultingResult.m */,
 			);
 			path = result;
-			sourceTree = "<group>";
-		};
-		DA0C84001C8FBF2000F7D8D0 /* MJExetensionTool */ = {
-			isa = PBXGroup;
-			children = (
-				DA0C84011C8FBF2000F7D8D0 /* WJExetensionTool.h */,
-				DA0C84021C8FBF2000F7D8D0 /* WJExetensionTool.m */,
-			);
-			path = MJExetensionTool;
 			sourceTree = "<group>";
 		};
 		DA0C84041C8FC28000F7D8D0 /* cell */ = {
@@ -564,7 +552,6 @@
 		DAE93A4D1C8E771200F03A67 /* Main-主要 */ = {
 			isa = PBXGroup;
 			children = (
-				DA0C84001C8FBF2000F7D8D0 /* MJExetensionTool */,
 				DA0C83DC1C8FBC7B00F7D8D0 /* httptool */,
 				DAE93A4E1C8E771200F03A67 /* category */,
 				DAE93A4F1C8E771200F03A67 /* controller */,
@@ -841,7 +828,6 @@
 				DA54AECB1C8EC27A000A7EA0 /* WJArrangeController.m in Sources */,
 				DAE93A881C8E7A9C00F03A67 /* ViewController.m in Sources */,
 				DAE93A071C8E75B900F03A67 /* main.m in Sources */,
-				DA0C84031C8FBF2000F7D8D0 /* WJExetensionTool.m in Sources */,
 				DA825B181C92521C000C5EE4 /* CarConsultingController.m in Sources */,
 				DA54AECF1C8EC27A000A7EA0 /* WJTipsController.m in Sources */,
 				DA54AE931C8E7D6D000A7EA0 /* CarMineController.m in Sources */,

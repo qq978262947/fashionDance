@@ -70,9 +70,9 @@
 //    } failure:^(NSError *error) {
 //        [self.tableView.mj_header endRefreshing];
 //    }];
-    [[WJHttpTool httpTool]get:@"" params:nil success:^(id result) {
+    [[WJHttpTool httpTool]GET:@"" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-    } failure:^(NSError *error) {
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
 }

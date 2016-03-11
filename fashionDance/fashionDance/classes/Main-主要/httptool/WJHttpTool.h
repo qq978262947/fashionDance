@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking.h>
 
-@interface WJHttpTool : NSObject
+@interface WJHttpTool : AFHTTPSessionManager
 
-
+/**
+ *  实例化方法
+ *
+ *  @return 返回一个实例对象
+ */
 + (instancetype)httpTool;
 
 /**
