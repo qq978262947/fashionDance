@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A68FAFEFF4F4A49290AF4C6D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2E3BD33B03E9DF56A54E8A /* libPods.a */; };
-		DA0C83EB1C8FBC7B00F7D8D0 /* WJBaseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C83DE1C8FBC7B00F7D8D0 /* WJBaseTool.m */; };
 		DA0C83ED1C8FBC7B00F7D8D0 /* WJHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C83E21C8FBC7B00F7D8D0 /* WJHttpTool.m */; };
-		DA0C83F41C8FBCBC00F7D8D0 /* WJVideoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C83F31C8FBCBC00F7D8D0 /* WJVideoTool.m */; };
 		DA0C83F91C8FBDDF00F7D8D0 /* WJSpecialVideoParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C83F81C8FBDDF00F7D8D0 /* WJSpecialVideoParam.m */; };
 		DA0C83FC1C8FBE1600F7D8D0 /* WJSpecialListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C83FB1C8FBE1600F7D8D0 /* WJSpecialListResult.m */; };
 		DA0C83FF1C8FBE5900F7D8D0 /* WJSpecialList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C83FE1C8FBE5900F7D8D0 /* WJSpecialList.m */; };
@@ -30,7 +28,6 @@
 		DA54AECE1C8EC27A000A7EA0 /* WJMaquillageControler.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AEC71C8EC27A000A7EA0 /* WJMaquillageControler.m */; };
 		DA54AECF1C8EC27A000A7EA0 /* WJTipsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AEC91C8EC27A000A7EA0 /* WJTipsController.m */; };
 		DA825B181C92521C000C5EE4 /* CarConsultingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825B171C92521C000C5EE4 /* CarConsultingController.m */; };
-		DA825B1B1C9253B6000C5EE4 /* WJConsultingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825B1A1C9253B6000C5EE4 /* WJConsultingTool.m */; };
 		DA825B1E1C925482000C5EE4 /* WJConsultingResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825B1D1C925482000C5EE4 /* WJConsultingResult.m */; };
 		DA825B251C9261CF000C5EE4 /* WJConsultingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825B231C9261CF000C5EE4 /* WJConsultingCell.m */; };
 		DA825B261C9261CF000C5EE4 /* WJConsultingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA825B241C9261CF000C5EE4 /* WJConsultingCell.xib */; };
@@ -77,12 +74,8 @@
 		6C2E3BD33B03E9DF56A54E8A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB5973FF1B297B050B1A609 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7CF344E4DA0F93C7E0B1D029 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		DA0C83DD1C8FBC7B00F7D8D0 /* WJBaseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJBaseTool.h; sourceTree = "<group>"; };
-		DA0C83DE1C8FBC7B00F7D8D0 /* WJBaseTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJBaseTool.m; sourceTree = "<group>"; };
 		DA0C83E11C8FBC7B00F7D8D0 /* WJHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJHttpTool.h; sourceTree = "<group>"; };
 		DA0C83E21C8FBC7B00F7D8D0 /* WJHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJHttpTool.m; sourceTree = "<group>"; };
-		DA0C83F21C8FBCBC00F7D8D0 /* WJVideoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJVideoTool.h; sourceTree = "<group>"; };
-		DA0C83F31C8FBCBC00F7D8D0 /* WJVideoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJVideoTool.m; sourceTree = "<group>"; };
 		DA0C83F71C8FBDDF00F7D8D0 /* WJSpecialVideoParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJSpecialVideoParam.h; sourceTree = "<group>"; };
 		DA0C83F81C8FBDDF00F7D8D0 /* WJSpecialVideoParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJSpecialVideoParam.m; sourceTree = "<group>"; };
 		DA0C83FA1C8FBE1600F7D8D0 /* WJSpecialListResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJSpecialListResult.h; sourceTree = "<group>"; };
@@ -120,8 +113,6 @@
 		DA54AEC91C8EC27A000A7EA0 /* WJTipsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJTipsController.m; sourceTree = "<group>"; };
 		DA825B161C92521C000C5EE4 /* CarConsultingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarConsultingController.h; sourceTree = "<group>"; };
 		DA825B171C92521C000C5EE4 /* CarConsultingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarConsultingController.m; sourceTree = "<group>"; };
-		DA825B191C9253B6000C5EE4 /* WJConsultingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJConsultingTool.h; sourceTree = "<group>"; };
-		DA825B1A1C9253B6000C5EE4 /* WJConsultingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJConsultingTool.m; sourceTree = "<group>"; };
 		DA825B1C1C925482000C5EE4 /* WJConsultingResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJConsultingResult.h; sourceTree = "<group>"; };
 		DA825B1D1C925482000C5EE4 /* WJConsultingResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJConsultingResult.m; sourceTree = "<group>"; };
 		DA825B221C9261CF000C5EE4 /* WJConsultingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJConsultingCell.h; sourceTree = "<group>"; };
@@ -207,14 +198,8 @@
 		DA0C83DC1C8FBC7B00F7D8D0 /* httptool */ = {
 			isa = PBXGroup;
 			children = (
-				DA0C83DD1C8FBC7B00F7D8D0 /* WJBaseTool.h */,
-				DA0C83DE1C8FBC7B00F7D8D0 /* WJBaseTool.m */,
 				DA0C83E11C8FBC7B00F7D8D0 /* WJHttpTool.h */,
 				DA0C83E21C8FBC7B00F7D8D0 /* WJHttpTool.m */,
-				DA0C83F21C8FBCBC00F7D8D0 /* WJVideoTool.h */,
-				DA0C83F31C8FBCBC00F7D8D0 /* WJVideoTool.m */,
-				DA825B191C9253B6000C5EE4 /* WJConsultingTool.h */,
-				DA825B1A1C9253B6000C5EE4 /* WJConsultingTool.m */,
 			);
 			path = httptool;
 			sourceTree = "<group>";
@@ -859,10 +844,8 @@
 				DA0C84031C8FBF2000F7D8D0 /* WJExetensionTool.m in Sources */,
 				DA825B181C92521C000C5EE4 /* CarConsultingController.m in Sources */,
 				DA54AECF1C8EC27A000A7EA0 /* WJTipsController.m in Sources */,
-				DA0C83F41C8FBCBC00F7D8D0 /* WJVideoTool.m in Sources */,
 				DA54AE931C8E7D6D000A7EA0 /* CarMineController.m in Sources */,
 				DA825B1E1C925482000C5EE4 /* WJConsultingResult.m in Sources */,
-				DA0C83EB1C8FBC7B00F7D8D0 /* WJBaseTool.m in Sources */,
 				DAE93A851C8E7A9C00F03A67 /* UIImage+cirlcle.m in Sources */,
 				DA0C83ED1C8FBC7B00F7D8D0 /* WJHttpTool.m in Sources */,
 				DA825B2A1C92716F000C5EE4 /* WJContainerView.m in Sources */,
@@ -877,7 +860,6 @@
 				DA54AECD1C8EC27A000A7EA0 /* WJFitnessController.m in Sources */,
 				DA54AECE1C8EC27A000A7EA0 /* WJMaquillageControler.m in Sources */,
 				DA54AECA1C8EC27A000A7EA0 /* WJHotCarController.m in Sources */,
-				DA825B1B1C9253B6000C5EE4 /* WJConsultingTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

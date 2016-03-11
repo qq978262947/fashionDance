@@ -7,7 +7,7 @@
 //
 
 #import "WJArrangeController.h"
-#import "WJVideoTool.h"
+#import "WJHttpTool.h"
 #import "WJExetensionTool.h"
 #import <AFNetworking.h>
 #import <MJRefresh.h>
@@ -58,33 +58,38 @@
 
 // 读区最新数据
 - (void)loadData {
-    WJSpecialVideoParam *param = [[WJSpecialVideoParam alloc]init];
-    self.pageIndex = 1;
-    param.aid = 1;
-    [WJExetensionTool setupSpecialVideoMode];
-    [[WJVideoTool sharedTool]videoWithParam:param success:^(WJSpecialListResult *result) {
-        [self.tableView.mj_header endRefreshing];
-        self.listArray = [NSMutableArray arrayWithArray:result.list];
-        [self.tableView reloadData];
-        self.pageIndex++;
+//    WJSpecialVideoParam *param = [[WJSpecialVideoParam alloc]init];
+//    self.pageIndex = 1;
+//    param.aid = 1;
+//    [WJExetensionTool setupSpecialVideoMode];
+//    [[WJVideoTool sharedTool]videoWithParam:param success:^(WJSpecialListResult *result) {
+//        [self.tableView.mj_header endRefreshing];
+//        self.listArray = [NSMutableArray arrayWithArray:result.list];
+//        [self.tableView reloadData];
+//        self.pageIndex++;
+//    } failure:^(NSError *error) {
+//        [self.tableView.mj_header endRefreshing];
+//    }];
+    [[WJHttpTool httpTool]get:@"" params:nil success:^(id result) {
+        
     } failure:^(NSError *error) {
-        [self.tableView.mj_header endRefreshing];
+        
     }];
 }
 
 // 读区更多数据
 - (void)loadMoreData {
-    WJSpecialVideoParam *param = [[WJSpecialVideoParam alloc]init];
-    param.aid = self.pageIndex;
-    [WJExetensionTool setupSpecialVideoMode];
-    [[WJVideoTool sharedTool]videoWithParam:param success:^(WJSpecialListResult *result) {
-        [self.tableView.mj_header endRefreshing];
-        [self.listArray addObjectsFromArray:result.list];
-        [self.tableView reloadData];
-        self.pageIndex++;
-    } failure:^(NSError *error) {
-        [self.tableView.mj_header endRefreshing];
-    }];
+//    WJSpecialVideoParam *param = [[WJSpecialVideoParam alloc]init];
+//    param.aid = self.pageIndex;
+//    [WJExetensionTool setupSpecialVideoMode];
+//    [[WJVideoTool sharedTool]videoWithParam:param success:^(WJSpecialListResult *result) {
+//        [self.tableView.mj_header endRefreshing];
+//        [self.listArray addObjectsFromArray:result.list];
+//        [self.tableView reloadData];
+//        self.pageIndex++;
+//    } failure:^(NSError *error) {
+//        [self.tableView.mj_header endRefreshing];
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {

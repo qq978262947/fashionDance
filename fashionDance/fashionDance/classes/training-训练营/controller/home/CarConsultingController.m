@@ -7,7 +7,7 @@
 //
 
 #import "CarConsultingController.h"
-#import "WJConsultingTool.h"
+#import "WJHttpTool.h"
 #import "WJConsultingCell.h"
 #import "WJHeaderView.h"
 #import <MJRefresh.h>
@@ -55,8 +55,10 @@
 
 // 加载最新数据
 - (void)loadNewData {
-    [[WJConsultingTool sharedTool]consultingWithParam:nil success:^(WJConsultingResult *result) {
-        self.listArray = [NSMutableArray arrayWithArray:result.result.list];
+
+    
+    [[WJHttpTool httpTool]get:@"" params:nil success:^(id dict) {
+        //        self.listArray = [NSMutableArray arrayWithArray:result.result.list];
         [self.tableView reloadData];
         [self.tableView.mj_header endRefreshing];
     } failure:^(NSError *error) {
@@ -67,7 +69,7 @@
 
 // 加载更多数据
 - (void)loadMoreData {
-    [self.tableView.mj_header endRefreshing];
+    [self.tableView.mj_footer endRefreshing];
 }
 
 
