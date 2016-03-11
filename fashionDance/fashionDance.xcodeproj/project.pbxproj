@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A68FAFEFF4F4A49290AF4C6D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2E3BD33B03E9DF56A54E8A /* libPods.a */; };
+		BC9FDD6C1C92987300F255A7 /* CarForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9FDD6B1C92987300F255A7 /* CarForumController.m */; };
 		DA0C83ED1C8FBC7B00F7D8D0 /* WJHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C83E21C8FBC7B00F7D8D0 /* WJHttpTool.m */; };
 		DA0C83F91C8FBDDF00F7D8D0 /* WJSpecialVideoParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C83F81C8FBDDF00F7D8D0 /* WJSpecialVideoParam.m */; };
 		DA0C83FC1C8FBE1600F7D8D0 /* WJSpecialListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C83FB1C8FBE1600F7D8D0 /* WJSpecialListResult.m */; };
@@ -15,7 +16,6 @@
 		DA0C84071C8FC2A100F7D8D0 /* WJSpecialVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C84061C8FC2A100F7D8D0 /* WJSpecialVideoCell.m */; };
 		DA0C840B1C8FC72B00F7D8D0 /* WJSpecialVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0C840A1C8FC72B00F7D8D0 /* WJSpecialVideoCell.xib */; };
 		DA0C840F1C8FC91B00F7D8D0 /* WJProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C840E1C8FC91B00F7D8D0 /* WJProgressView.m */; };
-		DA54AE871C8E7CF1000A7EA0 /* CarForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AE861C8E7CF1000A7EA0 /* CarForumController.m */; };
 		DA54AE8A1C8E7D2B000A7EA0 /* CarFindController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AE891C8E7D2B000A7EA0 /* CarFindController.m */; };
 		DA54AE8D1C8E7D43000A7EA0 /* CarPreferentialController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AE8C1C8E7D43000A7EA0 /* CarPreferentialController.m */; };
 		DA54AE931C8E7D6D000A7EA0 /* CarMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA54AE921C8E7D6D000A7EA0 /* CarMineController.m */; };
@@ -73,6 +73,8 @@
 		6C2E3BD33B03E9DF56A54E8A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB5973FF1B297B050B1A609 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7CF344E4DA0F93C7E0B1D029 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BC9FDD6A1C92987300F255A7 /* CarForumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarForumController.h; path = ../CarForumController.h; sourceTree = "<group>"; };
+		BC9FDD6B1C92987300F255A7 /* CarForumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarForumController.m; path = ../CarForumController.m; sourceTree = "<group>"; };
 		DA0C83E11C8FBC7B00F7D8D0 /* WJHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJHttpTool.h; sourceTree = "<group>"; };
 		DA0C83E21C8FBC7B00F7D8D0 /* WJHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJHttpTool.m; sourceTree = "<group>"; };
 		DA0C83F71C8FBDDF00F7D8D0 /* WJSpecialVideoParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJSpecialVideoParam.h; sourceTree = "<group>"; };
@@ -86,8 +88,6 @@
 		DA0C840A1C8FC72B00F7D8D0 /* WJSpecialVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WJSpecialVideoCell.xib; sourceTree = "<group>"; };
 		DA0C840D1C8FC91B00F7D8D0 /* WJProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJProgressView.h; sourceTree = "<group>"; };
 		DA0C840E1C8FC91B00F7D8D0 /* WJProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJProgressView.m; sourceTree = "<group>"; };
-		DA54AE851C8E7CF1000A7EA0 /* CarForumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarForumController.h; path = ../CarForumController.h; sourceTree = "<group>"; };
-		DA54AE861C8E7CF1000A7EA0 /* CarForumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarForumController.m; path = ../CarForumController.m; sourceTree = "<group>"; };
 		DA54AE881C8E7D2B000A7EA0 /* CarFindController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarFindController.h; sourceTree = "<group>"; };
 		DA54AE891C8E7D2B000A7EA0 /* CarFindController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarFindController.m; sourceTree = "<group>"; };
 		DA54AE8B1C8E7D43000A7EA0 /* CarPreferentialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarPreferentialController.h; sourceTree = "<group>"; };
@@ -184,6 +184,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC9FDD6D1C92989900F255A7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC9FDD6A1C92987300F255A7 /* CarForumController.h */,
+				BC9FDD6B1C92987300F255A7 /* CarForumController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BC9FDD6E1C92989900F255A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC9FDD6F1C92989900F255A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D2848F50D929F27A8AF2F15B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,35 +399,12 @@
 		DAE93A391C8E76D400F03A67 /* forum-论坛 */ = {
 			isa = PBXGroup;
 			children = (
-				DAE93A3A1C8E76D400F03A67 /* controller */,
-				DAE93A3B1C8E76D400F03A67 /* model */,
-				DAE93A3C1C8E76D400F03A67 /* view */,
+				BC9FDD6D1C92989900F255A7 /* Controllers */,
+				BC9FDD6E1C92989900F255A7 /* Models */,
+				BC9FDD6F1C92989900F255A7 /* Views */,
 			);
 			name = "forum-论坛";
 			path = "dance-舞蹈圈";
-			sourceTree = "<group>";
-		};
-		DAE93A3A1C8E76D400F03A67 /* controller */ = {
-			isa = PBXGroup;
-			children = (
-				DA54AE851C8E7CF1000A7EA0 /* CarForumController.h */,
-				DA54AE861C8E7CF1000A7EA0 /* CarForumController.m */,
-			);
-			path = controller;
-			sourceTree = "<group>";
-		};
-		DAE93A3B1C8E76D400F03A67 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		DAE93A3C1C8E76D400F03A67 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 		DAE93A3D1C8E76D400F03A67 /* findCar-找车 */ = {
@@ -812,6 +812,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE93A871C8E7A9C00F03A67 /* UIView+WJExtension.m in Sources */,
+				BC9FDD6C1C92987300F255A7 /* CarForumController.m in Sources */,
 				DA54AECC1C8EC27A000A7EA0 /* WJBaseController.m in Sources */,
 				DAE93A551C8E774800F03A67 /* WJTabBarController.m in Sources */,
 				DAE93A811C8E7A9C00F03A67 /* Foundation+Log.m in Sources */,
@@ -821,7 +822,6 @@
 				DAE93A5B1C8E77A600F03A67 /* WJConst.m in Sources */,
 				DA0C84071C8FC2A100F7D8D0 /* WJSpecialVideoCell.m in Sources */,
 				DA0C840F1C8FC91B00F7D8D0 /* WJProgressView.m in Sources */,
-				DA54AE871C8E7CF1000A7EA0 /* CarForumController.m in Sources */,
 				DA54AE8D1C8E7D43000A7EA0 /* CarPreferentialController.m in Sources */,
 				DAE93A861C8E7A9C00F03A67 /* UIImageView+downloadImage.m in Sources */,
 				DA0C83FF1C8FBE5900F7D8D0 /* WJSpecialList.m in Sources */,
