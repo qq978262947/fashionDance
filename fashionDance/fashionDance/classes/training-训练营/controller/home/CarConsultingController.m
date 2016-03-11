@@ -11,10 +11,22 @@
 #import "WJConsultingCell.h"
 #import "WJHeaderView.h"
 #import <MJRefresh.h>
+#import <MJExtension.h>
+#import "WJConsultingResult.h"
+#import "WJHotCarController.h"
 
-
-@interface CarConsultingController ()
-
+@interface CarConsultingController () <WJHeaderViewDelegate>
+/**
+ *  封装的要拼接url请求参数st
+ */
+@property (assign, nonatomic)long long st;
+/**
+ *  封装的要拼接url请求参数et
+ */
+@property (assign, nonatomic)long long et;
+/**
+ *  存放数据源的数组
+ */
 @property (strong, nonatomic)NSMutableArray *listArray;
 
 @end
@@ -27,6 +39,8 @@
     [self setupTableView];
     // 读区数据
     [self setupRefresh];
+    
+    
     
 }
 
@@ -45,20 +59,41 @@
 // 初始化tableview
 - (void)setupTableView {
     // 创建header
-    UIView *header = [[UIView alloc] init];
-    header.backgroundColor = [UIColor greenColor];
-    header.size = CGSizeMake(WJScreenW, 100);
+    WJHeaderView *header = [[WJHeaderView alloc] init];
+    header.backgroundColor = [UIColor colorWithRed:235/255.0 green:235/255.0  blue:235/255.0  alpha:1.0];
+    header.size = CGSizeMake(WJScreenW, 120);
     // 设置header
+    header.delegate = self;
     self.tableView.tableHeaderView = header;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
+- (void)headerView:(WJHeaderView *)headerView DidClick:(WJHeaderViewButtonType)buttonType {
+    switch (buttonType) {
+        case WJHeaderViewButtonTypeFindHot:
+            [self.navigationController pushViewController:[[WJHotCarController alloc]init] animated:YES];
+            break;
+        case WJHeaderViewButtonTypeFindNewCar:
+            break;
+        case WJHeaderViewButtonTypeusedCar:
+            break;
+        case WJHeaderViewButtonTypeCheckBreakRules:
+            break;
+        default:
+            break;
+    }
+}
+
+
 // 加载最新数据
 - (void)loadNewData {
 
-    
-    [[WJHttpTool httpTool]get:@"" params:nil success:^(id dict) {
-        //        self.listArray = [NSMutableArray arrayWithArray:result.result.list];
+    [[WJHttpTool httpTool]get:@"http://autoapp.auto.sohu.com/api/cmsnews/list_1457578183979_1457671132872.json" params:nil success:^(NSDictionary *responseObj) {
+        WJConsultingResult *result = [WJConsultingResult mj_objectWithKeyValues:responseObj];
+        
+        self.st = result.result.st;
+        self.et = result.result.et;
+        self.listArray = [NSMutableArray arrayWithArray:result.result.list];
         [self.tableView reloadData];
         [self.tableView.mj_header endRefreshing];
     } failure:^(NSError *error) {
@@ -69,7 +104,18 @@
 
 // 加载更多数据
 - (void)loadMoreData {
-    [self.tableView.mj_footer endRefreshing];
+    NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/cmsnews/list_%lli_%lli.json", self.st ,self.et];
+    [[WJHttpTool httpTool]get:urlString params:nil success:^(NSDictionary *responseObj) {
+        WJConsultingResult *result = [WJConsultingResult mj_objectWithKeyValues:responseObj];
+        
+        self.st = result.result.st;
+        self.et = result.result.et;
+        [self.listArray addObjectsFromArray:result.result.list];
+        [self.tableView reloadData];
+        [self.tableView.mj_footer endRefreshing];
+    } failure:^(NSError *error) {
+        [self.tableView.mj_footer endRefreshing];
+    }];
 }
 
 
@@ -90,7 +136,6 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     return 90;
 }
 

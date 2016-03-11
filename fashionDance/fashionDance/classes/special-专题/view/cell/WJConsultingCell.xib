@@ -51,9 +51,9 @@
                         <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGs-Dw-uwo">
+                    <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGs-Dw-uwo" userLabel="分割线">
                         <rect key="frame" x="0.0" y="134.5" width="320" height="1"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="XtV-SY-qav"/>
                         </constraints>
@@ -72,7 +72,7 @@
                     <constraint firstItem="Kar-tI-AtZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="ZTY-5Q-5zf"/>
                     <constraint firstItem="lwz-yR-RFW" firstAttribute="leading" secondItem="Kar-tI-AtZ" secondAttribute="trailing" constant="5" id="c4X-CM-xan"/>
                     <constraint firstItem="lwz-yR-RFW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8nC-WE-Qr7" secondAttribute="bottom" constant="5" id="gEC-m9-QlP"/>
-                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8nC-WE-Qr7" secondAttribute="trailing" constant="5" id="goL-dW-BaW"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8nC-WE-Qr7" secondAttribute="trailing" constant="10" id="goL-dW-BaW"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="okS-3d-KIN" secondAttribute="trailing" constant="5" id="jas-Jj-PhY"/>
                     <constraint firstItem="okS-3d-KIN" firstAttribute="leading" secondItem="lwz-yR-RFW" secondAttribute="trailing" constant="2" id="njD-TP-jLN"/>
                     <constraint firstAttribute="trailing" secondItem="VGs-Dw-uwo" secondAttribute="trailing" id="opA-Pt-7s5"/>

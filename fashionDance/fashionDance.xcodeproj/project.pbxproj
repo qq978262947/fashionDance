@@ -10,7 +10,6 @@
 		A68FAFEFF4F4A49290AF4C6D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2E3BD33B03E9DF56A54E8A /* libPods.a */; };
 		BC9FDD6C1C92987300F255A7 /* CarForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9FDD6B1C92987300F255A7 /* CarForumController.m */; };
 		DA0C83ED1C8FBC7B00F7D8D0 /* WJHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C83E21C8FBC7B00F7D8D0 /* WJHttpTool.m */; };
-		DA0C83F91C8FBDDF00F7D8D0 /* WJSpecialVideoParam.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C83F81C8FBDDF00F7D8D0 /* WJSpecialVideoParam.m */; };
 		DA0C83FC1C8FBE1600F7D8D0 /* WJSpecialListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C83FB1C8FBE1600F7D8D0 /* WJSpecialListResult.m */; };
 		DA0C83FF1C8FBE5900F7D8D0 /* WJSpecialList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C83FE1C8FBE5900F7D8D0 /* WJSpecialList.m */; };
 		DA0C84071C8FC2A100F7D8D0 /* WJSpecialVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C84061C8FC2A100F7D8D0 /* WJSpecialVideoCell.m */; };
@@ -32,6 +31,7 @@
 		DA825B261C9261CF000C5EE4 /* WJConsultingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA825B241C9261CF000C5EE4 /* WJConsultingCell.xib */; };
 		DA825B2A1C92716F000C5EE4 /* WJContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825B291C92716F000C5EE4 /* WJContainerView.m */; };
 		DA825B2E1C9271A6000C5EE4 /* WJHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825B2D1C9271A6000C5EE4 /* WJHeaderView.m */; };
+		DA825B321C92A8C0000C5EE4 /* WJVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825B311C92A8C0000C5EE4 /* WJVerticalButton.m */; };
 		DAE93A071C8E75B900F03A67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE93A061C8E75B900F03A67 /* main.m */; };
 		DAE93A0A1C8E75B900F03A67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE93A091C8E75B900F03A67 /* AppDelegate.m */; };
 		DAE93A101C8E75B900F03A67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE93A0E1C8E75B900F03A67 /* Main.storyboard */; };
@@ -77,8 +77,6 @@
 		BC9FDD6B1C92987300F255A7 /* CarForumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarForumController.m; path = ../CarForumController.m; sourceTree = "<group>"; };
 		DA0C83E11C8FBC7B00F7D8D0 /* WJHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJHttpTool.h; sourceTree = "<group>"; };
 		DA0C83E21C8FBC7B00F7D8D0 /* WJHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJHttpTool.m; sourceTree = "<group>"; };
-		DA0C83F71C8FBDDF00F7D8D0 /* WJSpecialVideoParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJSpecialVideoParam.h; sourceTree = "<group>"; };
-		DA0C83F81C8FBDDF00F7D8D0 /* WJSpecialVideoParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJSpecialVideoParam.m; sourceTree = "<group>"; };
 		DA0C83FA1C8FBE1600F7D8D0 /* WJSpecialListResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJSpecialListResult.h; sourceTree = "<group>"; };
 		DA0C83FB1C8FBE1600F7D8D0 /* WJSpecialListResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJSpecialListResult.m; sourceTree = "<group>"; };
 		DA0C83FD1C8FBE5900F7D8D0 /* WJSpecialList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJSpecialList.h; sourceTree = "<group>"; };
@@ -119,6 +117,8 @@
 		DA825B291C92716F000C5EE4 /* WJContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJContainerView.m; sourceTree = "<group>"; };
 		DA825B2C1C9271A6000C5EE4 /* WJHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJHeaderView.h; sourceTree = "<group>"; };
 		DA825B2D1C9271A6000C5EE4 /* WJHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJHeaderView.m; sourceTree = "<group>"; };
+		DA825B301C92A8C0000C5EE4 /* WJVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJVerticalButton.h; sourceTree = "<group>"; };
+		DA825B311C92A8C0000C5EE4 /* WJVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJVerticalButton.m; sourceTree = "<group>"; };
 		DAE93A021C8E75B900F03A67 /* fashionDance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fashionDance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE93A061C8E75B900F03A67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAE93A081C8E75B900F03A67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -222,15 +222,6 @@
 				DA0C83E21C8FBC7B00F7D8D0 /* WJHttpTool.m */,
 			);
 			path = httptool;
-			sourceTree = "<group>";
-		};
-		DA0C83F51C8FBD8D00F7D8D0 /* param */ = {
-			isa = PBXGroup;
-			children = (
-				DA0C83F71C8FBDDF00F7D8D0 /* WJSpecialVideoParam.h */,
-				DA0C83F81C8FBDDF00F7D8D0 /* WJSpecialVideoParam.m */,
-			);
-			path = param;
 			sourceTree = "<group>";
 		};
 		DA0C83F61C8FBD8D00F7D8D0 /* result */ = {
@@ -498,7 +489,6 @@
 		DAE93A471C8E76D400F03A67 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				DA0C83F51C8FBD8D00F7D8D0 /* param */,
 				DA0C83F61C8FBD8D00F7D8D0 /* result */,
 			);
 			path = model;
@@ -507,6 +497,8 @@
 		DAE93A481C8E76D400F03A67 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				DA825B301C92A8C0000C5EE4 /* WJVerticalButton.h */,
+				DA825B311C92A8C0000C5EE4 /* WJVerticalButton.m */,
 				DA825B2B1C92717F000C5EE4 /* headerView */,
 				DA825B271C92716F000C5EE4 /* ContainerView */,
 				DA0C840C1C8FC91B00F7D8D0 /* progress */,
@@ -837,11 +829,11 @@
 				DA825B2A1C92716F000C5EE4 /* WJContainerView.m in Sources */,
 				DA0C83FC1C8FBE1600F7D8D0 /* WJSpecialListResult.m in Sources */,
 				DAE93A831C8E7A9C00F03A67 /* NSString+StringFromNumber.m in Sources */,
-				DA0C83F91C8FBDDF00F7D8D0 /* WJSpecialVideoParam.m in Sources */,
 				DA825B2E1C9271A6000C5EE4 /* WJHeaderView.m in Sources */,
 				DAE93A821C8E7A9C00F03A67 /* NSDate+WJExtension.m in Sources */,
 				DAE93A841C8E7A9C00F03A67 /* UIBarButtonItem+WJExtension.m in Sources */,
 				DA54AE8A1C8E7D2B000A7EA0 /* CarFindController.m in Sources */,
+				DA825B321C92A8C0000C5EE4 /* WJVerticalButton.m in Sources */,
 				DA54AE961C8EA31C000A7EA0 /* UIImage+reSize.m in Sources */,
 				DA54AECD1C8EC27A000A7EA0 /* WJFitnessController.m in Sources */,
 				DA54AECE1C8EC27A000A7EA0 /* WJMaquillageControler.m in Sources */,

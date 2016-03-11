@@ -11,6 +11,8 @@
 #import <AFNetworking.h>
 #import <MJRefresh.h>
 #import "WJSpecialVideoCell.h"
+#import <MJExtension.h>
+
 
 @interface WJArrangeController () <UITableViewDataSource, UITableViewDelegate>
 // 数据源数组
@@ -40,7 +42,7 @@
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.backgroundColor = [UIColor whiteColor];
 }
 
 // 集成刷新控件
@@ -69,11 +71,7 @@
 //    } failure:^(NSError *error) {
 //        [self.tableView.mj_header endRefreshing];
 //    }];
-//    [[WJHttpTool httpTool]GET:@"" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        
-//    }];
+    [self.tableView.mj_header endRefreshing];
 }
 
 // 读区更多数据
@@ -89,6 +87,7 @@
 //    } failure:^(NSError *error) {
 //        [self.tableView.mj_header endRefreshing];
 //    }];
+    [self.tableView.mj_header endRefreshing];
 }
 
 - (void)didReceiveMemoryWarning {

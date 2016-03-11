@@ -47,6 +47,7 @@
  *  初始化子控制器
  */
 - (void)setupChildControllers {
+    // 多个可修改为类名发射
     [self addChildVC:[[WJArrangeController alloc]init]];
     [self addChildVC:[[WJFitnessController alloc]init]];
     [self addChildVC:[[WJMaquillageControler alloc]init]];
@@ -57,11 +58,6 @@
  *  设置标题
  */
 - (void)setupContainerView {
-//    // 设置背景色
-//    self.view.backgroundColor = WJGlobalBg;
-//    
-//    UIView *titleView = [[UIView alloc]init];
-//    [self.view addSubview:titleView];
     
     // 1 添加存放按钮点scrollview
     UIScrollView *scrollView = [[UIScrollView alloc]init];
@@ -97,7 +93,7 @@
  */
 - (void)setupNav {
     // 设置导航栏左边的按钮
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(tagClick)];
+//    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(tagClick)];
     
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithReImage:@"comment_nav_item_share_icon" highImage:@"comment_nav_item_share_icon_click" target:self action:@selector(loginClick)];
     // 设置背景色
