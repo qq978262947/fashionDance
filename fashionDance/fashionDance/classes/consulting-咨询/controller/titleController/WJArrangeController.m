@@ -15,7 +15,14 @@
 #import "WJSUVResult.h"
 #import "WJFindHotCell.h"
 //http://autoapp.auto.sohu.com/api/model/listHot/body_2_type_6_page_1
-//http://autoapp.auto.sohu.com/api/model/listHot/body_2_type_6_page_2
+//http://autoapp.auto.sohu.com/api/model/listHot/body_0_type_0_page_1
+//http://autoapp.auto.sohu.com/api/model/listHot/body_0_type_1_page_1
+//http://autoapp.auto.sohu.com/api/model/listHot/body_0_type_2_page_1
+//http://autoapp.auto.sohu.com/api/model/listHot/body_0_type_3_page_1
+//http://autoapp.auto.sohu.com/api/model/listHot/body_0_type_4_page_1
+//http://autoapp.auto.sohu.com/api/model/listHot/body_0_type_5_page_1
+//http://autoapp.auto.sohu.com/api/model/listHot/body_1_type_6_page_1
+
 
 @interface WJArrangeController () <UITableViewDataSource, UITableViewDelegate>
 // 数据源数组
@@ -63,7 +70,8 @@
 // 读区最新数据
 - (void)loadData {
     self.pageIndex = 1;
-    [[WJHttpTool httpTool]get:@"http://autoapp.auto.sohu.com/api/model/listHot/body_2_type_6_page_1" params:nil success:^(NSDictionary *responseObj) {
+    NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/model/listHot/body_%li_type_%li_page_1", self.body , self.type];
+    [[WJHttpTool httpTool]get:urlString params:nil success:^(NSDictionary *responseObj) {
         WJSUVResult *result = [WJSUVResult mj_objectWithKeyValues:responseObj];
         if (result != nil) {
             self.listArray = [NSMutableArray arrayWithArray:result.items];
@@ -79,20 +87,19 @@
 
 // 读区更多数据
 - (void)loadMoreData {
-    NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/model/listHot/body_2_type_6_page_%li",++self.pageIndex];
+    NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/model/listHot/body_%li_type_%li_page_%li", self.body , self.type, ++self.pageIndex];
     [[WJHttpTool httpTool]get:urlString params:nil success:^(NSDictionary *responseObj) {
         WJSUVResult *result = [WJSUVResult mj_objectWithKeyValues:responseObj];
-        if (result != nil) {
+        if (result.items != 0) {
             [self.listArray addObjectsFromArray:result.items];
             [self.tableView reloadData];
+            [self.tableView.mj_footer endRefreshing];
         } else {
             [self.tableView.mj_footer endRefreshingWithNoMoreData];
         }
-        [self.tableView.mj_header endRefreshing];
     } failure:^(NSError *error) {
         [self.tableView.mj_header endRefreshing];
     }];
-    [self.tableView.mj_header endRefreshing];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -126,6 +133,7 @@
     vc.view.backgroundColor = [UIColor redColor];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
 
 
 @end

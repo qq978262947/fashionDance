@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 @interface WJArrangeController : UITableViewController
 
 @property (assign, nonatomic, getter=isConfigConstraint)BOOL configConstraint;
+
+@property (assign, nonatomic)long body;
+
+@property (assign, nonatomic)long type;
 
 @end

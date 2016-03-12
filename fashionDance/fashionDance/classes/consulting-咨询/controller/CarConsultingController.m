@@ -14,6 +14,8 @@
 #import <MJExtension.h>
 #import "WJConsultingResult.h"
 #import "WJHotCarController.h"
+#import "WJWebViewController.h"
+#import "WJFindCarController.h"
 
 @interface CarConsultingController () <WJHeaderViewDelegate>
 /**
@@ -74,6 +76,7 @@
             [self.navigationController pushViewController:[[WJHotCarController alloc]init] animated:YES];
             break;
         case WJHeaderViewButtonTypeFindNewCar:
+            [self.navigationController pushViewController:[[WJFindCarController alloc]init] animated:YES];
             break;
         case WJHeaderViewButtonTypeusedCar:
             break;
@@ -141,5 +144,15 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 90;
 }
+
+#pragma mark - Table view delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    WJList *list = self.listArray[indexPath.row];
+    WJWebViewController *webViewController = [[WJWebViewController alloc]init];
+    webViewController.urlString = list.url;
+    [self.navigationController pushViewController:webViewController animated:YES];
+}
+
+
 
 @end
