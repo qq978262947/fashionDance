@@ -45,10 +45,14 @@
  */
 - (void)setupChildControllers {
     // 多个可修改为类名发射
-    [self addChildVC:[[WJArrangeController alloc]init]];
-//    [self addChildVC:[[WJFitnessController alloc]init]];
-//    [self addChildVC:[[WJMaquillageControler alloc]init]];
-//    [self addChildVC:[[WJTipsController alloc]init]];
+    [self addChildVC:[[WJArrangeController alloc]init] WithBody:2 andType:6];
+    [self addChildVC:[[WJArrangeController alloc]init] WithBody:0 andType:0];
+    [self addChildVC:[[WJArrangeController alloc]init] WithBody:0 andType:1];
+    [self addChildVC:[[WJArrangeController alloc]init] WithBody:0 andType:2];
+    [self addChildVC:[[WJArrangeController alloc]init] WithBody:0 andType:3];
+    [self addChildVC:[[WJArrangeController alloc]init] WithBody:0 andType:4];
+    [self addChildVC:[[WJArrangeController alloc]init] WithBody:0 andType:5];
+    [self addChildVC:[[WJArrangeController alloc]init] WithBody:1 andType:6];
 }
 
 /**
@@ -68,7 +72,7 @@
     // 2 添加容器view,存放标题按钮的
     WJContainerView *containerView = [WJContainerView containerView];
     self.containerView = containerView;
-    containerView.titles = @[@"推荐",@"化妆",@"编排",@"小贴士",@"化妆",@"编排",@"小贴士"];
+    containerView.titles = @[@"SUV",@"微型车",@"小型车",@"紧凑型车",@"中型车",@"中大型车",@"MPV"];
     [scrollView addSubview:containerView];
     [self configContainerView];
     [containerView setBackgroundColor:[UIColor whiteColor]];
@@ -93,7 +97,7 @@
     // 设置导航栏左边的按钮
 //    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(tagClick)];
     
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithReImage:@"comment_nav_item_share_icon" highImage:@"comment_nav_item_share_icon_click" target:self action:@selector(loginClick)];
+//    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithReImage:@"comment_nav_item_share_icon" highImage:@"comment_nav_item_share_icon_click" target:self action:@selector(loginClick)];
     // 设置背景色
     self.view.backgroundColor = WJGlobalBg;
 }
@@ -217,17 +221,11 @@
 }
 
 #pragma mark - privateMethod
-// 点击左边的按钮
-- (void)tagClick{
-    
-}
-// 点击右边的按钮
-- (void)loginClick {
-    
-}
 
 // 添加自控制器
-- (void)addChildVC:(UIViewController *)vc {
+- (void)addChildVC:(WJArrangeController *)vc  WithBody:(long)body andType:(long)type{
+    vc.body = body;
+    vc.type = type;
     [self addChildViewController:vc];
 }
 

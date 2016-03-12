@@ -38,9 +38,15 @@
 		DA825C8B1C92E943000C5EE4 /* LLCarTypeInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825C791C92E942000C5EE4 /* LLCarTypeInfoModel.m */; };
 		DA825C8C1C92E943000C5EE4 /* LLCarTypeVersionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825C7B1C92E942000C5EE4 /* LLCarTypeVersionModel.m */; };
 		DA825C971C92EAD2000C5EE4 /* CarConsultingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825C941C92EAD2000C5EE4 /* CarConsultingController.m */; };
-		DA825C981C92EAD2000C5EE4 /* WJHotCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825C961C92EAD2000C5EE4 /* WJHotCarController.m */; };
 		DA825C9B1C92EB39000C5EE4 /* CarMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825C9A1C92EB39000C5EE4 /* CarMineController.m */; };
 		DA825C9E1C92EB7E000C5EE4 /* WJArrangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825C9D1C92EB7E000C5EE4 /* WJArrangeController.m */; };
+		DA89F3461C92FDCE003D5AF8 /* WJFindCarResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DA89F3451C92FDCE003D5AF8 /* WJFindCarResult.m */; };
+		DA89F3511C92FE85003D5AF8 /* WJFindCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA89F34C1C92FE85003D5AF8 /* WJFindCarController.m */; };
+		DA89F3521C92FE85003D5AF8 /* WJHotCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA89F34E1C92FE85003D5AF8 /* WJHotCarController.m */; };
+		DA89F3531C92FE85003D5AF8 /* WJWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA89F3501C92FE85003D5AF8 /* WJWebViewController.m */; };
+		DA89F3561C93009B003D5AF8 /* WJWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DA89F3551C93009B003D5AF8 /* WJWaterFlowLayout.m */; };
+		DA89F35A1C9301B4003D5AF8 /* WJCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA89F3581C9301B4003D5AF8 /* WJCollectionViewCell.m */; };
+		DA89F35B1C9301B4003D5AF8 /* WJCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA89F3591C9301B4003D5AF8 /* WJCollectionViewCell.xib */; };
 		DAE93A071C8E75B900F03A67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE93A061C8E75B900F03A67 /* main.m */; };
 		DAE93A0A1C8E75B900F03A67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE93A091C8E75B900F03A67 /* AppDelegate.m */; };
 		DAE93A101C8E75B900F03A67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE93A0E1C8E75B900F03A67 /* Main.storyboard */; };
@@ -129,12 +135,23 @@
 		DA825C7B1C92E942000C5EE4 /* LLCarTypeVersionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCarTypeVersionModel.m; sourceTree = "<group>"; };
 		DA825C931C92EAD2000C5EE4 /* CarConsultingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarConsultingController.h; sourceTree = "<group>"; };
 		DA825C941C92EAD2000C5EE4 /* CarConsultingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarConsultingController.m; sourceTree = "<group>"; };
-		DA825C951C92EAD2000C5EE4 /* WJHotCarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJHotCarController.h; sourceTree = "<group>"; };
-		DA825C961C92EAD2000C5EE4 /* WJHotCarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJHotCarController.m; sourceTree = "<group>"; };
 		DA825C991C92EB39000C5EE4 /* CarMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarMineController.h; path = ../../../../../Documents/CarMineController.h; sourceTree = "<group>"; };
 		DA825C9A1C92EB39000C5EE4 /* CarMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarMineController.m; path = ../../../../../Documents/CarMineController.m; sourceTree = "<group>"; };
 		DA825C9C1C92EB7E000C5EE4 /* WJArrangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJArrangeController.h; sourceTree = "<group>"; };
 		DA825C9D1C92EB7E000C5EE4 /* WJArrangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJArrangeController.m; sourceTree = "<group>"; };
+		DA89F3441C92FDCE003D5AF8 /* WJFindCarResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJFindCarResult.h; sourceTree = "<group>"; };
+		DA89F3451C92FDCE003D5AF8 /* WJFindCarResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJFindCarResult.m; sourceTree = "<group>"; };
+		DA89F34B1C92FE85003D5AF8 /* WJFindCarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJFindCarController.h; sourceTree = "<group>"; };
+		DA89F34C1C92FE85003D5AF8 /* WJFindCarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJFindCarController.m; sourceTree = "<group>"; };
+		DA89F34D1C92FE85003D5AF8 /* WJHotCarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJHotCarController.h; sourceTree = "<group>"; };
+		DA89F34E1C92FE85003D5AF8 /* WJHotCarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJHotCarController.m; sourceTree = "<group>"; };
+		DA89F34F1C92FE85003D5AF8 /* WJWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJWebViewController.h; sourceTree = "<group>"; };
+		DA89F3501C92FE85003D5AF8 /* WJWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJWebViewController.m; sourceTree = "<group>"; };
+		DA89F3541C93009B003D5AF8 /* WJWaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJWaterFlowLayout.h; sourceTree = "<group>"; };
+		DA89F3551C93009B003D5AF8 /* WJWaterFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJWaterFlowLayout.m; sourceTree = "<group>"; };
+		DA89F3571C9301B4003D5AF8 /* WJCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJCollectionViewCell.h; sourceTree = "<group>"; };
+		DA89F3581C9301B4003D5AF8 /* WJCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJCollectionViewCell.m; sourceTree = "<group>"; };
+		DA89F3591C9301B4003D5AF8 /* WJCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WJCollectionViewCell.xib; sourceTree = "<group>"; };
 		DAE93A021C8E75B900F03A67 /* fashionDance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fashionDance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE93A061C8E75B900F03A67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAE93A081C8E75B900F03A67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -218,8 +235,7 @@
 			children = (
 				DA825C931C92EAD2000C5EE4 /* CarConsultingController.h */,
 				DA825C941C92EAD2000C5EE4 /* CarConsultingController.m */,
-				DA825C951C92EAD2000C5EE4 /* WJHotCarController.h */,
-				DA825C961C92EAD2000C5EE4 /* WJHotCarController.m */,
+				DA89F34A1C92FE85003D5AF8 /* ChildController */,
 				DA825BC21C92E86B000C5EE4 /* home */,
 				DA825BC51C92E86B000C5EE4 /* titleController */,
 			);
@@ -274,6 +290,8 @@
 				DA825BD91C92E86B000C5EE4 /* WJConsultingResult.m */,
 				DA825BDA1C92E86B000C5EE4 /* WJSUVResult.h */,
 				DA825BDB1C92E86B000C5EE4 /* WJSUVResult.m */,
+				DA89F3441C92FDCE003D5AF8 /* WJFindCarResult.h */,
+				DA89F3451C92FDCE003D5AF8 /* WJFindCarResult.m */,
 			);
 			path = result;
 			sourceTree = "<group>";
@@ -287,6 +305,8 @@
 				DA825BEA1C92E86B000C5EE4 /* progress */,
 				DA825BED1C92E86B000C5EE4 /* WJVerticalButton.h */,
 				DA825BEE1C92E86B000C5EE4 /* WJVerticalButton.m */,
+				DA89F3541C93009B003D5AF8 /* WJWaterFlowLayout.h */,
+				DA89F3551C93009B003D5AF8 /* WJWaterFlowLayout.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -300,6 +320,9 @@
 				DA825BE11C92E86B000C5EE4 /* WJFindHotCell.h */,
 				DA825BE21C92E86B000C5EE4 /* WJFindHotCell.m */,
 				DA825BE31C92E86B000C5EE4 /* WJFindHotCell.xib */,
+				DA89F3571C9301B4003D5AF8 /* WJCollectionViewCell.h */,
+				DA89F3581C9301B4003D5AF8 /* WJCollectionViewCell.m */,
+				DA89F3591C9301B4003D5AF8 /* WJCollectionViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -555,6 +578,19 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		DA89F34A1C92FE85003D5AF8 /* ChildController */ = {
+			isa = PBXGroup;
+			children = (
+				DA89F34B1C92FE85003D5AF8 /* WJFindCarController.h */,
+				DA89F34C1C92FE85003D5AF8 /* WJFindCarController.m */,
+				DA89F34D1C92FE85003D5AF8 /* WJHotCarController.h */,
+				DA89F34E1C92FE85003D5AF8 /* WJHotCarController.m */,
+				DA89F34F1C92FE85003D5AF8 /* WJWebViewController.h */,
+				DA89F3501C92FE85003D5AF8 /* WJWebViewController.m */,
+			);
+			path = ChildController;
+			sourceTree = "<group>";
+		};
 		DAE939F91C8E75B900F03A67 = {
 			isa = PBXGroup;
 			children = (
@@ -741,6 +777,7 @@
 				DA825C1A1C92E86B000C5EE4 /* WJConsultingCell.xib in Resources */,
 				DA825C1C1C92E86B000C5EE4 /* WJFindHotCell.xib in Resources */,
 				DAE93A151C8E75B900F03A67 /* LaunchScreen.storyboard in Resources */,
+				DA89F35B1C9301B4003D5AF8 /* WJCollectionViewCell.xib in Resources */,
 				DAE93A121C8E75B900F03A67 /* Assets.xcassets in Resources */,
 				DAE93A101C8E75B900F03A67 /* Main.storyboard in Resources */,
 			);
@@ -820,6 +857,7 @@
 				DA825C8A1C92E943000C5EE4 /* LLCarOffSaleListModel.m in Sources */,
 				DAE93A5B1C8E77A600F03A67 /* WJConst.m in Sources */,
 				DA825C181C92E86B000C5EE4 /* WJSUVResult.m in Sources */,
+				DA89F35A1C9301B4003D5AF8 /* WJCollectionViewCell.m in Sources */,
 				DA825C1E1C92E86B000C5EE4 /* WJHeaderView.m in Sources */,
 				DA825C8B1C92E943000C5EE4 /* LLCarTypeInfoModel.m in Sources */,
 				DA825C191C92E86B000C5EE4 /* WJConsultingCell.m in Sources */,
@@ -829,9 +867,9 @@
 				DA825C851C92E943000C5EE4 /* UIView+WJExtension.m in Sources */,
 				DA825C811C92E943000C5EE4 /* UIBarButtonItem+WJExtension.m in Sources */,
 				DA825C171C92E86B000C5EE4 /* WJConsultingResult.m in Sources */,
+				DA89F3511C92FE85003D5AF8 /* WJFindCarController.m in Sources */,
 				DA825C831C92E943000C5EE4 /* UIImage+reSize.m in Sources */,
 				DA825C241C92E86B000C5EE4 /* CarPreferentialController.m in Sources */,
-				DA825C981C92EAD2000C5EE4 /* WJHotCarController.m in Sources */,
 				DAE93A071C8E75B900F03A67 /* main.m in Sources */,
 				DA825C841C92E943000C5EE4 /* UIImageView+downloadImage.m in Sources */,
 				DA825C1B1C92E86B000C5EE4 /* WJFindHotCell.m in Sources */,
@@ -841,14 +879,18 @@
 				DA825C1D1C92E86B000C5EE4 /* WJContainerView.m in Sources */,
 				DA825C201C92E86B000C5EE4 /* WJVerticalButton.m in Sources */,
 				DA825C221C92E86B000C5EE4 /* CarForumController.m in Sources */,
+				DA89F3461C92FDCE003D5AF8 /* WJFindCarResult.m in Sources */,
 				DA825C9B1C92EB39000C5EE4 /* CarMineController.m in Sources */,
 				DA825C801C92E943000C5EE4 /* NSString+StringFromNumber.m in Sources */,
 				DA825C871C92E943000C5EE4 /* WJNavgationController.m in Sources */,
 				DA825C211C92E86B000C5EE4 /* CarFindController.m in Sources */,
 				DA825C7F1C92E942000C5EE4 /* NSDate+WJExtension.m in Sources */,
+				DA89F3561C93009B003D5AF8 /* WJWaterFlowLayout.m in Sources */,
 				DA825C861C92E943000C5EE4 /* LLCarTypeDetailController.m in Sources */,
+				DA89F3521C92FE85003D5AF8 /* WJHotCarController.m in Sources */,
 				DA825C881C92E943000C5EE4 /* WJTabBarController.m in Sources */,
 				DA825C7E1C92E942000C5EE4 /* Foundation+Log.m in Sources */,
+				DA89F3531C92FE85003D5AF8 /* WJWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
