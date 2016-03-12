@@ -8,6 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		A68FAFEFF4F4A49290AF4C6D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2E3BD33B03E9DF56A54E8A /* libPods.a */; };
+		BC878AED1C93FD1D004DEC7E /* CarForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878ACB1C93FD1D004DEC7E /* CarForumController.m */; };
+		BC878AEE1C93FD1D004DEC7E /* YUCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878ACD1C93FD1D004DEC7E /* YUCategoryViewController.m */; };
+		BC878AEF1C93FD1D004DEC7E /* YUHotTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878ACF1C93FD1D004DEC7E /* YUHotTopicViewController.m */; };
+		BC878AF01C93FD1D004DEC7E /* YUMoreTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AD11C93FD1D004DEC7E /* YUMoreTopicViewController.m */; };
+		BC878AF11C93FD1D004DEC7E /* YUSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AD31C93FD1D004DEC7E /* YUSelectionViewController.m */; };
+		BC878AF21C93FD1D004DEC7E /* YUTopicWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AD51C93FD1D004DEC7E /* YUTopicWebViewController.m */; };
+		BC878AF31C93FD1D004DEC7E /* YUBannerListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AD81C93FD1D004DEC7E /* YUBannerListModel.m */; };
+		BC878AF41C93FD1D004DEC7E /* YUHotTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878ADA1C93FD1D004DEC7E /* YUHotTopicModel.m */; };
+		BC878AF51C93FD1D004DEC7E /* YUSelectionTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878ADC1C93FD1D004DEC7E /* YUSelectionTopic.m */; };
+		BC878AF61C93FD1D004DEC7E /* YUCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878ADF1C93FD1D004DEC7E /* YUCollectionReusableView.m */; };
+		BC878AF71C93FD1D004DEC7E /* YUHotTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AE11C93FD1D004DEC7E /* YUHotTopicCell.m */; };
+		BC878AF81C93FD1D004DEC7E /* YUHotTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC878AE21C93FD1D004DEC7E /* YUHotTopicCell.xib */; };
+		BC878AF91C93FD1D004DEC7E /* YUImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AE41C93FD1D004DEC7E /* YUImageCell.m */; };
+		BC878AFA1C93FD1D004DEC7E /* YUMoreTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AE61C93FD1D004DEC7E /* YUMoreTopicCell.m */; };
+		BC878AFB1C93FD1D004DEC7E /* YUMoreTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC878AE71C93FD1D004DEC7E /* YUMoreTopicCell.xib */; };
+		BC878AFC1C93FD1D004DEC7E /* YUSelectionTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AE91C93FD1D004DEC7E /* YUSelectionTopicCell.m */; };
+		BC878AFD1C93FD1D004DEC7E /* YUSelectionTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC878AEA1C93FD1D004DEC7E /* YUSelectionTopicCell.xib */; };
+		BC878AFE1C93FD1D004DEC7E /* YUTopicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AEC1C93FD1D004DEC7E /* YUTopicHeaderView.m */; };
 		DA3B5CD01C93BF7A001997C8 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CAD1C93BF7A001997C8 /* Foundation+Log.m */; };
 		DA3B5CD11C93BF7A001997C8 /* NSDate+WJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CAF1C93BF7A001997C8 /* NSDate+WJExtension.m */; };
 		DA3B5CD21C93BF7A001997C8 /* NSString+StringFromNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CB11C93BF7A001997C8 /* NSString+StringFromNumber.m */; };
@@ -23,7 +41,6 @@
 		DA3B5CDC1C93BF7A001997C8 /* LLCarOffSaleListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CC91C93BF7A001997C8 /* LLCarOffSaleListModel.m */; };
 		DA3B5CDD1C93BF7A001997C8 /* LLCarTypeInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CCB1C93BF7A001997C8 /* LLCarTypeInfoModel.m */; };
 		DA3B5CDE1C93BF7A001997C8 /* LLCarTypeVersionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CCD1C93BF7A001997C8 /* LLCarTypeVersionModel.m */; };
-		DA3B5CE11C93C03B001997C8 /* CarForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CE01C93C03B001997C8 /* CarForumController.m */; };
 		DA825C0F1C92E86B000C5EE4 /* WJSpecialController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825BC41C92E86B000C5EE4 /* WJSpecialController.m */; };
 		DA825C171C92E86B000C5EE4 /* WJConsultingResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825BD91C92E86B000C5EE4 /* WJConsultingResult.m */; };
 		DA825C181C92E86B000C5EE4 /* WJSUVResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825BDB1C92E86B000C5EE4 /* WJSUVResult.m */; };
@@ -77,6 +94,39 @@
 		6C2E3BD33B03E9DF56A54E8A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB5973FF1B297B050B1A609 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7CF344E4DA0F93C7E0B1D029 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BC878ACA1C93FD1D004DEC7E /* CarForumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarForumController.h; sourceTree = "<group>"; };
+		BC878ACB1C93FD1D004DEC7E /* CarForumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarForumController.m; sourceTree = "<group>"; };
+		BC878ACC1C93FD1D004DEC7E /* YUCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUCategoryViewController.h; sourceTree = "<group>"; };
+		BC878ACD1C93FD1D004DEC7E /* YUCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUCategoryViewController.m; sourceTree = "<group>"; };
+		BC878ACE1C93FD1D004DEC7E /* YUHotTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUHotTopicViewController.h; sourceTree = "<group>"; };
+		BC878ACF1C93FD1D004DEC7E /* YUHotTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUHotTopicViewController.m; sourceTree = "<group>"; };
+		BC878AD01C93FD1D004DEC7E /* YUMoreTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUMoreTopicViewController.h; sourceTree = "<group>"; };
+		BC878AD11C93FD1D004DEC7E /* YUMoreTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUMoreTopicViewController.m; sourceTree = "<group>"; };
+		BC878AD21C93FD1D004DEC7E /* YUSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUSelectionViewController.h; sourceTree = "<group>"; };
+		BC878AD31C93FD1D004DEC7E /* YUSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUSelectionViewController.m; sourceTree = "<group>"; };
+		BC878AD41C93FD1D004DEC7E /* YUTopicWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUTopicWebViewController.h; sourceTree = "<group>"; };
+		BC878AD51C93FD1D004DEC7E /* YUTopicWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUTopicWebViewController.m; sourceTree = "<group>"; };
+		BC878AD71C93FD1D004DEC7E /* YUBannerListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUBannerListModel.h; sourceTree = "<group>"; };
+		BC878AD81C93FD1D004DEC7E /* YUBannerListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUBannerListModel.m; sourceTree = "<group>"; };
+		BC878AD91C93FD1D004DEC7E /* YUHotTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUHotTopicModel.h; sourceTree = "<group>"; };
+		BC878ADA1C93FD1D004DEC7E /* YUHotTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUHotTopicModel.m; sourceTree = "<group>"; };
+		BC878ADB1C93FD1D004DEC7E /* YUSelectionTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUSelectionTopic.h; sourceTree = "<group>"; };
+		BC878ADC1C93FD1D004DEC7E /* YUSelectionTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUSelectionTopic.m; sourceTree = "<group>"; };
+		BC878ADE1C93FD1D004DEC7E /* YUCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUCollectionReusableView.h; sourceTree = "<group>"; };
+		BC878ADF1C93FD1D004DEC7E /* YUCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUCollectionReusableView.m; sourceTree = "<group>"; };
+		BC878AE01C93FD1D004DEC7E /* YUHotTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUHotTopicCell.h; sourceTree = "<group>"; };
+		BC878AE11C93FD1D004DEC7E /* YUHotTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUHotTopicCell.m; sourceTree = "<group>"; };
+		BC878AE21C93FD1D004DEC7E /* YUHotTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUHotTopicCell.xib; sourceTree = "<group>"; };
+		BC878AE31C93FD1D004DEC7E /* YUImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUImageCell.h; sourceTree = "<group>"; };
+		BC878AE41C93FD1D004DEC7E /* YUImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUImageCell.m; sourceTree = "<group>"; };
+		BC878AE51C93FD1D004DEC7E /* YUMoreTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUMoreTopicCell.h; sourceTree = "<group>"; };
+		BC878AE61C93FD1D004DEC7E /* YUMoreTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUMoreTopicCell.m; sourceTree = "<group>"; };
+		BC878AE71C93FD1D004DEC7E /* YUMoreTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUMoreTopicCell.xib; sourceTree = "<group>"; };
+		BC878AE81C93FD1D004DEC7E /* YUSelectionTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUSelectionTopicCell.h; sourceTree = "<group>"; };
+		BC878AE91C93FD1D004DEC7E /* YUSelectionTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUSelectionTopicCell.m; sourceTree = "<group>"; };
+		BC878AEA1C93FD1D004DEC7E /* YUSelectionTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUSelectionTopicCell.xib; sourceTree = "<group>"; };
+		BC878AEB1C93FD1D004DEC7E /* YUTopicHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUTopicHeaderView.h; sourceTree = "<group>"; };
+		BC878AEC1C93FD1D004DEC7E /* YUTopicHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUTopicHeaderView.m; sourceTree = "<group>"; };
 		DA3B5CAD1C93BF7A001997C8 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		DA3B5CAE1C93BF7A001997C8 /* NSDate+WJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WJExtension.h"; sourceTree = "<group>"; };
 		DA3B5CAF1C93BF7A001997C8 /* NSDate+WJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WJExtension.m"; sourceTree = "<group>"; };
@@ -106,8 +156,6 @@
 		DA3B5CCB1C93BF7A001997C8 /* LLCarTypeInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCarTypeInfoModel.m; sourceTree = "<group>"; };
 		DA3B5CCC1C93BF7A001997C8 /* LLCarTypeVersionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLCarTypeVersionModel.h; sourceTree = "<group>"; };
 		DA3B5CCD1C93BF7A001997C8 /* LLCarTypeVersionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCarTypeVersionModel.m; sourceTree = "<group>"; };
-		DA3B5CDF1C93C03B001997C8 /* CarForumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarForumController.h; sourceTree = "<group>"; };
-		DA3B5CE01C93C03B001997C8 /* CarForumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarForumController.m; sourceTree = "<group>"; };
 		DA825BC31C92E86B000C5EE4 /* WJSpecialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJSpecialController.h; sourceTree = "<group>"; };
 		DA825BC41C92E86B000C5EE4 /* WJSpecialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJSpecialController.m; sourceTree = "<group>"; };
 		DA825BD81C92E86B000C5EE4 /* WJConsultingResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJConsultingResult.h; sourceTree = "<group>"; };
@@ -195,6 +243,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC878AC81C93FD1D004DEC7E /* forum-论坛 */ = {
+			isa = PBXGroup;
+			children = (
+				BC878AC91C93FD1D004DEC7E /* Controllers */,
+				BC878AD61C93FD1D004DEC7E /* Models */,
+				BC878ADD1C93FD1D004DEC7E /* Views */,
+			);
+			path = "forum-论坛";
+			sourceTree = "<group>";
+		};
+		BC878AC91C93FD1D004DEC7E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC878ACA1C93FD1D004DEC7E /* CarForumController.h */,
+				BC878ACB1C93FD1D004DEC7E /* CarForumController.m */,
+				BC878ACC1C93FD1D004DEC7E /* YUCategoryViewController.h */,
+				BC878ACD1C93FD1D004DEC7E /* YUCategoryViewController.m */,
+				BC878ACE1C93FD1D004DEC7E /* YUHotTopicViewController.h */,
+				BC878ACF1C93FD1D004DEC7E /* YUHotTopicViewController.m */,
+				BC878AD01C93FD1D004DEC7E /* YUMoreTopicViewController.h */,
+				BC878AD11C93FD1D004DEC7E /* YUMoreTopicViewController.m */,
+				BC878AD21C93FD1D004DEC7E /* YUSelectionViewController.h */,
+				BC878AD31C93FD1D004DEC7E /* YUSelectionViewController.m */,
+				BC878AD41C93FD1D004DEC7E /* YUTopicWebViewController.h */,
+				BC878AD51C93FD1D004DEC7E /* YUTopicWebViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BC878AD61C93FD1D004DEC7E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC878AD71C93FD1D004DEC7E /* YUBannerListModel.h */,
+				BC878AD81C93FD1D004DEC7E /* YUBannerListModel.m */,
+				BC878AD91C93FD1D004DEC7E /* YUHotTopicModel.h */,
+				BC878ADA1C93FD1D004DEC7E /* YUHotTopicModel.m */,
+				BC878ADB1C93FD1D004DEC7E /* YUSelectionTopic.h */,
+				BC878ADC1C93FD1D004DEC7E /* YUSelectionTopic.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC878ADD1C93FD1D004DEC7E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC878ADE1C93FD1D004DEC7E /* YUCollectionReusableView.h */,
+				BC878ADF1C93FD1D004DEC7E /* YUCollectionReusableView.m */,
+				BC878AE01C93FD1D004DEC7E /* YUHotTopicCell.h */,
+				BC878AE11C93FD1D004DEC7E /* YUHotTopicCell.m */,
+				BC878AE21C93FD1D004DEC7E /* YUHotTopicCell.xib */,
+				BC878AE31C93FD1D004DEC7E /* YUImageCell.h */,
+				BC878AE41C93FD1D004DEC7E /* YUImageCell.m */,
+				BC878AE51C93FD1D004DEC7E /* YUMoreTopicCell.h */,
+				BC878AE61C93FD1D004DEC7E /* YUMoreTopicCell.m */,
+				BC878AE71C93FD1D004DEC7E /* YUMoreTopicCell.xib */,
+				BC878AE81C93FD1D004DEC7E /* YUSelectionTopicCell.h */,
+				BC878AE91C93FD1D004DEC7E /* YUSelectionTopicCell.m */,
+				BC878AEA1C93FD1D004DEC7E /* YUSelectionTopicCell.xib */,
+				BC878AEB1C93FD1D004DEC7E /* YUTopicHeaderView.h */,
+				BC878AEC1C93FD1D004DEC7E /* YUTopicHeaderView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D2848F50D929F27A8AF2F15B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,8 +412,8 @@
 			children = (
 				DA3B5CAB1C93BF7A001997C8 /* Main-主要 */,
 				DA825BC01C92E86B000C5EE4 /* consulting-咨询 */,
+				BC878AC81C93FD1D004DEC7E /* forum-论坛 */,
 				DA825BEF1C92E86B000C5EE4 /* FindCar-找车 */,
-				DA825BF51C92E86B000C5EE4 /* Forum-论坛 */,
 				DA825C031C92E86B000C5EE4 /* Mine-我的 */,
 				DA825C091C92E86B000C5EE4 /* preferential-特惠 */,
 			);
@@ -462,39 +574,6 @@
 			sourceTree = "<group>";
 		};
 		DA825BF41C92E86B000C5EE4 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		DA825BF51C92E86B000C5EE4 /* Forum-论坛 */ = {
-			isa = PBXGroup;
-			children = (
-				DA825BF61C92E86B000C5EE4 /* controller */,
-				DA825BF91C92E86B000C5EE4 /* model */,
-				DA825BFA1C92E86B000C5EE4 /* view */,
-			);
-			path = "Forum-论坛";
-			sourceTree = "<group>";
-		};
-		DA825BF61C92E86B000C5EE4 /* controller */ = {
-			isa = PBXGroup;
-			children = (
-				DA3B5CDF1C93C03B001997C8 /* CarForumController.h */,
-				DA3B5CE01C93C03B001997C8 /* CarForumController.m */,
-			);
-			path = controller;
-			sourceTree = "<group>";
-		};
-		DA825BF91C92E86B000C5EE4 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		DA825BFA1C92E86B000C5EE4 /* view */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -763,7 +842,10 @@
 			files = (
 				DA825C1A1C92E86B000C5EE4 /* WJConsultingCell.xib in Resources */,
 				DA825C1C1C92E86B000C5EE4 /* WJFindHotCell.xib in Resources */,
+				BC878AFD1C93FD1D004DEC7E /* YUSelectionTopicCell.xib in Resources */,
 				DAE93A151C8E75B900F03A67 /* LaunchScreen.storyboard in Resources */,
+				BC878AF81C93FD1D004DEC7E /* YUHotTopicCell.xib in Resources */,
+				BC878AFB1C93FD1D004DEC7E /* YUMoreTopicCell.xib in Resources */,
 				DA89F35B1C9301B4003D5AF8 /* WJCollectionViewCell.xib in Resources */,
 				DAE93A121C8E75B900F03A67 /* Assets.xcassets in Resources */,
 				DAE93A101C8E75B900F03A67 /* Main.storyboard in Resources */,
@@ -839,6 +921,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC878AEE1C93FD1D004DEC7E /* YUCategoryViewController.m in Sources */,
 				DA825C971C92EAD2000C5EE4 /* CarConsultingController.m in Sources */,
 				DA3B5CDC1C93BF7A001997C8 /* LLCarOffSaleListModel.m in Sources */,
 				DAE93A0A1C8E75B900F03A67 /* AppDelegate.m in Sources */,
@@ -848,35 +931,48 @@
 				DA89F35A1C9301B4003D5AF8 /* WJCollectionViewCell.m in Sources */,
 				DA825C1E1C92E86B000C5EE4 /* WJHeaderView.m in Sources */,
 				DA825C191C92E86B000C5EE4 /* WJConsultingCell.m in Sources */,
+				BC878AF01C93FD1D004DEC7E /* YUMoreTopicViewController.m in Sources */,
 				DA825C0F1C92E86B000C5EE4 /* WJSpecialController.m in Sources */,
 				DA825C1F1C92E86B000C5EE4 /* WJProgressView.m in Sources */,
 				DA3B5CDE1C93BF7A001997C8 /* LLCarTypeVersionModel.m in Sources */,
 				DA3B5CD71C93BF7A001997C8 /* UIView+WJExtension.m in Sources */,
 				DA3B5CD31C93BF7A001997C8 /* UIBarButtonItem+WJExtension.m in Sources */,
 				DA825C171C92E86B000C5EE4 /* WJConsultingResult.m in Sources */,
+				BC878AF41C93FD1D004DEC7E /* YUHotTopicModel.m in Sources */,
 				DA3B5CD51C93BF7A001997C8 /* UIImage+reSize.m in Sources */,
 				DA89F3511C92FE85003D5AF8 /* WJFindCarController.m in Sources */,
+				BC878AFA1C93FD1D004DEC7E /* YUMoreTopicCell.m in Sources */,
 				DA825C241C92E86B000C5EE4 /* CarPreferentialController.m in Sources */,
 				DA3B5CD61C93BF7A001997C8 /* UIImageView+downloadImage.m in Sources */,
+				BC878AF51C93FD1D004DEC7E /* YUSelectionTopic.m in Sources */,
+				BC878AEF1C93FD1D004DEC7E /* YUHotTopicViewController.m in Sources */,
 				DAE93A071C8E75B900F03A67 /* main.m in Sources */,
 				DA3B5CD41C93BF7A001997C8 /* UIImage+cirlcle.m in Sources */,
 				DA3B5CDB1C93BF7A001997C8 /* WJHttpTool.m in Sources */,
+				BC878AF61C93FD1D004DEC7E /* YUCollectionReusableView.m in Sources */,
 				DA825C1B1C92E86B000C5EE4 /* WJFindHotCell.m in Sources */,
+				BC878AF21C93FD1D004DEC7E /* YUTopicWebViewController.m in Sources */,
 				DA825C9E1C92EB7E000C5EE4 /* WJArrangeController.m in Sources */,
 				DA825C1D1C92E86B000C5EE4 /* WJContainerView.m in Sources */,
 				DA825C201C92E86B000C5EE4 /* WJVerticalButton.m in Sources */,
 				DA89F3461C92FDCE003D5AF8 /* WJFindCarResult.m in Sources */,
 				DA3B5CD21C93BF7A001997C8 /* NSString+StringFromNumber.m in Sources */,
+				BC878AF71C93FD1D004DEC7E /* YUHotTopicCell.m in Sources */,
 				DA825C211C92E86B000C5EE4 /* CarFindController.m in Sources */,
 				DA3B5CD91C93BF7A001997C8 /* WJNavgationController.m in Sources */,
-				DA3B5CE11C93C03B001997C8 /* CarForumController.m in Sources */,
+				BC878AFE1C93FD1D004DEC7E /* YUTopicHeaderView.m in Sources */,
+				BC878AFC1C93FD1D004DEC7E /* YUSelectionTopicCell.m in Sources */,
+				BC878AED1C93FD1D004DEC7E /* CarForumController.m in Sources */,
+				BC878AF31C93FD1D004DEC7E /* YUBannerListModel.m in Sources */,
 				DA89F3561C93009B003D5AF8 /* WJWaterFlowLayout.m in Sources */,
+				BC878AF91C93FD1D004DEC7E /* YUImageCell.m in Sources */,
 				DA89F3521C92FE85003D5AF8 /* WJHotCarController.m in Sources */,
 				DA3B5CD11C93BF7A001997C8 /* NSDate+WJExtension.m in Sources */,
 				DA3B5CD81C93BF7A001997C8 /* LLCarTypeDetailController.m in Sources */,
 				DA89F3531C92FE85003D5AF8 /* WJWebViewController.m in Sources */,
 				DA3B5CDA1C93BF7A001997C8 /* WJTabBarController.m in Sources */,
 				DA3B5CD01C93BF7A001997C8 /* Foundation+Log.m in Sources */,
+				BC878AF11C93FD1D004DEC7E /* YUSelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

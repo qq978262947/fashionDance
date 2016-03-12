@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="YUMoreTopicCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oUn-hf-FIC">
+                        <rect key="frame" x="10" y="10" width="80" height="69"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="4eX-83-Yd2"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGj-ht-kk5">
+                        <rect key="frame" x="100" y="10" width="31" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdz-Nc-Nrt">
+                        <rect key="frame" x="100" y="38" width="29" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFu-Qo-XFy">
+                        <rect key="frame" x="100" y="57" width="60" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="3" maxX="10" maxY="4"/>
+                        <state key="normal" title="Button" image="tab_mySpace_normal">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXi-Lz-C1p">
+                        <rect key="frame" x="170" y="57" width="60" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="3" maxX="10" maxY="4"/>
+                        <state key="normal" title="Button" image="tab_mySpace_normal">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVm-3o-DH2">
+                        <rect key="frame" x="271" y="57" width="39" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="3" maxX="10" maxY="4"/>
+                        <state key="normal" title="111" image="tab_mySpace_normal">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="BGj-ht-kk5" firstAttribute="top" secondItem="oUn-hf-FIC" secondAttribute="top" id="0Bk-tk-sqT"/>
+                    <constraint firstItem="YVm-3o-DH2" firstAttribute="bottom" secondItem="pXi-Lz-C1p" secondAttribute="bottom" id="DcA-ct-uUj"/>
+                    <constraint firstItem="oUn-hf-FIC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="FMc-Cd-kqw"/>
+                    <constraint firstItem="CFu-Qo-XFy" firstAttribute="bottom" secondItem="oUn-hf-FIC" secondAttribute="bottom" id="GtB-9P-9J8"/>
+                    <constraint firstItem="CFu-Qo-XFy" firstAttribute="leading" secondItem="oUn-hf-FIC" secondAttribute="trailing" constant="10" id="TN7-hu-Cf1"/>
+                    <constraint firstAttribute="bottom" secondItem="oUn-hf-FIC" secondAttribute="bottom" constant="10" id="UJZ-Mf-s6h"/>
+                    <constraint firstItem="Rdz-Nc-Nrt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="a3Z-fz-4gE"/>
+                    <constraint firstItem="oUn-hf-FIC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="cIT-ig-pNd"/>
+                    <constraint firstAttribute="trailing" secondItem="YVm-3o-DH2" secondAttribute="trailing" constant="10" id="f2P-CU-b73"/>
+                    <constraint firstItem="pXi-Lz-C1p" firstAttribute="bottom" secondItem="CFu-Qo-XFy" secondAttribute="bottom" id="gDc-5z-wSA"/>
+                    <constraint firstItem="Rdz-Nc-Nrt" firstAttribute="leading" secondItem="oUn-hf-FIC" secondAttribute="trailing" constant="10" id="guB-DI-nKu"/>
+                    <constraint firstItem="pXi-Lz-C1p" firstAttribute="leading" secondItem="CFu-Qo-XFy" secondAttribute="trailing" constant="10" id="sij-jz-DL3"/>
+                    <constraint firstItem="BGj-ht-kk5" firstAttribute="leading" secondItem="oUn-hf-FIC" secondAttribute="trailing" constant="10" id="xW6-Mn-rOi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="authorBtn" destination="CFu-Qo-XFy" id="CEx-t7-TUq"/>
+                <outlet property="barNameBtn" destination="pXi-Lz-C1p" id="emb-zO-P3z"/>
+                <outlet property="imgView" destination="oUn-hf-FIC" id="WMW-JI-mlO"/>
+                <outlet property="replyCountBtn" destination="YVm-3o-DH2" id="p5v-Ba-eug"/>
+                <outlet property="titleLabel" destination="BGj-ht-kk5" id="Adq-nL-k4p"/>
+                <outlet property="topicDescriptionLabel" destination="Rdz-Nc-Nrt" id="cT9-yY-hKA"/>
+            </connections>
+            <point key="canvasLocation" x="257" y="270"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="tab_mySpace_normal" width="22" height="22"/>
+    </resources>
+</document>
