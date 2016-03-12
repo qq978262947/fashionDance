@@ -42,11 +42,7 @@
 		DA825C8B1C92E943000C5EE4 /* LLCarTypeInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825C791C92E942000C5EE4 /* LLCarTypeInfoModel.m */; };
 		DA825C8C1C92E943000C5EE4 /* LLCarTypeVersionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825C7B1C92E942000C5EE4 /* LLCarTypeVersionModel.m */; };
 		DA825C971C92EAD2000C5EE4 /* CarConsultingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825C941C92EAD2000C5EE4 /* CarConsultingController.m */; };
-<<<<<<< HEAD
-		DA825C9B1C92EB39000C5EE4 /* CarMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825C9A1C92EB39000C5EE4 /* CarMineController.m */; };
-=======
 		DA825C981C92EAD2000C5EE4 /* WJHotCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825C961C92EAD2000C5EE4 /* WJHotCarController.m */; };
->>>>>>> 9a2339caa0d485142cb3f3a672274e2059b4a390
 		DA825C9E1C92EB7E000C5EE4 /* WJArrangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825C9D1C92EB7E000C5EE4 /* WJArrangeController.m */; };
 		DA89F3461C92FDCE003D5AF8 /* WJFindCarResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DA89F3451C92FDCE003D5AF8 /* WJFindCarResult.m */; };
 		DA89F3511C92FE85003D5AF8 /* WJFindCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA89F34C1C92FE85003D5AF8 /* WJFindCarController.m */; };
@@ -151,13 +147,8 @@
 		DA825C7B1C92E942000C5EE4 /* LLCarTypeVersionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCarTypeVersionModel.m; sourceTree = "<group>"; };
 		DA825C931C92EAD2000C5EE4 /* CarConsultingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarConsultingController.h; sourceTree = "<group>"; };
 		DA825C941C92EAD2000C5EE4 /* CarConsultingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarConsultingController.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		DA825C991C92EB39000C5EE4 /* CarMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarMineController.h; path = ../../../../../Documents/CarMineController.h; sourceTree = "<group>"; };
-		DA825C9A1C92EB39000C5EE4 /* CarMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarMineController.m; path = ../../../../../Documents/CarMineController.m; sourceTree = "<group>"; };
-=======
 		DA825C951C92EAD2000C5EE4 /* WJHotCarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJHotCarController.h; sourceTree = "<group>"; };
 		DA825C961C92EAD2000C5EE4 /* WJHotCarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJHotCarController.m; sourceTree = "<group>"; };
->>>>>>> 9a2339caa0d485142cb3f3a672274e2059b4a390
 		DA825C9C1C92EB7E000C5EE4 /* WJArrangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJArrangeController.h; sourceTree = "<group>"; };
 		DA825C9D1C92EB7E000C5EE4 /* WJArrangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJArrangeController.m; sourceTree = "<group>"; };
 		DA89F3441C92FDCE003D5AF8 /* WJFindCarResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJFindCarResult.h; sourceTree = "<group>"; };
@@ -910,11 +901,7 @@
 				DA825C1D1C92E86B000C5EE4 /* WJContainerView.m in Sources */,
 				DA825C201C92E86B000C5EE4 /* WJVerticalButton.m in Sources */,
 				DA825C221C92E86B000C5EE4 /* CarForumController.m in Sources */,
-<<<<<<< HEAD
 				DA89F3461C92FDCE003D5AF8 /* WJFindCarResult.m in Sources */,
-				DA825C9B1C92EB39000C5EE4 /* CarMineController.m in Sources */,
-=======
->>>>>>> 9a2339caa0d485142cb3f3a672274e2059b4a390
 				DA825C801C92E943000C5EE4 /* NSString+StringFromNumber.m in Sources */,
 				DA825C871C92E943000C5EE4 /* WJNavgationController.m in Sources */,
 				DA825C211C92E86B000C5EE4 /* CarFindController.m in Sources */,
