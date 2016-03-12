@@ -40,7 +40,7 @@
     
     // 调整文字
     self.titleLabel.x = 0;
-    self.titleLabel.y = self.imageView.height + 5;
+    self.titleLabel.y = self.imageView.height + 2;
     self.titleLabel.width = self.width;
     self.titleLabel.height = self.height - self.titleLabel.y;
 }

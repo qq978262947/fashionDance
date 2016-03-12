@@ -31,9 +31,29 @@
  */
 @property (strong, nonatomic)NSMutableArray *listArray;
 
+@property (strong, nonatomic) WJWebViewController *userdCarWebVC;
+
+@property (strong, nonatomic) WJWebViewController *CheckBreakRulesVC;
 @end
 
 @implementation CarConsultingController
+
+- (WJWebViewController *)userdCarWebVC {
+    if (nil == _userdCarWebVC) {
+        _userdCarWebVC = [[WJWebViewController alloc]init];
+        _userdCarWebVC.urlString = @"http://m.2sc.sohu.com/";
+    }
+    return _userdCarWebVC;
+}
+
+- (WJWebViewController *)CheckBreakRulesVC {
+    if (nil == _CheckBreakRulesVC) {
+        _CheckBreakRulesVC = [[WJWebViewController alloc]init];
+        _CheckBreakRulesVC.urlString = @"http://mobile.auto.sohu.com/wzcx/weixin.at";
+    }
+    return _CheckBreakRulesVC;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -68,6 +88,7 @@
     header.delegate = self;
     self.tableView.tableHeaderView = header;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
 }
 
 - (void)headerView:(WJHeaderView *)headerView DidClick:(WJHeaderViewButtonType)buttonType {
@@ -79,8 +100,10 @@
             [self.navigationController pushViewController:[[WJFindCarController alloc]init] animated:YES];
             break;
         case WJHeaderViewButtonTypeusedCar:
+            [self.navigationController pushViewController:self.userdCarWebVC animated:YES];
             break;
         case WJHeaderViewButtonTypeCheckBreakRules:
+            [self.navigationController pushViewController:self.CheckBreakRulesVC animated:YES];
             break;
         default:
             break;

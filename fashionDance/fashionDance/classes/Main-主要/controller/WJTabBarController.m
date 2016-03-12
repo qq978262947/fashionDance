@@ -11,6 +11,7 @@
 #import "CarConsultingController.h"
 #import "CarFindController.h"
 #import "CarPreferentialController.h"
+#import "CarForumController.h"
 #import "UIImage+reSize.h"
 
 //测试llcartypedetailcontroll

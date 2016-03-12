@@ -42,7 +42,7 @@
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:carResult.pubDate / 1000];
     // 日期格式化类
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
-    fmt.dateFormat = @"MM-dd";
+    fmt.dateFormat = @"yyyy-MM-dd";
     NSString *dateString = [fmt stringFromDate:date];
     
     self.carData.text = dateString;
