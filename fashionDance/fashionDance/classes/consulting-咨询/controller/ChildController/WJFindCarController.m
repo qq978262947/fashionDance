@@ -97,7 +97,7 @@
 
 - (CGFloat)rowMarginInWaterflowLayout:(WJWaterflowLayout *)waterflowLayout
 {
-    return 20;
+    return 5;
 }
 
 - (CGFloat)columnCountInWaterflowLayout:(WJWaterflowLayout *)waterflowLayout

@@ -13,9 +13,9 @@ static const NSInteger WJDefaultColumnCount = 3;
 /** 每一列之间的间距 */
 static const CGFloat WJDefaultColumnMargin = 10;
 /** 每一行之间的间距 */
-static const CGFloat WJDefaultRowMargin = 10;
+static const CGFloat WJDefaultRowMargin = 2;
 /** 边缘间距 */
-static const UIEdgeInsets WJDefaultEdgeInsets = {10, 10, 10, 10};
+static const UIEdgeInsets WJDefaultEdgeInsets = {0, 2, 0, 2};
 
 @interface WJWaterflowLayout()
 /** 存放所有cell的布局属性 */
