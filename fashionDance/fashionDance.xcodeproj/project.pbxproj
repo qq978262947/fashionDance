@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A46D71A1C93A63F008949E3 /* LLCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A46D7191C93A63F008949E3 /* LLCollectionViewLayout.m */; };
+		6A46D71D1C93A95F008949E3 /* LLPictureCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A46D71C1C93A95F008949E3 /* LLPictureCollectionCell.m */; };
+		6A46D7201C93A984008949E3 /* LLTextCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A46D71F1C93A984008949E3 /* LLTextCollectionCell.m */; };
+		6A46D7221C93B293008949E3 /* LLTextCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A46D7211C93B293008949E3 /* LLTextCollectionCell.xib */; };
 		A68FAFEFF4F4A49290AF4C6D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2E3BD33B03E9DF56A54E8A /* libPods.a */; };
 		DA825C0F1C92E86B000C5EE4 /* WJSpecialController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825BC41C92E86B000C5EE4 /* WJSpecialController.m */; };
 		DA825C171C92E86B000C5EE4 /* WJConsultingResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825BD91C92E86B000C5EE4 /* WJConsultingResult.m */; };
@@ -68,6 +72,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A46D7181C93A63F008949E3 /* LLCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLCollectionViewLayout.h; sourceTree = "<group>"; };
+		6A46D7191C93A63F008949E3 /* LLCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCollectionViewLayout.m; sourceTree = "<group>"; };
+		6A46D71B1C93A95F008949E3 /* LLPictureCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPictureCollectionCell.h; sourceTree = "<group>"; };
+		6A46D71C1C93A95F008949E3 /* LLPictureCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLPictureCollectionCell.m; sourceTree = "<group>"; };
+		6A46D71E1C93A984008949E3 /* LLTextCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLTextCollectionCell.h; sourceTree = "<group>"; };
+		6A46D71F1C93A984008949E3 /* LLTextCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLTextCollectionCell.m; sourceTree = "<group>"; };
+		6A46D7211C93B293008949E3 /* LLTextCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLTextCollectionCell.xib; sourceTree = "<group>"; };
+		6ACFB7071C92FB660010D37B /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		6C2E3BD33B03E9DF56A54E8A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB5973FF1B297B050B1A609 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7CF344E4DA0F93C7E0B1D029 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -546,6 +558,13 @@
 		DA825C7D1C92E942000C5EE4 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				6A46D7181C93A63F008949E3 /* LLCollectionViewLayout.h */,
+				6A46D7191C93A63F008949E3 /* LLCollectionViewLayout.m */,
+				6A46D71B1C93A95F008949E3 /* LLPictureCollectionCell.h */,
+				6A46D71C1C93A95F008949E3 /* LLPictureCollectionCell.m */,
+				6A46D71E1C93A984008949E3 /* LLTextCollectionCell.h */,
+				6A46D71F1C93A984008949E3 /* LLTextCollectionCell.m */,
+				6A46D7211C93B293008949E3 /* LLTextCollectionCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -584,6 +603,7 @@
 				DAE93A161C8E75B900F03A67 /* Info.plist */,
 				DAE93A5C1C8E77BB00F03A67 /* singleton.h */,
 				DAE93A5D1C8E77BB00F03A67 /* PrefixHeader.pch */,
+				6ACFB7071C92FB660010D37B /* Config.h */,
 				DAE93A051C8E75B900F03A67 /* Supporting Files */,
 			);
 			path = fashionDance;
@@ -735,6 +755,7 @@
 			files = (
 				DA825C1A1C92E86B000C5EE4 /* WJConsultingCell.xib in Resources */,
 				DA825C1C1C92E86B000C5EE4 /* WJFindHotCell.xib in Resources */,
+				6A46D7221C93B293008949E3 /* LLTextCollectionCell.xib in Resources */,
 				DAE93A151C8E75B900F03A67 /* LaunchScreen.storyboard in Resources */,
 				DAE93A121C8E75B900F03A67 /* Assets.xcassets in Resources */,
 				DAE93A101C8E75B900F03A67 /* Main.storyboard in Resources */,
@@ -812,14 +833,17 @@
 			files = (
 				DA825C971C92EAD2000C5EE4 /* CarConsultingController.m in Sources */,
 				DAE93A0A1C8E75B900F03A67 /* AppDelegate.m in Sources */,
+				6A46D7201C93A984008949E3 /* LLTextCollectionCell.m in Sources */,
 				DA825C8A1C92E943000C5EE4 /* LLCarOffSaleListModel.m in Sources */,
 				DAE93A5B1C8E77A600F03A67 /* WJConst.m in Sources */,
+				6A46D71D1C93A95F008949E3 /* LLPictureCollectionCell.m in Sources */,
 				DA825C181C92E86B000C5EE4 /* WJSUVResult.m in Sources */,
 				DA825C1E1C92E86B000C5EE4 /* WJHeaderView.m in Sources */,
 				DA825C8B1C92E943000C5EE4 /* LLCarTypeInfoModel.m in Sources */,
 				DA825C191C92E86B000C5EE4 /* WJConsultingCell.m in Sources */,
 				DA825C0F1C92E86B000C5EE4 /* WJSpecialController.m in Sources */,
 				DA825C1F1C92E86B000C5EE4 /* WJProgressView.m in Sources */,
+				6A46D71A1C93A63F008949E3 /* LLCollectionViewLayout.m in Sources */,
 				DA825C8C1C92E943000C5EE4 /* LLCarTypeVersionModel.m in Sources */,
 				DA825C851C92E943000C5EE4 /* UIView+WJExtension.m in Sources */,
 				DA825C811C92E943000C5EE4 /* UIBarButtonItem+WJExtension.m in Sources */,

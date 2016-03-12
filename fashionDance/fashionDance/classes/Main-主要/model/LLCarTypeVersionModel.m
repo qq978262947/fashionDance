@@ -10,4 +10,9 @@
 
 @implementation LLCarTypeVersionModel
 
+
++(NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"minDprice":@"min2scPrice",@"maxDprice":@"max2scPrice"};
+}
 @end
