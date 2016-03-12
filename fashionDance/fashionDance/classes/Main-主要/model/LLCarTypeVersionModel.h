@@ -18,11 +18,11 @@
 
 @property (nonatomic, copy) NSString *nameZh;
 
-//@property (nonatomic, assign) NSInteger min2scPrice;
+@property (nonatomic, strong) NSNumber * min2scPrice;
 
 @property (nonatomic, copy) NSString *drvType;
 
-//@property (nonatomic, assign) CGFloat max2scPrice;
+@property (nonatomic, strong) NSNumber * max2scPrice;
 
 @property (nonatomic, copy) NSString *transType;
 
@@ -42,5 +42,8 @@
 
 //赋值完毕后外面调用，来执行一些逻辑
 -(void)configSale;
--(void)configOffSale;
+-(void)configOffSaleWithYear:(NSNumber *)year;
+
+//frame辅助，layout中计算
+@property(nonatomic,assign)CGFloat heigthYear;
 @end

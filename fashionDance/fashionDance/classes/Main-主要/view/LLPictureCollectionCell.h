@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LLCarTypeVersionModel.h"
+#import "LLCarTypeInfoModel.h"
+
+typedef void(^IsSaleDataChangedBlock)(BOOL isSale);
 
 @interface LLPictureCollectionCell : UICollectionViewCell
 
-@property(nonatomic,strong)LLCarTypeVersionModel * data;
+@property(nonatomic,strong)LLCarTypeInfoModel * data;
+
+/**
+ * 在售还是停售改变时调用
+ */
+@property(nonatomic,copy)IsSaleDataChangedBlock isSaleDataChangedBlock;
 
 @end

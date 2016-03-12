@@ -11,8 +11,26 @@
 @implementation LLCarTypeVersionModel
 
 
-+(NSDictionary *)mj_replacedKeyFromPropertyName
+//+(NSDictionary *)mj_replacedKeyFromPropertyName
+//{
+//    
+//    return @{@"min2scPrice":@"minDprice",@"max2scPrice":@"maxDprice"};
+//}
+
+-(void)configOffSaleWithYear:(NSNumber *)year
 {
-    return @{@"minDprice":@"min2scPrice",@"maxDprice":@"max2scPrice"};
+    //将maxDprice、minDprice补上，方便在cell中调用
+    self.minDprice = self.min2scPrice;
+    self.maxDprice = self.max2scPrice;
+    //配置year
+    self.year = year;
+    
+    self.isSale = NO;
 }
+
+-(void)configSale
+{
+    self.isSale = YES;
+}
+
 @end

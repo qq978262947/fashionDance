@@ -13,11 +13,11 @@
 
 +(NSDictionary *)mj_replacedKeyFromPropertyName
 {
-    return @{@"_2013":@"2013",@"_2014":@"2014"};
+    return @{@"2013":@"abc",@"2014":@"_2014"};
 }
 
 + (NSDictionary *)objectClassInArray{
-    return @{@"_2013" : [LLCarTypeVersionModel class], @"_2014" : [LLCarTypeVersionModel class]};
+    return @{@"abc" : [LLCarTypeVersionModel class], @"2014" : [LLCarTypeVersionModel class]};
 }
 
 @end

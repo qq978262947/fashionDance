@@ -18,9 +18,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *addToCompare;
 @property (weak, nonatomic) IBOutlet UIButton *budget;
 @property (weak, nonatomic) IBOutlet UIButton *source2S;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *yearHeight;
 @end
 
 @implementation LLTextCollectionCell
+
 
 -(void)setData:(LLCarTypeVersionModel *)data
 {
@@ -30,9 +32,16 @@
     if (data.isSale) {
         self.is2S.hidden = YES;
     }
+    else
+    {
+        self.is2S.hidden = NO;
+    }
+    
+    self.year.numberOfLines = 0;
     self.year.text = [[data.year stringValue] stringByAppendingString:data.nameZh];
     self.typeDetail.text = [data.drvType stringByAppendingString:data.transType];
     self.minPrice.text = [data.minDprice stringValue];
+    WJLog(@"minDprice--%@  maxDprice--%@",data.minDprice,data.maxDprice);
     self.priceGuide.text = [NSString stringWithFormat:@"%f",data.priceGuide];
 
 }

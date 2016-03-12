@@ -7,6 +7,12 @@
 //
 #import "Config.h"
 #import "LLCollectionViewLayout.h"
+
+//为了动态计算每个cell高度我们导入数据模型
+#import "LLCarTypeVersionModel.h"
+
+#import "NSString+Extension.h"
+
 #define picture_height WScreenHeight/2
 #define cell_height WScreenHeight/4
 #define section_number 2
@@ -15,20 +21,19 @@
 
 /** 存放所有cell的布局属性 */
 @property (nonatomic, strong) NSMutableArray *attrsArray;
-/** 存放所有列的当前高度 */
-@property (nonatomic, strong) NSMutableArray *columnHeights;
+/** 当前高度 */
+@property (nonatomic, assign) CGFloat contentSizeHeight;
 
 @end
 
 @implementation LLCollectionViewLayout
 
-
-- (NSMutableArray *)columnHeights
++(LLCollectionViewLayout *)layoutWithDataSoure:(NSArray<LLCarTypeVersionModel *> *)dataArray
 {
-    if (!_columnHeights) {
-        _columnHeights = [NSMutableArray array];
-    }
-    return _columnHeights;
+    LLCollectionViewLayout * layout = [[LLCollectionViewLayout alloc]init];
+    layout.section1DataArray = dataArray;
+    
+    return layout;
 }
 
 - (NSMutableArray *)attrsArray
@@ -47,12 +52,16 @@
 {
     [super prepareLayout];
     
-//    // 清除之前所有的布局属性
-//    [self.attrsArray removeAllObjects];
-//    // 开始创建每一个cell对应的布局属性
-    for (int i = 0; i < section_number; i++) {
+    // 清除之前所有的布局属性
+    [self.attrsArray removeAllObjects];
+    
+    //准备好content size height
+    self.contentSizeHeight = 0;
+    // 开始创建每一个cell对应的布局属性
+    for (int i = section_number - 1; i >= 0; i--) {
         [self instanceAttrsWithSection:i];
     }
+    
 }
 
 -(void)instanceAttrsWithSection:(NSUInteger)section
@@ -73,6 +82,7 @@
  */
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
 {
+//    WJLog(@"layoutAttributesForElementsInRect");
     return self.attrsArray;
 }
 
@@ -81,12 +91,13 @@
  */
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    // 创建布局属性
+//    WJLog(@"layoutAttributesForItemAtIndexPath section--%ld  item--%ld",indexPath.section,indexPath.item);
+    // 此处构造一个indexpath位置的attri，所以我们在layoutAttributesForElementsInRect中不按顺序给attri返回也行喽？
     UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     
     // 设置布局属性的frame
-    CGFloat w = WScreenWidth;//(collectionViewW - XMGDefaultEdgeInsets.left - XMGDefaultEdgeInsets.right - (XMGDefaultColumnCount - 1) * XMGDefaultColumnMargin) / XMGDefaultColumnCount;
-    CGFloat h;//此处固定
+    CGFloat w = WScreenWidth;
+    CGFloat h;//此处固定，酌量增加
     CGFloat x;
     CGFloat y;
     
@@ -98,20 +109,22 @@
         y = 0;
         x = 0;
     }
-    else if (indexPath.section == 1)
+    else
     {
         //在售块
         h = cell_height;
-        y = picture_height + indexPath.item * cell_height;
+        //取出data，动态计算
+        LLCarTypeVersionModel * model = self.section1DataArray[indexPath.item];
+        NSString * string = [[model.year stringValue] stringByAppendingString:model.nameZh];//此处和text cell中耦合
+        CGSize size = [string sizeWithFont:LLSubTitleFont maxSize:CGSizeMake(WScreenWidth * 3/5, CGFLOAT_MAX)];//两处和text cell xib耦合--LLSubTitleFont和WScreenWidth * 3/5
+        model.heigthYear = size.height;
+        //19.5为LLSubTitleFont一行高度
+        h += size.height - 18;//和上面LLSubTitleFont耦合
+        y = self.contentSizeHeight;
         x = 0;
     }
-    else
-    {
-        //停售块
-        h = cell_height;
-        y = picture_height + indexPath.item * cell_height;
-        x = WScreenWidth;
-    }
+    
+    self.contentSizeHeight += h;
     
     attrs.frame = CGRectMake(x, y, w, h);
     
@@ -121,16 +134,11 @@
 - (CGSize)collectionViewContentSize
 {
     CGFloat maxX;
-    CGFloat maxY;
     
     maxX = WScreenWidth;
-    NSInteger numItemInSection1 = [self.collectionView numberOfItemsInSection:1];
-//    NSInteger numItemInSection2 = [self.collectionView numberOfItemsInSection:2];
-//    NSInteger maxItem = numItemInSection2 ? numItemInSection1 : numItemInSection2 > numItemInSection1;
+    //这里的cell_height我们要动态增加
     
-    maxY = picture_height + numItemInSection1 * cell_height;
-    
-    return CGSizeMake(maxX, maxY);
+    return CGSizeMake(maxX, self.contentSizeHeight);
 }
 
 

@@ -39,5 +39,9 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define WScreenHeight ([UIScreen mainScreen].bounds.size.height)
 #define WScreenWidth ([UIScreen mainScreen].bounds.size.width)
 
+//字体大小
+#define LLSubTitleFont [UIFont systemFontOfSize:12.0]
+#define LLTitleFont [UIFont systemFontOfSize:14.0]
+#define LLSuperTitleFont [UIFont systemFontOfSize:16.0]
 
 #endif /* Config_h */
