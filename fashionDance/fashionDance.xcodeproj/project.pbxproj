@@ -312,7 +312,6 @@
 			isa = PBXGroup;
 			children = (
 				DA825BC11C92E86B000C5EE4 /* controller */,
-				DA825BD01C92E86B000C5EE4 /* home */,
 				DA825BD51C92E86B000C5EE4 /* model */,
 				DA825BDC1C92E86B000C5EE4 /* view */,
 			);
@@ -347,13 +346,6 @@
 				DA825C9D1C92EB7E000C5EE4 /* WJArrangeController.m */,
 			);
 			path = titleController;
-			sourceTree = "<group>";
-		};
-		DA825BD01C92E86B000C5EE4 /* home */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = home;
 			sourceTree = "<group>";
 		};
 		DA825BD51C92E86B000C5EE4 /* model */ = {

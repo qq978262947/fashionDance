@@ -92,7 +92,7 @@
 {
 //    WJShop *shop = self.shops[index];
     
-    return 130 + arc4random_uniform(40);
+    return 150 + arc4random_uniform(40);
 }
 
 - (CGFloat)rowMarginInWaterflowLayout:(WJWaterflowLayout *)waterflowLayout
