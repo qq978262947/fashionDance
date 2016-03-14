@@ -75,6 +75,7 @@
 		FCCB84651C96B0BB005EA1AA /* TSCarMod.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB84641C96B0BB005EA1AA /* TSCarMod.m */; };
 		FCCB84681C96B29E005EA1AA /* TSBrandCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB84671C96B29E005EA1AA /* TSBrandCarController.m */; };
 		FCCB846B1C96F745005EA1AA /* TSTJZCController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB846A1C96F745005EA1AA /* TSTJZCController.m */; };
+		FCCB846D1C970122005EA1AA /* CarData.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCCB846C1C970122005EA1AA /* CarData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -226,6 +227,7 @@
 		FCCB84671C96B29E005EA1AA /* TSBrandCarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBrandCarController.m; sourceTree = "<group>"; };
 		FCCB84691C96F745005EA1AA /* TSTJZCController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTJZCController.h; sourceTree = "<group>"; };
 		FCCB846A1C96F745005EA1AA /* TSTJZCController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTJZCController.m; sourceTree = "<group>"; };
+		FCCB846C1C970122005EA1AA /* CarData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CarData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -738,6 +740,7 @@
 		FCCB84611C96B0AA005EA1AA /* model */ = {
 			isa = PBXGroup;
 			children = (
+				FCCB846C1C970122005EA1AA /* CarData.plist */,
 				FCCB84631C96B0BB005EA1AA /* TSCarMod.h */,
 				FCCB84641C96B0BB005EA1AA /* TSCarMod.m */,
 			);
@@ -862,6 +865,7 @@
 				DA825C1C1C92E86B000C5EE4 /* WJFindHotCell.xib in Resources */,
 				BC878AFD1C93FD1D004DEC7E /* YUSelectionTopicCell.xib in Resources */,
 				DAE93A151C8E75B900F03A67 /* LaunchScreen.storyboard in Resources */,
+				FCCB846D1C970122005EA1AA /* CarData.plist in Resources */,
 				BC878AF81C93FD1D004DEC7E /* YUHotTopicCell.xib in Resources */,
 				FCCB845D1C96AF1A005EA1AA /* brand_list.json in Resources */,
 				BC878AFB1C93FD1D004DEC7E /* YUMoreTopicCell.xib in Resources */,
