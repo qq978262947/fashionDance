@@ -13,6 +13,7 @@
 - (void)setup
 {
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    self.titleLabel.font = [UIFont systemFontOfSize:16];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -33,14 +34,14 @@
     [super layoutSubviews];
     
     // 调整图片
-    self.imageView.x = 10;
-    self.imageView.y = 10;
+    self.imageView.x = 25;
+    self.imageView.y = 25;
     self.imageView.width = self.width - 2 * self.imageView.x;
     self.imageView.height = self.imageView.width;
     
     // 调整文字
     self.titleLabel.x = 0;
-    self.titleLabel.y = self.imageView.height + 2;
+    self.titleLabel.y = CGRectGetMaxY(self.imageView.frame) + 2;
     self.titleLabel.width = self.width;
     self.titleLabel.height = self.height - self.titleLabel.y;
 }

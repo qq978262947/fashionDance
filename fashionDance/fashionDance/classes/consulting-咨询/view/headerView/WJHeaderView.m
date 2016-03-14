@@ -50,10 +50,10 @@
     self.bgView = bgView;
     bgView.backgroundColor = [UIColor whiteColor];
     // 添加所有的子控件
-    [self addButtonWithIcon:@"circle_point" title:@"看热门" tag:WJHeaderViewButtonTypeFindHot];
-    [self addButtonWithIcon:@"circle_point" title:@"看新车" tag:WJHeaderViewButtonTypeFindNewCar];
-    [self addButtonWithIcon:@"circle_point" title:@"二手车" tag:WJHeaderViewButtonTypeusedCar];
-    [self addButtonWithIcon:@"circle_point" title:@"查违规" tag:WJHeaderViewButtonTypeCheckBreakRules];
+    [self addButtonWithIcon:@"publish-review" title:@"看热门" tag:WJHeaderViewButtonTypeFindHot];
+    [self addButtonWithIcon:@"publish-picture" title:@"看新车" tag:WJHeaderViewButtonTypeFindNewCar];
+    [self addButtonWithIcon:@"publish-video" title:@"二手车" tag:WJHeaderViewButtonTypeusedCar];
+    [self addButtonWithIcon:@"publish-text" title:@"查违规" tag:WJHeaderViewButtonTypeCheckBreakRules];
     
 }
 

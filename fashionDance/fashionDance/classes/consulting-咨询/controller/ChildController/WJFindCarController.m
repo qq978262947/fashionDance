@@ -31,6 +31,8 @@
     [self setupLayout];
     // 集成刷新控件
     [self setupRefresh];
+    // 设置背景色
+    self.view.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1.0];
 }
 /**
  *  集成刷新控件
@@ -62,6 +64,9 @@
     [self.view addSubview:collectionView];
     
     self.collectionView = collectionView;
+    
+    // 设置背景色
+    collectionView.backgroundColor = [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1.0];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -92,7 +97,7 @@
 {
 //    WJShop *shop = self.shops[index];
     
-    return 150 + arc4random_uniform(40);
+    return 170;
 }
 
 - (CGFloat)rowMarginInWaterflowLayout:(WJWaterflowLayout *)waterflowLayout
