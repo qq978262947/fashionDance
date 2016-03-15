@@ -71,6 +71,7 @@
 		DAE93A201C8E75B900F03A67 /* fashionDanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE93A1F1C8E75B900F03A67 /* fashionDanceTests.m */; };
 		DAE93A2B1C8E75B900F03A67 /* fashionDanceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE93A2A1C8E75B900F03A67 /* fashionDanceUITests.m */; };
 		DAE93A5B1C8E77A600F03A67 /* WJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE93A5A1C8E77A600F03A67 /* WJConst.m */; };
+		FC457D781C97AAE200DDB531 /* TSPriceChoseView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC457D771C97AAE200DDB531 /* TSPriceChoseView.m */; };
 		FCCB845D1C96AF1A005EA1AA /* brand_list.json in Resources */ = {isa = PBXBuildFile; fileRef = FCCB845C1C96AF1A005EA1AA /* brand_list.json */; };
 		FCCB84651C96B0BB005EA1AA /* TSCarMod.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB84641C96B0BB005EA1AA /* TSCarMod.m */; };
 		FCCB84681C96B29E005EA1AA /* TSBrandCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB84671C96B29E005EA1AA /* TSBrandCarController.m */; };
@@ -220,6 +221,8 @@
 		DAE93A5A1C8E77A600F03A67 /* WJConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJConst.m; sourceTree = "<group>"; };
 		DAE93A5C1C8E77BB00F03A67 /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singleton.h; sourceTree = "<group>"; };
 		DAE93A5D1C8E77BB00F03A67 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FC457D761C97AAE200DDB531 /* TSPriceChoseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPriceChoseView.h; sourceTree = "<group>"; };
+		FC457D771C97AAE200DDB531 /* TSPriceChoseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPriceChoseView.m; sourceTree = "<group>"; };
 		FCCB845C1C96AF1A005EA1AA /* brand_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brand_list.json; sourceTree = "<group>"; };
 		FCCB84631C96B0BB005EA1AA /* TSCarMod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCarMod.h; sourceTree = "<group>"; };
 		FCCB84641C96B0BB005EA1AA /* TSCarMod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCarMod.m; sourceTree = "<group>"; };
@@ -750,6 +753,8 @@
 		FCCB84621C96B0AA005EA1AA /* view */ = {
 			isa = PBXGroup;
 			children = (
+				FC457D761C97AAE200DDB531 /* TSPriceChoseView.h */,
+				FC457D771C97AAE200DDB531 /* TSPriceChoseView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -996,6 +1001,7 @@
 				DA3B5CD11C93BF7A001997C8 /* NSDate+WJExtension.m in Sources */,
 				DA3B5CD81C93BF7A001997C8 /* LLCarTypeDetailController.m in Sources */,
 				DA89F3531C92FE85003D5AF8 /* WJWebViewController.m in Sources */,
+				FC457D781C97AAE200DDB531 /* TSPriceChoseView.m in Sources */,
 				DA3B5CDA1C93BF7A001997C8 /* WJTabBarController.m in Sources */,
 				DA3B5CD01C93BF7A001997C8 /* Foundation+Log.m in Sources */,
 				BC878AF11C93FD1D004DEC7E /* YUSelectionViewController.m in Sources */,
