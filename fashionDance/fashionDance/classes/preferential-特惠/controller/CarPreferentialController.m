@@ -15,7 +15,7 @@ static NSString *cellId = @"MKVideoCell";
 
 @property (nonatomic, weak) UITableView *tableView;
 @property (nonatomic,strong) UIView *titleView;
-@property (nonatomic,assign)NSInteger lastTag;
+@property (nonatomic,strong)UIButton *lastButton;
 @end
 
 @implementation CarPreferentialController
@@ -65,30 +65,22 @@ static NSString *cellId = @"MKVideoCell";
         [btn setTitle:array[i] forState:UIControlStateNormal];
         btn.backgroundColor = [UIColor whiteColor];
         [btn addTarget:self action:@selector(touchBtn:) forControlEvents:UIControlEventTouchUpInside];
-        btn.tag = i;
         if (i ==0) {
-            [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+            btn.selected = YES;
+            [btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+            self.lastButton = btn;
         }
-        self.lastTag =0;
     }
 }
 
 
 - (void)touchBtn:(UIButton *)btn
 {
-    NSLog(@"btn:%ld",btn.tag);
-    if (self.lastTag !=btn.tag) {
-        //恢复之前按钮颜色
-        UIButton *lastBtn = (UIButton *)[self.view viewWithTag:self.lastTag];
-        
-        [lastBtn setTitleColor:[UIColor colorWithWhite:0.600 alpha:1.000] forState:UIControlStateNormal];
-        UIButton *currentbtn = (UIButton *)[self.view viewWithTag:btn.tag];
-        //修改当前颜色
-        [currentbtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-        
-        //修改序号
-        self.lastTag = btn.tag;
-    }
+
+    self.lastButton.selected = NO;
+    [btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+    btn.selected = YES;
+    self.lastButton = btn;
 }
 
 #pragma mark - Table view datasource
