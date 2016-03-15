@@ -7,9 +7,9 @@
 //
 
 #import "TSTJZCController.h"
+#import "TSDrawView.h"
 
 @interface TSTJZCController ()
-
 @end
 
 @implementation TSTJZCController
@@ -17,13 +17,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor=[UIColor redColor];
-    // Do any additional setup after loading the view.
+    
+    [self configSubviews];
 }
-
-- (void)didReceiveMemoryWarning {
+-(void)configSubviews
+{
+    self.view.backgroundColor=[UIColor redColor];
+    TSDrawView * drawView=[[TSDrawView alloc]init];
+    [self.view addSubview:drawView];
+    [drawView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(0);
+        make.right.equalTo(0);
+        make.top.equalTo(0);
+        make.height.equalTo(150);
+    }];
+}
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*
