@@ -7,18 +7,11 @@
 //
 
 #import "TSCarMod.h"
+#import <MJExtension.h>
 
 @implementation TSCarMod
-
-+(instancetype)modWithDict:(NSDictionary *)dict
++(NSDictionary *)mj_replacedKeyFromPropertyName
 {
-    TSCarMod * mod=[TSCarMod new];
-    mod.capitalPy = [dict objectForKey:@"capitalPy"];
-    mod.logoUrl = [dict objectForKey:@"logoUrl"];
-    mod.namePy = [dict objectForKey:@"namePy"];
-    mod.nameZh = [dict objectForKey:@"nameZh"];
-    mod.ID = [dict objectForKey:@"id"];
-
-    return mod;
+    return @{@"cid":@"id"};
 }
 @end

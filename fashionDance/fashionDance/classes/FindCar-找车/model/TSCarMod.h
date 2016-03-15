@@ -9,13 +9,19 @@
 #import <Foundation/Foundation.h>
 
 @interface TSCarMod : NSObject
+/**
+ *  logoUrl : http://m4.auto.itc.cn/c_zoom,w_160/logo/brand/339.png,
+	namePy : ruhu,
+	id : 339,
+	nameZh : 如虎,
+	capitalPy : R
+ */
 @property (nonatomic,strong) NSString * capitalPy;
 @property (nonatomic,strong) NSString * logoUrl;
 @property (nonatomic,strong) NSString * namePy;
 @property (nonatomic,strong) NSString * nameZh;
-@property (nonatomic,strong)NSNumber * ID;
+@property (nonatomic,strong)NSNumber * cid;
 
 
-+(instancetype)modWithDict:(NSDictionary *)dict;
 
 @end
