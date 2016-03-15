@@ -70,6 +70,7 @@
         make.top.equalTo(0);
         make.height.equalTo(self.scrollView.mas_height);
         make.width.equalTo(SCRW);
+        //把scrollview撑开
         make.right.equalTo(self.scrollView.mas_right);
     }];
 }

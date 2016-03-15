@@ -7,6 +7,9 @@
 //
 
 #import "WJVerticalButton.h"
+#define WJImageViewMargin 10
+#define WJTitleH 30
+#define WJBtnCount 4
 
 @implementation WJVerticalButton
 
@@ -34,16 +37,16 @@
     [super layoutSubviews];
     
     // 调整图片
-    self.imageView.x = 25;
-    self.imageView.y = 25;
-    self.imageView.width = self.width - 2 * self.imageView.x;
-    self.imageView.height = self.imageView.width;
+    self.imageView.height = self.height - 2 * WJImageViewMargin - WJTitleH;
+    self.imageView.width = self.imageView.height;
+    self.imageView.x = (self.width - self.imageView.width) / 2;
+    self.imageView.y = self.imageView.x / 2;
     
     // 调整文字
     self.titleLabel.x = 0;
     self.titleLabel.y = CGRectGetMaxY(self.imageView.frame) + 2;
     self.titleLabel.width = self.width;
-    self.titleLabel.height = self.height - self.titleLabel.y;
+    self.titleLabel.height = WJTitleH;
 }
 
 @end
