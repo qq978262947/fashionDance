@@ -42,7 +42,6 @@
                 [SVProgressHUD showErrorWithStatus:@"网络异常，请检查网络设置！"];
                 break;
                 
-            //case AFNetworkReachabilityStatusUnknown: // 未知网络
             case AFNetworkReachabilityStatusReachableViaWWAN: // 手机自带网络
                 WJLog(@"手机自带网络");
                 break;
@@ -54,7 +53,6 @@
     }];
     // 开始监控
     [mgr startMonitoring];
-    
     return YES;
 }
 
