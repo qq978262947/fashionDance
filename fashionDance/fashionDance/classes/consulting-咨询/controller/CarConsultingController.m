@@ -16,6 +16,7 @@
 #import "WJHotCarController.h"
 #import "WJWebViewController.h"
 #import "WJFindCarController.h"
+#import "WJConsultingNoPicCell.h"
 
 @interface CarConsultingController () <WJHeaderViewDelegate>
 /**
@@ -157,14 +158,29 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    WJConsultingCell *cell = [WJConsultingCell consultingCellWithTableView:tableView];
     WJList *list = self.listArray[indexPath.row];
-    cell.list = list;
-    return cell;
+    if (list.picUrl == nil || [list.picUrl isEqualToString:@""]) {
+        WJConsultingNoPicCell *cell = [WJConsultingNoPicCell consultingCellWithTableView:tableView];
+        cell.list = list;
+        return cell;
+    }else {
+        WJConsultingCell *cell  = [WJConsultingCell consultingCellWithTableView:tableView];
+        cell.list = list;
+        return cell;
+    }
+
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    WJList *list = self.listArray[indexPath.row];
+    if (list.picUrl == nil || [list.picUrl isEqualToString:@""]) {
+        // 文字的最大尺寸
+        CGSize maxSize = CGSizeMake(WJScreenW - 2 * 10, MAXFLOAT);
+        // 计算文字的高度
+        CGFloat height = [list.title boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:17]} context:nil].size.height;
+        return height + 20 + 20 + 5;
+    }
     return 90;
 }
 
