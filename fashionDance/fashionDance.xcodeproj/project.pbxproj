@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A7D74931C97EE78007544F8 /* SWBrandHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7D74921C97EE78007544F8 /* SWBrandHeadView.m */; };
+		4A7D74981C97F7F3007544F8 /* SWSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7D74971C97F7F3007544F8 /* SWSectionModel.m */; };
+		4A7D749C1C97FEFC007544F8 /* SWCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7D749A1C97FEFC007544F8 /* SWCarCell.m */; };
+		4A7D749D1C97FEFC007544F8 /* SWCarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A7D749B1C97FEFC007544F8 /* SWCarCell.xib */; };
 		A68FAFEFF4F4A49290AF4C6D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2E3BD33B03E9DF56A54E8A /* libPods.a */; };
 		BC878AED1C93FD1D004DEC7E /* CarForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878ACB1C93FD1D004DEC7E /* CarForumController.m */; };
 		BC878AEE1C93FD1D004DEC7E /* YUCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878ACD1C93FD1D004DEC7E /* YUCategoryViewController.m */; };
@@ -97,6 +101,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A7D74911C97EE78007544F8 /* SWBrandHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWBrandHeadView.h; sourceTree = "<group>"; };
+		4A7D74921C97EE78007544F8 /* SWBrandHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWBrandHeadView.m; sourceTree = "<group>"; };
+		4A7D74961C97F7F3007544F8 /* SWSectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWSectionModel.h; sourceTree = "<group>"; };
+		4A7D74971C97F7F3007544F8 /* SWSectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWSectionModel.m; sourceTree = "<group>"; };
+		4A7D74991C97FEFC007544F8 /* SWCarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCarCell.h; sourceTree = "<group>"; };
+		4A7D749A1C97FEFC007544F8 /* SWCarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCarCell.m; sourceTree = "<group>"; };
+		4A7D749B1C97FEFC007544F8 /* SWCarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SWCarCell.xib; sourceTree = "<group>"; };
 		6C2E3BD33B03E9DF56A54E8A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB5973FF1B297B050B1A609 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7CF344E4DA0F93C7E0B1D029 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -746,6 +757,8 @@
 				FCCB846C1C970122005EA1AA /* CarData.plist */,
 				FCCB84631C96B0BB005EA1AA /* TSCarMod.h */,
 				FCCB84641C96B0BB005EA1AA /* TSCarMod.m */,
+				4A7D74961C97F7F3007544F8 /* SWSectionModel.h */,
+				4A7D74971C97F7F3007544F8 /* SWSectionModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -755,6 +768,11 @@
 			children = (
 				FC457D761C97AAE200DDB531 /* TSPriceChoseView.h */,
 				FC457D771C97AAE200DDB531 /* TSPriceChoseView.m */,
+				4A7D74911C97EE78007544F8 /* SWBrandHeadView.h */,
+				4A7D74921C97EE78007544F8 /* SWBrandHeadView.m */,
+				4A7D74991C97FEFC007544F8 /* SWCarCell.h */,
+				4A7D749A1C97FEFC007544F8 /* SWCarCell.m */,
+				4A7D749B1C97FEFC007544F8 /* SWCarCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -872,6 +890,7 @@
 				DAE93A151C8E75B900F03A67 /* LaunchScreen.storyboard in Resources */,
 				FCCB846D1C970122005EA1AA /* CarData.plist in Resources */,
 				BC878AF81C93FD1D004DEC7E /* YUHotTopicCell.xib in Resources */,
+				4A7D749D1C97FEFC007544F8 /* SWCarCell.xib in Resources */,
 				FCCB845D1C96AF1A005EA1AA /* brand_list.json in Resources */,
 				BC878AFB1C93FD1D004DEC7E /* YUMoreTopicCell.xib in Resources */,
 				DA89F35B1C9301B4003D5AF8 /* WJCollectionViewCell.xib in Resources */,
@@ -958,6 +977,7 @@
 				DA3B5CDD1C93BF7A001997C8 /* LLCarTypeInfoModel.m in Sources */,
 				DA89F35A1C9301B4003D5AF8 /* WJCollectionViewCell.m in Sources */,
 				DA825C1E1C92E86B000C5EE4 /* WJHeaderView.m in Sources */,
+				4A7D74981C97F7F3007544F8 /* SWSectionModel.m in Sources */,
 				DA825C191C92E86B000C5EE4 /* WJConsultingCell.m in Sources */,
 				BC878AF01C93FD1D004DEC7E /* YUMoreTopicViewController.m in Sources */,
 				DA825C0F1C92E86B000C5EE4 /* WJSpecialController.m in Sources */,
@@ -973,6 +993,7 @@
 				DA825C241C92E86B000C5EE4 /* CarPreferentialController.m in Sources */,
 				DA3B5CD61C93BF7A001997C8 /* UIImageView+downloadImage.m in Sources */,
 				BC878AF51C93FD1D004DEC7E /* YUSelectionTopic.m in Sources */,
+				4A7D749C1C97FEFC007544F8 /* SWCarCell.m in Sources */,
 				BC878AEF1C93FD1D004DEC7E /* YUHotTopicViewController.m in Sources */,
 				DAE93A071C8E75B900F03A67 /* main.m in Sources */,
 				DA3B5CD41C93BF7A001997C8 /* UIImage+cirlcle.m in Sources */,
@@ -996,6 +1017,7 @@
 				BC878AED1C93FD1D004DEC7E /* CarForumController.m in Sources */,
 				BC878AF31C93FD1D004DEC7E /* YUBannerListModel.m in Sources */,
 				DA89F3561C93009B003D5AF8 /* WJWaterFlowLayout.m in Sources */,
+				4A7D74931C97EE78007544F8 /* SWBrandHeadView.m in Sources */,
 				BC878AF91C93FD1D004DEC7E /* YUImageCell.m in Sources */,
 				DA89F3521C92FE85003D5AF8 /* WJHotCarController.m in Sources */,
 				DA3B5CD11C93BF7A001997C8 /* NSDate+WJExtension.m in Sources */,

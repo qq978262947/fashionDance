@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class TSCarMod;
 @interface SWCarCell : UITableViewCell
+@property (nonatomic ,strong )TSCarMod *model;
 
++(id)carCellWithTableView:(UITableView *)tableView;
 @end

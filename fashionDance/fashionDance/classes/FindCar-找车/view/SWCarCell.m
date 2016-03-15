@@ -7,8 +7,21 @@
 //
 
 #import "SWCarCell.h"
+#import "TSCarMod.h"
+#import <UIImageView+WebCache.h>
+@interface SWCarCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
+@end
 @implementation SWCarCell
++(id)carCellWithTableView:(UITableView *)tableView
+{
+    NSString *className = NSStringFromClass([self class]);
+    UINib *nib = [UINib nibWithNibName:className bundle:nil];
+    [tableView registerNib:nib forCellReuseIdentifier:className];
+    return [tableView dequeueReusableCellWithIdentifier:className];
+}
 
 - (void)awakeFromNib {
     // Initialization code
@@ -20,4 +33,10 @@
     // Configure the view for the selected state
 }
 
+-(void)setModel:(TSCarMod *)model
+{
+    _model = model;
+    self.nameLabel.text = model.nameZh;
+    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:model.logoUrl]];
+}
 @end

@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface SWSectionModel : NSObject
-
+@property (nonatomic, strong) NSArray *citys;
+@property (nonatomic, copy) NSString *initial;
 @end

@@ -7,7 +7,11 @@
 //
 
 #import "SWSectionModel.h"
-
+#import "TSCarMod.h"
+#import <MJExtension.h>
 @implementation SWSectionModel
++(NSDictionary *)objectClassInArray{//数组中是某种模型
+    return @{@"citys" : [TSCarMod class]};
+}
 
 @end
