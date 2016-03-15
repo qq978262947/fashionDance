@@ -71,6 +71,11 @@
 		DAE93A201C8E75B900F03A67 /* fashionDanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE93A1F1C8E75B900F03A67 /* fashionDanceTests.m */; };
 		DAE93A2B1C8E75B900F03A67 /* fashionDanceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE93A2A1C8E75B900F03A67 /* fashionDanceUITests.m */; };
 		DAE93A5B1C8E77A600F03A67 /* WJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE93A5A1C8E77A600F03A67 /* WJConst.m */; };
+		FCCB845D1C96AF1A005EA1AA /* brand_list.json in Resources */ = {isa = PBXBuildFile; fileRef = FCCB845C1C96AF1A005EA1AA /* brand_list.json */; };
+		FCCB84651C96B0BB005EA1AA /* TSCarMod.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB84641C96B0BB005EA1AA /* TSCarMod.m */; };
+		FCCB84681C96B29E005EA1AA /* TSBrandCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB84671C96B29E005EA1AA /* TSBrandCarController.m */; };
+		FCCB846B1C96F745005EA1AA /* TSTJZCController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB846A1C96F745005EA1AA /* TSTJZCController.m */; };
+		FCCB846D1C970122005EA1AA /* CarData.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCCB846C1C970122005EA1AA /* CarData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -215,6 +220,14 @@
 		DAE93A5A1C8E77A600F03A67 /* WJConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJConst.m; sourceTree = "<group>"; };
 		DAE93A5C1C8E77BB00F03A67 /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singleton.h; sourceTree = "<group>"; };
 		DAE93A5D1C8E77BB00F03A67 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FCCB845C1C96AF1A005EA1AA /* brand_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brand_list.json; sourceTree = "<group>"; };
+		FCCB84631C96B0BB005EA1AA /* TSCarMod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCarMod.h; sourceTree = "<group>"; };
+		FCCB84641C96B0BB005EA1AA /* TSCarMod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCarMod.m; sourceTree = "<group>"; };
+		FCCB84661C96B29E005EA1AA /* TSBrandCarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBrandCarController.h; sourceTree = "<group>"; };
+		FCCB84671C96B29E005EA1AA /* TSBrandCarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBrandCarController.m; sourceTree = "<group>"; };
+		FCCB84691C96F745005EA1AA /* TSTJZCController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTJZCController.h; sourceTree = "<group>"; };
+		FCCB846A1C96F745005EA1AA /* TSTJZCController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTJZCController.m; sourceTree = "<group>"; };
+		FCCB846C1C970122005EA1AA /* CarData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CarData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -550,9 +563,10 @@
 		DA825BEF1C92E86B000C5EE4 /* FindCar-找车 */ = {
 			isa = PBXGroup;
 			children = (
+				FCCB84611C96B0AA005EA1AA /* model */,
+				FCCB84621C96B0AA005EA1AA /* view */,
+				FCCB845C1C96AF1A005EA1AA /* brand_list.json */,
 				DA825BF01C92E86B000C5EE4 /* controller */,
-				DA825BF31C92E86B000C5EE4 /* model */,
-				DA825BF41C92E86B000C5EE4 /* view */,
 			);
 			path = "FindCar-找车";
 			sourceTree = "<group>";
@@ -562,22 +576,12 @@
 			children = (
 				DA825BF11C92E86B000C5EE4 /* CarFindController.h */,
 				DA825BF21C92E86B000C5EE4 /* CarFindController.m */,
+				FCCB84661C96B29E005EA1AA /* TSBrandCarController.h */,
+				FCCB84671C96B29E005EA1AA /* TSBrandCarController.m */,
+				FCCB84691C96F745005EA1AA /* TSTJZCController.h */,
+				FCCB846A1C96F745005EA1AA /* TSTJZCController.m */,
 			);
 			path = controller;
-			sourceTree = "<group>";
-		};
-		DA825BF31C92E86B000C5EE4 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		DA825BF41C92E86B000C5EE4 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 		DA825C031C92E86B000C5EE4 /* Mine-我的 */ = {
@@ -733,6 +737,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FCCB84611C96B0AA005EA1AA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FCCB846C1C970122005EA1AA /* CarData.plist */,
+				FCCB84631C96B0BB005EA1AA /* TSCarMod.h */,
+				FCCB84641C96B0BB005EA1AA /* TSCarMod.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		FCCB84621C96B0AA005EA1AA /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -844,7 +865,9 @@
 				DA825C1C1C92E86B000C5EE4 /* WJFindHotCell.xib in Resources */,
 				BC878AFD1C93FD1D004DEC7E /* YUSelectionTopicCell.xib in Resources */,
 				DAE93A151C8E75B900F03A67 /* LaunchScreen.storyboard in Resources */,
+				FCCB846D1C970122005EA1AA /* CarData.plist in Resources */,
 				BC878AF81C93FD1D004DEC7E /* YUHotTopicCell.xib in Resources */,
+				FCCB845D1C96AF1A005EA1AA /* brand_list.json in Resources */,
 				BC878AFB1C93FD1D004DEC7E /* YUMoreTopicCell.xib in Resources */,
 				DA89F35B1C9301B4003D5AF8 /* WJCollectionViewCell.xib in Resources */,
 				DAE93A121C8E75B900F03A67 /* Assets.xcassets in Resources */,
@@ -954,11 +977,14 @@
 				BC878AF21C93FD1D004DEC7E /* YUTopicWebViewController.m in Sources */,
 				DA825C9E1C92EB7E000C5EE4 /* WJArrangeController.m in Sources */,
 				DA825C1D1C92E86B000C5EE4 /* WJContainerView.m in Sources */,
+				FCCB84651C96B0BB005EA1AA /* TSCarMod.m in Sources */,
 				DA825C201C92E86B000C5EE4 /* WJVerticalButton.m in Sources */,
 				DA89F3461C92FDCE003D5AF8 /* WJFindCarResult.m in Sources */,
 				DA3B5CD21C93BF7A001997C8 /* NSString+StringFromNumber.m in Sources */,
 				BC878AF71C93FD1D004DEC7E /* YUHotTopicCell.m in Sources */,
 				DA825C211C92E86B000C5EE4 /* CarFindController.m in Sources */,
+				FCCB846B1C96F745005EA1AA /* TSTJZCController.m in Sources */,
+				FCCB84681C96B29E005EA1AA /* TSBrandCarController.m in Sources */,
 				DA3B5CD91C93BF7A001997C8 /* WJNavgationController.m in Sources */,
 				BC878AFE1C93FD1D004DEC7E /* YUTopicHeaderView.m in Sources */,
 				BC878AFC1C93FD1D004DEC7E /* YUSelectionTopicCell.m in Sources */,
