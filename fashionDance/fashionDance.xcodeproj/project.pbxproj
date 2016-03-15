@@ -80,6 +80,11 @@
 		FC457DCD1C9816A200DDB531 /* SWSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC457DCC1C9816A200DDB531 /* SWSectionModel.m */; };
 		FC457DD11C9816AF00DDB531 /* SWCarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC457DCF1C9816AF00DDB531 /* SWCarCell.m */; };
 		FC457DD21C9816AF00DDB531 /* SWCarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC457DD01C9816AF00DDB531 /* SWCarCell.xib */; };
+		FC457DD41C983CA200DDB531 /* TSTitleList.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC457DD31C983CA200DDB531 /* TSTitleList.plist */; };
+		FC457DD61C983D3800DDB531 /* TSConfigList.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC457DD51C983D3800DDB531 /* TSConfigList.plist */; };
+		FC457DDA1C98413100DDB531 /* TSTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC457DD81C98413100DDB531 /* TSTitleCell.m */; };
+		FC457DDB1C98413100DDB531 /* TSTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC457DD91C98413100DDB531 /* TSTitleCell.xib */; };
+		FC457DDE1C9847E600DDB531 /* TSSpecificController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC457DDD1C9847E600DDB531 /* TSSpecificController.m */; };
 		FCCB845D1C96AF1A005EA1AA /* brand_list.json in Resources */ = {isa = PBXBuildFile; fileRef = FCCB845C1C96AF1A005EA1AA /* brand_list.json */; };
 		FCCB84651C96B0BB005EA1AA /* TSCarMod.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB84641C96B0BB005EA1AA /* TSCarMod.m */; };
 		FCCB84681C96B29E005EA1AA /* TSBrandCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB84671C96B29E005EA1AA /* TSBrandCarController.m */; };
@@ -244,6 +249,13 @@
 		FC457DCE1C9816AF00DDB531 /* SWCarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCarCell.h; sourceTree = "<group>"; };
 		FC457DCF1C9816AF00DDB531 /* SWCarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCarCell.m; sourceTree = "<group>"; };
 		FC457DD01C9816AF00DDB531 /* SWCarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SWCarCell.xib; sourceTree = "<group>"; };
+		FC457DD31C983CA200DDB531 /* TSTitleList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TSTitleList.plist; sourceTree = "<group>"; };
+		FC457DD51C983D3800DDB531 /* TSConfigList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TSConfigList.plist; sourceTree = "<group>"; };
+		FC457DD71C98413100DDB531 /* TSTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTitleCell.h; sourceTree = "<group>"; };
+		FC457DD81C98413100DDB531 /* TSTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTitleCell.m; sourceTree = "<group>"; };
+		FC457DD91C98413100DDB531 /* TSTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSTitleCell.xib; sourceTree = "<group>"; };
+		FC457DDC1C9847E600DDB531 /* TSSpecificController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSpecificController.h; sourceTree = "<group>"; };
+		FC457DDD1C9847E600DDB531 /* TSSpecificController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSpecificController.m; sourceTree = "<group>"; };
 		FCCB845C1C96AF1A005EA1AA /* brand_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brand_list.json; sourceTree = "<group>"; };
 		FCCB84631C96B0BB005EA1AA /* TSCarMod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCarMod.h; sourceTree = "<group>"; };
 		FCCB84641C96B0BB005EA1AA /* TSCarMod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCarMod.m; sourceTree = "<group>"; };
@@ -607,6 +619,8 @@
 				FCCB84671C96B29E005EA1AA /* TSBrandCarController.m */,
 				FCCB84691C96F745005EA1AA /* TSTJZCController.h */,
 				FCCB846A1C96F745005EA1AA /* TSTJZCController.m */,
+				FC457DDC1C9847E600DDB531 /* TSSpecificController.h */,
+				FC457DDD1C9847E600DDB531 /* TSSpecificController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -775,6 +789,8 @@
 				FCCB846C1C970122005EA1AA /* CarData.plist */,
 				FCCB84631C96B0BB005EA1AA /* TSCarMod.h */,
 				FCCB84641C96B0BB005EA1AA /* TSCarMod.m */,
+				FC457DD31C983CA200DDB531 /* TSTitleList.plist */,
+				FC457DD51C983D3800DDB531 /* TSConfigList.plist */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -789,6 +805,9 @@
 				FC457DC91C98168700DDB531 /* SWBrandHeadView.m */,
 				FC457DBB1C98064C00DDB531 /* TSDrawView.h */,
 				FC457DBC1C98064C00DDB531 /* TSDrawView.m */,
+				FC457DD71C98413100DDB531 /* TSTitleCell.h */,
+				FC457DD81C98413100DDB531 /* TSTitleCell.m */,
+				FC457DD91C98413100DDB531 /* TSTitleCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -901,15 +920,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC457DC71C98165900DDB531 /* MKVideoCell.xib in Resources */,
+				FC457DD41C983CA200DDB531 /* TSTitleList.plist in Resources */,
 				DA825C1A1C92E86B000C5EE4 /* WJConsultingCell.xib in Resources */,
 				DA825C1C1C92E86B000C5EE4 /* WJFindHotCell.xib in Resources */,
 				BC878AFD1C93FD1D004DEC7E /* YUSelectionTopicCell.xib in Resources */,
+				FC457DD61C983D3800DDB531 /* TSConfigList.plist in Resources */,
 				DAE93A151C8E75B900F03A67 /* LaunchScreen.storyboard in Resources */,
 				FCCB846D1C970122005EA1AA /* CarData.plist in Resources */,
 				BC878AF81C93FD1D004DEC7E /* YUHotTopicCell.xib in Resources */,
 				FCCB845D1C96AF1A005EA1AA /* brand_list.json in Resources */,
 				BC878AFB1C93FD1D004DEC7E /* YUMoreTopicCell.xib in Resources */,
 				DA89F35B1C9301B4003D5AF8 /* WJCollectionViewCell.xib in Resources */,
+				FC457DDB1C98413100DDB531 /* TSTitleCell.xib in Resources */,
 				DAE93A121C8E75B900F03A67 /* Assets.xcassets in Resources */,
 				FC457DC21C98162D00DDB531 /* WJConsultingNoPicCell.xib in Resources */,
 				FC457DD21C9816AF00DDB531 /* SWCarCell.xib in Resources */,
@@ -999,6 +1021,7 @@
 				DA825C191C92E86B000C5EE4 /* WJConsultingCell.m in Sources */,
 				BC878AF01C93FD1D004DEC7E /* YUMoreTopicViewController.m in Sources */,
 				DA825C0F1C92E86B000C5EE4 /* WJSpecialController.m in Sources */,
+				FC457DDA1C98413100DDB531 /* TSTitleCell.m in Sources */,
 				DA825C1F1C92E86B000C5EE4 /* WJProgressView.m in Sources */,
 				DA3B5CDE1C93BF7A001997C8 /* LLCarTypeVersionModel.m in Sources */,
 				DA3B5CD71C93BF7A001997C8 /* UIView+WJExtension.m in Sources */,
@@ -1027,6 +1050,7 @@
 				DA825C201C92E86B000C5EE4 /* WJVerticalButton.m in Sources */,
 				DA89F3461C92FDCE003D5AF8 /* WJFindCarResult.m in Sources */,
 				FC457DCD1C9816A200DDB531 /* SWSectionModel.m in Sources */,
+				FC457DDE1C9847E600DDB531 /* TSSpecificController.m in Sources */,
 				DA3B5CD21C93BF7A001997C8 /* NSString+StringFromNumber.m in Sources */,
 				BC878AF71C93FD1D004DEC7E /* YUHotTopicCell.m in Sources */,
 				DA825C211C92E86B000C5EE4 /* CarFindController.m in Sources */,

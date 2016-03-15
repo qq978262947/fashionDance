@@ -7,7 +7,7 @@
 //
 
 #import "TSBrandCarController.h"
-
+#import "TSTitleCell.h"
 #import "SWBrandHeadView.h"
 #import "SWSectionModel.h"
 #import "TSCarMod.h"
