@@ -26,6 +26,8 @@
 		BC878AFC1C93FD1D004DEC7E /* YUSelectionTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AE91C93FD1D004DEC7E /* YUSelectionTopicCell.m */; };
 		BC878AFD1C93FD1D004DEC7E /* YUSelectionTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC878AEA1C93FD1D004DEC7E /* YUSelectionTopicCell.xib */; };
 		BC878AFE1C93FD1D004DEC7E /* YUTopicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AEC1C93FD1D004DEC7E /* YUTopicHeaderView.m */; };
+		D15A9B731C97F12C00A084BB /* MKVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D15A9B711C97F12C00A084BB /* MKVideoCell.m */; };
+		D15A9B741C97F12C00A084BB /* MKVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D15A9B721C97F12C00A084BB /* MKVideoCell.xib */; };
 		DA3802901C97E0A400FAC887 /* WJConsultingNoPicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA38028E1C97E0A400FAC887 /* WJConsultingNoPicCell.m */; };
 		DA3802911C97E0A400FAC887 /* WJConsultingNoPicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA38028F1C97E0A400FAC887 /* WJConsultingNoPicCell.xib */; };
 		DA3B5CD01C93BF7A001997C8 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CAD1C93BF7A001997C8 /* Foundation+Log.m */; };
@@ -135,6 +137,9 @@
 		BC878AEA1C93FD1D004DEC7E /* YUSelectionTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUSelectionTopicCell.xib; sourceTree = "<group>"; };
 		BC878AEB1C93FD1D004DEC7E /* YUTopicHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUTopicHeaderView.h; sourceTree = "<group>"; };
 		BC878AEC1C93FD1D004DEC7E /* YUTopicHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUTopicHeaderView.m; sourceTree = "<group>"; };
+		D15A9B701C97F12C00A084BB /* MKVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKVideoCell.h; path = "fashionDance/classes/preferential-特惠/MKVideoCell.h"; sourceTree = SOURCE_ROOT; };
+		D15A9B711C97F12C00A084BB /* MKVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKVideoCell.m; path = "fashionDance/classes/preferential-特惠/MKVideoCell.m"; sourceTree = SOURCE_ROOT; };
+		D15A9B721C97F12C00A084BB /* MKVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MKVideoCell.xib; path = "fashionDance/classes/preferential-特惠/MKVideoCell.xib"; sourceTree = SOURCE_ROOT; };
 		DA38028D1C97E0A400FAC887 /* WJConsultingNoPicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJConsultingNoPicCell.h; sourceTree = "<group>"; };
 		DA38028E1C97E0A400FAC887 /* WJConsultingNoPicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJConsultingNoPicCell.m; sourceTree = "<group>"; };
 		DA38028F1C97E0A400FAC887 /* WJConsultingNoPicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WJConsultingNoPicCell.xib; sourceTree = "<group>"; };
@@ -655,6 +660,9 @@
 		DA825C0E1C92E86B000C5EE4 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				D15A9B701C97F12C00A084BB /* MKVideoCell.h */,
+				D15A9B711C97F12C00A084BB /* MKVideoCell.m */,
+				D15A9B721C97F12C00A084BB /* MKVideoCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -874,6 +882,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D15A9B741C97F12C00A084BB /* MKVideoCell.xib in Resources */,
 				DA825C1A1C92E86B000C5EE4 /* WJConsultingCell.xib in Resources */,
 				DA825C1C1C92E86B000C5EE4 /* WJFindHotCell.xib in Resources */,
 				BC878AFD1C93FD1D004DEC7E /* YUSelectionTopicCell.xib in Resources */,
@@ -977,6 +986,7 @@
 				DA825C171C92E86B000C5EE4 /* WJConsultingResult.m in Sources */,
 				BC878AF41C93FD1D004DEC7E /* YUHotTopicModel.m in Sources */,
 				DA3B5CD51C93BF7A001997C8 /* UIImage+reSize.m in Sources */,
+				D15A9B731C97F12C00A084BB /* MKVideoCell.m in Sources */,
 				DA89F3511C92FE85003D5AF8 /* WJFindCarController.m in Sources */,
 				BC878AFA1C93FD1D004DEC7E /* YUMoreTopicCell.m in Sources */,
 				DA825C241C92E86B000C5EE4 /* CarPreferentialController.m in Sources */,
