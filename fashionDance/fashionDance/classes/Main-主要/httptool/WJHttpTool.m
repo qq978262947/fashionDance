@@ -15,6 +15,11 @@
 
 @implementation WJHttpTool
 
++ (instancetype)httpTool {
+    return [[self alloc]init];
+}
+
+
 - (AFHTTPSessionManager *)manager{
     if (nil == _manager) {
         //1.获得请求管理者

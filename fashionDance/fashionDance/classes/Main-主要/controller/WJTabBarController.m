@@ -8,11 +8,10 @@
 
 #import "WJTabBarController.h"
 #import "WJNavgationController.h"
-#import "WJDanceController.h"
-#import "WJRecommendController.h"
-#import "WJShowsTopperController.h"
-#import "WJSpecialController.h"
-#import "WJTrainingController.h"
+#import "CarConsultingController.h"
+#import "CarFindController.h"
+#import "CarPreferentialController.h"
+#import "CarForumController.h"
 #import "UIImage+reSize.h"
 
 //#define WJImageSize CGSizeMake(25, 25)
@@ -46,15 +45,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 添加子控制器
-    [self setupChildVc:[[WJSpecialController alloc] init] title:@"咨询" imageName:@"tab_forum_normal" selectedImageName:@"tab_forum_highlighted"];
+    [self setupChildVc:[[CarConsultingController alloc] init] title:@"咨询" imageName:@"tab_forum_normal" selectedImageName:@"tab_forum_highlighted"];
     
-    [self setupChildVc:[[WJRecommendController alloc] init] title:@"找车" imageName:@"tab_selectCar_normal" selectedImageName:@"tab_selectCar_highlighted"];
+    [self setupChildVc:[[CarFindController alloc] init] title:@"找车" imageName:@"tab_selectCar_normal" selectedImageName:@"tab_selectCar_highlighted"];
     
-    [self setupChildVc:[[WJShowsTopperController alloc] init] title:@"特惠" imageName:@"tab_preferentialCar_normal" selectedImageName:@"tab_preferentialCar_highlighted"];
+    [self setupChildVc:[[CarPreferentialController alloc] init] title:@"特惠" imageName:@"tab_preferentialCar_normal" selectedImageName:@"tab_preferentialCar_highlighted"];
     
-    [self setupChildVc:[[WJDanceController alloc] init] title:@"论坛" imageName:@"tab_news_normal" selectedImageName:@"tab_news_highlighted"];
+    [self setupChildVc:[[CarForumController alloc] init] title:@"论坛" imageName:@"tab_news_normal" selectedImageName:@"tab_news_highlighted"];
     
-    [self setupChildVc:[[WJTrainingController alloc] init] title:@"我的" imageName:@"tab_mySpace_normal" selectedImageName:@"tab_mySpace_highlighted"];
     
     UIView *whiteView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WJScreenW, WJTopicCellBottomBarH)];
     whiteView.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.9];

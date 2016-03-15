@@ -44,16 +44,13 @@
     if (self.childViewControllers.count > 0) { // 如果push进来的不是第一个控制器
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setTitle:@"返回" forState:UIControlStateNormal];
-        [button setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];
-        [button setImage:[UIImage imageNamed:@"navigationButtonReturnClick"] forState:UIControlStateHighlighted];
+        [button setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
         button.size = CGSizeMake(70, 30);
         // 让按钮内部的所有内容左对齐
         button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         //        [button sizeToFit];
         // 让按钮的内容往左边偏移10
         button.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
-        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
         [button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
         
         // 修改导航栏左边的item
