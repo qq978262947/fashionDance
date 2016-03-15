@@ -7,9 +7,12 @@
 //
 
 #import "CarPreferentialController.h"
+#import "MKVideoCell.h"
 
-@interface CarPreferentialController ()
+static NSString *cellId = @"MKVideoCell";
+@interface CarPreferentialController ()<UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, weak) UITableView *tableView;
 @end
 
 @implementation CarPreferentialController
@@ -18,21 +21,52 @@
     [super viewDidLoad];
     // 设置背景色
     self.view.backgroundColor = WJGlobalBg;
+    
+    // 设置tableview
+    [self setupTableView];
+
+}
+- (void)setupTableView {
+    //Nav的距离
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0, 0.0, WJScreenW, WJScreenH) style:UITableViewStylePlain];
+    // 设置tableView的额外滚动区域
+   // [tableView setContentInset:UIEdgeInsetsMake(0.0, 0.0, TableViewContentInset, 0.0)];
+    [tableView setBackgroundColor:WJGlobalBg];
+    [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    [self.view addSubview:tableView];
+    //tableView.backgroundColor = [UIColor colorWithRed:0.000 green:1.000 blue:0.502 alpha:1.000];
+    self.tableView = tableView;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - Table view datasource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MKVideoCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (cell ==nil) {
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"MKVideoCell" owner:nil options:nil]lastObject];
+    }
+    //显示数据
+   // NewsModel *model = self.dataArry[indexPath.row];
+    return cell;
 }
-*/
+
+
+#pragma mark - Table view delegate methods
+/**
+ *  根据相应的数据设置cell的高度
+ *
+ *  @param indexPath cell的位置
+ */
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 86;
+}
+
 
 @end
