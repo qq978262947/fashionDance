@@ -26,6 +26,14 @@
 		BC878AFC1C93FD1D004DEC7E /* YUSelectionTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AE91C93FD1D004DEC7E /* YUSelectionTopicCell.m */; };
 		BC878AFD1C93FD1D004DEC7E /* YUSelectionTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC878AEA1C93FD1D004DEC7E /* YUSelectionTopicCell.xib */; };
 		BC878AFE1C93FD1D004DEC7E /* YUTopicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AEC1C93FD1D004DEC7E /* YUTopicHeaderView.m */; };
+		DA2B4BFA1C99A5A7001DE451 /* CCPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B4BEF1C99A5A7001DE451 /* CCPicViewController.m */; };
+		DA2B4BFB1C99A5A7001DE451 /* WJPraiseViewController.h.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B4BF11C99A5A7001DE451 /* WJPraiseViewController.h.m */; };
+		DA2B4BFC1C99A5A7001DE451 /* WJPublicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B4BF31C99A5A7001DE451 /* WJPublicViewController.m */; };
+		DA2B4BFD1C99A5A7001DE451 /* YuArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B4BF51C99A5A7001DE451 /* YuArticleViewController.m */; };
+		DA2B4BFE1C99A5A7001DE451 /* YuForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B4BF71C99A5A7001DE451 /* YuForumViewController.m */; };
+		DA2B4BFF1C99A5A7001DE451 /* YuSummarizeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B4BF91C99A5A7001DE451 /* YuSummarizeController.m */; };
+		DA2B4C021C99A600001DE451 /* WJScrollTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B4C011C99A600001DE451 /* WJScrollTitleView.m */; };
+		DA2B4C051C99A609001DE451 /* WJConstraintModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B4C041C99A609001DE451 /* WJConstraintModel.m */; };
 		DA3B5CD01C93BF7A001997C8 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CAD1C93BF7A001997C8 /* Foundation+Log.m */; };
 		DA3B5CD11C93BF7A001997C8 /* NSDate+WJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CAF1C93BF7A001997C8 /* NSDate+WJExtension.m */; };
 		DA3B5CD21C93BF7A001997C8 /* NSString+StringFromNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CB11C93BF7A001997C8 /* NSString+StringFromNumber.m */; };
@@ -150,6 +158,22 @@
 		BC878AEA1C93FD1D004DEC7E /* YUSelectionTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUSelectionTopicCell.xib; sourceTree = "<group>"; };
 		BC878AEB1C93FD1D004DEC7E /* YUTopicHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUTopicHeaderView.h; sourceTree = "<group>"; };
 		BC878AEC1C93FD1D004DEC7E /* YUTopicHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUTopicHeaderView.m; sourceTree = "<group>"; };
+		DA2B4BEE1C99A5A7001DE451 /* CCPicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPicViewController.h; sourceTree = "<group>"; };
+		DA2B4BEF1C99A5A7001DE451 /* CCPicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPicViewController.m; sourceTree = "<group>"; };
+		DA2B4BF01C99A5A7001DE451 /* WJPraiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJPraiseViewController.h; sourceTree = "<group>"; };
+		DA2B4BF11C99A5A7001DE451 /* WJPraiseViewController.h.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJPraiseViewController.h.m; sourceTree = "<group>"; };
+		DA2B4BF21C99A5A7001DE451 /* WJPublicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJPublicViewController.h; sourceTree = "<group>"; };
+		DA2B4BF31C99A5A7001DE451 /* WJPublicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJPublicViewController.m; sourceTree = "<group>"; };
+		DA2B4BF41C99A5A7001DE451 /* YuArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YuArticleViewController.h; sourceTree = "<group>"; };
+		DA2B4BF51C99A5A7001DE451 /* YuArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YuArticleViewController.m; sourceTree = "<group>"; };
+		DA2B4BF61C99A5A7001DE451 /* YuForumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YuForumViewController.h; sourceTree = "<group>"; };
+		DA2B4BF71C99A5A7001DE451 /* YuForumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YuForumViewController.m; sourceTree = "<group>"; };
+		DA2B4BF81C99A5A7001DE451 /* YuSummarizeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YuSummarizeController.h; sourceTree = "<group>"; };
+		DA2B4BF91C99A5A7001DE451 /* YuSummarizeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YuSummarizeController.m; sourceTree = "<group>"; };
+		DA2B4C001C99A600001DE451 /* WJScrollTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJScrollTitleView.h; sourceTree = "<group>"; };
+		DA2B4C011C99A600001DE451 /* WJScrollTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJScrollTitleView.m; sourceTree = "<group>"; };
+		DA2B4C031C99A609001DE451 /* WJConstraintModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJConstraintModel.h; sourceTree = "<group>"; };
+		DA2B4C041C99A609001DE451 /* WJConstraintModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJConstraintModel.m; sourceTree = "<group>"; };
 		DA3B5CAD1C93BF7A001997C8 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		DA3B5CAE1C93BF7A001997C8 /* NSDate+WJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WJExtension.h"; sourceTree = "<group>"; };
 		DA3B5CAF1C93BF7A001997C8 /* NSDate+WJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WJExtension.m"; sourceTree = "<group>"; };
@@ -375,9 +399,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA2B4BED1C99A5A7001DE451 /* publicController */ = {
+			isa = PBXGroup;
+			children = (
+				DA2B4BEE1C99A5A7001DE451 /* CCPicViewController.h */,
+				DA2B4BEF1C99A5A7001DE451 /* CCPicViewController.m */,
+				DA2B4BF01C99A5A7001DE451 /* WJPraiseViewController.h */,
+				DA2B4BF11C99A5A7001DE451 /* WJPraiseViewController.h.m */,
+				DA2B4BF21C99A5A7001DE451 /* WJPublicViewController.h */,
+				DA2B4BF31C99A5A7001DE451 /* WJPublicViewController.m */,
+				DA2B4BF41C99A5A7001DE451 /* YuArticleViewController.h */,
+				DA2B4BF51C99A5A7001DE451 /* YuArticleViewController.m */,
+				DA2B4BF61C99A5A7001DE451 /* YuForumViewController.h */,
+				DA2B4BF71C99A5A7001DE451 /* YuForumViewController.m */,
+				DA2B4BF81C99A5A7001DE451 /* YuSummarizeController.h */,
+				DA2B4BF91C99A5A7001DE451 /* YuSummarizeController.m */,
+			);
+			path = publicController;
+			sourceTree = "<group>";
+		};
 		DA3B5CAB1C93BF7A001997C8 /* Main-主要 */ = {
 			isa = PBXGroup;
 			children = (
+				DA2B4BED1C99A5A7001DE451 /* publicController */,
 				DA3B5CAC1C93BF7A001997C8 /* category */,
 				DA3B5CBC1C93BF7A001997C8 /* controller */,
 				DA3B5CC31C93BF7A001997C8 /* httptool */,
@@ -586,6 +630,10 @@
 		DA825BE41C92E86B000C5EE4 /* ContainerView */ = {
 			isa = PBXGroup;
 			children = (
+				DA2B4C031C99A609001DE451 /* WJConstraintModel.h */,
+				DA2B4C041C99A609001DE451 /* WJConstraintModel.m */,
+				DA2B4C001C99A600001DE451 /* WJScrollTitleView.h */,
+				DA2B4C011C99A600001DE451 /* WJScrollTitleView.m */,
 				DA825BE51C92E86B000C5EE4 /* WJContainerView.h */,
 				DA825BE61C92E86B000C5EE4 /* WJContainerView.m */,
 			);
@@ -1030,11 +1078,13 @@
 				BC878AEE1C93FD1D004DEC7E /* YUCategoryViewController.m in Sources */,
 				DA825C971C92EAD2000C5EE4 /* CarConsultingController.m in Sources */,
 				FC457DC01C98162700DDB531 /* WJConsultingNoPicCell.m in Sources */,
+				DA2B4C021C99A600001DE451 /* WJScrollTitleView.m in Sources */,
 				DA3B5CDC1C93BF7A001997C8 /* LLCarOffSaleListModel.m in Sources */,
 				DAE93A0A1C8E75B900F03A67 /* AppDelegate.m in Sources */,
 				DAE93A5B1C8E77A600F03A67 /* WJConst.m in Sources */,
 				DA825C181C92E86B000C5EE4 /* WJSUVResult.m in Sources */,
 				DA3B5CDD1C93BF7A001997C8 /* LLCarTypeInfoModel.m in Sources */,
+				DA2B4BFC1C99A5A7001DE451 /* WJPublicViewController.m in Sources */,
 				DA89F35A1C9301B4003D5AF8 /* WJCollectionViewCell.m in Sources */,
 				DA825C1E1C92E86B000C5EE4 /* WJHeaderView.m in Sources */,
 				DA825C191C92E86B000C5EE4 /* WJConsultingCell.m in Sources */,
@@ -1042,13 +1092,17 @@
 				DA825C0F1C92E86B000C5EE4 /* WJSpecialController.m in Sources */,
 				FC457DDA1C98413100DDB531 /* TSTitleCell.m in Sources */,
 				FCCF82741C995DC300F12B8C /* TSSXTableController.m in Sources */,
+				DA2B4BFB1C99A5A7001DE451 /* WJPraiseViewController.h.m in Sources */,
 				DA825C1F1C92E86B000C5EE4 /* WJProgressView.m in Sources */,
 				DA3B5CDE1C93BF7A001997C8 /* LLCarTypeVersionModel.m in Sources */,
 				DA3B5CD71C93BF7A001997C8 /* UIView+WJExtension.m in Sources */,
 				DA3B5CD31C93BF7A001997C8 /* UIBarButtonItem+WJExtension.m in Sources */,
 				DA825C171C92E86B000C5EE4 /* WJConsultingResult.m in Sources */,
+				DA2B4BFA1C99A5A7001DE451 /* CCPicViewController.m in Sources */,
 				BC878AF41C93FD1D004DEC7E /* YUHotTopicModel.m in Sources */,
 				FC457DC61C98165900DDB531 /* MKVideoCell.m in Sources */,
+				DA2B4BFF1C99A5A7001DE451 /* YuSummarizeController.m in Sources */,
+				DA2B4BFE1C99A5A7001DE451 /* YuForumViewController.m in Sources */,
 				DA3B5CD51C93BF7A001997C8 /* UIImage+reSize.m in Sources */,
 				DA89F3511C92FE85003D5AF8 /* WJFindCarController.m in Sources */,
 				BC878AFA1C93FD1D004DEC7E /* YUMoreTopicCell.m in Sources */,
@@ -1074,6 +1128,7 @@
 				FC457DCD1C9816A200DDB531 /* SWSectionModel.m in Sources */,
 				FC457DDE1C9847E600DDB531 /* TSSpecificController.m in Sources */,
 				DA3B5CD21C93BF7A001997C8 /* NSString+StringFromNumber.m in Sources */,
+				DA2B4C051C99A609001DE451 /* WJConstraintModel.m in Sources */,
 				BC878AF71C93FD1D004DEC7E /* YUHotTopicCell.m in Sources */,
 				DA825C211C92E86B000C5EE4 /* CarFindController.m in Sources */,
 				FCCB846B1C96F745005EA1AA /* TSTJZCController.m in Sources */,
@@ -1093,6 +1148,7 @@
 				DA3B5CDA1C93BF7A001997C8 /* WJTabBarController.m in Sources */,
 				DA3B5CD01C93BF7A001997C8 /* Foundation+Log.m in Sources */,
 				BC878AF11C93FD1D004DEC7E /* YUSelectionViewController.m in Sources */,
+				DA2B4BFD1C99A5A7001DE451 /* YuArticleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
