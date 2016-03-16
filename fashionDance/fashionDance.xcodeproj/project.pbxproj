@@ -27,6 +27,7 @@
 		BC878AFD1C93FD1D004DEC7E /* YUSelectionTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC878AEA1C93FD1D004DEC7E /* YUSelectionTopicCell.xib */; };
 		BC878AFE1C93FD1D004DEC7E /* YUTopicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AEC1C93FD1D004DEC7E /* YUTopicHeaderView.m */; };
 		D11C6F791C98EAE10046C8DC /* MKVediosModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C6F781C98EAE10046C8DC /* MKVediosModel.m */; };
+		D11C6F7C1C9945D00046C8DC /* MKVedioDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C6F7B1C9945D00046C8DC /* MKVedioDetailController.m */; };
 		DA3B5CD01C93BF7A001997C8 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CAD1C93BF7A001997C8 /* Foundation+Log.m */; };
 		DA3B5CD11C93BF7A001997C8 /* NSDate+WJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CAF1C93BF7A001997C8 /* NSDate+WJExtension.m */; };
 		DA3B5CD21C93BF7A001997C8 /* NSString+StringFromNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CB11C93BF7A001997C8 /* NSString+StringFromNumber.m */; };
@@ -149,6 +150,8 @@
 		BC878AEC1C93FD1D004DEC7E /* YUTopicHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUTopicHeaderView.m; sourceTree = "<group>"; };
 		D11C6F771C98EAE10046C8DC /* MKVediosModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKVediosModel.h; path = "fashionDance/classes/preferential-特惠/MKVediosModel.h"; sourceTree = SOURCE_ROOT; };
 		D11C6F781C98EAE10046C8DC /* MKVediosModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKVediosModel.m; path = "fashionDance/classes/preferential-特惠/MKVediosModel.m"; sourceTree = SOURCE_ROOT; };
+		D11C6F7A1C9945D00046C8DC /* MKVedioDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKVedioDetailController.h; sourceTree = "<group>"; };
+		D11C6F7B1C9945D00046C8DC /* MKVedioDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKVedioDetailController.m; sourceTree = "<group>"; };
 		DA3B5CAD1C93BF7A001997C8 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		DA3B5CAE1C93BF7A001997C8 /* NSDate+WJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WJExtension.h"; sourceTree = "<group>"; };
 		DA3B5CAF1C93BF7A001997C8 /* NSDate+WJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WJExtension.m"; sourceTree = "<group>"; };
@@ -674,6 +677,8 @@
 			children = (
 				DA825C0B1C92E86B000C5EE4 /* CarPreferentialController.h */,
 				DA825C0C1C92E86B000C5EE4 /* CarPreferentialController.m */,
+				D11C6F7A1C9945D00046C8DC /* MKVedioDetailController.h */,
+				D11C6F7B1C9945D00046C8DC /* MKVedioDetailController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1023,6 +1028,7 @@
 				DA3B5CDD1C93BF7A001997C8 /* LLCarTypeInfoModel.m in Sources */,
 				DA89F35A1C9301B4003D5AF8 /* WJCollectionViewCell.m in Sources */,
 				DA825C1E1C92E86B000C5EE4 /* WJHeaderView.m in Sources */,
+				D11C6F7C1C9945D00046C8DC /* MKVedioDetailController.m in Sources */,
 				DA825C191C92E86B000C5EE4 /* WJConsultingCell.m in Sources */,
 				BC878AF01C93FD1D004DEC7E /* YUMoreTopicViewController.m in Sources */,
 				DA825C0F1C92E86B000C5EE4 /* WJSpecialController.m in Sources */,

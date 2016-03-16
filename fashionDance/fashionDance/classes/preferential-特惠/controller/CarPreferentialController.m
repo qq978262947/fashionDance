@@ -11,6 +11,7 @@
 #import "MJRefresh.h"
 #import "MKVediosModel.h"
 #import "WJHttpTool.h"
+#import "MKVedioDetailController.h"
 
 static NSString *cellId = @"MKVideoCell";
 @interface CarPreferentialController ()<UITableViewDataSource, UITableViewDelegate>
@@ -94,15 +95,25 @@ static NSString *cellId = @"MKVideoCell";
 
 - (void)touchBtn:(UIButton *)btn
 {
-
+    
     self.lastButton.selected = NO;
     [btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
     btn.selected = YES;
     self.lastButton = btn;
     if (btn.tag==1) {
+        self.path =@"http://autoapp.auto.sohu.com/api/columnnews/list_6_0_20";
+        
+    }else if (btn.tag ==2) {
         self.path =@"http://autoapp.auto.sohu.com/api/columnnews/list_7_0_20";
-       
+    }else if (btn.tag ==3) {
+        self.path =@"http://autoapp.auto.sohu.com/api/columnnews/list_8_0_20";
+    }else if (btn.tag ==4)
+    {
+        self.path =@"http://autoapp.auto.sohu.com/api/columnnews/list_9_0_20";
+    }else{
+        self.path = @"http://autoapp.auto.sohu.com/api/columnnews/list_5_0_20";
     }
+    [self downloadData];
 }
 
 - (void)downloadData
@@ -143,14 +154,28 @@ static NSString *cellId = @"MKVideoCell";
 
 
 #pragma mark - Table view delegate methods
-/**
- *  根据相应的数据设置cell的高度
- *
- *  @param indexPath cell的位置
- */
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 107;
 }
 
+#pragma mark-------
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    MKVedioDetailController *vdVC = [[MKVedioDetailController alloc]init];
+    vdVC.hidesBottomBarWhenPushed = YES;
+    vdVC.view.backgroundColor = [UIColor colorWithRed:1.000 green:0.400 blue:0.400 alpha:1.000];
+    VedioResultList *list = self.dataArray[indexPath.row];
+    
+
+    NSString *str1 = @"http://autoapp.auto.sohu.com/auto-app/news2/";
+    NSString *str2 = [NSString stringWithFormat:@"%@",list.cmsId];
+    NSString *str3 = @".html?src=11640001";
+    NSString *path = [NSString stringWithFormat:@"%@%@%@",str1,str2,str3];
+    vdVC.path = path;
+    NSLog(@"cmsID:%@",vdVC.path);
+    [self.navigationController pushViewController:vdVC animated:YES];
+}
 
 @end
