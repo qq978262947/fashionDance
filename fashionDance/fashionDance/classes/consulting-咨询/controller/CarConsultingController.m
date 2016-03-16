@@ -168,7 +168,6 @@
         cell.list = list;
         return cell;
     }
-
 }
 
 
