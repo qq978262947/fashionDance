@@ -30,7 +30,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     NSURL* url = [NSURL URLWithString:_path];//创建URL
-    NSLog(@"%@",_path);
+  //  NSLog(@"%@",_path);
     NSURLRequest* request = [NSURLRequest requestWithURL:url];//创建NSURLRequest
     [self.webView loadRequest:request];//加载
 

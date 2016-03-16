@@ -8,7 +8,7 @@
 
 #import "YUTopicWebViewController.h"
 #import "YUHotTopicModel.h"
-#import <SVProgressHUD.h>
+#import "SVProgressHUD.h"
 
 @interface YUTopicWebViewController () <UIWebViewDelegate>
 

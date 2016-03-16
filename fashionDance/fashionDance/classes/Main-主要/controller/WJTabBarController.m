@@ -49,7 +49,7 @@
     
     [self setupChildVc:[[CarFindController alloc] init] title:@"找车" imageName:@"tab_selectCar_normal" selectedImageName:@"tab_selectCar_highlighted"];
     
-    [self setupChildVc:[[CarPreferentialController alloc] init] title:@"特惠" imageName:@"tab_preferentialCar_normal" selectedImageName:@"tab_preferentialCar_highlighted"];
+    [self setupChildVc:[[CarPreferentialController alloc] init] title:@"视频" imageName:@"tab_preferentialCar_normal" selectedImageName:@"tab_preferentialCar_highlighted"];
     
     [self setupChildVc:[[CarForumController alloc] init] title:@"论坛" imageName:@"tab_news_normal" selectedImageName:@"tab_news_highlighted"];
     

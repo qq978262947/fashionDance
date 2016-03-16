@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A68FAFEFF4F4A49290AF4C6D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2E3BD33B03E9DF56A54E8A /* libPods.a */; };
+		48E58D2A69ABBC1280CAD956 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2A3A4EF14D4E08EF250CFD /* Pods.framework */; };
 		BC878AED1C93FD1D004DEC7E /* CarForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878ACB1C93FD1D004DEC7E /* CarForumController.m */; };
 		BC878AEE1C93FD1D004DEC7E /* YUCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878ACD1C93FD1D004DEC7E /* YUCategoryViewController.m */; };
 		BC878AEF1C93FD1D004DEC7E /* YUHotTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878ACF1C93FD1D004DEC7E /* YUHotTopicViewController.m */; };
@@ -26,8 +26,8 @@
 		BC878AFC1C93FD1D004DEC7E /* YUSelectionTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AE91C93FD1D004DEC7E /* YUSelectionTopicCell.m */; };
 		BC878AFD1C93FD1D004DEC7E /* YUSelectionTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC878AEA1C93FD1D004DEC7E /* YUSelectionTopicCell.xib */; };
 		BC878AFE1C93FD1D004DEC7E /* YUTopicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AEC1C93FD1D004DEC7E /* YUTopicHeaderView.m */; };
-		D11C6F791C98EAE10046C8DC /* MKVediosModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C6F781C98EAE10046C8DC /* MKVediosModel.m */; };
 		D11C6F7C1C9945D00046C8DC /* MKVedioDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C6F7B1C9945D00046C8DC /* MKVedioDetailController.m */; };
+		D11C6F8B1C9955330046C8DC /* MKVediosModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C6F8A1C9955330046C8DC /* MKVediosModel.m */; };
 		DA3B5CD01C93BF7A001997C8 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CAD1C93BF7A001997C8 /* Foundation+Log.m */; };
 		DA3B5CD11C93BF7A001997C8 /* NSDate+WJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CAF1C93BF7A001997C8 /* NSDate+WJExtension.m */; };
 		DA3B5CD21C93BF7A001997C8 /* NSString+StringFromNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CB11C93BF7A001997C8 /* NSString+StringFromNumber.m */; };
@@ -112,7 +112,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6C2E3BD33B03E9DF56A54E8A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D2A3A4EF14D4E08EF250CFD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB5973FF1B297B050B1A609 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7CF344E4DA0F93C7E0B1D029 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC878ACA1C93FD1D004DEC7E /* CarForumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarForumController.h; sourceTree = "<group>"; };
@@ -148,10 +148,10 @@
 		BC878AEA1C93FD1D004DEC7E /* YUSelectionTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUSelectionTopicCell.xib; sourceTree = "<group>"; };
 		BC878AEB1C93FD1D004DEC7E /* YUTopicHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUTopicHeaderView.h; sourceTree = "<group>"; };
 		BC878AEC1C93FD1D004DEC7E /* YUTopicHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUTopicHeaderView.m; sourceTree = "<group>"; };
-		D11C6F771C98EAE10046C8DC /* MKVediosModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKVediosModel.h; path = "fashionDance/classes/preferential-特惠/MKVediosModel.h"; sourceTree = SOURCE_ROOT; };
-		D11C6F781C98EAE10046C8DC /* MKVediosModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKVediosModel.m; path = "fashionDance/classes/preferential-特惠/MKVediosModel.m"; sourceTree = SOURCE_ROOT; };
 		D11C6F7A1C9945D00046C8DC /* MKVedioDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKVedioDetailController.h; sourceTree = "<group>"; };
 		D11C6F7B1C9945D00046C8DC /* MKVedioDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKVedioDetailController.m; sourceTree = "<group>"; };
+		D11C6F891C9955260046C8DC /* MKVediosModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MKVediosModel.h; path = "fashionDance/classes/preferential-特惠/MKVediosModel.h"; sourceTree = SOURCE_ROOT; };
+		D11C6F8A1C9955330046C8DC /* MKVediosModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKVediosModel.m; path = "fashionDance/classes/preferential-特惠/MKVediosModel.m"; sourceTree = SOURCE_ROOT; };
 		DA3B5CAD1C93BF7A001997C8 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		DA3B5CAE1C93BF7A001997C8 /* NSDate+WJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WJExtension.h"; sourceTree = "<group>"; };
 		DA3B5CAF1C93BF7A001997C8 /* NSDate+WJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WJExtension.m"; sourceTree = "<group>"; };
@@ -277,7 +277,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A68FAFEFF4F4A49290AF4C6D /* libPods.a in Frameworks */,
+				48E58D2A69ABBC1280CAD956 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +365,7 @@
 		D2848F50D929F27A8AF2F15B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6C2E3BD33B03E9DF56A54E8A /* libPods.a */,
+				5D2A3A4EF14D4E08EF250CFD /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -686,8 +686,8 @@
 		DA825C0D1C92E86B000C5EE4 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				D11C6F771C98EAE10046C8DC /* MKVediosModel.h */,
-				D11C6F781C98EAE10046C8DC /* MKVediosModel.m */,
+				D11C6F8A1C9955330046C8DC /* MKVediosModel.m */,
+				D11C6F891C9955260046C8DC /* MKVediosModel.h */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1045,8 +1045,8 @@
 				BC878AFA1C93FD1D004DEC7E /* YUMoreTopicCell.m in Sources */,
 				DA825C241C92E86B000C5EE4 /* CarPreferentialController.m in Sources */,
 				DA3B5CD61C93BF7A001997C8 /* UIImageView+downloadImage.m in Sources */,
+				D11C6F8B1C9955330046C8DC /* MKVediosModel.m in Sources */,
 				BC878AF51C93FD1D004DEC7E /* YUSelectionTopic.m in Sources */,
-				D11C6F791C98EAE10046C8DC /* MKVediosModel.m in Sources */,
 				BC878AEF1C93FD1D004DEC7E /* YUHotTopicViewController.m in Sources */,
 				DAE93A071C8E75B900F03A67 /* main.m in Sources */,
 				DA3B5CD41C93BF7A001997C8 /* UIImage+cirlcle.m in Sources */,

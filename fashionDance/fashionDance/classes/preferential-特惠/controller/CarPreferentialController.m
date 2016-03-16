@@ -51,7 +51,7 @@ static NSString *cellId = @"MKVideoCell";
     //标题视图
     UIView *titleView = [[UIView alloc]initWithFrame:CGRectMake(0, NAVH+20, WJScreenW, BTNH)];
     self.titleView =titleView;
-    titleView.backgroundColor = [UIColor colorWithWhite:0.800 alpha:1.000];
+    titleView.backgroundColor = WJGlobalBg;
     [self.view addSubview:titleView];
     NSArray *btnArr = @[@"全部",@"原创",@"集锦",@"海外",@"试驾"];
     //添加子视图
@@ -77,8 +77,8 @@ static NSString *cellId = @"MKVideoCell";
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.frame = CGRectMake(i*width, 0, width, height);
         [self.titleView addSubview:btn];
-        [btn setTitleColor:[UIColor colorWithWhite:0.600 alpha:1.000] forState:UIControlStateNormal];
-        btn.titleLabel.font = [UIFont systemFontOfSize:13];
+        [btn setTitleColor:[UIColor colorWithWhite:0.502 alpha:1.000] forState:UIControlStateNormal];
+        btn.titleLabel.font = [UIFont systemFontOfSize:14];
         [btn setTitle:array[i] forState:UIControlStateNormal];
         btn.backgroundColor = [UIColor whiteColor];
         [btn addTarget:self action:@selector(touchBtn:) forControlEvents:UIControlEventTouchUpInside];
@@ -102,13 +102,11 @@ static NSString *cellId = @"MKVideoCell";
     self.lastButton = btn;
     if (btn.tag==1) {
         self.path =@"http://autoapp.auto.sohu.com/api/columnnews/list_6_0_20";
-        
     }else if (btn.tag ==2) {
         self.path =@"http://autoapp.auto.sohu.com/api/columnnews/list_7_0_20";
     }else if (btn.tag ==3) {
         self.path =@"http://autoapp.auto.sohu.com/api/columnnews/list_8_0_20";
-    }else if (btn.tag ==4)
-    {
+    }else if (btn.tag ==4){
         self.path =@"http://autoapp.auto.sohu.com/api/columnnews/list_9_0_20";
     }else{
         self.path = @"http://autoapp.auto.sohu.com/api/columnnews/list_5_0_20";
@@ -174,7 +172,7 @@ static NSString *cellId = @"MKVideoCell";
     NSString *str3 = @".html?src=11640001";
     NSString *path = [NSString stringWithFormat:@"%@%@%@",str1,str2,str3];
     vdVC.path = path;
-    NSLog(@"cmsID:%@",vdVC.path);
+   // NSLog(@"cmsID:%@",vdVC.path);
     [self.navigationController pushViewController:vdVC animated:YES];
 }
 

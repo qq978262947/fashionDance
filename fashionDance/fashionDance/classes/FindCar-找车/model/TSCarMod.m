@@ -7,7 +7,7 @@
 //
 
 #import "TSCarMod.h"
-#import <MJExtension.h>
+#import "MJExtension.h"
 
 @implementation TSCarMod
 +(NSDictionary *)mj_replacedKeyFromPropertyName

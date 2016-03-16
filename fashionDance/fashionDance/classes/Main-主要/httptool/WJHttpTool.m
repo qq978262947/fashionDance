@@ -7,7 +7,7 @@
 //
 
 #import "WJHttpTool.h"
-#import <AFNetworking.h>
+#import "AFNetworking.h"
 
 @interface WJHttpTool ()
 @property (strong, nonatomic) AFHTTPSessionManager *manager;
@@ -24,6 +24,7 @@
     if (nil == _manager) {
         //1.获得请求管理者
         _manager = [[AFHTTPSessionManager alloc]init];
+        _manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     }
     return _manager;
 }
