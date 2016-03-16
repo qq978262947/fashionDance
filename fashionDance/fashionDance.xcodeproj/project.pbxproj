@@ -90,6 +90,10 @@
 		FCCB84681C96B29E005EA1AA /* TSBrandCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB84671C96B29E005EA1AA /* TSBrandCarController.m */; };
 		FCCB846B1C96F745005EA1AA /* TSTJZCController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB846A1C96F745005EA1AA /* TSTJZCController.m */; };
 		FCCB846D1C970122005EA1AA /* CarData.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCCB846C1C970122005EA1AA /* CarData.plist */; };
+		FCCF82741C995DC300F12B8C /* TSSXTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCF82731C995DC300F12B8C /* TSSXTableController.m */; };
+		FCCF82771C99628100F12B8C /* TSSXCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCF82761C99628100F12B8C /* TSSXCarModel.m */; };
+		FCCF827F1C997DE600F12B8C /* TSXCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCF827D1C997DE600F12B8C /* TSXCCell.m */; };
+		FCCF82801C997DE600F12B8C /* TSXCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCCF827E1C997DE600F12B8C /* TSXCCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -264,6 +268,13 @@
 		FCCB84691C96F745005EA1AA /* TSTJZCController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTJZCController.h; sourceTree = "<group>"; };
 		FCCB846A1C96F745005EA1AA /* TSTJZCController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTJZCController.m; sourceTree = "<group>"; };
 		FCCB846C1C970122005EA1AA /* CarData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CarData.plist; sourceTree = "<group>"; };
+		FCCF82721C995DC300F12B8C /* TSSXTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSXTableController.h; sourceTree = "<group>"; };
+		FCCF82731C995DC300F12B8C /* TSSXTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSXTableController.m; sourceTree = "<group>"; };
+		FCCF82751C99628100F12B8C /* TSSXCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSXCarModel.h; sourceTree = "<group>"; };
+		FCCF82761C99628100F12B8C /* TSSXCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSXCarModel.m; sourceTree = "<group>"; };
+		FCCF827C1C997DE600F12B8C /* TSXCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSXCCell.h; sourceTree = "<group>"; };
+		FCCF827D1C997DE600F12B8C /* TSXCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSXCCell.m; sourceTree = "<group>"; };
+		FCCF827E1C997DE600F12B8C /* TSXCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSXCCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -621,6 +632,8 @@
 				FCCB846A1C96F745005EA1AA /* TSTJZCController.m */,
 				FC457DDC1C9847E600DDB531 /* TSSpecificController.h */,
 				FC457DDD1C9847E600DDB531 /* TSSpecificController.m */,
+				FCCF82721C995DC300F12B8C /* TSSXTableController.h */,
+				FCCF82731C995DC300F12B8C /* TSSXTableController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -791,6 +804,8 @@
 				FCCB84641C96B0BB005EA1AA /* TSCarMod.m */,
 				FC457DD31C983CA200DDB531 /* TSTitleList.plist */,
 				FC457DD51C983D3800DDB531 /* TSConfigList.plist */,
+				FCCF82751C99628100F12B8C /* TSSXCarModel.h */,
+				FCCF82761C99628100F12B8C /* TSSXCarModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -808,6 +823,9 @@
 				FC457DD71C98413100DDB531 /* TSTitleCell.h */,
 				FC457DD81C98413100DDB531 /* TSTitleCell.m */,
 				FC457DD91C98413100DDB531 /* TSTitleCell.xib */,
+				FCCF827C1C997DE600F12B8C /* TSXCCell.h */,
+				FCCF827D1C997DE600F12B8C /* TSXCCell.m */,
+				FCCF827E1C997DE600F12B8C /* TSXCCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -924,6 +942,7 @@
 				DA825C1A1C92E86B000C5EE4 /* WJConsultingCell.xib in Resources */,
 				DA825C1C1C92E86B000C5EE4 /* WJFindHotCell.xib in Resources */,
 				BC878AFD1C93FD1D004DEC7E /* YUSelectionTopicCell.xib in Resources */,
+				FCCF82801C997DE600F12B8C /* TSXCCell.xib in Resources */,
 				FC457DD61C983D3800DDB531 /* TSConfigList.plist in Resources */,
 				DAE93A151C8E75B900F03A67 /* LaunchScreen.storyboard in Resources */,
 				FCCB846D1C970122005EA1AA /* CarData.plist in Resources */,
@@ -1022,6 +1041,7 @@
 				BC878AF01C93FD1D004DEC7E /* YUMoreTopicViewController.m in Sources */,
 				DA825C0F1C92E86B000C5EE4 /* WJSpecialController.m in Sources */,
 				FC457DDA1C98413100DDB531 /* TSTitleCell.m in Sources */,
+				FCCF82741C995DC300F12B8C /* TSSXTableController.m in Sources */,
 				DA825C1F1C92E86B000C5EE4 /* WJProgressView.m in Sources */,
 				DA3B5CDE1C93BF7A001997C8 /* LLCarTypeVersionModel.m in Sources */,
 				DA3B5CD71C93BF7A001997C8 /* UIView+WJExtension.m in Sources */,
@@ -1034,6 +1054,7 @@
 				BC878AFA1C93FD1D004DEC7E /* YUMoreTopicCell.m in Sources */,
 				DA825C241C92E86B000C5EE4 /* CarPreferentialController.m in Sources */,
 				DA3B5CD61C93BF7A001997C8 /* UIImageView+downloadImage.m in Sources */,
+				FCCF827F1C997DE600F12B8C /* TSXCCell.m in Sources */,
 				BC878AF51C93FD1D004DEC7E /* YUSelectionTopic.m in Sources */,
 				BC878AEF1C93FD1D004DEC7E /* YUHotTopicViewController.m in Sources */,
 				DAE93A071C8E75B900F03A67 /* main.m in Sources */,
@@ -1044,6 +1065,7 @@
 				BC878AF21C93FD1D004DEC7E /* YUTopicWebViewController.m in Sources */,
 				FC457DBD1C98064C00DDB531 /* TSDrawView.m in Sources */,
 				DA825C9E1C92EB7E000C5EE4 /* WJArrangeController.m in Sources */,
+				FCCF82771C99628100F12B8C /* TSSXCarModel.m in Sources */,
 				DA825C1D1C92E86B000C5EE4 /* WJContainerView.m in Sources */,
 				FC457DD11C9816AF00DDB531 /* SWCarCell.m in Sources */,
 				FCCB84651C96B0BB005EA1AA /* TSCarMod.m in Sources */,

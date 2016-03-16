@@ -143,6 +143,8 @@
         self.moneyLabel.text=[NSString stringWithFormat:@"%ld万-%ld万",self.smallNumber,self.bigNumber];
     }
     self.moneyLabel.center=CGPointMake((self.smallView.center.x+self.bigView.center.x)/2, TSLableY);
+    
+    self.TSDrawViewDragBlock(self);
 }
 -(void)bigPanAction:(UIPanGestureRecognizer *)pan
 {
@@ -225,6 +227,8 @@
     }
     self.moneyLabel.center=CGPointMake((self.smallView.center.x+self.bigView.center.x)/2, TSLableY);
     [self setNeedsDisplay];
+    
+    self.TSDrawViewDragBlock(self);
 }
 -(void)drawRect:(CGRect)rect
 {

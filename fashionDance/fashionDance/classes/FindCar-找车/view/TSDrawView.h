@@ -15,4 +15,6 @@
 
 @property (nonatomic,strong)NSNumber * smallNum;
 @property (nonatomic,strong)NSNumber * bigNum;
+
+@property(nonatomic,copy)void (^TSDrawViewDragBlock)(TSDrawView * drawView);
 @end
