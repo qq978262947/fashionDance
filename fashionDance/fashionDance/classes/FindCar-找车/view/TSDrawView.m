@@ -58,6 +58,8 @@
         self.moneyLabel.layer.cornerRadius=10;
         self.moneyLabel.textAlignment=NSTextAlignmentCenter;
         self.moneyLabel.text=@"1万-100+万";
+        self.bigNum=[NSNumber numberWithInteger:101];
+        self.smallNum=[NSNumber numberWithInteger:0];
     }
     return self;
 }
@@ -84,11 +86,11 @@
     [pan setTranslation:CGPointZero inView:self];
     NSInteger number1 =(self.bigView.center.x-TSChartX)/TSSmallW;//大
     NSInteger number2 = (pan.view.center.x-TSChartX)/TSSmallW;//小
-    NSLog(@"small:%ld ,big:%ld",number2,number1);
     //大数值判断
     if (number1<=35)
     {
         self.bigNumber=number1;
+        
     }//35
     else if(number1>35&&number1<=40)
     {
@@ -111,7 +113,6 @@
     if (number2<=35)
     {
         self.smallNumber=number2;
-        NSLog(@"%ld",number2);
     }//35
     else if(number2>35&&number2<=40)
     {
@@ -129,7 +130,8 @@
     {
         self.smallNumber=101;
     }
-    
+    self.bigNum=[NSNumber numberWithInteger:self.bigNumber];
+    self.smallNum=[NSNumber numberWithInteger:self.smallNumber];
     
     [self setNeedsDisplay];
     if (self.bigNumber==101)
@@ -166,7 +168,6 @@
     //给数字赋值
     NSInteger number1 = (pan.view.center.x-TSChartX)/TSSmallW;//大
     NSInteger number2 = (self.smallView.center.x-TSChartX)/TSSmallW;//小
-    NSLog(@"small:%ld ,big:%ld",number2,number1);
     //大数值判断
     if (number1<=35)
     {
@@ -194,7 +195,6 @@
     if (number2<=35)
     {
         self.smallNumber=number2;
-        NSLog(@"%ld",number2);
     }//35
     else if(number2>35&&number2<=40)
     {
@@ -212,6 +212,10 @@
     {
         self.smallNumber=101;
     }
+    
+    self.bigNum=[NSNumber numberWithInteger:self.bigNumber];
+    self.smallNum=[NSNumber numberWithInteger:self.smallNumber];
+    
     if (self.bigNumber==101) {
         self.moneyLabel.text=[NSString stringWithFormat:@"%ld万-100+万",self.smallNumber];
     }
