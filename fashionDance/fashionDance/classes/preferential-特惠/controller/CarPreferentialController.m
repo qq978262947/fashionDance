@@ -8,7 +8,9 @@
 
 #import "CarPreferentialController.h"
 #import "MKVideoCell.h"
-
+#import "MJRefresh.h"
+#import "MKVediosModel.h"
+#import "WJHttpTool.h"
 
 static NSString *cellId = @"MKVideoCell";
 @interface CarPreferentialController ()<UITableViewDataSource, UITableViewDelegate>
@@ -16,6 +18,10 @@ static NSString *cellId = @"MKVideoCell";
 @property (nonatomic, weak) UITableView *tableView;
 @property (nonatomic,strong) UIView *titleView;
 @property (nonatomic,strong)UIButton *lastButton;
+@property (nonatomic,strong)NSMutableArray *dataArray;
+@property (nonatomic,strong)MKVediosModel *model;
+
+@property (nonatomic,strong)NSString *path;
 @end
 
 @implementation CarPreferentialController
@@ -26,9 +32,20 @@ static NSString *cellId = @"MKVideoCell";
     self.view.backgroundColor = WJGlobalBg;
     
     // 设置tableview
-    [self setupView];
+    //[self setupView];
+    //
+     [self setupRefresh];
     
 }
+- (void)setupRefresh
+{    // 设置tableview
+     [self setupView];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(downloadData)];
+    [self.tableView.mj_header beginRefreshing];
+    
+    
+}
+
 - (void)setupView {
     //标题视图
     UIView *titleView = [[UIView alloc]initWithFrame:CGRectMake(0, NAVH+20, WJScreenW, BTNH)];
@@ -49,7 +66,6 @@ static NSString *cellId = @"MKVideoCell";
     self.tableView = tableView;
 }
 
-
 - (void)creatBtnWithArray:(NSArray *)array
 {
     
@@ -65,10 +81,12 @@ static NSString *cellId = @"MKVideoCell";
         [btn setTitle:array[i] forState:UIControlStateNormal];
         btn.backgroundColor = [UIColor whiteColor];
         [btn addTarget:self action:@selector(touchBtn:) forControlEvents:UIControlEventTouchUpInside];
+        btn.tag = i;
         if (i ==0) {
             btn.selected = YES;
             [btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
             self.lastButton = btn;
+             self.path = @"http://autoapp.auto.sohu.com/api/columnnews/list_5_0_20";
         }
     }
 }
@@ -81,11 +99,33 @@ static NSString *cellId = @"MKVideoCell";
     [btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
     btn.selected = YES;
     self.lastButton = btn;
+    if (btn.tag==1) {
+        self.path =@"http://autoapp.auto.sohu.com/api/columnnews/list_7_0_20";
+       
+    }
 }
 
+- (void)downloadData
+{
+    __weak typeof(self) weakSelf = self;
+    [[WJHttpTool httpTool]get:_path params:nil success:^(id result) {
+        
+      //  NSLog(@"%@",result);
+         NSError *error;
+        weakSelf.model = [[MKVediosModel alloc]initWithData:result error:&error];
+        weakSelf.dataArray = [NSMutableArray arrayWithArray:weakSelf.model.result.newsList];
+     //   NSLog(@"%@",weakSelf.dataArray);
+        [weakSelf.tableView reloadData];
+
+         [weakSelf.tableView.mj_header endRefreshing];
+    } failure:^(NSError *error) {
+        
+    }];
+    
+}
 #pragma mark - Table view datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.dataArray.count;
 }
 
 
@@ -96,7 +136,8 @@ static NSString *cellId = @"MKVideoCell";
         cell = [[[NSBundle mainBundle]loadNibNamed:@"MKVideoCell" owner:nil options:nil]lastObject];
     }
     //显示数据
-    // NewsModel *model = self.dataArry[indexPath.row];
+    VedioResultList *list = self.dataArray[indexPath.row];
+    [cell configureModel:list];
     return cell;
 }
 
