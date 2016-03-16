@@ -120,7 +120,10 @@
 
 #pragma mark -
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-#warning 
+#warning －－－－－
+    WJPublicViewController *vc = [[WJPublicViewController alloc]init];
+    vc.view.backgroundColor = [UIColor redColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - <privateMethod>
