@@ -25,8 +25,6 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    
-    
 }
 
 - (void)setTopic:(YUHotTopicModel *)topic

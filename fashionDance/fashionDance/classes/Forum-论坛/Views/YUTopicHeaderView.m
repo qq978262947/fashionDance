@@ -11,7 +11,7 @@
 #import "YUBannerListModel.h"
 #import "YUHotTopicModel.h"
 
-#define YUMaxSections 20
+#define YUMaxSections 50
 
 static NSString *Id = @"cell";
 
@@ -136,7 +136,7 @@ static NSString *Id = @"cell";
  */
 - (void)addTimer
 {
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(nextPage) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     self.timer = timer;
 }
@@ -199,10 +199,11 @@ static NSString *Id = @"cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     YUImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:Id forIndexPath:indexPath];
-    cell.bannerListModel = self.bannerListModels[indexPath.item];
+    YUBannerListModel *bannerListModel = self.bannerListModels[indexPath.item];
+    cell.bannerListModel = bannerListModel;
     
-    YUHotTopicModel *topicModel = cell.bannerListModel.topic;
-    
+    YUHotTopicModel *topicModel = bannerListModel.topic;
+    topicModel.imgUrl = bannerListModel.imgUrl;
     self.titleLabel.text = topicModel.title;
     
     return cell;

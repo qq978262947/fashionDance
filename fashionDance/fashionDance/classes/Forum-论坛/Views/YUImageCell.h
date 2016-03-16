@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define YUImageCellH 165
+#define YUImageCellH 200
 
 @class YUBannerListModel;
 
