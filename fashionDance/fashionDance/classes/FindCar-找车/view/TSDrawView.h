@@ -12,4 +12,7 @@
 
 @property (nonatomic,assign)NSInteger bigNumber;
 @property (nonatomic,assign)NSInteger smallNumber;
+
+@property (nonatomic,strong)NSNumber * smallNum;
+@property (nonatomic,strong)NSNumber * bigNum;
 @end

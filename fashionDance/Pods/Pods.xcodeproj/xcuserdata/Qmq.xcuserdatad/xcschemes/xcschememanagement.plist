@@ -6,73 +6,68 @@
 	<dict>
 		<key>AFNetworking.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>DACircularProgress.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>JSONModel.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>MJExtension.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>MJRefresh.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>NJKWebViewProgress.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>9</integer>
 		</dict>
 		<key>SVProgressHUD.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>10</integer>
 		</dict>
 		<key>pop.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>073CF65068EE7C0FCA464A9673CEFD9D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>09FA060F1A0492FB25232F489AC4E573</key>
+		<key>008D600E25A8420ADF033293210346A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>59D408EB48A52550A9780D237D4B78F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,11 +82,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>92871E769CEA3DFE97A748C3B0F0C2A0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>9775596B3CA16905FC8F66DA8E2A3C67</key>
 		<dict>
 			<key>primary</key>
@@ -102,7 +92,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B37F3160F024B32E8DC731BA14F1E865</key>
+		<key>9FCC1409733804D2F07680F6D3515108</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,7 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D08033DEBB6D9BBA2B0E03AFC9933CBD</key>
+		<key>F7C675521FE4806728B279E30244DBE4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -10,10 +10,27 @@
 
 @interface TSSpecificController ()<UITableViewDelegate,UITableViewDataSource>
 
+@property (nonatomic,strong)NSNumber * selectNumber;
 @property (nonatomic,strong)UITableView * tableView;
+@property (nonatomic,strong)NSMutableArray * selectArray;
 @end
 
 @implementation TSSpecificController
+-(NSMutableArray *)selectArray
+{
+    if (_selectArray==nil)
+    {
+        _selectArray=[NSMutableArray array];
+    }
+    return _selectArray;
+}
+-(NSNumber *)selectNumber
+{
+    if (_selectNumber==nil) {
+        _selectNumber=[NSNumber numberWithInteger:0];
+    }
+    return _selectNumber;
+}
 +(instancetype)specificControllerWithArray:(NSArray *)specificArray andTitle:(NSString *)title
 {
     TSSpecificController * spec=[TSSpecificController new];
@@ -88,6 +105,7 @@
 }
 -(void)gestureAction
 {
+    self.TSSpecificControllerRetBlock(self,self.selectNumber,self.selectArray);
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -109,11 +127,64 @@
 {
     return UITableViewCellEditingStyleInsert |UITableViewCellEditingStyleDelete;//选择界面
 }
-//-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    
-//}
-- (void)didReceiveMemoryWarning {
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSInteger now=self.selectNumber.integerValue;
+    NSInteger add=1;
+    if (indexPath.row==0) {
+        add=0;
+        self.selectNumber=[NSNumber numberWithInteger:0];
+        [self.selectArray removeAllObjects];
+        //所有的cell的选择变为no
+        //走函数？
+        for (int i=1; i<self.specificArray.count; i++)
+        {
+            NSIndexPath *indexpath1=[NSIndexPath indexPathForRow:i inSection:0];
+            UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexpath1];
+            cell.selected=NO;
+        }
+
+        
+        
+        return;
+    }
+    else
+    {
+        for (int i = 0;  i < indexPath.row-1; i ++)
+        {
+            add = add*2;
+        }
+    }
+    self.selectNumber=[NSNumber numberWithInteger:(now+add)];
+    //字符串数组的进出
+    [self.selectArray addObject:self.specificArray[indexPath.row]];
+    NSLog(@"%@",self.selectNumber);
+    NSLog(@"%@",self.selectArray);
+
+}
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSInteger now=self.selectNumber.integerValue;
+    NSInteger red=1;
+    if (indexPath.row==0) {
+        red=0;
+    }
+    else
+    {
+        for (int i = 0;  i < indexPath.row-1; i ++)
+        {
+            red = red*2;
+        }
+    }
+    self.selectNumber=[NSNumber numberWithInteger:(now-red)];
+    [self.selectArray removeObject:self.specificArray[indexPath.row]];
+    NSLog(@"%@",self.selectNumber);
+    NSLog(@"%@",self.selectArray);
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
