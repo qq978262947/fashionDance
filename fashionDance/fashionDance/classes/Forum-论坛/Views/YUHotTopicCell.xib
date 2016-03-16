@@ -14,73 +14,95 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdl-lx-623">
-                        <rect key="frame" x="10" y="6" width="36" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <rect key="frame" x="10" y="6" width="38" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EyJ-X1-ezh">
-                        <rect key="frame" x="10" y="33" width="95" height="70"/>
+                        <rect key="frame" x="10" y="34" width="98" height="70"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="70" id="a83-Ly-fBE"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lqq-iJ-yLC">
-                        <rect key="frame" x="120" y="33" width="95" height="70"/>
+                        <rect key="frame" x="118" y="34" width="99" height="70"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="70" id="4Dd-Wx-eWd"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QxL-1R-KPm">
-                        <rect key="frame" x="230" y="33" width="95" height="70"/>
+                        <rect key="frame" x="227" y="34" width="98" height="70"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="70" id="Egc-tv-kNv"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa5-VO-FO7">
-                        <rect key="frame" x="10" y="113" width="58" height="22"/>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa5-VO-FO7">
+                        <rect key="frame" x="10" y="116" width="15" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <state key="normal" title="赵六前" image="tab_mySpace_normal">
-                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" image="author">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ke-23-6Zx">
-                        <rect key="frame" x="78" y="113" width="58" height="22"/>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ke-23-6Zx">
+                        <rect key="frame" x="35" y="116" width="15" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <state key="normal" title="赵六前" image="tab_mySpace_normal">
-                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <state key="normal" image="bar">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gU-d9-rHN">
-                        <rect key="frame" x="267" y="113" width="58" height="22"/>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gU-d9-rHN">
+                        <rect key="frame" x="310" y="116" width="15" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <state key="normal" title="赵六前" image="tab_mySpace_normal">
-                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" image="replayCount">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="isElite" translatesAutoresizingMaskIntoConstraints="NO" id="7oM-7E-oNp">
+                        <rect key="frame" x="53" y="5" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="CCq-K7-BpQ"/>
+                            <constraint firstAttribute="width" constant="20" id="Yjt-Ms-fgc"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Qa5-VO-FO7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="0uQ-7l-2cR"/>
-                    <constraint firstItem="Lqq-iJ-yLC" firstAttribute="leading" secondItem="EyJ-X1-ezh" secondAttribute="trailing" constant="15" id="KWr-bv-KtQ"/>
+                    <constraint firstItem="1Ke-23-6Zx" firstAttribute="top" secondItem="Qa5-VO-FO7" secondAttribute="top" id="6wZ-dC-602"/>
+                    <constraint firstItem="Lqq-iJ-yLC" firstAttribute="leading" secondItem="EyJ-X1-ezh" secondAttribute="trailing" constant="10" id="KWr-bv-KtQ"/>
                     <constraint firstItem="Lqq-iJ-yLC" firstAttribute="width" secondItem="EyJ-X1-ezh" secondAttribute="width" id="LDO-Eb-5GI"/>
                     <constraint firstItem="EyJ-X1-ezh" firstAttribute="leading" secondItem="Mdl-lx-623" secondAttribute="leading" id="MXN-1S-fPL"/>
                     <constraint firstItem="Mdl-lx-623" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="N8v-u4-vwH"/>
                     <constraint firstItem="QxL-1R-KPm" firstAttribute="width" secondItem="EyJ-X1-ezh" secondAttribute="width" id="SRB-CU-yll"/>
                     <constraint firstItem="QxL-1R-KPm" firstAttribute="top" secondItem="EyJ-X1-ezh" secondAttribute="top" id="Sqn-Tx-NH4"/>
                     <constraint firstItem="EyJ-X1-ezh" firstAttribute="top" secondItem="Mdl-lx-623" secondAttribute="bottom" constant="10" id="TPT-9E-HBO"/>
+                    <constraint firstItem="5gU-d9-rHN" firstAttribute="top" secondItem="Qa5-VO-FO7" secondAttribute="top" id="ZGv-MF-LDN"/>
+                    <constraint firstItem="7oM-7E-oNp" firstAttribute="centerY" secondItem="Mdl-lx-623" secondAttribute="centerY" id="fZi-zf-RD7"/>
                     <constraint firstItem="1Ke-23-6Zx" firstAttribute="top" secondItem="Lqq-iJ-yLC" secondAttribute="bottom" constant="10" id="gGp-CD-TOF"/>
                     <constraint firstAttribute="trailing" secondItem="5gU-d9-rHN" secondAttribute="trailing" constant="10" id="h8m-Uq-jHD"/>
                     <constraint firstItem="1Ke-23-6Zx" firstAttribute="leading" secondItem="Qa5-VO-FO7" secondAttribute="trailing" constant="10" id="jmx-Rf-sGS"/>
                     <constraint firstItem="Mdl-lx-623" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="lNi-B8-zQT"/>
                     <constraint firstItem="5gU-d9-rHN" firstAttribute="top" secondItem="QxL-1R-KPm" secondAttribute="bottom" constant="10" id="mxr-Q2-MvP"/>
                     <constraint firstItem="Lqq-iJ-yLC" firstAttribute="top" secondItem="EyJ-X1-ezh" secondAttribute="top" id="r4D-ty-kT7"/>
+                    <constraint firstItem="7oM-7E-oNp" firstAttribute="leading" secondItem="Mdl-lx-623" secondAttribute="trailing" constant="5" id="tCf-VH-lc1"/>
+                    <constraint firstAttribute="bottom" secondItem="Qa5-VO-FO7" secondAttribute="bottom" constant="10" id="tTK-Ur-Mga"/>
                     <constraint firstItem="Qa5-VO-FO7" firstAttribute="top" secondItem="EyJ-X1-ezh" secondAttribute="bottom" constant="10" id="vM1-7q-Hv7"/>
-                    <constraint firstItem="QxL-1R-KPm" firstAttribute="leading" secondItem="Lqq-iJ-yLC" secondAttribute="trailing" constant="15" id="voo-0Y-3XW"/>
+                    <constraint firstItem="QxL-1R-KPm" firstAttribute="leading" secondItem="Lqq-iJ-yLC" secondAttribute="trailing" constant="10" id="voo-0Y-3XW"/>
                     <constraint firstAttribute="trailing" secondItem="QxL-1R-KPm" secondAttribute="trailing" constant="10" id="x38-uD-jGO"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="vM1-7q-Hv7"/>
+                        <exclude reference="gGp-CD-TOF"/>
+                        <exclude reference="mxr-Q2-MvP"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="barNameBtn" destination="1Ke-23-6Zx" id="S9U-77-j3g"/>
+                <outlet property="eliteImageView" destination="7oM-7E-oNp" id="6aG-PY-w1M"/>
                 <outlet property="imageView1" destination="EyJ-X1-ezh" id="dZs-nH-mCM"/>
                 <outlet property="imageView2" destination="Lqq-iJ-yLC" id="tVy-D2-BFV"/>
                 <outlet property="imageView3" destination="QxL-1R-KPm" id="iRc-26-KuL"/>
@@ -88,10 +110,13 @@
                 <outlet property="replayCountBtn" destination="5gU-d9-rHN" id="Hv5-cX-dkb"/>
                 <outlet property="titleLabel" destination="Mdl-lx-623" id="eX8-zO-CLs"/>
             </connections>
-            <point key="canvasLocation" x="512.5" y="228"/>
+            <point key="canvasLocation" x="371.5" y="204"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="tab_mySpace_normal" width="22" height="22"/>
+        <image name="author" width="15" height="14"/>
+        <image name="bar" width="15" height="15"/>
+        <image name="isElite" width="15" height="14"/>
+        <image name="replayCount" width="15" height="16"/>
     </resources>
 </document>

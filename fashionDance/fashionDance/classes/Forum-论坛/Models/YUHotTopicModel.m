@@ -18,7 +18,21 @@
 {
     return @{
              @"topicDescription" : @"description",
+             @"pic1" : @"pics[0].url",
+             @"pic2" : @"pics[1].url",
+             @"pic3" : @"pics[2].url",
              };
+}
+
+- (void)setHotTopicCellH:(CGFloat)hotTopicCellH
+{
+    _hotTopicCellH = hotTopicCellH;
+    
+    if (self.pics.count > 0) {
+        
+        
+    }
+    
 }
 
 @end

@@ -122,7 +122,6 @@ static NSString *Id = @"cell";
             headerView.selectionTopic = self.selectionTopics[indexPath.section];
         }
         
-        
         headerView.delegate = self;
         reusableview = headerView;
     }

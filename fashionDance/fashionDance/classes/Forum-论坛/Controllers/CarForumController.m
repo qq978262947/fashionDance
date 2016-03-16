@@ -10,6 +10,7 @@
 #import "YUSelectionViewController.h"
 #import "YUHotTopicViewController.h"
 #import "YUCategoryViewController.h"
+#import "YUScrollView.h"
 
 @interface CarForumController () <UIScrollViewDelegate>
 
@@ -37,8 +38,7 @@
 
 - (void)setupNav
 {
-    UISegmentedControl *segment = [[UISegmentedControl alloc]initWithItems:@[@"热帖",@"精选",@"分类"]];
-    
+    UISegmentedControl *segment = [[UISegmentedControl alloc]initWithItems:@[@"热帖",@"精选",@"收藏"]];
     self.navigationItem.titleView = segment;
     self.segment = segment;
     //去掉颜色,现在整个segment都看不见
@@ -61,6 +61,9 @@
     
     [segment addTarget:self action:@selector(itemDidClick:) forControlEvents:UIControlEventValueChanged];  
     
+    [segment setWidth:40 forSegmentAtIndex:0];
+    [segment setWidth:40 forSegmentAtIndex:1];
+    [segment setWidth:40 forSegmentAtIndex:2];
 }
 
 /**
@@ -87,7 +90,7 @@
     // 不要自动调整inset
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    UIScrollView *contentView = [[UIScrollView alloc] init];
+    YUScrollView *contentView = [[YUScrollView alloc] init];
     contentView.frame = self.view.bounds;
     contentView.delegate = self;
     contentView.pagingEnabled = YES;
