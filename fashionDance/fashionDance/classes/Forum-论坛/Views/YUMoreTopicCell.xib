@@ -14,45 +14,44 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oUn-hf-FIC">
-                        <rect key="frame" x="10" y="10" width="80" height="69"/>
+                        <rect key="frame" x="10" y="10" width="105" height="69"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="80" id="4eX-83-Yd2"/>
+                            <constraint firstAttribute="width" constant="105" id="4eX-83-Yd2"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGj-ht-kk5">
-                        <rect key="frame" x="100" y="10" width="31" height="15"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <rect key="frame" x="125" y="10" width="38" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdz-Nc-Nrt">
-                        <rect key="frame" x="100" y="38" width="29" height="14"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="frame" x="125" y="37" width="185" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFu-Qo-XFy">
-                        <rect key="frame" x="100" y="57" width="60" height="22"/>
+                        <rect key="frame" x="125" y="64" width="15" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="3" maxX="10" maxY="4"/>
-                        <state key="normal" title="Button" image="tab_mySpace_normal">
-                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" image="author">
+                            <color key="titleColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXi-Lz-C1p">
-                        <rect key="frame" x="170" y="57" width="60" height="22"/>
+                        <rect key="frame" x="150" y="64" width="15" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="3" maxX="10" maxY="4"/>
-                        <state key="normal" title="Button" image="tab_mySpace_normal">
-                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <state key="normal" image="bar">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVm-3o-DH2">
-                        <rect key="frame" x="271" y="57" width="39" height="22"/>
+                        <rect key="frame" x="295" y="63" width="15" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="3" maxX="10" maxY="4"/>
-                        <state key="normal" title="111" image="tab_mySpace_normal">
-                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="imageEdgeInsets" minX="-2" minY="1" maxX="2" maxY="0.0"/>
+                        <state key="normal" image="replayCount">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                 </subviews>
@@ -61,6 +60,7 @@
                     <constraint firstItem="YVm-3o-DH2" firstAttribute="bottom" secondItem="pXi-Lz-C1p" secondAttribute="bottom" id="DcA-ct-uUj"/>
                     <constraint firstItem="oUn-hf-FIC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="FMc-Cd-kqw"/>
                     <constraint firstItem="CFu-Qo-XFy" firstAttribute="bottom" secondItem="oUn-hf-FIC" secondAttribute="bottom" id="GtB-9P-9J8"/>
+                    <constraint firstAttribute="trailing" secondItem="Rdz-Nc-Nrt" secondAttribute="trailing" constant="10" id="IeS-lD-Rus"/>
                     <constraint firstItem="CFu-Qo-XFy" firstAttribute="leading" secondItem="oUn-hf-FIC" secondAttribute="trailing" constant="10" id="TN7-hu-Cf1"/>
                     <constraint firstAttribute="bottom" secondItem="oUn-hf-FIC" secondAttribute="bottom" constant="10" id="UJZ-Mf-s6h"/>
                     <constraint firstItem="Rdz-Nc-Nrt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="a3Z-fz-4gE"/>
@@ -84,6 +84,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="tab_mySpace_normal" width="22" height="22"/>
+        <image name="author" width="15" height="14"/>
+        <image name="bar" width="15" height="15"/>
+        <image name="replayCount" width="15" height="16"/>
     </resources>
 </document>
