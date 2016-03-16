@@ -263,8 +263,6 @@
         }
         self.selectArray[selectInteger]=str;
        // cell.dtLabel.text=str;
-        //[cell.dtLabel setTextColor:[UIColor blueColor]];
-        
         //if (number.integerValue==0)
        // {
         //    cell.dtLabel.text=@"不限";
