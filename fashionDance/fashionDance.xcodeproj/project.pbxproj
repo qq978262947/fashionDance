@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A68FAFEFF4F4A49290AF4C6D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2E3BD33B03E9DF56A54E8A /* libPods.a */; };
+		7D89235A4F7B39CCC1B56FAB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E53C4EFB1F1A193A5BB398D3 /* Pods.framework */; };
 		BC0F44E01C999EA800894419 /* CarForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0F44AC1C999EA800894419 /* CarForumController.m */; };
 		BC0F44E11C999EA800894419 /* YUCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0F44AE1C999EA800894419 /* YUCategoryViewController.m */; };
 		BC0F44E21C999EA800894419 /* YUHotTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0F44B01C999EA800894419 /* YUHotTopicViewController.m */; };
@@ -136,7 +136,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6C2E3BD33B03E9DF56A54E8A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB5973FF1B297B050B1A609 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7CF344E4DA0F93C7E0B1D029 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0F44AB1C999EA800894419 /* CarForumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarForumController.h; sourceTree = "<group>"; };
@@ -303,6 +302,7 @@
 		DAE93A5A1C8E77A600F03A67 /* WJConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJConst.m; sourceTree = "<group>"; };
 		DAE93A5C1C8E77BB00F03A67 /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singleton.h; sourceTree = "<group>"; };
 		DAE93A5D1C8E77BB00F03A67 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E53C4EFB1F1A193A5BB398D3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC457DBB1C98064C00DDB531 /* TSDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDrawView.h; sourceTree = "<group>"; };
 		FC457DBC1C98064C00DDB531 /* TSDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDrawView.m; sourceTree = "<group>"; };
 		FC457DBE1C98162700DDB531 /* WJConsultingNoPicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJConsultingNoPicCell.h; sourceTree = "<group>"; };
@@ -349,7 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC623B9F1C99A1DE00098459 /* libsqlite3.0.tbd in Frameworks */,
-				A68FAFEFF4F4A49290AF4C6D /* libPods.a in Frameworks */,
+				7D89235A4F7B39CCC1B56FAB /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +477,7 @@
 			isa = PBXGroup;
 			children = (
 				BC623B9E1C99A1DE00098459 /* libsqlite3.0.tbd */,
-				6C2E3BD33B03E9DF56A54E8A /* libPods.a */,
+				E53C4EFB1F1A193A5BB398D3 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

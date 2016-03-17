@@ -11,7 +11,7 @@
 #import "SWBrandHeadView.h"
 #import "SWSectionModel.h"
 #import "TSCarMod.h"
-#import <UIImageView+WebCache.h>
+#import "UIImageView+WebCache.h"
 
 #import "SWCarCell.h"
 @interface TSBrandCarController ()<UITableViewDataSource,UITableViewDelegate>
