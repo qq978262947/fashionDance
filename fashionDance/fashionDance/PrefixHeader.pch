@@ -35,12 +35,16 @@
 // 是否为iOS7
 #define iOS8_3 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.3)
 
+//#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
 #import <Masonry.h>
 
 #import "MJExtension.h"
 #import "WJHttpTool.h"
 
-//颜色、字体等各种参数
-#import "Config.h"
-
+#define SCRW [UIScreen mainScreen].bounds.size.width
+#define SCRH [UIScreen mainScreen].bounds.size.height
+#define BTNH 48
+#define NAVH 44
+#define TabbarH 49
 #endif

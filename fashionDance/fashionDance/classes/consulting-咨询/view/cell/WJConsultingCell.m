@@ -40,7 +40,7 @@
     [self.carImageView setNormalImagewithURL:[NSURL URLWithString:list.picUrl]  placeholderImage:[UIImage imageNamed:@"FollowBtnClickBg"] completed:nil];
     self.carTitle.text = list.title;
     self.nameLabel.text = list.author;
-    self.commandLabel.text = [NSString stringWithFormat:@"%li",(long)list.subbrandId];
+    self.commandLabel.text = [NSString stringWithFormat:@"%li",(long)list.brandId];
 }
 
 @end

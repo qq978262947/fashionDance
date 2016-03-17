@@ -42,7 +42,7 @@
     UILabel *titleLabel = [[UILabel alloc]init];
     [self addSubview:titleLabel];
     self.titleLabel = titleLabel;
-    titleLabel.font = [UIFont systemFontOfSize:12];
+    titleLabel.font = [UIFont systemFontOfSize:13];
     titleLabel.textColor = [UIColor grayColor];
 }
 
@@ -74,15 +74,6 @@
         [self.delegate collectionReusableViewDidBtnClick:self selectionTopic:self.selectionTopic];
     }
     
-    //http://saa.auto.sohu.com/v5/mobileapp/club/choices.do?num=20&start=0&type=0
-    //http://saa.auto.sohu.com/v5/mobileapp/club/choices.do?num=20&start=20&type=0
-    //http://saa.auto.sohu.com/v5/mobileapp/club/choices.do?num=20&start=40&type=0
-    
-    //http://saa.auto.sohu.com/v5/mobileapp/club/choices.do?num=20&start=0&type=2
-    
-    //http://saa.auto.sohu.com/v5/mobileapp/club/choices.do?num=20&start=0&type=4
-    
-    //http://saa.auto.sohu.com/v5/mobileapp/club/choices.do?num=20&start=0&type=3
 }
 
 - (void)layoutSubviews

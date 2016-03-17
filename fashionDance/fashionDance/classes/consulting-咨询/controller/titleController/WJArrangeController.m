@@ -14,6 +14,7 @@
 #import <MJExtension.h>
 #import "WJSUVResult.h"
 #import "WJFindHotCell.h"
+#import "WJPublicViewController.h"
 //http://autoapp.auto.sohu.com/api/model/listHot/body_2_type_6_page_1
 //http://autoapp.auto.sohu.com/api/model/listHot/body_0_type_0_page_1
 //http://autoapp.auto.sohu.com/api/model/listHot/body_0_type_1_page_1
@@ -87,7 +88,7 @@
 
 // 读区更多数据
 - (void)loadMoreData {
-    NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/model/listHot/body_%li_type_%li_page_%li", self.body , self.type, ++self.pageIndex];
+    NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/model/listHot/body_%li_type_%li_page_%i", self.body , self.type, ++self.pageIndex];
     [[WJHttpTool httpTool]get:urlString params:nil success:^(NSDictionary *responseObj) {
         WJSUVResult *result = [WJSUVResult mj_objectWithKeyValues:responseObj];
         if (result.items != 0) {
@@ -129,8 +130,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIViewController *vc = [[UIViewController alloc]init];
-    vc.view.backgroundColor = [UIColor redColor];
+    WJCarModel *carModel = self.listArray[indexPath.row];
+    WJPublicViewController *vc = [[WJPublicViewController alloc]init];
+    vc.modelId = carModel.modelId;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

@@ -7,8 +7,16 @@
 //
 
 #import "YUCategoryViewController.h"
+#import "YUHotTopicModel.h"
+#import "YUDBManager.h"
+#import "YUHotTopicCell.h"
+#import "YUTopicWebViewController.h"
+
+static NSString *const hotTopicCellID = @"YUHotTopicCell";
 
 @interface YUCategoryViewController ()
+/** 收藏的帖子数组 */
+@property (nonatomic, strong) NSMutableArray *collectArray;
 
 @end
 
@@ -16,84 +24,99 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.tableView.tableFooterView = [[UIView alloc]init];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.tableView.delaysContentTouches = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.view.backgroundColor = [UIColor greenColor];
+    // 注册cell
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YUHotTopicCell class]) bundle:nil] forCellReuseIdentifier:hotTopicCellID];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    __weak typeof (self) weakSelf = self;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        NSArray *array = [[YUDBManager sharedManager] searchAllTopic];
+        weakSelf.collectArray = [NSMutableArray arrayWithArray:array];
+        // 回主线程刷新数据
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [weakSelf setbackgroundImage];
+            
+            [weakSelf.tableView reloadData];
+        });
+    });
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
-    return 0;
+- (void)setbackgroundImage
+{
+    self.tableView.backgroundColor = self.collectArray.count > 0 ? WJColor(245, 245, 245) : [UIColor colorWithPatternImage:[UIImage imageNamed:@"topic"]];
 }
+
+#pragma mark UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return 0;
+    
+    return self.collectArray.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    YUHotTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:hotTopicCellID];
+    cell.topicModel = self.collectArray[indexPath.row];
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YUTopicWebViewController *webVc = [[YUTopicWebViewController alloc]init];
+
+    webVc.topicModel = self.collectArray[indexPath.row];
+    
+    [self.navigationController pushViewController:webVc animated:YES];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YUHotTopicModel *topic = self.collectArray[indexPath.row];
+    if (topic.pic1 || topic.imgUrl) {
+        
+        return  140;
+    } else {
+        return 60;
+    }
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    YUHotTopicModel *topic = self.collectArray[indexPath.row];
+//    
+//    [[YUDBManager sharedManager] deleteCollectWithTopic:topic];
+//    
+//    [self.collectArray removeObjectAtIndex:indexPath.row];
+//    
+//    [self.tableView reloadData];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+-(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        YUHotTopicModel *topic = self.collectArray[indexPath.row];
+        
+        [[YUDBManager sharedManager] deleteCollectWithTopic:topic];
+        
+        [self.collectArray removeObjectAtIndex:indexPath.row];
+        
+        [self setbackgroundImage];
+        
+        [self.tableView reloadData];
+        
+    }];
+    return @[action1];
 }
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

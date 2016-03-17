@@ -35,6 +35,8 @@
     [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         switch (status) {
             case AFNetworkReachabilityStatusUnknown: // 未知网络
+                WJLog(@"未知网络");
+                break;
             case AFNetworkReachabilityStatusNotReachable: // 没有网络(断网)
                 WJLog(@"没有网络(断网)");
                 [SVProgressHUD showErrorWithStatus:@"网络异常，请检查网络设置！"];
@@ -51,7 +53,6 @@
     }];
     // 开始监控
     [mgr startMonitoring];
-    
     return YES;
 }
 

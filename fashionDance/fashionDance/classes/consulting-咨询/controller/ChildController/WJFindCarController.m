@@ -13,8 +13,9 @@
 #import <MJExtension.h>
 #import "WJHttpTool.h"
 #import "WJFindCarResult.h"
+#import "WJPublicViewController.h"
 
-@interface WJFindCarController () <WJWaterflowLayoutDelegate, UICollectionViewDataSource>
+@interface WJFindCarController () <WJWaterflowLayoutDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) UICollectionView *collectionView;
 
@@ -31,6 +32,8 @@
     [self setupLayout];
     // 集成刷新控件
     [self setupRefresh];
+    // 设置背景色
+    self.view.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1.0];
 }
 /**
  *  集成刷新控件
@@ -59,9 +62,13 @@
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     collectionView.backgroundColor = [UIColor whiteColor];
     collectionView.dataSource = self;
+    collectionView.delegate = self;
     [self.view addSubview:collectionView];
     
     self.collectionView = collectionView;
+    
+    // 设置背景色
+    collectionView.backgroundColor = [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1.0];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -92,7 +99,7 @@
 {
 //    WJShop *shop = self.shops[index];
     
-    return 150 + arc4random_uniform(40);
+    return 170;
 }
 
 - (CGFloat)rowMarginInWaterflowLayout:(WJWaterflowLayout *)waterflowLayout
@@ -109,6 +116,13 @@
 - (UIEdgeInsets)edgeInsetsInWaterflowLayout:(WJWaterflowLayout *)waterflowLayout
 {
     return UIEdgeInsetsMake(10, 10, 10, 10);
+}
+
+#pragma mark - <UICollectionViewDelegate>
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    WJPublicViewController *vc = [[WJPublicViewController alloc]init];
+    vc.view.backgroundColor = [UIColor redColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
