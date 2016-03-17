@@ -6,6 +6,8 @@
 //  Copyright © 2016年 汪俊. All rights reserved.
 //
 
+
+#import "LLCarTypeDetailController.h"
 #import "WJPublicViewController.h"
 #import "WJScrollTitleView.h"
 #import "YuSummarizeController.h"
