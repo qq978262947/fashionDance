@@ -121,9 +121,9 @@ static NSString *cellId = @"MKVideoCell";
         
       //  NSLog(@"%@",result);
          NSError *error;
-        weakSelf.model = [[MKVediosModel alloc]initWithData:result error:&error];
+        weakSelf.model = [[MKVediosModel alloc]initWithDictionary:result error:&error];
         weakSelf.dataArray = [NSMutableArray arrayWithArray:weakSelf.model.result.newsList];
-     //   NSLog(@"%@",weakSelf.dataArray);
+        NSLog(@"%@",weakSelf.dataArray);
         [weakSelf.tableView reloadData];
 
          [weakSelf.tableView.mj_header endRefreshing];
