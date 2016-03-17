@@ -14,40 +14,14 @@
 		6A46D7241C93C75F008949E3 /* LLPictureCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A46D7231C93C75F008949E3 /* LLPictureCollectionCell.xib */; };
 		6A46D7271C940AF0008949E3 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A46D7261C940AF0008949E3 /* UIImage+Color.m */; };
 		6A46D72A1C943F21008949E3 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A46D7291C943F21008949E3 /* NSString+Extension.m */; };
+		6A46D7331C944DA4008949E3 /* LLCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A46D72C1C944DA4008949E3 /* LLCollectionViewLayout.m */; };
+		6A46D7341C944DA4008949E3 /* LLPictureCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A46D72E1C944DA4008949E3 /* LLPictureCollectionCell.m */; };
+		6A46D7351C944DA4008949E3 /* LLPictureCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A46D72F1C944DA4008949E3 /* LLPictureCollectionCell.xib */; };
+		6A46D7411C944DE5008949E3 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A46D73E1C944DE5008949E3 /* NSString+Extension.m */; };
+		6A46D7421C944DE5008949E3 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A46D7401C944DE5008949E3 /* UIImage+Color.m */; };
+		6A46D74B1C944F6E008949E3 /* LLTextCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A46D7491C944F6E008949E3 /* LLTextCollectionCell.m */; };
+		6A46D74C1C944F6E008949E3 /* LLTextCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A46D74A1C944F6E008949E3 /* LLTextCollectionCell.xib */; };
 		A68FAFEFF4F4A49290AF4C6D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2E3BD33B03E9DF56A54E8A /* libPods.a */; };
-		BC878AED1C93FD1D004DEC7E /* CarForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878ACB1C93FD1D004DEC7E /* CarForumController.m */; };
-		BC878AEE1C93FD1D004DEC7E /* YUCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878ACD1C93FD1D004DEC7E /* YUCategoryViewController.m */; };
-		BC878AEF1C93FD1D004DEC7E /* YUHotTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878ACF1C93FD1D004DEC7E /* YUHotTopicViewController.m */; };
-		BC878AF01C93FD1D004DEC7E /* YUMoreTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AD11C93FD1D004DEC7E /* YUMoreTopicViewController.m */; };
-		BC878AF11C93FD1D004DEC7E /* YUSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AD31C93FD1D004DEC7E /* YUSelectionViewController.m */; };
-		BC878AF21C93FD1D004DEC7E /* YUTopicWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AD51C93FD1D004DEC7E /* YUTopicWebViewController.m */; };
-		BC878AF31C93FD1D004DEC7E /* YUBannerListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AD81C93FD1D004DEC7E /* YUBannerListModel.m */; };
-		BC878AF41C93FD1D004DEC7E /* YUHotTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878ADA1C93FD1D004DEC7E /* YUHotTopicModel.m */; };
-		BC878AF51C93FD1D004DEC7E /* YUSelectionTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878ADC1C93FD1D004DEC7E /* YUSelectionTopic.m */; };
-		BC878AF61C93FD1D004DEC7E /* YUCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878ADF1C93FD1D004DEC7E /* YUCollectionReusableView.m */; };
-		BC878AF71C93FD1D004DEC7E /* YUHotTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AE11C93FD1D004DEC7E /* YUHotTopicCell.m */; };
-		BC878AF81C93FD1D004DEC7E /* YUHotTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC878AE21C93FD1D004DEC7E /* YUHotTopicCell.xib */; };
-		BC878AF91C93FD1D004DEC7E /* YUImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AE41C93FD1D004DEC7E /* YUImageCell.m */; };
-		BC878AFA1C93FD1D004DEC7E /* YUMoreTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AE61C93FD1D004DEC7E /* YUMoreTopicCell.m */; };
-		BC878AFB1C93FD1D004DEC7E /* YUMoreTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC878AE71C93FD1D004DEC7E /* YUMoreTopicCell.xib */; };
-		BC878AFC1C93FD1D004DEC7E /* YUSelectionTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AE91C93FD1D004DEC7E /* YUSelectionTopicCell.m */; };
-		BC878AFD1C93FD1D004DEC7E /* YUSelectionTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC878AEA1C93FD1D004DEC7E /* YUSelectionTopicCell.xib */; };
-		BC878AFE1C93FD1D004DEC7E /* YUTopicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC878AEC1C93FD1D004DEC7E /* YUTopicHeaderView.m */; };
-		DA3B5CD01C93BF7A001997C8 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CAD1C93BF7A001997C8 /* Foundation+Log.m */; };
-		DA3B5CD11C93BF7A001997C8 /* NSDate+WJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CAF1C93BF7A001997C8 /* NSDate+WJExtension.m */; };
-		DA3B5CD21C93BF7A001997C8 /* NSString+StringFromNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CB11C93BF7A001997C8 /* NSString+StringFromNumber.m */; };
-		DA3B5CD31C93BF7A001997C8 /* UIBarButtonItem+WJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CB31C93BF7A001997C8 /* UIBarButtonItem+WJExtension.m */; };
-		DA3B5CD41C93BF7A001997C8 /* UIImage+cirlcle.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CB51C93BF7A001997C8 /* UIImage+cirlcle.m */; };
-		DA3B5CD51C93BF7A001997C8 /* UIImage+reSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CB71C93BF7A001997C8 /* UIImage+reSize.m */; };
-		DA3B5CD61C93BF7A001997C8 /* UIImageView+downloadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CB91C93BF7A001997C8 /* UIImageView+downloadImage.m */; };
-		DA3B5CD71C93BF7A001997C8 /* UIView+WJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CBB1C93BF7A001997C8 /* UIView+WJExtension.m */; };
-		DA3B5CD81C93BF7A001997C8 /* LLCarTypeDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CBE1C93BF7A001997C8 /* LLCarTypeDetailController.m */; };
-		DA3B5CD91C93BF7A001997C8 /* WJNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CC01C93BF7A001997C8 /* WJNavgationController.m */; };
-		DA3B5CDA1C93BF7A001997C8 /* WJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CC21C93BF7A001997C8 /* WJTabBarController.m */; };
-		DA3B5CDB1C93BF7A001997C8 /* WJHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CC51C93BF7A001997C8 /* WJHttpTool.m */; };
-		DA3B5CDC1C93BF7A001997C8 /* LLCarOffSaleListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CC91C93BF7A001997C8 /* LLCarOffSaleListModel.m */; };
-		DA3B5CDD1C93BF7A001997C8 /* LLCarTypeInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CCB1C93BF7A001997C8 /* LLCarTypeInfoModel.m */; };
-		DA3B5CDE1C93BF7A001997C8 /* LLCarTypeVersionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3B5CCD1C93BF7A001997C8 /* LLCarTypeVersionModel.m */; };
 		DA825C0F1C92E86B000C5EE4 /* WJSpecialController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825BC41C92E86B000C5EE4 /* WJSpecialController.m */; };
 		DA825C171C92E86B000C5EE4 /* WJConsultingResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825BD91C92E86B000C5EE4 /* WJConsultingResult.m */; };
 		DA825C181C92E86B000C5EE4 /* WJSUVResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DA825BDB1C92E86B000C5EE4 /* WJSUVResult.m */; };
@@ -98,18 +72,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6A46D7181C93A63F008949E3 /* LLCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLCollectionViewLayout.h; sourceTree = "<group>"; };
 		6A46D7191C93A63F008949E3 /* LLCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCollectionViewLayout.m; sourceTree = "<group>"; };
-		6A46D71B1C93A95F008949E3 /* LLPictureCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPictureCollectionCell.h; sourceTree = "<group>"; };
 		6A46D71C1C93A95F008949E3 /* LLPictureCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLPictureCollectionCell.m; sourceTree = "<group>"; };
-		6A46D71E1C93A984008949E3 /* LLTextCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLTextCollectionCell.h; sourceTree = "<group>"; };
 		6A46D71F1C93A984008949E3 /* LLTextCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLTextCollectionCell.m; sourceTree = "<group>"; };
 		6A46D7211C93B293008949E3 /* LLTextCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLTextCollectionCell.xib; sourceTree = "<group>"; };
 		6A46D7231C93C75F008949E3 /* LLPictureCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLPictureCollectionCell.xib; sourceTree = "<group>"; };
-		6A46D7251C940AF0008949E3 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
 		6A46D7261C940AF0008949E3 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
-		6A46D7281C943F21008949E3 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		6A46D7291C943F21008949E3 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		6A46D72B1C944DA4008949E3 /* LLCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLCollectionViewLayout.h; sourceTree = "<group>"; };
+		6A46D72C1C944DA4008949E3 /* LLCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCollectionViewLayout.m; sourceTree = "<group>"; };
+		6A46D72D1C944DA4008949E3 /* LLPictureCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPictureCollectionCell.h; sourceTree = "<group>"; };
+		6A46D72E1C944DA4008949E3 /* LLPictureCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLPictureCollectionCell.m; sourceTree = "<group>"; };
+		6A46D72F1C944DA4008949E3 /* LLPictureCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLPictureCollectionCell.xib; sourceTree = "<group>"; };
+		6A46D73D1C944DE5008949E3 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		6A46D73E1C944DE5008949E3 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		6A46D73F1C944DE5008949E3 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		6A46D7401C944DE5008949E3 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		6A46D7481C944F6E008949E3 /* LLTextCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLTextCollectionCell.h; sourceTree = "<group>"; };
+		6A46D7491C944F6E008949E3 /* LLTextCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLTextCollectionCell.m; sourceTree = "<group>"; };
+		6A46D74A1C944F6E008949E3 /* LLTextCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLTextCollectionCell.xib; sourceTree = "<group>"; };
 		6ACFB7071C92FB660010D37B /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		6C2E3BD33B03E9DF56A54E8A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB5973FF1B297B050B1A609 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -352,6 +333,10 @@
 		DA3B5CAC1C93BF7A001997C8 /* category */ = {
 			isa = PBXGroup;
 			children = (
+				6A46D73D1C944DE5008949E3 /* NSString+Extension.h */,
+				6A46D73E1C944DE5008949E3 /* NSString+Extension.m */,
+				6A46D73F1C944DE5008949E3 /* UIImage+Color.h */,
+				6A46D7401C944DE5008949E3 /* UIImage+Color.m */,
 				DA3B5CAD1C93BF7A001997C8 /* Foundation+Log.m */,
 				DA3B5CAE1C93BF7A001997C8 /* NSDate+WJExtension.h */,
 				DA3B5CAF1C93BF7A001997C8 /* NSDate+WJExtension.m */,
@@ -423,6 +408,14 @@
 		DA3B5CCF1C93BF7A001997C8 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				6A46D7481C944F6E008949E3 /* LLTextCollectionCell.h */,
+				6A46D7491C944F6E008949E3 /* LLTextCollectionCell.m */,
+				6A46D74A1C944F6E008949E3 /* LLTextCollectionCell.xib */,
+				6A46D72B1C944DA4008949E3 /* LLCollectionViewLayout.h */,
+				6A46D72C1C944DA4008949E3 /* LLCollectionViewLayout.m */,
+				6A46D72D1C944DA4008949E3 /* LLPictureCollectionCell.h */,
+				6A46D72E1C944DA4008949E3 /* LLPictureCollectionCell.m */,
+				6A46D72F1C944DA4008949E3 /* LLPictureCollectionCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -664,110 +657,6 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		DA825C591C92E942000C5EE4 /* Main-主要 */ = {
-			isa = PBXGroup;
-			children = (
-				DA825C5A1C92E942000C5EE4 /* category */,
-				DA825C6A1C92E942000C5EE4 /* controller */,
-				DA825C711C92E942000C5EE4 /* httptool */,
-				DA825C741C92E942000C5EE4 /* MJExetensionTool */,
-				DA825C751C92E942000C5EE4 /* model */,
-				DA825C7C1C92E942000C5EE4 /* tool */,
-				DA825C7D1C92E942000C5EE4 /* view */,
-			);
-			path = "Main-主要";
-			sourceTree = "<group>";
-		};
-		DA825C5A1C92E942000C5EE4 /* category */ = {
-			isa = PBXGroup;
-			children = (
-				6A46D7281C943F21008949E3 /* NSString+Extension.h */,
-				6A46D7291C943F21008949E3 /* NSString+Extension.m */,
-				6A46D7251C940AF0008949E3 /* UIImage+Color.h */,
-				6A46D7261C940AF0008949E3 /* UIImage+Color.m */,
-				DA825C5B1C92E942000C5EE4 /* Foundation+Log.m */,
-				DA825C5C1C92E942000C5EE4 /* NSDate+WJExtension.h */,
-				DA825C5D1C92E942000C5EE4 /* NSDate+WJExtension.m */,
-				DA825C5E1C92E942000C5EE4 /* NSString+StringFromNumber.h */,
-				DA825C5F1C92E942000C5EE4 /* NSString+StringFromNumber.m */,
-				DA825C601C92E942000C5EE4 /* UIBarButtonItem+WJExtension.h */,
-				DA825C611C92E942000C5EE4 /* UIBarButtonItem+WJExtension.m */,
-				DA825C621C92E942000C5EE4 /* UIImage+cirlcle.h */,
-				DA825C631C92E942000C5EE4 /* UIImage+cirlcle.m */,
-				DA825C641C92E942000C5EE4 /* UIImage+reSize.h */,
-				DA825C651C92E942000C5EE4 /* UIImage+reSize.m */,
-				DA825C661C92E942000C5EE4 /* UIImageView+downloadImage.h */,
-				DA825C671C92E942000C5EE4 /* UIImageView+downloadImage.m */,
-				DA825C681C92E942000C5EE4 /* UIView+WJExtension.h */,
-				DA825C691C92E942000C5EE4 /* UIView+WJExtension.m */,
-			);
-			path = category;
-			sourceTree = "<group>";
-		};
-		DA825C6A1C92E942000C5EE4 /* controller */ = {
-			isa = PBXGroup;
-			children = (
-				DA825C6B1C92E942000C5EE4 /* LLCarTypeDetailController.h */,
-				DA825C6C1C92E942000C5EE4 /* LLCarTypeDetailController.m */,
-				DA825C6D1C92E942000C5EE4 /* WJNavgationController.h */,
-				DA825C6E1C92E942000C5EE4 /* WJNavgationController.m */,
-				DA825C6F1C92E942000C5EE4 /* WJTabBarController.h */,
-				DA825C701C92E942000C5EE4 /* WJTabBarController.m */,
-			);
-			path = controller;
-			sourceTree = "<group>";
-		};
-		DA825C711C92E942000C5EE4 /* httptool */ = {
-			isa = PBXGroup;
-			children = (
-				DA825C721C92E942000C5EE4 /* WJHttpTool.h */,
-				DA825C731C92E942000C5EE4 /* WJHttpTool.m */,
-			);
-			path = httptool;
-			sourceTree = "<group>";
-		};
-		DA825C741C92E942000C5EE4 /* MJExetensionTool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MJExetensionTool;
-			sourceTree = "<group>";
-		};
-		DA825C751C92E942000C5EE4 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				DA825C761C92E942000C5EE4 /* LLCarOffSaleListModel.h */,
-				DA825C771C92E942000C5EE4 /* LLCarOffSaleListModel.m */,
-				DA825C781C92E942000C5EE4 /* LLCarTypeInfoModel.h */,
-				DA825C791C92E942000C5EE4 /* LLCarTypeInfoModel.m */,
-				DA825C7A1C92E942000C5EE4 /* LLCarTypeVersionModel.h */,
-				DA825C7B1C92E942000C5EE4 /* LLCarTypeVersionModel.m */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		DA825C7C1C92E942000C5EE4 /* tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = tool;
-			sourceTree = "<group>";
-		};
-		DA825C7D1C92E942000C5EE4 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				6A46D7181C93A63F008949E3 /* LLCollectionViewLayout.h */,
-				6A46D7191C93A63F008949E3 /* LLCollectionViewLayout.m */,
-				6A46D71B1C93A95F008949E3 /* LLPictureCollectionCell.h */,
-				6A46D71C1C93A95F008949E3 /* LLPictureCollectionCell.m */,
-				6A46D7231C93C75F008949E3 /* LLPictureCollectionCell.xib */,
-				6A46D71E1C93A984008949E3 /* LLTextCollectionCell.h */,
-				6A46D71F1C93A984008949E3 /* LLTextCollectionCell.m */,
-				6A46D7211C93B293008949E3 /* LLTextCollectionCell.xib */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
 		DA89F34A1C92FE85003D5AF8 /* ChildController */ = {
 			isa = PBXGroup;
 			children = (
@@ -967,11 +856,13 @@
 			files = (
 				DA825C1A1C92E86B000C5EE4 /* WJConsultingCell.xib in Resources */,
 				DA825C1C1C92E86B000C5EE4 /* WJFindHotCell.xib in Resources */,
+				6A46D7351C944DA4008949E3 /* LLPictureCollectionCell.xib in Resources */,
 				6A46D7221C93B293008949E3 /* LLTextCollectionCell.xib in Resources */,
 				DAE93A151C8E75B900F03A67 /* LaunchScreen.storyboard in Resources */,
 				6A46D7241C93C75F008949E3 /* LLPictureCollectionCell.xib in Resources */,
 				DA89F35B1C9301B4003D5AF8 /* WJCollectionViewCell.xib in Resources */,
 				DAE93A121C8E75B900F03A67 /* Assets.xcassets in Resources */,
+				6A46D74C1C944F6E008949E3 /* LLTextCollectionCell.xib in Resources */,
 				DAE93A101C8E75B900F03A67 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1048,45 +939,34 @@
 				DA825C971C92EAD2000C5EE4 /* CarConsultingController.m in Sources */,
 				DAE93A0A1C8E75B900F03A67 /* AppDelegate.m in Sources */,
 				6A46D7201C93A984008949E3 /* LLTextCollectionCell.m in Sources */,
-				DA825C8A1C92E943000C5EE4 /* LLCarOffSaleListModel.m in Sources */,
 				DAE93A5B1C8E77A600F03A67 /* WJConst.m in Sources */,
 				6A46D71D1C93A95F008949E3 /* LLPictureCollectionCell.m in Sources */,
 				DA825C181C92E86B000C5EE4 /* WJSUVResult.m in Sources */,
 				DA89F35A1C9301B4003D5AF8 /* WJCollectionViewCell.m in Sources */,
 				DA825C1E1C92E86B000C5EE4 /* WJHeaderView.m in Sources */,
 				6A46D7271C940AF0008949E3 /* UIImage+Color.m in Sources */,
-				DA825C8B1C92E943000C5EE4 /* LLCarTypeInfoModel.m in Sources */,
 				DA825C191C92E86B000C5EE4 /* WJConsultingCell.m in Sources */,
+				6A46D7341C944DA4008949E3 /* LLPictureCollectionCell.m in Sources */,
 				DA825C0F1C92E86B000C5EE4 /* WJSpecialController.m in Sources */,
 				DA825C1F1C92E86B000C5EE4 /* WJProgressView.m in Sources */,
+				6A46D7331C944DA4008949E3 /* LLCollectionViewLayout.m in Sources */,
 				6A46D71A1C93A63F008949E3 /* LLCollectionViewLayout.m in Sources */,
-				DA825C8C1C92E943000C5EE4 /* LLCarTypeVersionModel.m in Sources */,
-				DA825C851C92E943000C5EE4 /* UIView+WJExtension.m in Sources */,
-				DA825C811C92E943000C5EE4 /* UIBarButtonItem+WJExtension.m in Sources */,
 				DA825C171C92E86B000C5EE4 /* WJConsultingResult.m in Sources */,
 				DA89F3511C92FE85003D5AF8 /* WJFindCarController.m in Sources */,
-				DA825C831C92E943000C5EE4 /* UIImage+reSize.m in Sources */,
 				DA825C241C92E86B000C5EE4 /* CarPreferentialController.m in Sources */,
 				DAE93A071C8E75B900F03A67 /* main.m in Sources */,
-				DA825C841C92E943000C5EE4 /* UIImageView+downloadImage.m in Sources */,
 				DA825C1B1C92E86B000C5EE4 /* WJFindHotCell.m in Sources */,
-				DA825C821C92E943000C5EE4 /* UIImage+cirlcle.m in Sources */,
 				DA825C9E1C92EB7E000C5EE4 /* WJArrangeController.m in Sources */,
-				DA825C891C92E943000C5EE4 /* WJHttpTool.m in Sources */,
+				6A46D7421C944DE5008949E3 /* UIImage+Color.m in Sources */,
+				6A46D7411C944DE5008949E3 /* NSString+Extension.m in Sources */,
 				DA825C1D1C92E86B000C5EE4 /* WJContainerView.m in Sources */,
 				DA825C201C92E86B000C5EE4 /* WJVerticalButton.m in Sources */,
 				6A46D72A1C943F21008949E3 /* NSString+Extension.m in Sources */,
-				DA825C221C92E86B000C5EE4 /* CarForumController.m in Sources */,
+				6A46D74B1C944F6E008949E3 /* LLTextCollectionCell.m in Sources */,
 				DA89F3461C92FDCE003D5AF8 /* WJFindCarResult.m in Sources */,
-				DA825C801C92E943000C5EE4 /* NSString+StringFromNumber.m in Sources */,
-				DA825C871C92E943000C5EE4 /* WJNavgationController.m in Sources */,
 				DA825C211C92E86B000C5EE4 /* CarFindController.m in Sources */,
-				DA825C7F1C92E942000C5EE4 /* NSDate+WJExtension.m in Sources */,
 				DA89F3561C93009B003D5AF8 /* WJWaterFlowLayout.m in Sources */,
-				DA825C861C92E943000C5EE4 /* LLCarTypeDetailController.m in Sources */,
 				DA89F3521C92FE85003D5AF8 /* WJHotCarController.m in Sources */,
-				DA825C881C92E943000C5EE4 /* WJTabBarController.m in Sources */,
-				DA825C7E1C92E942000C5EE4 /* Foundation+Log.m in Sources */,
 				DA89F3531C92FE85003D5AF8 /* WJWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
