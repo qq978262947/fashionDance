@@ -101,6 +101,8 @@
 		FC457DDA1C98413100DDB531 /* TSTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC457DD81C98413100DDB531 /* TSTitleCell.m */; };
 		FC457DDB1C98413100DDB531 /* TSTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC457DD91C98413100DDB531 /* TSTitleCell.xib */; };
 		FC457DDE1C9847E600DDB531 /* TSSpecificController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC457DDD1C9847E600DDB531 /* TSSpecificController.m */; };
+		FC54BC5C1C9A3EC3004D78BB /* TSCKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54BC5B1C9A3EC3004D78BB /* TSCKModel.m */; };
+		FC54BC611C9A3FBA004D78BB /* TSHalfController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54BC601C9A3FBA004D78BB /* TSHalfController.m */; };
 		FCCB845D1C96AF1A005EA1AA /* brand_list.json in Resources */ = {isa = PBXBuildFile; fileRef = FCCB845C1C96AF1A005EA1AA /* brand_list.json */; };
 		FCCB84651C96B0BB005EA1AA /* TSCarMod.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB84641C96B0BB005EA1AA /* TSCarMod.m */; };
 		FCCB84681C96B29E005EA1AA /* TSBrandCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB84671C96B29E005EA1AA /* TSBrandCarController.m */; };
@@ -308,6 +310,10 @@
 		FC457DD91C98413100DDB531 /* TSTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSTitleCell.xib; sourceTree = "<group>"; };
 		FC457DDC1C9847E600DDB531 /* TSSpecificController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSpecificController.h; sourceTree = "<group>"; };
 		FC457DDD1C9847E600DDB531 /* TSSpecificController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSpecificController.m; sourceTree = "<group>"; };
+		FC54BC5A1C9A3EC3004D78BB /* TSCKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCKModel.h; sourceTree = "<group>"; };
+		FC54BC5B1C9A3EC3004D78BB /* TSCKModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCKModel.m; sourceTree = "<group>"; };
+		FC54BC5F1C9A3FBA004D78BB /* TSHalfController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHalfController.h; sourceTree = "<group>"; };
+		FC54BC601C9A3FBA004D78BB /* TSHalfController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHalfController.m; sourceTree = "<group>"; };
 		FCCB845C1C96AF1A005EA1AA /* brand_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brand_list.json; sourceTree = "<group>"; };
 		FCCB84631C96B0BB005EA1AA /* TSCarMod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCarMod.h; sourceTree = "<group>"; };
 		FCCB84641C96B0BB005EA1AA /* TSCarMod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCarMod.m; sourceTree = "<group>"; };
@@ -467,6 +473,9 @@
 		DA2B4C1F1C99B12D001DE451 /* publicController */ = {
 			isa = PBXGroup;
 			children = (
+				FC54BC5E1C9A3F74004D78BB /* Controller */,
+				FC54BC581C9A3E98004D78BB /* Model */,
+				FC54BC591C9A3E98004D78BB /* View */,
 				DA2B4C201C99B12D001DE451 /* CCPicViewController.h */,
 				DA2B4C211C99B12D001DE451 /* CCPicViewController.m */,
 				DA2B4C221C99B12D001DE451 /* WJPraiseViewController.h */,
@@ -907,6 +916,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FC54BC581C9A3E98004D78BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC54BC5A1C9A3EC3004D78BB /* TSCKModel.h */,
+				FC54BC5B1C9A3EC3004D78BB /* TSCKModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC54BC591C9A3E98004D78BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC54BC5E1C9A3F74004D78BB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC54BC5F1C9A3FBA004D78BB /* TSHalfController.h */,
+				FC54BC601C9A3FBA004D78BB /* TSHalfController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		FCCB84611C96B0AA005EA1AA /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1166,6 +1200,7 @@
 				FC457DC61C98165900DDB531 /* MKVideoCell.m in Sources */,
 				BC0F44EB1C999EA800894419 /* YUBannerListModel.m in Sources */,
 				BC0F44F71C999EA800894419 /* YUTopicHeaderView.m in Sources */,
+				FC54BC611C9A3FBA004D78BB /* TSHalfController.m in Sources */,
 				DA2B4C311C99B12D001DE451 /* YuSummarizeController.m in Sources */,
 				DA2B4C2D1C99B12D001DE451 /* WJPraiseViewController.h.m in Sources */,
 				DA3B5CD51C93BF7A001997C8 /* UIImage+reSize.m in Sources */,
@@ -1200,6 +1235,7 @@
 				BC0F44E41C999EA800894419 /* YUSelectionViewController.m in Sources */,
 				BC0F44E51C999EA800894419 /* YUTopicWebViewController.m in Sources */,
 				DA3B5CD21C93BF7A001997C8 /* NSString+StringFromNumber.m in Sources */,
+				FC54BC5C1C9A3EC3004D78BB /* TSCKModel.m in Sources */,
 				DA2B4C341C99B1F9001DE451 /* WJScrollTitleView.m in Sources */,
 				DA825C211C92E86B000C5EE4 /* CarFindController.m in Sources */,
 				BC0F44ED1C999EA800894419 /* YUSelectionTopic.m in Sources */,
