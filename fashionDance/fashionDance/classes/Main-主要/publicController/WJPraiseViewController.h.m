@@ -10,10 +10,13 @@
 #import "WJHeaderAppraiseModel.h"
 #import "WJContentAppraiseModel.h"
 #import "WJPraiseTableViewCell.h"
+#import "WJPraiseHeaderView.h"
 
 @interface WJPraiseViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) UITableView *tableView;
+
+@property (weak, nonatomic) WJPraiseHeaderView *headerView;
 
 @property (copy, nonatomic)NSArray *listArray;
 
@@ -36,7 +39,8 @@
     NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/eval/stat/model_%@",self.modelId];
     [[WJHttpTool httpTool]get:urlString params:nil success:^(id result) {
         WJHeaderAppraiseModel *appraiseModel = [WJHeaderAppraiseModel mj_objectWithKeyValues:result];
-        WJLog(@"%@",appraiseModel);
+        self.headerView.appraiseModel = appraiseModel;
+        [self.tableView reloadData];
     } failure:^(NSError *error) {
         
     }];
@@ -54,19 +58,25 @@
 
 
 - (void)setupTableView {
-    
-    
-    
+
+    self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
     UITableView *tableView = [[UITableView alloc]init];
     [self.view addSubview:tableView];
     self.tableView = tableView;
     
+    tableView.contentInset = UIEdgeInsetsMake(0, 0, 99, 0);
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.dataSource = self;
     tableView.delegate = self;
     
     [self constraintTableView];
+    
+    // 设置headerview
+    WJPraiseHeaderView *headerView = [WJPraiseHeaderView praiseHeaderViewWithFrame:CGRectMake(0, 0, WJScreenW, 300)];
+    self.headerView = headerView;
+    headerView.backgroundColor = [UIColor yellowColor];
+    tableView.tableHeaderView = headerView;
 }
 
 - (void)constraintTableView {

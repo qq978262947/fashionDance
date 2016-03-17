@@ -44,6 +44,7 @@
 		DA2701E81C9A4A3500AC8205 /* WJPraiseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2701E61C9A4A3500AC8205 /* WJPraiseTableViewCell.m */; };
 		DA2701E91C9A4A3500AC8205 /* WJPraiseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA2701E71C9A4A3500AC8205 /* WJPraiseTableViewCell.xib */; };
 		DA2701EC1C9A61A400AC8205 /* WJPraiseHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2701EB1C9A61A400AC8205 /* WJPraiseHeaderView.m */; };
+		DA2701EF1C9A828D00AC8205 /* WJStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2701EE1C9A828D00AC8205 /* WJStarView.m */; };
 		DA2B4C2C1C99B12D001DE451 /* CCPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B4C211C99B12D001DE451 /* CCPicViewController.m */; };
 		DA2B4C2D1C99B12D001DE451 /* WJPraiseViewController.h.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B4C231C99B12D001DE451 /* WJPraiseViewController.h.m */; };
 		DA2B4C2E1C99B12D001DE451 /* WJPublicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B4C251C99B12D001DE451 /* WJPublicViewController.m */; };
@@ -209,6 +210,8 @@
 		DA2701E71C9A4A3500AC8205 /* WJPraiseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WJPraiseTableViewCell.xib; path = "fashionDance/classes/Main-主要/model/WJPraiseTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		DA2701EA1C9A61A400AC8205 /* WJPraiseHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WJPraiseHeaderView.h; path = "fashionDance/classes/Main-主要/model/WJPraiseHeaderView.h"; sourceTree = SOURCE_ROOT; };
 		DA2701EB1C9A61A400AC8205 /* WJPraiseHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WJPraiseHeaderView.m; path = "fashionDance/classes/Main-主要/model/WJPraiseHeaderView.m"; sourceTree = SOURCE_ROOT; };
+		DA2701ED1C9A828D00AC8205 /* WJStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WJStarView.h; path = "fashionDance/classes/Main-主要/model/WJStarView.h"; sourceTree = SOURCE_ROOT; };
+		DA2701EE1C9A828D00AC8205 /* WJStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WJStarView.m; path = "fashionDance/classes/Main-主要/model/WJStarView.m"; sourceTree = SOURCE_ROOT; };
 		DA2B4C201C99B12D001DE451 /* CCPicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPicViewController.h; sourceTree = "<group>"; };
 		DA2B4C211C99B12D001DE451 /* CCPicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPicViewController.m; sourceTree = "<group>"; };
 		DA2B4C221C99B12D001DE451 /* WJPraiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJPraiseViewController.h; sourceTree = "<group>"; };
@@ -634,6 +637,8 @@
 				DA2701E71C9A4A3500AC8205 /* WJPraiseTableViewCell.xib */,
 				DA2701EA1C9A61A400AC8205 /* WJPraiseHeaderView.h */,
 				DA2701EB1C9A61A400AC8205 /* WJPraiseHeaderView.m */,
+				DA2701ED1C9A828D00AC8205 /* WJStarView.h */,
+				DA2701EE1C9A828D00AC8205 /* WJStarView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1237,6 +1242,7 @@
 				DA825C1B1C92E86B000C5EE4 /* WJFindHotCell.m in Sources */,
 				FC457DBD1C98064C00DDB531 /* TSDrawView.m in Sources */,
 				DA2B4C2E1C99B12D001DE451 /* WJPublicViewController.m in Sources */,
+				DA2701EF1C9A828D00AC8205 /* WJStarView.m in Sources */,
 				DA2701CC1C9A3BFC00AC8205 /* WJContentAppraiseModel.m in Sources */,
 				DA825C9E1C92EB7E000C5EE4 /* WJArrangeController.m in Sources */,
 				DA2701DA1C9A434300AC8205 /* MKVediosModel.m in Sources */,

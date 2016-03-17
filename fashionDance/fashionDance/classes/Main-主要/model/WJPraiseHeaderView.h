@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WJHeaderAppraiseModel.h"
 
 @interface WJPraiseHeaderView : UIView
 
@@ -14,5 +15,7 @@
 + (instancetype)praiseHeaderView;
 
 + (instancetype)praiseHeaderViewWithFrame:(CGRect)frame;
+
+@property (strong, nonatomic)WJHeaderAppraiseModel *appraiseModel;
 
 @end
