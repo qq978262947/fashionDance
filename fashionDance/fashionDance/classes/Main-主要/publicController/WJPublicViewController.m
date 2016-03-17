@@ -59,11 +59,11 @@
     vc4.modelId = self.modelId;
     vc5.modelId = self.modelId;
     
-    vc1.view.backgroundColor = [UIColor whiteColor];
-    vc2.view.backgroundColor = [UIColor redColor];
-    vc3.view.backgroundColor = [UIColor blackColor];
-    vc4.view.backgroundColor = [UIColor yellowColor];
-    vc5.view.backgroundColor = [UIColor greenColor];
+//    vc1.view.backgroundColor = [UIColor whiteColor];
+//    vc2.view.backgroundColor = [UIColor redColor];
+//    vc3.view.backgroundColor = [UIColor blackColor];
+//    vc4.view.backgroundColor = [UIColor yellowColor];
+//    vc5.view.backgroundColor = [UIColor greenColor];
     
     tv.views = @[vc1.view,vc2.view,vc3.view,vc4.view,vc5.view];
     tv.titles = @[@"综述",@"图片",@"口碑",@"文章",@"论坛"];

@@ -41,6 +41,9 @@
 		DA2701E01C9A437200AC8205 /* MKVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2701DE1C9A437200AC8205 /* MKVideoCell.m */; };
 		DA2701E11C9A437200AC8205 /* MKVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA2701DF1C9A437200AC8205 /* MKVideoCell.xib */; };
 		DA2701E41C9A438B00AC8205 /* CarPreferentialController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2701E31C9A438B00AC8205 /* CarPreferentialController.m */; };
+		DA2701E81C9A4A3500AC8205 /* WJPraiseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2701E61C9A4A3500AC8205 /* WJPraiseTableViewCell.m */; };
+		DA2701E91C9A4A3500AC8205 /* WJPraiseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA2701E71C9A4A3500AC8205 /* WJPraiseTableViewCell.xib */; };
+		DA2701EC1C9A61A400AC8205 /* WJPraiseHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2701EB1C9A61A400AC8205 /* WJPraiseHeaderView.m */; };
 		DA2B4C2C1C99B12D001DE451 /* CCPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B4C211C99B12D001DE451 /* CCPicViewController.m */; };
 		DA2B4C2D1C99B12D001DE451 /* WJPraiseViewController.h.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B4C231C99B12D001DE451 /* WJPraiseViewController.h.m */; };
 		DA2B4C2E1C99B12D001DE451 /* WJPublicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B4C251C99B12D001DE451 /* WJPublicViewController.m */; };
@@ -201,6 +204,11 @@
 		DA2701DF1C9A437200AC8205 /* MKVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MKVideoCell.xib; sourceTree = "<group>"; };
 		DA2701E21C9A438B00AC8205 /* CarPreferentialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarPreferentialController.h; sourceTree = "<group>"; };
 		DA2701E31C9A438B00AC8205 /* CarPreferentialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarPreferentialController.m; sourceTree = "<group>"; };
+		DA2701E51C9A4A3500AC8205 /* WJPraiseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WJPraiseTableViewCell.h; path = "fashionDance/classes/Main-主要/model/WJPraiseTableViewCell.h"; sourceTree = SOURCE_ROOT; };
+		DA2701E61C9A4A3500AC8205 /* WJPraiseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WJPraiseTableViewCell.m; path = "fashionDance/classes/Main-主要/model/WJPraiseTableViewCell.m"; sourceTree = SOURCE_ROOT; };
+		DA2701E71C9A4A3500AC8205 /* WJPraiseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WJPraiseTableViewCell.xib; path = "fashionDance/classes/Main-主要/model/WJPraiseTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		DA2701EA1C9A61A400AC8205 /* WJPraiseHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WJPraiseHeaderView.h; path = "fashionDance/classes/Main-主要/model/WJPraiseHeaderView.h"; sourceTree = SOURCE_ROOT; };
+		DA2701EB1C9A61A400AC8205 /* WJPraiseHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WJPraiseHeaderView.m; path = "fashionDance/classes/Main-主要/model/WJPraiseHeaderView.m"; sourceTree = SOURCE_ROOT; };
 		DA2B4C201C99B12D001DE451 /* CCPicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPicViewController.h; sourceTree = "<group>"; };
 		DA2B4C211C99B12D001DE451 /* CCPicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPicViewController.m; sourceTree = "<group>"; };
 		DA2B4C221C99B12D001DE451 /* WJPraiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJPraiseViewController.h; sourceTree = "<group>"; };
@@ -621,6 +629,11 @@
 		DA3B5CCF1C93BF7A001997C8 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				DA2701E51C9A4A3500AC8205 /* WJPraiseTableViewCell.h */,
+				DA2701E61C9A4A3500AC8205 /* WJPraiseTableViewCell.m */,
+				DA2701E71C9A4A3500AC8205 /* WJPraiseTableViewCell.xib */,
+				DA2701EA1C9A61A400AC8205 /* WJPraiseHeaderView.h */,
+				DA2701EB1C9A61A400AC8205 /* WJPraiseHeaderView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1103,6 +1116,7 @@
 				BC0F44F01C999EA800894419 /* YUHotTopicCell.xib in Resources */,
 				DA2701E11C9A437200AC8205 /* MKVideoCell.xib in Resources */,
 				DAE93A121C8E75B900F03A67 /* Assets.xcassets in Resources */,
+				DA2701E91C9A4A3500AC8205 /* WJPraiseTableViewCell.xib in Resources */,
 				FC457DC21C98162D00DDB531 /* WJConsultingNoPicCell.xib in Resources */,
 				FC457DD21C9816AF00DDB531 /* SWCarCell.xib in Resources */,
 				DAE93A101C8E75B900F03A67 /* Main.storyboard in Resources */,
@@ -1178,6 +1192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA2701E81C9A4A3500AC8205 /* WJPraiseTableViewCell.m in Sources */,
 				DA825C971C92EAD2000C5EE4 /* CarConsultingController.m in Sources */,
 				FC457DC01C98162700DDB531 /* WJConsultingNoPicCell.m in Sources */,
 				DA2B4C301C99B12D001DE451 /* YuForumViewController.m in Sources */,
@@ -1218,6 +1233,7 @@
 				DAE93A071C8E75B900F03A67 /* main.m in Sources */,
 				DA3B5CD41C93BF7A001997C8 /* UIImage+cirlcle.m in Sources */,
 				DA3B5CDB1C93BF7A001997C8 /* WJHttpTool.m in Sources */,
+				DA2701EC1C9A61A400AC8205 /* WJPraiseHeaderView.m in Sources */,
 				DA825C1B1C92E86B000C5EE4 /* WJFindHotCell.m in Sources */,
 				FC457DBD1C98064C00DDB531 /* TSDrawView.m in Sources */,
 				DA2B4C2E1C99B12D001DE451 /* WJPublicViewController.m in Sources */,

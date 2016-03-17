@@ -7,10 +7,15 @@
 //
 
 #import "WJPraiseViewController.h"
+#import "WJHeaderAppraiseModel.h"
+#import "WJContentAppraiseModel.h"
+#import "WJPraiseTableViewCell.h"
 
 @interface WJPraiseViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) UITableView *tableView;
+
+@property (copy, nonatomic)NSArray *listArray;
 
 @end
 
@@ -21,22 +26,54 @@
     [super viewDidLoad];
     // 初始化tableview
     [self setupTableView];
+    // 加载头部数据
+    [self loadHeaderData];
+    // 加载身体数据
+    [self loadContentData];
 }
 
-
-- (void)setupTableView {
-    UITableView *tableView = [[UITableView alloc]init];
-    [self.view addSubview:tableView];
-    self.tableView = tableView;
-    
-    tableView.dataSource = self;
-    tableView.delegate = self;
-    
-    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+- (void)loadHeaderData {
+    NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/eval/stat/model_%@",self.modelId];
+    [[WJHttpTool httpTool]get:urlString params:nil success:^(id result) {
+        WJHeaderAppraiseModel *appraiseModel = [WJHeaderAppraiseModel mj_objectWithKeyValues:result];
+        WJLog(@"%@",appraiseModel);
+    } failure:^(NSError *error) {
         
     }];
 }
 
+- (void)loadContentData {
+    NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/eval/list/model_%@_size_20_page_1",self.modelId];
+    [[WJHttpTool httpTool]get:urlString params:nil success:^(id result) {
+        _listArray = [WJContentAppraiseModel mj_objectArrayWithKeyValuesArray:result];
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
+
+- (void)setupTableView {
+    
+    
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    UITableView *tableView = [[UITableView alloc]init];
+    [self.view addSubview:tableView];
+    self.tableView = tableView;
+    
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    tableView.dataSource = self;
+    tableView.delegate = self;
+    
+    [self constraintTableView];
+}
+
+- (void)constraintTableView {
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(@0);
+    }];
+}
 
 
 - (void)didReceiveMemoryWarning {
@@ -46,11 +83,19 @@
 
 #pragma mark - <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.listArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    WJContentAppraiseModel *listModel = self.listArray[indexPath.row];
+    WJPraiseTableViewCell *cell = [WJPraiseTableViewCell praiseTableViewCellWithTableView:tableView];
+    cell.appraiseList = listModel;
+    return cell;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 330;
 }
 
 @end
