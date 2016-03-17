@@ -10,4 +10,12 @@
 
 @interface WJCombinationProgressView : UIView
 
++ (instancetype)combinationProgressView;
+
++ (instancetype)combinationProgressViewWithFrame:(CGRect)frame;
+
+@property (weak, nonatomic)UIProgressView *progressView;
+
+@property (weak, nonatomic)UILabel *progressLabel;
+
 @end

@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WJHeaderAppraiseModel.h"
 
 @interface WJProgressesView : UIView
+
++ (instancetype)progressesView;
+
++ (instancetype)progressesViewWithFrame:(CGRect)frame;
+
+@property (strong, nonatomic) WJHeaderAppraiseModel *appraiseModel;
 
 @end

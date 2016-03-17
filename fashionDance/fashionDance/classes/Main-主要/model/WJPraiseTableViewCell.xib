@@ -165,9 +165,6 @@
                                 <state key="normal" title="查看详情口碑">
                                     <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="moreButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aGP-6a-Fz8"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>

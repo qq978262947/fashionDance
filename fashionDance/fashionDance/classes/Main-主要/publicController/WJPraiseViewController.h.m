@@ -11,6 +11,7 @@
 #import "WJContentAppraiseModel.h"
 #import "WJPraiseTableViewCell.h"
 #import "WJPraiseHeaderView.h"
+#import "WJCarDetailsController.h"
 
 @interface WJPraiseViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -18,13 +19,29 @@
 
 @property (weak, nonatomic) WJPraiseHeaderView *headerView;
 
-@property (copy, nonatomic)NSArray *listArray;
+@property (copy, nonatomic) NSArray *listArray;
+
+@property (strong, nonatomic) UILabel *titleView;
 
 @end
 
 @implementation WJPraiseViewController
 // http://autoapp.auto.sohu.com/api/eval/stat/model_4095
 // http://autoapp.auto.sohu.com/api/eval/list/model_4095_size_20_page_1
+
+- (UILabel *)titleView {
+    if (nil == _titleView) {
+        UILabel *titleView = [[UILabel alloc]init];
+        titleView.size = CGSizeMake(WJScreenW, 30);
+        titleView.text = @"  全部口碑";
+        titleView.textColor = [UIColor colorWithWhite:0.1 alpha:1.0];
+        titleView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
+        _titleView = titleView;
+    }
+    return _titleView;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 初始化tableview
@@ -58,7 +75,7 @@
 
 
 - (void)setupTableView {
-
+    
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
     UITableView *tableView = [[UITableView alloc]init];
@@ -66,6 +83,7 @@
     self.tableView = tableView;
     
     tableView.contentInset = UIEdgeInsetsMake(0, 0, 99, 0);
+    tableView.scrollIndicatorInsets = tableView.contentInset;
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.dataSource = self;
     tableView.delegate = self;
@@ -73,9 +91,9 @@
     [self constraintTableView];
     
     // 设置headerview
-    WJPraiseHeaderView *headerView = [WJPraiseHeaderView praiseHeaderViewWithFrame:CGRectMake(0, 0, WJScreenW, 300)];
+    WJPraiseHeaderView *headerView = [WJPraiseHeaderView praiseHeaderViewWithFrame:CGRectMake(0, 0, WJScreenW, 270)];
     self.headerView = headerView;
-    headerView.backgroundColor = [UIColor yellowColor];
+    headerView.backgroundColor = [UIColor colorWithRed:235/255.0 green:235/255.0 blue:235/255.0 alpha:1.0];
     tableView.tableHeaderView = headerView;
 }
 
@@ -93,6 +111,7 @@
 
 #pragma mark - <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    self.titleView.hidden = self.listArray.count == 0;
     return self.listArray.count;
 }
 
@@ -109,15 +128,8 @@
 }
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UILabel *titleView = [[UILabel alloc]init];
-    titleView.size = CGSizeMake(WJScreenW, 30);
-    titleView.text = @"  全部口碑";
-    titleView.textColor = [UIColor colorWithWhite:0.1 alpha:1.0];
-    titleView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
-    return titleView;
+    return self.titleView;
 }
-
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
@@ -125,6 +137,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 30;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    WJCarDetailsController *carDetailsController = [[WJCarDetailsController alloc]init];
+    carDetailsController.modelId = self.modelId;
+    [self.navigationController pushViewController:carDetailsController animated:YES];
 }
 
 @end

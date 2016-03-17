@@ -49,9 +49,7 @@
     self.dissatisfyLabel.text = appraiseList.dissatisfy;
     
 }
-- (IBAction)moreButtonClick:(id)sender {
-    
-}
+
 
 
 @end
