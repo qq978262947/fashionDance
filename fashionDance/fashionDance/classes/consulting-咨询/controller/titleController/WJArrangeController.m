@@ -88,7 +88,7 @@
 
 // 读区更多数据
 - (void)loadMoreData {
-    NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/model/listHot/body_%li_type_%li_page_%i", self.body , self.type, ++self.pageIndex];
+    NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/model/listHot/body_%li_type_%li_page_%li", self.body , self.type, ++self.pageIndex];
     [[WJHttpTool httpTool]get:urlString params:nil success:^(NSDictionary *responseObj) {
         WJSUVResult *result = [WJSUVResult mj_objectWithKeyValues:responseObj];
         if (result.items != 0) {

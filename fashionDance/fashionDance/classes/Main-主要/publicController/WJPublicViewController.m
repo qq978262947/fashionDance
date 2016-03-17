@@ -13,6 +13,7 @@
 #import "YuArticleViewController.h"
 #import "YuForumViewController.h"
 #import "CCPicViewController.h"
+#import "llParameterController.h"
 #import "Masonry.h"
 #define WJScreenW [UIScreen mainScreen].bounds.size.width
 
@@ -51,13 +52,15 @@
     [self addChildViewController:vc4];
     YuForumViewController *vc5 = [[YuForumViewController alloc]init];
     [self addChildViewController:vc5];
-    
+    llParameterController *vc6 = [[llParameterController alloc]init];
+    [self addChildViewController:vc6];
     
     vc1.modelId = self.modelId;
     vc2.modelId = self.modelId;
     vc3.modelId = self.modelId;
     vc4.modelId = self.modelId;
     vc5.modelId = self.modelId;
+    vc6.modelId = self.modelId;
     
 //    vc1.view.backgroundColor = [UIColor whiteColor];
 //    vc2.view.backgroundColor = [UIColor redColor];
@@ -65,8 +68,8 @@
 //    vc4.view.backgroundColor = [UIColor yellowColor];
 //    vc5.view.backgroundColor = [UIColor greenColor];
     
-    tv.views = @[vc1.view,vc2.view,vc3.view,vc4.view,vc5.view];
-    tv.titles = @[@"综述",@"图片",@"口碑",@"文章",@"论坛"];
+    tv.views = @[vc1.view,vc2.view,vc3.view,vc4.view,vc5.view,vc6.view];
+    tv.titles = @[@"综述",@"图片",@"口碑",@"文章",@"论坛",@"参数"];
     
     [self.view addSubview:tv];
     
