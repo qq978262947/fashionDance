@@ -34,7 +34,6 @@
 - (void)setPicUrlString:(NSString *)picUrlString {
     _picUrlString = [picUrlString copy];
     [self.picImageView setNormalImagewithURL:[NSURL URLWithString:picUrlString] placeholderImage:[UIImage imageNamed:@"FollowBtnClickBg"] completed:nil];
-    WJLog(@"%@",picUrlString);
 }
 
 

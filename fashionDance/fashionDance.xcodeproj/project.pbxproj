@@ -100,6 +100,8 @@
 		DAE9A5381C9B074D00ED8033 /* WJCombinationProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9A5371C9B074D00ED8033 /* WJCombinationProgressView.m */; };
 		DAE9A53B1C9B077100ED8033 /* WJMoreAboutCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9A53A1C9B077100ED8033 /* WJMoreAboutCarModel.m */; };
 		DAE9A53D1C9B086300ED8033 /* WJPraiseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAE9A53C1C9B086300ED8033 /* WJPraiseTableViewCell.xib */; };
+		DAE9A5411C9B14EF00ED8033 /* WJCarDetailNoImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9A53F1C9B14EF00ED8033 /* WJCarDetailNoImageCell.m */; };
+		DAE9A5421C9B14EF00ED8033 /* WJCarDetailNoImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAE9A5401C9B14EF00ED8033 /* WJCarDetailNoImageCell.xib */; };
 		FC457DBD1C98064C00DDB531 /* TSDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC457DBC1C98064C00DDB531 /* TSDrawView.m */; };
 		FC457DC01C98162700DDB531 /* WJConsultingNoPicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC457DBF1C98162700DDB531 /* WJConsultingNoPicCell.m */; };
 		FC457DC21C98162D00DDB531 /* WJConsultingNoPicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC457DC11C98162D00DDB531 /* WJConsultingNoPicCell.xib */; };
@@ -355,6 +357,9 @@
 		DAE9A5391C9B077100ED8033 /* WJMoreAboutCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJMoreAboutCarModel.h; sourceTree = "<group>"; };
 		DAE9A53A1C9B077100ED8033 /* WJMoreAboutCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJMoreAboutCarModel.m; sourceTree = "<group>"; };
 		DAE9A53C1C9B086300ED8033 /* WJPraiseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WJPraiseTableViewCell.xib; sourceTree = "<group>"; };
+		DAE9A53E1C9B14EF00ED8033 /* WJCarDetailNoImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJCarDetailNoImageCell.h; sourceTree = "<group>"; };
+		DAE9A53F1C9B14EF00ED8033 /* WJCarDetailNoImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJCarDetailNoImageCell.m; sourceTree = "<group>"; };
+		DAE9A5401C9B14EF00ED8033 /* WJCarDetailNoImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WJCarDetailNoImageCell.xib; sourceTree = "<group>"; };
 		FC457DBB1C98064C00DDB531 /* TSDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDrawView.h; sourceTree = "<group>"; };
 		FC457DBC1C98064C00DDB531 /* TSDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDrawView.m; sourceTree = "<group>"; };
 		FC457DBE1C98162700DDB531 /* WJConsultingNoPicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJConsultingNoPicCell.h; sourceTree = "<group>"; };
@@ -1075,6 +1080,9 @@
 				DAE9A5341C9B073900ED8033 /* WJProgressesView.m */,
 				DAE9A5361C9B074D00ED8033 /* WJCombinationProgressView.h */,
 				DAE9A5371C9B074D00ED8033 /* WJCombinationProgressView.m */,
+				DAE9A53E1C9B14EF00ED8033 /* WJCarDetailNoImageCell.h */,
+				DAE9A53F1C9B14EF00ED8033 /* WJCarDetailNoImageCell.m */,
+				DAE9A5401C9B14EF00ED8033 /* WJCarDetailNoImageCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1386,6 +1394,7 @@
 				FC54BC6E1C9AAB0C004D78BB /* TSPicReusableView.xib in Resources */,
 				DA89F35B1C9301B4003D5AF8 /* WJCollectionViewCell.xib in Resources */,
 				FC457DDB1C98413100DDB531 /* TSTitleCell.xib in Resources */,
+				DAE9A5421C9B14EF00ED8033 /* WJCarDetailNoImageCell.xib in Resources */,
 				BC0F44F01C999EA800894419 /* YUHotTopicCell.xib in Resources */,
 				FC54BCA21C9AFCD3004D78BB /* YUSummarizeHeaderView.xib in Resources */,
 				DA2701E11C9A437200AC8205 /* MKVideoCell.xib in Resources */,
@@ -1529,6 +1538,7 @@
 				DA825C1B1C92E86B000C5EE4 /* WJFindHotCell.m in Sources */,
 				FC457DBD1C98064C00DDB531 /* TSDrawView.m in Sources */,
 				FC54BC711C9AB7AF004D78BB /* TSHalfWithoutModController.m in Sources */,
+				DAE9A5411C9B14EF00ED8033 /* WJCarDetailNoImageCell.m in Sources */,
 				DAE9A5261C9B064400ED8033 /* WJCarDetailHeaderView.m in Sources */,
 				DA2701CC1C9A3BFC00AC8205 /* WJContentAppraiseModel.m in Sources */,
 				FC54BC9C1C9AFCD3004D78BB /* YUTitleNews.m in Sources */,

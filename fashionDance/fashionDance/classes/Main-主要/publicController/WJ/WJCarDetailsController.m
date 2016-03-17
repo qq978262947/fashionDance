@@ -99,7 +99,7 @@
 //    WJPraiseTableViewCell *cell = [WJPraiseTableViewCell praiseTableViewCellWithTableView:tableView];
 //    cell.appraiseList = listModel;
 //    return cell;
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0 && indexPath.row == 0) {
         WJCarDetailPicCell *cell = [WJCarDetailPicCell carDetailPicCellWithTableView:tableView];
         if (self.appraiseModel.carPhotoList.count) {
             cell.picUrlString = self.appraiseModel.carPhotoList[0];
