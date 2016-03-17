@@ -107,6 +107,9 @@
 		FC457DDE1C9847E600DDB531 /* TSSpecificController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC457DDD1C9847E600DDB531 /* TSSpecificController.m */; };
 		FC54BC5C1C9A3EC3004D78BB /* TSCKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54BC5B1C9A3EC3004D78BB /* TSCKModel.m */; };
 		FC54BC611C9A3FBA004D78BB /* TSHalfController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54BC601C9A3FBA004D78BB /* TSHalfController.m */; };
+		FC54BC641C9A59BE004D78BB /* TSCarPicMod.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54BC631C9A59BE004D78BB /* TSCarPicMod.m */; };
+		FC54BC681C9A6177004D78BB /* TSPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54BC661C9A6177004D78BB /* TSPhotoCell.m */; };
+		FC54BC691C9A6177004D78BB /* TSPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC54BC671C9A6177004D78BB /* TSPhotoCell.xib */; };
 		FCCB845D1C96AF1A005EA1AA /* brand_list.json in Resources */ = {isa = PBXBuildFile; fileRef = FCCB845C1C96AF1A005EA1AA /* brand_list.json */; };
 		FCCB84651C96B0BB005EA1AA /* TSCarMod.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB84641C96B0BB005EA1AA /* TSCarMod.m */; };
 		FCCB84681C96B29E005EA1AA /* TSBrandCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB84671C96B29E005EA1AA /* TSBrandCarController.m */; };
@@ -326,6 +329,11 @@
 		FC54BC5B1C9A3EC3004D78BB /* TSCKModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCKModel.m; sourceTree = "<group>"; };
 		FC54BC5F1C9A3FBA004D78BB /* TSHalfController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHalfController.h; sourceTree = "<group>"; };
 		FC54BC601C9A3FBA004D78BB /* TSHalfController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHalfController.m; sourceTree = "<group>"; };
+		FC54BC621C9A59BE004D78BB /* TSCarPicMod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSCarPicMod.h; path = ../Controller/TSCarPicMod.h; sourceTree = "<group>"; };
+		FC54BC631C9A59BE004D78BB /* TSCarPicMod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSCarPicMod.m; path = ../Controller/TSCarPicMod.m; sourceTree = "<group>"; };
+		FC54BC651C9A6177004D78BB /* TSPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPhotoCell.h; sourceTree = "<group>"; };
+		FC54BC661C9A6177004D78BB /* TSPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPhotoCell.m; sourceTree = "<group>"; };
+		FC54BC671C9A6177004D78BB /* TSPhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSPhotoCell.xib; sourceTree = "<group>"; };
 		FCCB845C1C96AF1A005EA1AA /* brand_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brand_list.json; sourceTree = "<group>"; };
 		FCCB84631C96B0BB005EA1AA /* TSCarMod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCarMod.h; sourceTree = "<group>"; };
 		FCCB84641C96B0BB005EA1AA /* TSCarMod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCarMod.m; sourceTree = "<group>"; };
@@ -923,6 +931,8 @@
 		FC54BC581C9A3E98004D78BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FC54BC621C9A59BE004D78BB /* TSCarPicMod.h */,
+				FC54BC631C9A59BE004D78BB /* TSCarPicMod.m */,
 				FC54BC5A1C9A3EC3004D78BB /* TSCKModel.h */,
 				FC54BC5B1C9A3EC3004D78BB /* TSCKModel.m */,
 			);
@@ -932,6 +942,9 @@
 		FC54BC591C9A3E98004D78BB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FC54BC651C9A6177004D78BB /* TSPhotoCell.h */,
+				FC54BC661C9A6177004D78BB /* TSPhotoCell.m */,
+				FC54BC671C9A6177004D78BB /* TSPhotoCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1098,6 +1111,7 @@
 				FCCB846D1C970122005EA1AA /* CarData.plist in Resources */,
 				BC0F44F31C999EA800894419 /* YUMoreTopicCell.xib in Resources */,
 				FCCB845D1C96AF1A005EA1AA /* brand_list.json in Resources */,
+				FC54BC691C9A6177004D78BB /* TSPhotoCell.xib in Resources */,
 				DA89F35B1C9301B4003D5AF8 /* WJCollectionViewCell.xib in Resources */,
 				FC457DDB1C98413100DDB531 /* TSTitleCell.xib in Resources */,
 				BC0F44F01C999EA800894419 /* YUHotTopicCell.xib in Resources */,
@@ -1213,6 +1227,7 @@
 				BC0F44E21C999EA800894419 /* YUHotTopicViewController.m in Sources */,
 				DA2B4C371C99B203001DE451 /* WJConstraintModel.m in Sources */,
 				DA3B5CD61C93BF7A001997C8 /* UIImageView+downloadImage.m in Sources */,
+				FC54BC681C9A6177004D78BB /* TSPhotoCell.m in Sources */,
 				BC0F44EE1C999EA800894419 /* YUCollectionReusableView.m in Sources */,
 				FCCF827F1C997DE600F12B8C /* TSXCCell.m in Sources */,
 				DAE93A071C8E75B900F03A67 /* main.m in Sources */,
@@ -1243,6 +1258,7 @@
 				BC0F44E51C999EA800894419 /* YUTopicWebViewController.m in Sources */,
 				DA3B5CD21C93BF7A001997C8 /* NSString+StringFromNumber.m in Sources */,
 				FC54BC5C1C9A3EC3004D78BB /* TSCKModel.m in Sources */,
+				FC54BC641C9A59BE004D78BB /* TSCarPicMod.m in Sources */,
 				DA2B4C341C99B1F9001DE451 /* WJScrollTitleView.m in Sources */,
 				DA825C211C92E86B000C5EE4 /* CarFindController.m in Sources */,
 				BC0F44ED1C999EA800894419 /* YUSelectionTopic.m in Sources */,
