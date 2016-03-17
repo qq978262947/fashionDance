@@ -18,11 +18,11 @@
 
 @property (nonatomic, copy) NSString *nameZh;
 
-@property (nonatomic, assign) NSInteger min2scPrice;
+@property (nonatomic, strong) NSNumber * min2scPrice;
 
 @property (nonatomic, copy) NSString *drvType;
 
-@property (nonatomic, assign) CGFloat max2scPrice;
+@property (nonatomic, strong) NSNumber * max2scPrice;
 
 @property (nonatomic, copy) NSString *transType;
 
@@ -37,4 +37,13 @@
 
 @property(nonatomic,strong)NSNumber * year;
 
+//辅助判断是否在售，待赋值完毕后从外面统一给值
+@property(nonatomic,assign)BOOL isSale;
+
+//赋值完毕后外面调用，来执行一些逻辑
+-(void)configSale;
+-(void)configOffSaleWithYear:(NSNumber *)year;
+
+//frame辅助，layout中计算
+@property(nonatomic,assign)CGFloat heigthYear;
 @end

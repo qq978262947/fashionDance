@@ -17,4 +17,6 @@
 
 @property (nonatomic,assign)NSInteger page;
 @property (nonatomic,assign)NSInteger size;
+
++(instancetype)ccpicviewcontrollerWithString:(NSString *)modid;
 @end

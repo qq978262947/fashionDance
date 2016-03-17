@@ -32,6 +32,13 @@
 #define WJColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 // name和日期的字体
 #define WJlabelFont [UIFont systemFontOfSize:14]
+
+//字体大小
+#define LLSubTitleFont [UIFont systemFontOfSize:12.0]
+#define LLTitleFont [UIFont systemFontOfSize:14.0]
+#define LLSuperTitleFont [UIFont systemFontOfSize:16.0]
+
+
 // 是否为iOS7
 #define iOS8_3 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.3)
 

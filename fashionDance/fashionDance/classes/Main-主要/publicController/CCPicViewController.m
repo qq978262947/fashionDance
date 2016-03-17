@@ -133,9 +133,14 @@
     }
     return _allTypeArray;
 }
++(instancetype)ccpicviewcontrollerWithString:(NSString *)modid
+{
+    CCPicViewController * ctl=[CCPicViewController new];
+    ctl.modelId=modid;
+    return ctl;
+}
 - (void)viewDidLoad
 {
-    self.modelId=@"4395";
     self.page=1;
     self.size=20;
     self.collectionViewType=YES;
