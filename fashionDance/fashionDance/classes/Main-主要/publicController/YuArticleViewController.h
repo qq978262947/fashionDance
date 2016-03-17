@@ -10,4 +10,7 @@
 
 @interface YuArticleViewController : UIViewController
 
+
+@property (strong, nonatomic)NSString *modelId;
+
 @end

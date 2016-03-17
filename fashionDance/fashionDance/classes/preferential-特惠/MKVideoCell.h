@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MKVediosModel.h"
 
 @interface MKVideoCell : UITableViewCell
-
+- (void)configureModel:(VedioResultList *)model ;
 @end
+
