@@ -26,6 +26,9 @@ static NSString *const hotTopicCellID = @"YUHotTopicCell";
     [super viewDidLoad];
 
     self.tableView.tableFooterView = [[UIView alloc]init];
+    
+    self.tableView.delaysContentTouches = NO;
+    
     // 注册cell
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YUHotTopicCell class]) bundle:nil] forCellReuseIdentifier:hotTopicCellID];
     
