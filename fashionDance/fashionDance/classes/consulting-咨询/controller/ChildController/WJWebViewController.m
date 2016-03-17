@@ -7,7 +7,7 @@
 //
 
 #import "WJWebViewController.h"
-#import "SVProgressHUD.h"
+#import <SVProgressHUD.h>
 
 @interface WJWebViewController () <UIWebViewDelegate>
 @property (weak, nonatomic) UIWebView *webView;

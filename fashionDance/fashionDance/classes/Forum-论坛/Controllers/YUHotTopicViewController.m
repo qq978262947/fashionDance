@@ -10,12 +10,12 @@
 #import "YUImageCell.h"
 #import "WJHttpTool.h"
 #import "YUHotTopicModel.h"
-#import "MJExtension.h"
+#import <MJExtension.h>
 #import "YUHotTopicCell.h"
-#import "MJRefresh.h"
+#import <MJRefresh.h>
 #import "YUBannerListModel.h"
 #import "YUTopicHeaderView.h"
-#import "SVProgressHUD.h"
+#import <SVProgressHUD.h>
 #import "YUTopicWebViewController.h"
 
 static NSString *YUHotTopicCellId = @"YUHotTopicCell";
@@ -55,7 +55,6 @@ static NSString *YUHotTopicCellId = @"YUHotTopicCell";
 
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YUHotTopicCell class]) bundle:nil] forCellReuseIdentifier:YUHotTopicCellId];
-    self.tableView.rowHeight = 140;
     
     YUTopicHeaderView *topicHeaderView = [[YUTopicHeaderView alloc]initWithFrame:CGRectMake(0, 0, WJScreenW, YUImageCellH)];
     topicHeaderView.delegate = self;
@@ -128,6 +127,18 @@ static NSString *YUHotTopicCellId = @"YUHotTopicCell";
     YUTopicWebViewController *topicWebVc = [[YUTopicWebViewController alloc]init];
     topicWebVc.topicModel = self.topicModels[indexPath.row];
     [self.navigationController pushViewController:topicWebVc animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YUHotTopicModel *topic = self.topicModels[indexPath.row];
+    if (topic.pics.count > 0) {
+        
+        return  140;
+    } else {
+        return 60;
+    }
+    
 }
 
 

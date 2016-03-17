@@ -11,9 +11,9 @@
 #import "YUCollectionReusableView.h"
 #import "WJHttpTool.h"
 #import "YUSelectionTopic.h"
-#import "MJExtension.h"
+#import <MJExtension.h>
 #import "YUMoreTopicViewController.h"
-#import "SVProgressHUD.h"
+#import <SVProgressHUD.h>
 #import "YUTopicWebViewController.h"
 
 
@@ -121,7 +121,6 @@ static NSString *Id = @"cell";
         if (self.selectionTopics[indexPath.section]) {
             headerView.selectionTopic = self.selectionTopics[indexPath.section];
         }
-        
         
         headerView.delegate = self;
         reusableview = headerView;

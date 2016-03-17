@@ -10,6 +10,7 @@
 
 @interface TSSpecificController ()<UITableViewDelegate,UITableViewDataSource>
 
+
 @property (nonatomic,strong)NSNumber * selectNumber;
 @property (nonatomic,strong)UITableView * tableView;
 @property (nonatomic,strong)NSMutableArray * selectArray;
@@ -136,20 +137,19 @@
         self.selectNumber=[NSNumber numberWithInteger:0];
         [self.selectArray removeAllObjects];
         //所有的cell的选择变为no
-        //走函数？
         for (int i=1; i<self.specificArray.count; i++)
         {
             NSIndexPath *indexpath1=[NSIndexPath indexPathForRow:i inSection:0];
             UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexpath1];
             cell.selected=NO;
         }
-
-        
-        
         return;
     }
     else
     {
+        NSIndexPath *indexpath1=[NSIndexPath indexPathForRow:0 inSection:0];
+        UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexpath1];
+        cell.selected=NO;
         for (int i = 0;  i < indexPath.row-1; i ++)
         {
             add = add*2;

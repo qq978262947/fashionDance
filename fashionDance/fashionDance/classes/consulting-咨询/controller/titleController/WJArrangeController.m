@@ -8,12 +8,13 @@
 
 #import "WJArrangeController.h"
 #import "WJHttpTool.h"
-#import "AFNetworking.h"
-#import "MJRefresh.h"
+#import <AFNetworking.h>
+#import <MJRefresh.h>
 #import "WJSUVResult.h"
-#import "MJExtension.h"
+#import <MJExtension.h>
 #import "WJSUVResult.h"
 #import "WJFindHotCell.h"
+#import "WJPublicViewController.h"
 //http://autoapp.auto.sohu.com/api/model/listHot/body_2_type_6_page_1
 //http://autoapp.auto.sohu.com/api/model/listHot/body_0_type_0_page_1
 //http://autoapp.auto.sohu.com/api/model/listHot/body_0_type_1_page_1
@@ -129,7 +130,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIViewController *vc = [[UIViewController alloc]init];
+    WJPublicViewController *vc = [[WJPublicViewController alloc]init];
     vc.view.backgroundColor = [UIColor redColor];
     [self.navigationController pushViewController:vc animated:YES];
 }

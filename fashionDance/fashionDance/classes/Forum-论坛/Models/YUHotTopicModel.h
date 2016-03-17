@@ -6,7 +6,7 @@
 //  Copyright © 2016年 汪俊. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @class Pics;
 @interface YUHotTopicModel : NSObject
@@ -31,6 +31,12 @@
 
 @property (nonatomic, copy) NSString *nickName;
 
+@property (nonatomic,copy) NSString *pic1;
+
+@property (nonatomic,copy) NSString *pic2;
+
+@property (nonatomic,copy) NSString *pic3;
+
 @property (nonatomic, strong) NSArray<Pics *> *pics;
 
 /** 原YUTopicList数据  */
@@ -44,6 +50,9 @@
 @property (nonatomic, copy) NSString *authorName;
 
 @property (nonatomic, copy) NSString *topicDescription;
+
+/** 额外增加的属性  */
+@property (nonatomic, assign) CGFloat hotTopicCellH;
 
 @end
 @interface Pics : NSObject

@@ -8,9 +8,12 @@
 
 #import "YUTopicWebViewController.h"
 #import "YUHotTopicModel.h"
-#import "SVProgressHUD.h"
+#import <SVProgressHUD.h>
+#import "YUDBManager.h"
 
 @interface YUTopicWebViewController () <UIWebViewDelegate>
+
+@property (nonatomic, weak) UIButton *rightBtn;
 
 @end
 
@@ -28,9 +31,52 @@
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     
 }
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [SVProgressHUD setBackgroundColor:[UIColor whiteColor]];
+}
+
 - (void)setupNav
 {
     self.title = @"帖子详情";
+    
+    UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:btn];
+    self.navigationItem.rightBarButtonItem=item;
+    [btn setBackgroundImage:[UIImage imageNamed:@"new_collectBtn_normal"] forState:UIControlStateNormal];
+    [btn setBackgroundImage:[UIImage imageNamed:@"new_collect_selected"] forState:UIControlStateSelected];
+    self.rightBtn=btn;
+    [btn addTarget:self action:@selector(rightBtnTouch) forControlEvents:UIControlEventTouchUpInside];
+    
+    YUDBManager *manager = [YUDBManager sharedManager];
+    NSArray *tmpArray = [manager searchAllTopic];
+    for (YUHotTopicModel *topic in tmpArray) {
+        
+        if (self.topicModel.bid == topic.bid) {
+            self.rightBtn.selected = YES;
+            return;
+        }
+    }
+    self.rightBtn.selected = NO;
+}
+
+//执行收藏操作
+- (void)rightBtnTouch
+{
+    //选中状态下，即收藏状态下
+    if (self.rightBtn.selected)
+    {
+        //取消收藏
+        [[YUDBManager sharedManager]deleteTopicWithID:self.topicModel.bid];
+    }
+    else
+    {
+        [[YUDBManager sharedManager]insertTopic:self.topicModel];
+    }
+    self.rightBtn.selected=!self.rightBtn.selected;
 }
 /**
  *  创建webView
@@ -57,12 +103,13 @@
 {
 //    //显示加载进度条
 //    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+    //隐藏加载进度条
+    [SVProgressHUD dismiss];
 }
 //加载结束
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    //隐藏加载进度条
-    [SVProgressHUD dismiss];
+    
     
 }
 

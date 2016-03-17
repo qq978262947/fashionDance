@@ -10,8 +10,8 @@
 #import "WJHttpTool.h"
 #import "WJConsultingCell.h"
 #import "WJHeaderView.h"
-#import "MJRefresh.h"
-#import "MJExtension.h"
+#import <MJRefresh.h>
+#import <MJExtension.h>
 #import "WJConsultingResult.h"
 #import "WJHotCarController.h"
 #import "WJWebViewController.h"
@@ -168,7 +168,6 @@
         cell.list = list;
         return cell;
     }
-
 }
 
 

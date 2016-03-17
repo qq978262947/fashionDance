@@ -11,19 +11,40 @@
 #import "TSTitleCell.h"
 #import "TSSpecificController.h"
 #import "ReactiveCocoa.h"
-@interface TSTJZCController ()<UITableViewDelegate,UITableViewDataSource>
+#import "TSSXTableController.h"
 
+@interface TSTJZCController ()<UITableViewDelegate,UITableViewDataSource>
+//标题数组
 @property (nonatomic,strong)NSMutableArray * titleArray;
+//详细选项数组
 @property (nonatomic,strong)NSArray * specicsArray;
+//已选择的选项数组
+@property (nonatomic,strong)NSMutableArray * selectArray;
+
 @property (nonatomic,strong)UITableView * tableView;
 @property (nonatomic,strong)TSDrawView * drawView;
 @property (nonatomic,strong)UIView * toolBarView;
 @property (nonatomic,strong)UIButton * resetBtn;
 //符合条件按钮
 @property (nonatomic,strong)UIButton * eligibleBtn;
+
+
 @end
 
 @implementation TSTJZCController
+-(NSMutableArray *)selectArray
+{
+    if (_selectArray==nil)
+    {
+        _selectArray=[NSMutableArray array];
+        for (int i = 0;i<7;i++)
+        {
+            //一开始存七个空字符串
+            [_selectArray addObject:@""];
+        }
+    }
+    return _selectArray;
+}
 -(NSMutableArray *)numberArray
 {
     if (_numberArray==nil)
@@ -84,7 +105,6 @@
     self.number6=[NSNumber numberWithInteger:0];
     self.number7=[NSNumber numberWithInteger:0];
     
-    
     //底部符合条件视图
     UIView * toolBarView=[[UIView alloc]init];
     [self.view addSubview:toolBarView];
@@ -123,8 +143,6 @@
         make.bottom.equalTo(-15);
     }];
     
-    
-    
     //tableview
     self.tableView=[[UITableView alloc]init];
     [self.view addSubview:self.tableView];
@@ -138,6 +156,11 @@
     TSDrawView * drawView=[[TSDrawView alloc]initWithFrame:CGRectMake(0, 0, SCRW, 150)];
     self.tableView.tableHeaderView=drawView;
     self.drawView=drawView;
+    //拖动更新
+    __weak typeof(self) weakSelf=self;
+    [self.drawView setTSDrawViewDragBlock:^(TSDrawView * draw) {
+        [weakSelf valueChangedForSearchBtn];
+    }];
     self.tableView.delegate=self;
     self.tableView.dataSource=self;
     
@@ -145,11 +168,25 @@
 }
 -(void)resetAction
 {
+    //归零
+    //清除文字
+    //图标归位
     NSLog(@"resetAction");
 }
 -(void)searchAction
 {
-    NSLog(@"searchAction");
+    //http://autoapp.auto.sohu.com/api/search/result-1024-0-0-0-0-0-0-0-0-0-2-20
+    NSString * path1=@"http://autoapp.auto.sohu.com/api/search/result";
+    NSInteger bigNumber=self.drawView.bigNumber;
+    if (bigNumber>100)
+    {
+        bigNumber=0;
+    }
+    NSString * path2=[NSString stringWithFormat:@"-1024-%@-%@-%@-%@-%@-%@-%@-%ld-%ld",self.numberArray[0],self.numberArray[1],self.numberArray[2],self.numberArray[3],self.numberArray[4],self.numberArray[5],self.numberArray[6],self.drawView.smallNumber,bigNumber];
+    NSString * path = [NSString stringWithFormat:@"%@%@",path1,path2];
+    TSSXTableController * sxCtl=[TSSXTableController tableControllerWithUrl:path];
+    [self.navigationController pushViewController:sxCtl animated:YES];
+
 }
 -(void)valueChangedForSearchBtn
 {
@@ -159,8 +196,10 @@
     {
         bigNumber=0;
     }
+    
     NSString * path2=[NSString stringWithFormat:@"-1024-%@-%@-%@-%@-%@-%@-%@-%ld-%ld",self.numberArray[0],self.numberArray[1],self.numberArray[2],self.numberArray[3],self.numberArray[4],self.numberArray[5],self.numberArray[6],self.drawView.smallNumber,bigNumber];
     NSString * path = [NSString stringWithFormat:@"%@%@",path1,path2];
+    
     [[WJHttpTool httpTool]get:path params:nil success:^(NSDictionary * result)
     {
         NSString * title=[NSString stringWithFormat:@"有%@个车型符合条件",result[@"count"]];
@@ -189,6 +228,13 @@
 {
     TSTitleCell * cell=[TSTitleCell cellWithTableView:tableView];
     cell.nameLabel.text=self.titleArray[indexPath.row];
+    cell.dtLabel.text=self.selectArray[indexPath.row];
+    cell.dtLabel.textColor=[UIColor blueColor];
+    if (cell.dtLabel.text==nil||cell.dtLabel.text.length==0)
+    {
+        cell.dtLabel.text=@"不限";
+        cell.dtLabel.textColor=[UIColor grayColor];
+    }
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
 }
@@ -196,6 +242,7 @@
 {
     
     TSSpecificController * spec=[TSSpecificController specificControllerWithArray:self.specicsArray[indexPath.row] andTitle:self.titleArray[indexPath.row]];
+    //返回传值
     [spec setTSSpecificControllerRetBlock:^(TSSpecificController *sp, NSNumber * number, NSArray *selectArray)
     {
        //判断行数，改变请求数字
@@ -203,7 +250,7 @@
         self.numberArray[selectInteger]=number;
         
         NSIndexPath * index=[NSIndexPath indexPathForRow:selectInteger inSection:0];
-        TSTitleCell * cell = [tableView cellForRowAtIndexPath:index];
+        //TSTitleCell * cell = [tableView cellForRowAtIndexPath:index];
         //改变cell字符串
         NSString * str=[NSString string];
         for (int i = 0 ; i<selectArray.count; i++)
@@ -214,17 +261,17 @@
             }
             str=[str stringByAppendingString:selectArray[i]];
         }
-        cell.dtLabel.text=str;
-        [cell.dtLabel setTextColor:[UIColor blueColor]];
-        
-        if (number.integerValue==0)
-        {
-            cell.dtLabel.text=@"不限";
-            [cell.dtLabel setTextColor:[UIColor grayColor]];
-        }
+        self.selectArray[selectInteger]=str;
+       // cell.dtLabel.text=str;
+        //if (number.integerValue==0)
+       // {
+        //    cell.dtLabel.text=@"不限";
+        //    [cell.dtLabel setTextColor:[UIColor grayColor]];
+       // }
     
         //进行请求
         [self valueChangedForSearchBtn];
+        [self.tableView reloadData];
     }];
     [self presentViewController:spec animated:YES completion:nil];
 }

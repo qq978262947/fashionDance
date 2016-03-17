@@ -8,7 +8,7 @@
 
 #import "WJFindHotCell.h"
 #import "WJProgressView.h"
-#import "UIImageView+WebCache.h"
+#import <UIImageView+WebCache.h>
 
 @interface WJFindHotCell ()
 

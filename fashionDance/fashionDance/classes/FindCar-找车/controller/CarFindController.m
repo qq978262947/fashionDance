@@ -8,7 +8,7 @@
 
 #import "CarFindController.h"
 #import "TSBrandCarController.h"
-#import "SDWebImageManager.h"
+#import <SDWebImageManager.h>
 #import "TSTJZCController.h"
 
 @interface CarFindController ()<UIScrollViewDelegate>
