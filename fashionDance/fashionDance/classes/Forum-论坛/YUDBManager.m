@@ -9,7 +9,7 @@
 #import "YUDBManager.h"
 #import "FMDatabase.h"
 #import "YUHotTopicModel.h"
-#import <SVProgressHUD.h>
+#import "SVProgressHUD.h"
 
 @implementation YUDBManager
 

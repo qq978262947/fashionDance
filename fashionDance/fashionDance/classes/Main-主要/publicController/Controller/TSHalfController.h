@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TSHalfController : UIViewController
-
+@property (nonatomic,strong)NSArray * dataArray;
+@property (nonatomic,strong)NSArray * titleArray;
++(instancetype)halfControllerWithArray:(NSArray *)dataArray andTitleArray:(NSArray *)titleArray;
 @end

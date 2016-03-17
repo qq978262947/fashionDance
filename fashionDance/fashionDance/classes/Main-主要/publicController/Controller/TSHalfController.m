@@ -8,30 +8,48 @@
 
 #import "TSHalfController.h"
 
-@interface TSHalfController ()
-
+@interface TSHalfController ()<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic,strong)UITableView * tableView;
 @end
 
 @implementation TSHalfController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
++(instancetype)halfControllerWithArray:(NSArray *)dataArray andTitleArray:(NSArray *)titleArray;
+{
+    TSHalfController * half=[TSHalfController new];
+    half.dataArray=dataArray;
+    half.titleArray=titleArray;
+    return half;
 }
-
-- (void)didReceiveMemoryWarning {
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+#pragma mark delegate
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSArray * seArray=self.dataArray[section];
+    return seArray.count;
+}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.dataArray.count;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString * identifity=NSStringFromClass([UITableViewCell class]);
+    UITableViewCell * cell=[tableView dequeueReusableCellWithIdentifier:identifity];
+    NSArray * seArray=self.dataArray[indexPath.section];
+    cell.textLabel.text=seArray[indexPath.row];
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //回调
+}
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
