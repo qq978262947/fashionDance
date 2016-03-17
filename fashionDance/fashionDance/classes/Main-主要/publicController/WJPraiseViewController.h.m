@@ -93,9 +93,28 @@
     return cell;
 }
 
-
+#pragma mark - <UITableViewDelegate>
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 330;
+}
+
+- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UILabel *titleView = [[UILabel alloc]init];
+    titleView.size = CGSizeMake(WJScreenW, 30);
+    titleView.text = @"  全部口碑";
+    titleView.textColor = [UIColor colorWithWhite:0.1 alpha:1.0];
+    titleView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
+    return titleView;
+}
+
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 30;
 }
 
 @end
