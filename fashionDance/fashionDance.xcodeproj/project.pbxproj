@@ -40,6 +40,11 @@
 		BC7E4F171C9A5FBA0045ABD2 /* YUSummarizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7E4F151C9A5FBA0045ABD2 /* YUSummarizeCell.xib */; };
 		BC7E4F1A1C9A652E0045ABD2 /* YUCarDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E4F191C9A652E0045ABD2 /* YUCarDetailModel.m */; };
 		BC7E4F1D1C9A82180045ABD2 /* YUCarCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E4F1C1C9A82180045ABD2 /* YUCarCellModel.m */; };
+		BC7E4F201C9A99FD0045ABD2 /* YUArticleInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E4F1F1C9A99FD0045ABD2 /* YUArticleInformationViewController.m */; };
+		BC7E4F231C9A9A3A0045ABD2 /* YUArticleQuotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E4F221C9A9A3A0045ABD2 /* YUArticleQuotationViewController.m */; };
+		BC7E4F261C9A9DD40045ABD2 /* YUTitleNews.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E4F251C9A9DD40045ABD2 /* YUTitleNews.m */; };
+		BC7E4F2A1C9AA00D0045ABD2 /* YUArticleNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E4F281C9AA00D0045ABD2 /* YUArticleNewsCell.m */; };
+		BC7E4F2B1C9AA00D0045ABD2 /* YUArticleNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7E4F291C9AA00D0045ABD2 /* YUArticleNewsCell.xib */; };
 		DA2701C91C9A3B4B00AC8205 /* WJHeaderAppraiseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2701C81C9A3B4B00AC8205 /* WJHeaderAppraiseModel.m */; };
 		DA2701CC1C9A3BFC00AC8205 /* WJContentAppraiseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2701CB1C9A3BFC00AC8205 /* WJContentAppraiseModel.m */; };
 		DA2701D91C9A434300AC8205 /* MKVedioDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2701D21C9A434300AC8205 /* MKVedioDetailController.m */; };
@@ -203,6 +208,15 @@
 		BC7E4F191C9A652E0045ABD2 /* YUCarDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUCarDetailModel.m; sourceTree = "<group>"; };
 		BC7E4F1B1C9A82180045ABD2 /* YUCarCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUCarCellModel.h; sourceTree = "<group>"; };
 		BC7E4F1C1C9A82180045ABD2 /* YUCarCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUCarCellModel.m; sourceTree = "<group>"; };
+		BC7E4F1E1C9A99FD0045ABD2 /* YUArticleInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUArticleInformationViewController.h; sourceTree = "<group>"; };
+		BC7E4F1F1C9A99FD0045ABD2 /* YUArticleInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUArticleInformationViewController.m; sourceTree = "<group>"; };
+		BC7E4F211C9A9A3A0045ABD2 /* YUArticleQuotationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUArticleQuotationViewController.h; sourceTree = "<group>"; };
+		BC7E4F221C9A9A3A0045ABD2 /* YUArticleQuotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUArticleQuotationViewController.m; sourceTree = "<group>"; };
+		BC7E4F241C9A9DD40045ABD2 /* YUTitleNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUTitleNews.h; sourceTree = "<group>"; };
+		BC7E4F251C9A9DD40045ABD2 /* YUTitleNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUTitleNews.m; sourceTree = "<group>"; };
+		BC7E4F271C9AA00D0045ABD2 /* YUArticleNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUArticleNewsCell.h; sourceTree = "<group>"; };
+		BC7E4F281C9AA00D0045ABD2 /* YUArticleNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUArticleNewsCell.m; sourceTree = "<group>"; };
+		BC7E4F291C9AA00D0045ABD2 /* YUArticleNewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUArticleNewsCell.xib; sourceTree = "<group>"; };
 		DA2701C71C9A3B4B00AC8205 /* WJHeaderAppraiseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJHeaderAppraiseModel.h; sourceTree = "<group>"; };
 		DA2701C81C9A3B4B00AC8205 /* WJHeaderAppraiseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJHeaderAppraiseModel.m; sourceTree = "<group>"; };
 		DA2701CA1C9A3BFC00AC8205 /* WJContentAppraiseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJContentAppraiseModel.h; sourceTree = "<group>"; };
@@ -502,12 +516,16 @@
 		BC7E4F081C9A5A940045ABD2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DA2B4C261C99B12D001DE451 /* YuArticleViewController.h */,
-				DA2B4C271C99B12D001DE451 /* YuArticleViewController.m */,
 				DA2B4C281C99B12D001DE451 /* YuForumViewController.h */,
 				DA2B4C291C99B12D001DE451 /* YuForumViewController.m */,
 				DA2B4C2A1C99B12D001DE451 /* YuSummarizeController.h */,
 				DA2B4C2B1C99B12D001DE451 /* YuSummarizeController.m */,
+				DA2B4C261C99B12D001DE451 /* YuArticleViewController.h */,
+				DA2B4C271C99B12D001DE451 /* YuArticleViewController.m */,
+				BC7E4F1E1C9A99FD0045ABD2 /* YUArticleInformationViewController.h */,
+				BC7E4F1F1C9A99FD0045ABD2 /* YUArticleInformationViewController.m */,
+				BC7E4F211C9A9A3A0045ABD2 /* YUArticleQuotationViewController.h */,
+				BC7E4F221C9A9A3A0045ABD2 /* YUArticleQuotationViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -519,6 +537,8 @@
 				BC7E4F191C9A652E0045ABD2 /* YUCarDetailModel.m */,
 				BC7E4F1B1C9A82180045ABD2 /* YUCarCellModel.h */,
 				BC7E4F1C1C9A82180045ABD2 /* YUCarCellModel.m */,
+				BC7E4F241C9A9DD40045ABD2 /* YUTitleNews.h */,
+				BC7E4F251C9A9DD40045ABD2 /* YUTitleNews.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -532,6 +552,9 @@
 				BC7E4F131C9A5FBA0045ABD2 /* YUSummarizeCell.h */,
 				BC7E4F141C9A5FBA0045ABD2 /* YUSummarizeCell.m */,
 				BC7E4F151C9A5FBA0045ABD2 /* YUSummarizeCell.xib */,
+				BC7E4F271C9AA00D0045ABD2 /* YUArticleNewsCell.h */,
+				BC7E4F281C9AA00D0045ABD2 /* YUArticleNewsCell.m */,
+				BC7E4F291C9AA00D0045ABD2 /* YUArticleNewsCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1163,6 +1186,7 @@
 				DA2701E11C9A437200AC8205 /* MKVideoCell.xib in Resources */,
 				DAE93A121C8E75B900F03A67 /* Assets.xcassets in Resources */,
 				FC457DC21C98162D00DDB531 /* WJConsultingNoPicCell.xib in Resources */,
+				BC7E4F2B1C9AA00D0045ABD2 /* YUArticleNewsCell.xib in Resources */,
 				FC457DD21C9816AF00DDB531 /* SWCarCell.xib in Resources */,
 				DAE93A101C8E75B900F03A67 /* Main.storyboard in Resources */,
 				BC7E4F111C9A5CF50045ABD2 /* YUSummarizeHeaderView.xib in Resources */,
@@ -1263,6 +1287,7 @@
 				DA3B5CD71C93BF7A001997C8 /* UIView+WJExtension.m in Sources */,
 				DA3B5CD31C93BF7A001997C8 /* UIBarButtonItem+WJExtension.m in Sources */,
 				DA825C171C92E86B000C5EE4 /* WJConsultingResult.m in Sources */,
+				BC7E4F231C9A9A3A0045ABD2 /* YUArticleQuotationViewController.m in Sources */,
 				BC0F44EB1C999EA800894419 /* YUBannerListModel.m in Sources */,
 				BC0F44F71C999EA800894419 /* YUTopicHeaderView.m in Sources */,
 				FC54BC611C9A3FBA004D78BB /* TSHalfController.m in Sources */,
@@ -1296,6 +1321,7 @@
 				DA825C201C92E86B000C5EE4 /* WJVerticalButton.m in Sources */,
 				DA89F3461C92FDCE003D5AF8 /* WJFindCarResult.m in Sources */,
 				BC0F44F21C999EA800894419 /* YUMoreTopicCell.m in Sources */,
+				BC7E4F201C9A99FD0045ABD2 /* YUArticleInformationViewController.m in Sources */,
 				BC0F44EA1C999EA800894419 /* FMResultSet.m in Sources */,
 				FC457DCD1C9816A200DDB531 /* SWSectionModel.m in Sources */,
 				BC7E4F1D1C9A82180045ABD2 /* YUCarCellModel.m in Sources */,
@@ -1305,8 +1331,10 @@
 				BC0F44E51C999EA800894419 /* YUTopicWebViewController.m in Sources */,
 				DA3B5CD21C93BF7A001997C8 /* NSString+StringFromNumber.m in Sources */,
 				FC54BC5C1C9A3EC3004D78BB /* TSCKModel.m in Sources */,
+				BC7E4F261C9A9DD40045ABD2 /* YUTitleNews.m in Sources */,
 				DA2B4C341C99B1F9001DE451 /* WJScrollTitleView.m in Sources */,
 				DA825C211C92E86B000C5EE4 /* CarFindController.m in Sources */,
+				BC7E4F2A1C9AA00D0045ABD2 /* YUArticleNewsCell.m in Sources */,
 				BC0F44ED1C999EA800894419 /* YUSelectionTopic.m in Sources */,
 				DA2701E41C9A438B00AC8205 /* CarPreferentialController.m in Sources */,
 				BC0F44F11C999EA800894419 /* YUImageCell.m in Sources */,
