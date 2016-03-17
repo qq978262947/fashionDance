@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A68FAFEFF4F4A49290AF4C6D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2E3BD33B03E9DF56A54E8A /* libPods.a */; };
+		7D89235A4F7B39CCC1B56FAB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E53C4EFB1F1A193A5BB398D3 /* Pods.framework */; };
 		BC0F44E01C999EA800894419 /* CarForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0F44AC1C999EA800894419 /* CarForumController.m */; };
 		BC0F44E11C999EA800894419 /* YUCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0F44AE1C999EA800894419 /* YUCategoryViewController.m */; };
 		BC0F44E21C999EA800894419 /* YUHotTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0F44B01C999EA800894419 /* YUHotTopicViewController.m */; };
@@ -34,6 +34,17 @@
 		BC0F44F71C999EA800894419 /* YUTopicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0F44DD1C999EA800894419 /* YUTopicHeaderView.m */; };
 		BC0F44F81C999EA800894419 /* YUDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0F44DF1C999EA800894419 /* YUDBManager.m */; };
 		BC623B9F1C99A1DE00098459 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC623B9E1C99A1DE00098459 /* libsqlite3.0.tbd */; };
+		BC7E4F0D1C9A5ABB0045ABD2 /* YUSummarizeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E4F0C1C9A5ABB0045ABD2 /* YUSummarizeHeaderView.m */; };
+		BC7E4F111C9A5CF50045ABD2 /* YUSummarizeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7E4F101C9A5CF50045ABD2 /* YUSummarizeHeaderView.xib */; };
+		BC7E4F161C9A5FBA0045ABD2 /* YUSummarizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E4F141C9A5FBA0045ABD2 /* YUSummarizeCell.m */; };
+		BC7E4F171C9A5FBA0045ABD2 /* YUSummarizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7E4F151C9A5FBA0045ABD2 /* YUSummarizeCell.xib */; };
+		BC7E4F1A1C9A652E0045ABD2 /* YUCarDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E4F191C9A652E0045ABD2 /* YUCarDetailModel.m */; };
+		BC7E4F1D1C9A82180045ABD2 /* YUCarCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E4F1C1C9A82180045ABD2 /* YUCarCellModel.m */; };
+		BC7E4F201C9A99FD0045ABD2 /* YUArticleInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E4F1F1C9A99FD0045ABD2 /* YUArticleInformationViewController.m */; };
+		BC7E4F231C9A9A3A0045ABD2 /* YUArticleQuotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E4F221C9A9A3A0045ABD2 /* YUArticleQuotationViewController.m */; };
+		BC7E4F261C9A9DD40045ABD2 /* YUTitleNews.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E4F251C9A9DD40045ABD2 /* YUTitleNews.m */; };
+		BC7E4F2A1C9AA00D0045ABD2 /* YUArticleNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E4F281C9AA00D0045ABD2 /* YUArticleNewsCell.m */; };
+		BC7E4F2B1C9AA00D0045ABD2 /* YUArticleNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7E4F291C9AA00D0045ABD2 /* YUArticleNewsCell.xib */; };
 		DA2701C91C9A3B4B00AC8205 /* WJHeaderAppraiseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2701C81C9A3B4B00AC8205 /* WJHeaderAppraiseModel.m */; };
 		DA2701CC1C9A3BFC00AC8205 /* WJContentAppraiseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2701CB1C9A3BFC00AC8205 /* WJContentAppraiseModel.m */; };
 		DA2701D91C9A434300AC8205 /* MKVedioDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2701D21C9A434300AC8205 /* MKVedioDetailController.m */; };
@@ -140,7 +151,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6C2E3BD33B03E9DF56A54E8A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB5973FF1B297B050B1A609 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7CF344E4DA0F93C7E0B1D029 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0F44AB1C999EA800894419 /* CarForumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarForumController.h; sourceTree = "<group>"; };
@@ -192,6 +202,25 @@
 		BC0F44DE1C999EA800894419 /* YUDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUDBManager.h; sourceTree = "<group>"; };
 		BC0F44DF1C999EA800894419 /* YUDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUDBManager.m; sourceTree = "<group>"; };
 		BC623B9E1C99A1DE00098459 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		BC7E4F0B1C9A5ABB0045ABD2 /* YUSummarizeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUSummarizeHeaderView.h; sourceTree = "<group>"; };
+		BC7E4F0C1C9A5ABB0045ABD2 /* YUSummarizeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUSummarizeHeaderView.m; sourceTree = "<group>"; };
+		BC7E4F101C9A5CF50045ABD2 /* YUSummarizeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUSummarizeHeaderView.xib; sourceTree = "<group>"; };
+		BC7E4F131C9A5FBA0045ABD2 /* YUSummarizeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUSummarizeCell.h; sourceTree = "<group>"; };
+		BC7E4F141C9A5FBA0045ABD2 /* YUSummarizeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUSummarizeCell.m; sourceTree = "<group>"; };
+		BC7E4F151C9A5FBA0045ABD2 /* YUSummarizeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUSummarizeCell.xib; sourceTree = "<group>"; };
+		BC7E4F181C9A652E0045ABD2 /* YUCarDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUCarDetailModel.h; sourceTree = "<group>"; };
+		BC7E4F191C9A652E0045ABD2 /* YUCarDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUCarDetailModel.m; sourceTree = "<group>"; };
+		BC7E4F1B1C9A82180045ABD2 /* YUCarCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUCarCellModel.h; sourceTree = "<group>"; };
+		BC7E4F1C1C9A82180045ABD2 /* YUCarCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUCarCellModel.m; sourceTree = "<group>"; };
+		BC7E4F1E1C9A99FD0045ABD2 /* YUArticleInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUArticleInformationViewController.h; sourceTree = "<group>"; };
+		BC7E4F1F1C9A99FD0045ABD2 /* YUArticleInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUArticleInformationViewController.m; sourceTree = "<group>"; };
+		BC7E4F211C9A9A3A0045ABD2 /* YUArticleQuotationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUArticleQuotationViewController.h; sourceTree = "<group>"; };
+		BC7E4F221C9A9A3A0045ABD2 /* YUArticleQuotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUArticleQuotationViewController.m; sourceTree = "<group>"; };
+		BC7E4F241C9A9DD40045ABD2 /* YUTitleNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUTitleNews.h; sourceTree = "<group>"; };
+		BC7E4F251C9A9DD40045ABD2 /* YUTitleNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUTitleNews.m; sourceTree = "<group>"; };
+		BC7E4F271C9AA00D0045ABD2 /* YUArticleNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUArticleNewsCell.h; sourceTree = "<group>"; };
+		BC7E4F281C9AA00D0045ABD2 /* YUArticleNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUArticleNewsCell.m; sourceTree = "<group>"; };
+		BC7E4F291C9AA00D0045ABD2 /* YUArticleNewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUArticleNewsCell.xib; sourceTree = "<group>"; };
 		DA2701C71C9A3B4B00AC8205 /* WJHeaderAppraiseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJHeaderAppraiseModel.h; sourceTree = "<group>"; };
 		DA2701C81C9A3B4B00AC8205 /* WJHeaderAppraiseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJHeaderAppraiseModel.m; sourceTree = "<group>"; };
 		DA2701CA1C9A3BFC00AC8205 /* WJContentAppraiseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJContentAppraiseModel.h; sourceTree = "<group>"; };
@@ -218,12 +247,12 @@
 		DA2B4C231C99B12D001DE451 /* WJPraiseViewController.h.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJPraiseViewController.h.m; sourceTree = "<group>"; };
 		DA2B4C241C99B12D001DE451 /* WJPublicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJPublicViewController.h; sourceTree = "<group>"; };
 		DA2B4C251C99B12D001DE451 /* WJPublicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJPublicViewController.m; sourceTree = "<group>"; };
-		DA2B4C261C99B12D001DE451 /* YuArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YuArticleViewController.h; sourceTree = "<group>"; };
-		DA2B4C271C99B12D001DE451 /* YuArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YuArticleViewController.m; sourceTree = "<group>"; };
-		DA2B4C281C99B12D001DE451 /* YuForumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YuForumViewController.h; sourceTree = "<group>"; };
-		DA2B4C291C99B12D001DE451 /* YuForumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YuForumViewController.m; sourceTree = "<group>"; };
-		DA2B4C2A1C99B12D001DE451 /* YuSummarizeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YuSummarizeController.h; sourceTree = "<group>"; };
-		DA2B4C2B1C99B12D001DE451 /* YuSummarizeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YuSummarizeController.m; sourceTree = "<group>"; };
+		DA2B4C261C99B12D001DE451 /* YuArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YuArticleViewController.h; path = ../../YuArticleViewController.h; sourceTree = "<group>"; };
+		DA2B4C271C99B12D001DE451 /* YuArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YuArticleViewController.m; path = ../../YuArticleViewController.m; sourceTree = "<group>"; };
+		DA2B4C281C99B12D001DE451 /* YuForumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YuForumViewController.h; path = ../../YuForumViewController.h; sourceTree = "<group>"; };
+		DA2B4C291C99B12D001DE451 /* YuForumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YuForumViewController.m; path = ../../YuForumViewController.m; sourceTree = "<group>"; };
+		DA2B4C2A1C99B12D001DE451 /* YuSummarizeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YuSummarizeController.h; path = ../../YuSummarizeController.h; sourceTree = "<group>"; };
+		DA2B4C2B1C99B12D001DE451 /* YuSummarizeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YuSummarizeController.m; path = ../../YuSummarizeController.m; sourceTree = "<group>"; };
 		DA2B4C321C99B1F9001DE451 /* WJScrollTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJScrollTitleView.h; sourceTree = "<group>"; };
 		DA2B4C331C99B1F9001DE451 /* WJScrollTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJScrollTitleView.m; sourceTree = "<group>"; };
 		DA2B4C351C99B203001DE451 /* WJConstraintModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJConstraintModel.h; sourceTree = "<group>"; };
@@ -314,6 +343,7 @@
 		DAE93A5A1C8E77A600F03A67 /* WJConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJConst.m; sourceTree = "<group>"; };
 		DAE93A5C1C8E77BB00F03A67 /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = singleton.h; sourceTree = "<group>"; };
 		DAE93A5D1C8E77BB00F03A67 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E53C4EFB1F1A193A5BB398D3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC457DBB1C98064C00DDB531 /* TSDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDrawView.h; sourceTree = "<group>"; };
 		FC457DBC1C98064C00DDB531 /* TSDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDrawView.m; sourceTree = "<group>"; };
 		FC457DBE1C98162700DDB531 /* WJConsultingNoPicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJConsultingNoPicCell.h; sourceTree = "<group>"; };
@@ -360,7 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC623B9F1C99A1DE00098459 /* libsqlite3.0.tbd in Frameworks */,
-				A68FAFEFF4F4A49290AF4C6D /* libPods.a in Frameworks */,
+				7D89235A4F7B39CCC1B56FAB /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,11 +514,67 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BC7E4F071C9A5A940045ABD2 /* YU */ = {
+			isa = PBXGroup;
+			children = (
+				BC7E4F081C9A5A940045ABD2 /* Controllers */,
+				BC7E4F091C9A5A940045ABD2 /* Models */,
+				BC7E4F0A1C9A5A940045ABD2 /* Views */,
+			);
+			path = YU;
+			sourceTree = "<group>";
+		};
+		BC7E4F081C9A5A940045ABD2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA2B4C281C99B12D001DE451 /* YuForumViewController.h */,
+				DA2B4C291C99B12D001DE451 /* YuForumViewController.m */,
+				DA2B4C2A1C99B12D001DE451 /* YuSummarizeController.h */,
+				DA2B4C2B1C99B12D001DE451 /* YuSummarizeController.m */,
+				DA2B4C261C99B12D001DE451 /* YuArticleViewController.h */,
+				DA2B4C271C99B12D001DE451 /* YuArticleViewController.m */,
+				BC7E4F1E1C9A99FD0045ABD2 /* YUArticleInformationViewController.h */,
+				BC7E4F1F1C9A99FD0045ABD2 /* YUArticleInformationViewController.m */,
+				BC7E4F211C9A9A3A0045ABD2 /* YUArticleQuotationViewController.h */,
+				BC7E4F221C9A9A3A0045ABD2 /* YUArticleQuotationViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BC7E4F091C9A5A940045ABD2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BC7E4F181C9A652E0045ABD2 /* YUCarDetailModel.h */,
+				BC7E4F191C9A652E0045ABD2 /* YUCarDetailModel.m */,
+				BC7E4F1B1C9A82180045ABD2 /* YUCarCellModel.h */,
+				BC7E4F1C1C9A82180045ABD2 /* YUCarCellModel.m */,
+				BC7E4F241C9A9DD40045ABD2 /* YUTitleNews.h */,
+				BC7E4F251C9A9DD40045ABD2 /* YUTitleNews.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BC7E4F0A1C9A5A940045ABD2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC7E4F0B1C9A5ABB0045ABD2 /* YUSummarizeHeaderView.h */,
+				BC7E4F0C1C9A5ABB0045ABD2 /* YUSummarizeHeaderView.m */,
+				BC7E4F101C9A5CF50045ABD2 /* YUSummarizeHeaderView.xib */,
+				BC7E4F131C9A5FBA0045ABD2 /* YUSummarizeCell.h */,
+				BC7E4F141C9A5FBA0045ABD2 /* YUSummarizeCell.m */,
+				BC7E4F151C9A5FBA0045ABD2 /* YUSummarizeCell.xib */,
+				BC7E4F271C9AA00D0045ABD2 /* YUArticleNewsCell.h */,
+				BC7E4F281C9AA00D0045ABD2 /* YUArticleNewsCell.m */,
+				BC7E4F291C9AA00D0045ABD2 /* YUArticleNewsCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D2848F50D929F27A8AF2F15B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				BC623B9E1C99A1DE00098459 /* libsqlite3.0.tbd */,
-				6C2E3BD33B03E9DF56A54E8A /* libPods.a */,
+				E53C4EFB1F1A193A5BB398D3 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -520,6 +606,7 @@
 		DA2B4C1F1C99B12D001DE451 /* publicController */ = {
 			isa = PBXGroup;
 			children = (
+				BC7E4F071C9A5A940045ABD2 /* YU */,
 				FC54BC5E1C9A3F74004D78BB /* Controller */,
 				FC54BC581C9A3E98004D78BB /* Model */,
 				FC54BC591C9A3E98004D78BB /* View */,
@@ -529,12 +616,6 @@
 				DA2B4C231C99B12D001DE451 /* WJPraiseViewController.h.m */,
 				DA2B4C241C99B12D001DE451 /* WJPublicViewController.h */,
 				DA2B4C251C99B12D001DE451 /* WJPublicViewController.m */,
-				DA2B4C261C99B12D001DE451 /* YuArticleViewController.h */,
-				DA2B4C271C99B12D001DE451 /* YuArticleViewController.m */,
-				DA2B4C281C99B12D001DE451 /* YuForumViewController.h */,
-				DA2B4C291C99B12D001DE451 /* YuForumViewController.m */,
-				DA2B4C2A1C99B12D001DE451 /* YuSummarizeController.h */,
-				DA2B4C2B1C99B12D001DE451 /* YuSummarizeController.m */,
 			);
 			path = publicController;
 			sourceTree = "<group>";
@@ -1113,6 +1194,7 @@
 				FCCF82801C997DE600F12B8C /* TSXCCell.xib in Resources */,
 				FC457DD61C983D3800DDB531 /* TSConfigList.plist in Resources */,
 				DAE93A151C8E75B900F03A67 /* LaunchScreen.storyboard in Resources */,
+				BC7E4F171C9A5FBA0045ABD2 /* YUSummarizeCell.xib in Resources */,
 				FCCB846D1C970122005EA1AA /* CarData.plist in Resources */,
 				BC0F44F31C999EA800894419 /* YUMoreTopicCell.xib in Resources */,
 				FCCB845D1C96AF1A005EA1AA /* brand_list.json in Resources */,
@@ -1123,8 +1205,10 @@
 				DAE93A121C8E75B900F03A67 /* Assets.xcassets in Resources */,
 				DA2701E91C9A4A3500AC8205 /* WJPraiseTableViewCell.xib in Resources */,
 				FC457DC21C98162D00DDB531 /* WJConsultingNoPicCell.xib in Resources */,
+				BC7E4F2B1C9AA00D0045ABD2 /* YUArticleNewsCell.xib in Resources */,
 				FC457DD21C9816AF00DDB531 /* SWCarCell.xib in Resources */,
 				DAE93A101C8E75B900F03A67 /* Main.storyboard in Resources */,
+				BC7E4F111C9A5CF50045ABD2 /* YUSummarizeHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1223,6 +1307,7 @@
 				DA3B5CD71C93BF7A001997C8 /* UIView+WJExtension.m in Sources */,
 				DA3B5CD31C93BF7A001997C8 /* UIBarButtonItem+WJExtension.m in Sources */,
 				DA825C171C92E86B000C5EE4 /* WJConsultingResult.m in Sources */,
+				BC7E4F231C9A9A3A0045ABD2 /* YUArticleQuotationViewController.m in Sources */,
 				BC0F44EB1C999EA800894419 /* YUBannerListModel.m in Sources */,
 				BC0F44F71C999EA800894419 /* YUTopicHeaderView.m in Sources */,
 				FC54BC611C9A3FBA004D78BB /* TSHalfController.m in Sources */,
@@ -1258,15 +1343,20 @@
 				DA825C201C92E86B000C5EE4 /* WJVerticalButton.m in Sources */,
 				DA89F3461C92FDCE003D5AF8 /* WJFindCarResult.m in Sources */,
 				BC0F44F21C999EA800894419 /* YUMoreTopicCell.m in Sources */,
+				BC7E4F201C9A99FD0045ABD2 /* YUArticleInformationViewController.m in Sources */,
 				BC0F44EA1C999EA800894419 /* FMResultSet.m in Sources */,
 				FC457DCD1C9816A200DDB531 /* SWSectionModel.m in Sources */,
+				BC7E4F1D1C9A82180045ABD2 /* YUCarCellModel.m in Sources */,
 				FC457DDE1C9847E600DDB531 /* TSSpecificController.m in Sources */,
+				BC7E4F1A1C9A652E0045ABD2 /* YUCarDetailModel.m in Sources */,
 				BC0F44E41C999EA800894419 /* YUSelectionViewController.m in Sources */,
 				BC0F44E51C999EA800894419 /* YUTopicWebViewController.m in Sources */,
 				DA3B5CD21C93BF7A001997C8 /* NSString+StringFromNumber.m in Sources */,
 				FC54BC5C1C9A3EC3004D78BB /* TSCKModel.m in Sources */,
+				BC7E4F261C9A9DD40045ABD2 /* YUTitleNews.m in Sources */,
 				DA2B4C341C99B1F9001DE451 /* WJScrollTitleView.m in Sources */,
 				DA825C211C92E86B000C5EE4 /* CarFindController.m in Sources */,
+				BC7E4F2A1C9AA00D0045ABD2 /* YUArticleNewsCell.m in Sources */,
 				BC0F44ED1C999EA800894419 /* YUSelectionTopic.m in Sources */,
 				DA2701E41C9A438B00AC8205 /* CarPreferentialController.m in Sources */,
 				BC0F44F11C999EA800894419 /* YUImageCell.m in Sources */,
@@ -1281,7 +1371,9 @@
 				DA89F3561C93009B003D5AF8 /* WJWaterFlowLayout.m in Sources */,
 				DA2B4C2F1C99B12D001DE451 /* YuArticleViewController.m in Sources */,
 				DA89F3521C92FE85003D5AF8 /* WJHotCarController.m in Sources */,
+				BC7E4F0D1C9A5ABB0045ABD2 /* YUSummarizeHeaderView.m in Sources */,
 				DA3B5CD11C93BF7A001997C8 /* NSDate+WJExtension.m in Sources */,
+				BC7E4F161C9A5FBA0045ABD2 /* YUSummarizeCell.m in Sources */,
 				DA3B5CD81C93BF7A001997C8 /* LLCarTypeDetailController.m in Sources */,
 				DA89F3531C92FE85003D5AF8 /* WJWebViewController.m in Sources */,
 				DA3B5CDA1C93BF7A001997C8 /* WJTabBarController.m in Sources */,

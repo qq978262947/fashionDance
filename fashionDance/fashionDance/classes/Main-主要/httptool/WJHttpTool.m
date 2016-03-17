@@ -7,7 +7,7 @@
 //
 
 #import "WJHttpTool.h"
-#import <AFNetworking.h>
+#import "AFNetworking.h"
 
 @interface WJHttpTool ()
 @property (strong, nonatomic) AFHTTPSessionManager *manager;
