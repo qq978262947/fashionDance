@@ -107,7 +107,7 @@ static NSString * const textReuseID = @"LLTextCollectionCell";
 {
     if (!_collectionView) {
         LLCollectionViewLayout * layout = [LLCollectionViewLayout layoutWithDataSoure:self.section1Data];
-        UICollectionView * view = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, WScreenWidth, WScreenHeight) collectionViewLayout:layout];
+        UICollectionView * view = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, SCRW, SCRH) collectionViewLayout:layout];
         [self.view addSubview:view];
         view.dataSource = self;
         view.delegate = self;

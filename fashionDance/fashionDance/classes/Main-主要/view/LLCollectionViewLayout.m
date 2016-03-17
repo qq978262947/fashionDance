@@ -5,7 +5,6 @@
 //  Created by 李璐 on 16/3/11.
 //  Copyright © 2016年 李璐. All rights reserved.
 //
-#import "Config.h"
 #import "LLCollectionViewLayout.h"
 
 //为了动态计算每个cell高度我们导入数据模型
@@ -13,8 +12,8 @@
 
 #import "NSString+Extension.h"
 
-#define picture_height WScreenHeight/2
-#define cell_height WScreenHeight/4
+#define picture_height SCRH/2
+#define cell_height SCRH/4
 #define section_number 2
 
 @interface LLCollectionViewLayout ()
@@ -96,7 +95,7 @@
     UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     
     // 设置布局属性的frame
-    CGFloat w = WScreenWidth;
+    CGFloat w = SCRW;
     CGFloat h;//此处固定，酌量增加
     CGFloat x;
     CGFloat y;
@@ -116,7 +115,7 @@
         //取出data，动态计算
         LLCarTypeVersionModel * model = self.section1DataArray[indexPath.item];
         NSString * string = [[model.year stringValue] stringByAppendingString:model.nameZh];//此处和text cell中耦合
-        CGSize size = [string sizeWithFont:LLSubTitleFont maxSize:CGSizeMake(WScreenWidth * 3/5, CGFLOAT_MAX)];//两处和text cell xib耦合--LLSubTitleFont和WScreenWidth * 3/5
+        CGSize size = [string sizeWithFont:LLSubTitleFont maxSize:CGSizeMake(SCRW * 3/5, CGFLOAT_MAX)];//两处和text cell xib耦合--LLSubTitleFont和WScreenWidth * 3/5
         model.heigthYear = size.height;
         //19.5为LLSubTitleFont一行高度
         h += size.height - 18;//和上面LLSubTitleFont耦合
@@ -135,7 +134,7 @@
 {
     CGFloat maxX;
     
-    maxX = WScreenWidth;
+    maxX = SCRW;
     //这里的cell_height我们要动态增加
     
     return CGSizeMake(maxX, self.contentSizeHeight);

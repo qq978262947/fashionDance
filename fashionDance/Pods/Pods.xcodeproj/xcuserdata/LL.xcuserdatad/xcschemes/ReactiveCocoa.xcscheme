@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6847254D016329D4A531D34ED2B6DF81"
-               BuildableName = "MJRefresh.framework"
-               BlueprintName = "MJRefresh"
+               BlueprintIdentifier = "84C410948D247D9C310AD89EE642C573"
+               BuildableName = "ReactiveCocoa.framework"
+               BlueprintName = "ReactiveCocoa"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6847254D016329D4A531D34ED2B6DF81"
-            BuildableName = "MJRefresh.framework"
-            BlueprintName = "MJRefresh"
+            BlueprintIdentifier = "84C410948D247D9C310AD89EE642C573"
+            BuildableName = "ReactiveCocoa.framework"
+            BlueprintName = "ReactiveCocoa"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6847254D016329D4A531D34ED2B6DF81"
-            BuildableName = "MJRefresh.framework"
-            BlueprintName = "MJRefresh"
+            BlueprintIdentifier = "84C410948D247D9C310AD89EE642C573"
+            BuildableName = "ReactiveCocoa.framework"
+            BlueprintName = "ReactiveCocoa"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
