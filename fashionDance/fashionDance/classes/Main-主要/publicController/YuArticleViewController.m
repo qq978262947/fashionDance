@@ -12,6 +12,7 @@
 #import "YUTitleNews.h"
 #import "YUArticleNewsCell.h"
 #import "SVProgressHUD.h"
+#import "MJRefresh.h"
 
 static NSString *Id = @"YUArticleNewsCell";
 
@@ -26,6 +27,8 @@ static NSString *Id = @"YUArticleNewsCell";
 @property (nonatomic, weak) UIView *indicatorView;
 
 @property (nonatomic, copy) NSMutableArray *titleNewsArray;
+/** 当前type */
+@property (nonatomic, assign) NSInteger type;
 
 @end
 
@@ -42,7 +45,6 @@ static NSString *Id = @"YUArticleNewsCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 //    // 设置导航栏内容
 //    [self setupNav];
     
@@ -56,27 +58,26 @@ static NSString *Id = @"YUArticleNewsCell";
     
 }
 
-- (void)loadCellDataWithType:(int)type
+
+- (void)loadCellData
 {
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     
-    NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/news/list/model_%@_type_%d_city_110000_page_1",self.modelId,type];
+    NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/news/list/model_%@_type_%ld_city_110000_page_1",self.modelId,self.type];
     
     __weak typeof (self) weakSelf = self;
     [[WJHttpTool httpTool] get:urlString params:nil success:^(id result) {
         
-        NSLog(@"%@",result);
         NSArray *tmpArray = [YUTitleNews mj_objectArrayWithKeyValuesArray:result[@"news"]];
-        
         [weakSelf.titleNewsArray addObjectsFromArray:tmpArray];
         [weakSelf.tableView reloadData];
         [SVProgressHUD dismiss];
-        
     } failure:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:@"加载失败"];
     }];
     
 }
+
 
 - (void)setupTableView
 {
@@ -169,17 +170,16 @@ static NSString *Id = @"YUArticleNewsCell";
         [self.titleNewsArray removeAllObjects];
         
         [self.tableView reloadData];
-        
-        [self loadCellDataWithType:0];
+        self.type = 0;
+        [self loadCellData];
         
     } else {
         
         [self.titleNewsArray removeAllObjects];
         
         [self.tableView reloadData];
-        
-        [self loadCellDataWithType:1];
-        
+        self.type = 1;
+        [self loadCellData];
     }
     
 }
@@ -188,6 +188,8 @@ static NSString *Id = @"YUArticleNewsCell";
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    self.tableView.mj_footer.hidden = (self.titleNewsArray.count == 0);
     return self.titleNewsArray.count;
 }
 

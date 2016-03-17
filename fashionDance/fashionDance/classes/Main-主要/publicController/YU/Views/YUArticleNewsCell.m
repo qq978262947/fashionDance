@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *carImageView;
 @property (weak, nonatomic) IBOutlet UIButton *authorBtn;
 @property (weak, nonatomic) IBOutlet UIButton *commentsBtn;
+@property (assign, nonatomic) IBOutlet NSLayoutConstraint *titleLabelLeading;
 
 @end
 
@@ -27,8 +28,16 @@
 - (void)setTitleNews:(YUTitleNews *)titleNews
 {
     _titleNews = titleNews;
+    self.titleLabelLeading.constant = 100;
+    self.carImageView.hidden = NO;
     
-    [self.carImageView setNormalImagewithURL:[NSURL URLWithString:titleNews.picUrl] placeholderImage:[UIImage imageNamed:@"FollowBtnClickBg"] completed:nil];
+    if (titleNews.picUrl.length > 1) {
+      [self.carImageView setNormalImagewithURL:[NSURL URLWithString:titleNews.picUrl] placeholderImage:[UIImage imageNamed:@"FollowBtnClickBg"] completed:nil];
+    } else {
+        self.carImageView.hidden = YES;
+        self.titleLabelLeading.constant = 10;
+    }
+    
     self.titleLabel.text = titleNews.title;
     [self.authorBtn setTitle:titleNews.media forState:UIControlStateNormal];
     [self.commentsBtn setTitle:[NSString stringWithFormat:@"%ld",titleNews.comments] forState:UIControlStateNormal];
