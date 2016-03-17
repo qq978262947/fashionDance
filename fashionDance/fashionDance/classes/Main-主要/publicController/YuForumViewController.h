@@ -10,4 +10,7 @@
 
 @interface YuForumViewController : UIViewController
 
+
+@property (strong, nonatomic)NSString *modelId;
+
 @end

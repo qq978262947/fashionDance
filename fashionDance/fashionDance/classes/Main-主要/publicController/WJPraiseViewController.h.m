@@ -10,14 +10,30 @@
 
 @interface WJPraiseViewController ()
 
+@property (weak, nonatomic) UITableView *tableView;
+
 @end
 
 @implementation WJPraiseViewController
-
+// http://autoapp.auto.sohu.com/api/eval/stat/model_4095
+// http://autoapp.auto.sohu.com/api/eval/list/model_4095_size_20_page_1
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // 初始化tableview
+    [self setupTableView];
 }
+
+
+- (void)setupTableView {
+    UITableView *tableView = [[UITableView alloc]init];
+    [self.view addSubview:tableView];
+    WJLog(@"%@",self.modelId);
+    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+    }];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
