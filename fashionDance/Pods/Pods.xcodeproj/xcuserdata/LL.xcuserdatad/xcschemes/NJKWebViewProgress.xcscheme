@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B4A3E08D49931371F7247521A50EAF79"
-               BuildableName = "libNJKWebViewProgress.a"
+               BlueprintIdentifier = "33B42E21671AAC905130853EDCADA43B"
+               BuildableName = "NJKWebViewProgress.framework"
                BlueprintName = "NJKWebViewProgress"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B4A3E08D49931371F7247521A50EAF79"
-            BuildableName = "libNJKWebViewProgress.a"
+            BlueprintIdentifier = "33B42E21671AAC905130853EDCADA43B"
+            BuildableName = "NJKWebViewProgress.framework"
             BlueprintName = "NJKWebViewProgress"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
@@ -63,8 +63,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B4A3E08D49931371F7247521A50EAF79"
-            BuildableName = "libNJKWebViewProgress.a"
+            BlueprintIdentifier = "33B42E21671AAC905130853EDCADA43B"
+            BuildableName = "NJKWebViewProgress.framework"
             BlueprintName = "NJKWebViewProgress"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>

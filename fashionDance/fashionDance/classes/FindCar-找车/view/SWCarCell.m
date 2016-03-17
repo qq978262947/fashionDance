@@ -8,7 +8,7 @@
 
 #import "SWCarCell.h"
 #import "TSCarMod.h"
-#import <UIImageView+WebCache.h>
+#import "UIImageView+WebCache.h"
 @interface SWCarCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;

@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9775596B3CA16905FC8F66DA8E2A3C67"
-               BuildableName = "libDACircularProgress.a"
+               BlueprintIdentifier = "94624EC6C9739263AA965CFE2D8933F5"
+               BuildableName = "DACircularProgress.framework"
                BlueprintName = "DACircularProgress"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9775596B3CA16905FC8F66DA8E2A3C67"
-            BuildableName = "libDACircularProgress.a"
+            BlueprintIdentifier = "94624EC6C9739263AA965CFE2D8933F5"
+            BuildableName = "DACircularProgress.framework"
             BlueprintName = "DACircularProgress"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
@@ -63,8 +63,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9775596B3CA16905FC8F66DA8E2A3C67"
-            BuildableName = "libDACircularProgress.a"
+            BlueprintIdentifier = "94624EC6C9739263AA965CFE2D8933F5"
+            BuildableName = "DACircularProgress.framework"
             BlueprintName = "DACircularProgress"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>

@@ -6,6 +6,8 @@
 //  Copyright © 2016年 汪俊. All rights reserved.
 //
 
+
+#import "LLCarTypeDetailController.h"
 #import "WJPublicViewController.h"
 #import "WJScrollTitleView.h"
 #import "YuSummarizeController.h"
@@ -44,7 +46,7 @@
     // 可抽公共代码啊
     YuSummarizeController *vc1 = [[YuSummarizeController alloc]init];
     [self addChildViewController:vc1];
-    CCPicViewController *vc2 = [[CCPicViewController alloc]init];
+    CCPicViewController *vc2 = [CCPicViewController ccpicviewcontrollerWithString:self.modelId];
     [self addChildViewController:vc2];
     WJPraiseViewController *vc3 = [[WJPraiseViewController alloc]init];
     [self addChildViewController:vc3];
@@ -56,7 +58,7 @@
     [self addChildViewController:vc6];
     
     vc1.modelId = self.modelId;
-    vc2.modelId = self.modelId;
+
     vc3.modelId = self.modelId;
     vc4.modelId = self.modelId;
     vc5.modelId = self.modelId;
