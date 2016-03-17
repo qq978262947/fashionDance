@@ -1,22 +1,21 @@
 //
-//  TSHalfController.m
+//  TSHalfWithoutModController.m
 //  fashionDance
 //
 //  Created by Dylan on 3/17/16.
 //  Copyright © 2016 汪俊. All rights reserved.
 //
 
-#import "TSHalfController.h"
+#import "TSHalfWithoutModController.h"
 
-@interface TSHalfController ()<UITableViewDataSource,UITableViewDelegate>
-@property (nonatomic,strong)UITableView * tableView;
-@property (nonatomic,strong)NSString * titleStr;
+@interface TSHalfWithoutModController ()<UITableViewDelegate,UITableViewDataSource>
+
 @end
 
-@implementation TSHalfController
+@implementation TSHalfWithoutModController
 +(instancetype)halfControllerWithArray:(NSArray *)dataArray andTitleArray:(NSArray *)titleArray andtitle:(NSString *)title
 {
-    TSHalfController * half=[TSHalfController new];
+    TSHalfWithoutModController * half=[TSHalfWithoutModController new];
     half.dataArray=dataArray;
     half.titleArray=titleArray;
     half.titleStr=title;
@@ -96,7 +95,7 @@
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.dataArray.count;
+    return self.titleArray.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -107,17 +106,35 @@
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifity];
     }
     NSArray * seArray=self.dataArray[indexPath.section];
-    TSCKModel * mod=seArray[indexPath.row];
-    cell.textLabel.text=mod.trimName;
-
+    cell.textLabel.text=seArray[indexPath.row];
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //回调
+    //回调:计算数字，返回数字
+    NSNumber * number;
+    switch (indexPath.row) {
+        case 0:
+            number=[NSNumber numberWithInteger:0];
+            break;
+        case 1:
+            number=[NSNumber numberWithInteger:1];
+            break;
+        case 2:
+            number=[NSNumber numberWithInteger:2];
+            break;
+        case 3:
+            number=[NSNumber numberWithInteger:3];
+            break;
+        case 4:
+            number=[NSNumber numberWithInteger:4];
+            break;
+            
+        default:
+            break;
+    }
     NSArray * seArray=self.dataArray[indexPath.section];
-    TSCKModel * mod=seArray[indexPath.row];
-    self.TSHalfControllerBlock(self,mod);
+    self.TSHalfWithoutModControllerBlock(self,number,seArray[indexPath.row]);
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -129,5 +146,4 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 @end

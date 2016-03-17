@@ -110,6 +110,12 @@
 		FC54BC641C9A59BE004D78BB /* TSCarPicMod.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54BC631C9A59BE004D78BB /* TSCarPicMod.m */; };
 		FC54BC681C9A6177004D78BB /* TSPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54BC661C9A6177004D78BB /* TSPhotoCell.m */; };
 		FC54BC691C9A6177004D78BB /* TSPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC54BC671C9A6177004D78BB /* TSPhotoCell.xib */; };
+		FC54BC6D1C9AAB0C004D78BB /* TSPicReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54BC6B1C9AAB0C004D78BB /* TSPicReusableView.m */; };
+		FC54BC6E1C9AAB0C004D78BB /* TSPicReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC54BC6C1C9AAB0C004D78BB /* TSPicReusableView.xib */; };
+		FC54BC711C9AB7AF004D78BB /* TSHalfWithoutModController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54BC701C9AB7AF004D78BB /* TSHalfWithoutModController.m */; };
+		FC54BC741C9AD224004D78BB /* TSColorMod.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54BC731C9AD224004D78BB /* TSColorMod.m */; };
+		FC54BC771C9AD43B004D78BB /* TSHalfColorController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54BC761C9AD43B004D78BB /* TSHalfColorController.m */; };
+		FC54BC7A1C9AE957004D78BB /* TSLXModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54BC791C9AE957004D78BB /* TSLXModel.m */; };
 		FCCB845D1C96AF1A005EA1AA /* brand_list.json in Resources */ = {isa = PBXBuildFile; fileRef = FCCB845C1C96AF1A005EA1AA /* brand_list.json */; };
 		FCCB84651C96B0BB005EA1AA /* TSCarMod.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB84641C96B0BB005EA1AA /* TSCarMod.m */; };
 		FCCB84681C96B29E005EA1AA /* TSBrandCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB84671C96B29E005EA1AA /* TSBrandCarController.m */; };
@@ -334,6 +340,17 @@
 		FC54BC651C9A6177004D78BB /* TSPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPhotoCell.h; sourceTree = "<group>"; };
 		FC54BC661C9A6177004D78BB /* TSPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPhotoCell.m; sourceTree = "<group>"; };
 		FC54BC671C9A6177004D78BB /* TSPhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSPhotoCell.xib; sourceTree = "<group>"; };
+		FC54BC6A1C9AAB0C004D78BB /* TSPicReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPicReusableView.h; sourceTree = "<group>"; };
+		FC54BC6B1C9AAB0C004D78BB /* TSPicReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPicReusableView.m; sourceTree = "<group>"; };
+		FC54BC6C1C9AAB0C004D78BB /* TSPicReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSPicReusableView.xib; sourceTree = "<group>"; };
+		FC54BC6F1C9AB7AF004D78BB /* TSHalfWithoutModController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHalfWithoutModController.h; sourceTree = "<group>"; };
+		FC54BC701C9AB7AF004D78BB /* TSHalfWithoutModController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHalfWithoutModController.m; sourceTree = "<group>"; };
+		FC54BC721C9AD224004D78BB /* TSColorMod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSColorMod.h; sourceTree = "<group>"; };
+		FC54BC731C9AD224004D78BB /* TSColorMod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSColorMod.m; sourceTree = "<group>"; };
+		FC54BC751C9AD43B004D78BB /* TSHalfColorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHalfColorController.h; sourceTree = "<group>"; };
+		FC54BC761C9AD43B004D78BB /* TSHalfColorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHalfColorController.m; sourceTree = "<group>"; };
+		FC54BC781C9AE957004D78BB /* TSLXModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLXModel.h; sourceTree = "<group>"; };
+		FC54BC791C9AE957004D78BB /* TSLXModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLXModel.m; sourceTree = "<group>"; };
 		FCCB845C1C96AF1A005EA1AA /* brand_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brand_list.json; sourceTree = "<group>"; };
 		FCCB84631C96B0BB005EA1AA /* TSCarMod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCarMod.h; sourceTree = "<group>"; };
 		FCCB84641C96B0BB005EA1AA /* TSCarMod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCarMod.m; sourceTree = "<group>"; };
@@ -935,6 +952,10 @@
 				FC54BC631C9A59BE004D78BB /* TSCarPicMod.m */,
 				FC54BC5A1C9A3EC3004D78BB /* TSCKModel.h */,
 				FC54BC5B1C9A3EC3004D78BB /* TSCKModel.m */,
+				FC54BC721C9AD224004D78BB /* TSColorMod.h */,
+				FC54BC731C9AD224004D78BB /* TSColorMod.m */,
+				FC54BC781C9AE957004D78BB /* TSLXModel.h */,
+				FC54BC791C9AE957004D78BB /* TSLXModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -945,6 +966,9 @@
 				FC54BC651C9A6177004D78BB /* TSPhotoCell.h */,
 				FC54BC661C9A6177004D78BB /* TSPhotoCell.m */,
 				FC54BC671C9A6177004D78BB /* TSPhotoCell.xib */,
+				FC54BC6A1C9AAB0C004D78BB /* TSPicReusableView.h */,
+				FC54BC6B1C9AAB0C004D78BB /* TSPicReusableView.m */,
+				FC54BC6C1C9AAB0C004D78BB /* TSPicReusableView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -954,6 +978,10 @@
 			children = (
 				FC54BC5F1C9A3FBA004D78BB /* TSHalfController.h */,
 				FC54BC601C9A3FBA004D78BB /* TSHalfController.m */,
+				FC54BC6F1C9AB7AF004D78BB /* TSHalfWithoutModController.h */,
+				FC54BC701C9AB7AF004D78BB /* TSHalfWithoutModController.m */,
+				FC54BC751C9AD43B004D78BB /* TSHalfColorController.h */,
+				FC54BC761C9AD43B004D78BB /* TSHalfColorController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1112,6 +1140,7 @@
 				BC0F44F31C999EA800894419 /* YUMoreTopicCell.xib in Resources */,
 				FCCB845D1C96AF1A005EA1AA /* brand_list.json in Resources */,
 				FC54BC691C9A6177004D78BB /* TSPhotoCell.xib in Resources */,
+				FC54BC6E1C9AAB0C004D78BB /* TSPicReusableView.xib in Resources */,
 				DA89F35B1C9301B4003D5AF8 /* WJCollectionViewCell.xib in Resources */,
 				FC457DDB1C98413100DDB531 /* TSTitleCell.xib in Resources */,
 				BC0F44F01C999EA800894419 /* YUHotTopicCell.xib in Resources */,
@@ -1233,8 +1262,11 @@
 				DAE93A071C8E75B900F03A67 /* main.m in Sources */,
 				DA3B5CD41C93BF7A001997C8 /* UIImage+cirlcle.m in Sources */,
 				DA3B5CDB1C93BF7A001997C8 /* WJHttpTool.m in Sources */,
+				FC54BC741C9AD224004D78BB /* TSColorMod.m in Sources */,
+				FC54BC7A1C9AE957004D78BB /* TSLXModel.m in Sources */,
 				DA825C1B1C92E86B000C5EE4 /* WJFindHotCell.m in Sources */,
 				FC457DBD1C98064C00DDB531 /* TSDrawView.m in Sources */,
+				FC54BC711C9AB7AF004D78BB /* TSHalfWithoutModController.m in Sources */,
 				DA2B4C2E1C99B12D001DE451 /* WJPublicViewController.m in Sources */,
 				DA2701CC1C9A3BFC00AC8205 /* WJContentAppraiseModel.m in Sources */,
 				DA825C9E1C92EB7E000C5EE4 /* WJArrangeController.m in Sources */,
@@ -1275,10 +1307,12 @@
 				DA89F3561C93009B003D5AF8 /* WJWaterFlowLayout.m in Sources */,
 				DA2B4C2F1C99B12D001DE451 /* YuArticleViewController.m in Sources */,
 				DA89F3521C92FE85003D5AF8 /* WJHotCarController.m in Sources */,
+				FC54BC771C9AD43B004D78BB /* TSHalfColorController.m in Sources */,
 				DA3B5CD11C93BF7A001997C8 /* NSDate+WJExtension.m in Sources */,
 				DA3B5CD81C93BF7A001997C8 /* LLCarTypeDetailController.m in Sources */,
 				DA89F3531C92FE85003D5AF8 /* WJWebViewController.m in Sources */,
 				DA3B5CDA1C93BF7A001997C8 /* WJTabBarController.m in Sources */,
+				FC54BC6D1C9AAB0C004D78BB /* TSPicReusableView.m in Sources */,
 				DA3B5CD01C93BF7A001997C8 /* Foundation+Log.m in Sources */,
 				DA2B4C2C1C99B12D001DE451 /* CCPicViewController.m in Sources */,
 			);

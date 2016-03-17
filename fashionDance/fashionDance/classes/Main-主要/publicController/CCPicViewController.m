@@ -9,26 +9,94 @@
 #import "CCPicViewController.h"
 #import "TSCKModel.h"
 #import "TSCarPicMod.h"
+#import "TSLXModel.h"
+#import "TSHalfWithoutModController.h"
+#import "TSHalfColorController.h"
 #import "TSHalfController.h"
 #import "SVProgressHUD.h"
 #import "TSPhotoCell.h"
+#import "TSPicReusableView.h"
+#import "TSColorMod.h"
 @interface CCPicViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+//按钮数组
+@property (nonatomic,strong)NSMutableArray * btnArray;
 //tableviw
 @property (nonatomic,strong)UICollectionView * collectionView;
-//
+@property (nonatomic,assign)BOOL collectionViewType;
+//选择按钮
 @property (nonatomic,strong)NSMutableArray * onsaleArray;
 @property (nonatomic,strong)NSMutableArray * offsaleArray;
+//颜色按钮
+@property (nonatomic,strong)NSMutableArray * insideColor;
+@property (nonatomic,strong)NSMutableArray * outsideColor;
+
+
+
 @property (nonatomic,strong)NSMutableArray * allCKArray;
 //@property (nonatomic,strong)NSArray * 
 @property (nonatomic,strong)NSArray * allTypeArray;
 //选中类型,根据mod中的id
 @property (nonatomic,strong)TSCKModel * ckModel;
 //显示图片的数组
+//type1
 @property (nonatomic,strong)NSMutableArray * titleArray;
 @property (nonatomic,strong)NSMutableArray * dataArray;
+//tpye2
+@property (nonatomic,strong)NSMutableArray * bigDataArray;
+@property (nonatomic,assign)BOOL firstReq;
+@property (nonatomic,strong)NSString * collectionTitle;
 @end
 
 @implementation CCPicViewController
+-(NSNumber *)type
+{
+    if (_type==nil) {
+        _type=[NSNumber numberWithInteger:0];
+    }
+    return _type;
+}
+-(NSNumber *)trim
+{
+    if (_trim==nil) {
+        _trim=[NSNumber numberWithInteger:-1];
+    }
+    return _trim;
+}
+-(NSNumber *)color
+{
+    if (_color==nil) {
+        _color=[NSNumber numberWithInteger:0];
+    }
+    return _color;
+}
+-(NSMutableArray *)bigDataArray
+{
+    if (_bigDataArray==nil) {
+        _bigDataArray=[NSMutableArray array];
+    }
+    return _bigDataArray;
+}
+-(NSMutableArray *)btnArray
+{
+    if (_btnArray==nil) {
+        _btnArray=[NSMutableArray array];
+    }
+    return _btnArray;
+}
+-(NSMutableArray *)insideColor
+{
+    if (_insideColor==nil) {
+        _insideColor=[NSMutableArray array];
+    }
+    return _insideColor;
+}
+-(NSMutableArray *)outsideColor
+{
+    if (_outsideColor==nil) {
+        _outsideColor=[NSMutableArray array];
+    }
+    return _outsideColor;
+}
 -(NSMutableArray *)dataArray
 {
     if (_dataArray==nil) {
@@ -68,8 +136,16 @@
 - (void)viewDidLoad
 {
     self.modelId=@"4395";
+    self.page=1;
+    self.size=20;
+    self.collectionViewType=YES;
+    self.firstReq=YES;
+    
+    
+    self.view.backgroundColor=[UIColor whiteColor];
     [self downLoadListData];
     [self downLoadData];
+    [self getColor];
     [self configsubViews];
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -78,7 +154,9 @@
 {
     //获取页面图片
     //http://autoapp.auto.sohu.com/api/pic/listForIndex/model_4395_trim_-1
-    NSString * path=@"http://autoapp.auto.sohu.com/api/pic/listForIndex/model_4395_trim_-1";
+
+    
+    NSString * path=[NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/pic/listForIndex/model_%@_trim_%@",self.modelId,self.trim];
     [[WJHttpTool httpTool]get:path params:nil success:^(id result)
     {
         self.dataArray=nil;
@@ -94,7 +172,7 @@
                 [tempArray addObject:mod];
             }
             [self.dataArray addObject:tempArray];
-            [self.titleArray addObject:@"内饰"];
+            [self.titleArray addObject:@"外饰"];
         }
         
         NSArray * chassis=result[@"chassis"];
@@ -133,6 +211,7 @@
             [self.dataArray addObject:tempArray];
             [self.titleArray addObject:@"其他"];
         }
+        
         [self.collectionView reloadData];
         
     }
@@ -160,25 +239,87 @@
             TSCKModel * mod= [TSCKModel modWithDictionary:dict];
             [self.offsaleArray addObject:mod];
         }
-        NSLog(@"%@",result);
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
     }];
+}
+-(void)downloadLXData
+{
+    if (self.color.integerValue==0&&self.trim.integerValue==-1&&self.type.integerValue==0)
+    {
+        [self downLoadData];
+        return;
+    }
+    //http://autoapp.auto.sohu.com/api/pic/listForIndex/model_4905_trim_-1
+    //http://autoapp.auto.sohu.com/api/pic/list/model_4905_trim_-1_type_1000_color_0_page_1_size_20
+    //http://autoapp.auto.sohu.com/api/pic/list/model_4898_trim_-1_type_2000_color_0_page_1_size_20
+    //http://autoapp.auto.sohu.com/api/pic/list/model_4898_trim_-1_type_3000_color_0_page_1_size_20
+    //http://autoapp.auto.sohu.com/api/pic/list/model_4898_trim_-1_type_9000_color_0_page_1_size_20
+    //接口
+    //model trim color
+    //type
+    //page size
+    if (self.firstReq)
+    {
+        self.bigDataArray=nil;
+    }
+    NSString * path=[NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/pic/list/model_%@_trim_%@_type_%@000_color_%@_page_%ld_size_%ld",self.modelId,self.trim,self.type,self.color,self.page,self.size];
+    NSLog(@"%@",path);
+    [[WJHttpTool httpTool]get:path params:nil success:^(NSDictionary * result)
+    {
+
+        NSDictionary * res=result[@"result"];
+        NSArray * items=res[@"PicItems"];
+        for (NSDictionary * dict in items)
+        {
+            TSLXModel * mod=[TSLXModel modWithDict:dict];
+            [self.bigDataArray addObject:mod];
+        }
+        NSLog(@"%ld",self.bigDataArray.count);
+        
+        self.firstReq=NO;
+        [self.collectionView reloadData];
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
 }
 -(void)getColor
 {
     /*
      全部颜色
-     http://autoapp.auto.sohu.com/api/pic/listForIndex/model_4720_trim_-1
      选中颜色
      http://autoapp.auto.sohu.com/api/pic/colorList/model_4720_trim_131140
      */
+    self.insideColor=nil;
+    self.outsideColor=nil;
+
+    NSString * path=[NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/pic/colorList/model_4720_trim_%@",self.trim];
+    [[WJHttpTool httpTool]get:path params:nil success:^(NSDictionary * result)
+     {
+         NSArray * inside=result[@"inside"];
+         for (NSDictionary * dict in inside)
+         {
+             TSColorMod * mod=[TSColorMod modWithDict:dict];
+             [self.insideColor addObject:mod];
+         }
+         NSArray * outside=result[@"outside"];
+         for (NSDictionary * dict in outside)
+         {
+             TSColorMod * mod=[TSColorMod modWithDict:dict];
+             [self.outsideColor addObject:mod];
+         }
+         
+     } failure:^(NSError *error) {
+         
+     }];
 }
 //configToolBar
 -(void)configsubViews
 {
     //顶部工具条
     NSArray * titleArray=@[@"全部车款",@"全部类型",@"全部颜色"];
+    
     for (int i = 0;i<3;i++)
     {
         UIButton * btn=[[UIButton alloc]init];
@@ -188,13 +329,18 @@
         [self.view addSubview:btn];
         btn.tag=100+i;
         [btn addTarget:self action:@selector(btnTouch:) forControlEvents:UIControlEventTouchUpInside];
+        [self.btnArray addObject:btn];
     }
     //下面collectionView
     UICollectionViewFlowLayout * flaw=[UICollectionViewFlowLayout new];
+    
+    flaw.headerReferenceSize = CGSizeMake(SCRW, 35);
     self.collectionView=[[UICollectionView alloc]initWithFrame:CGRectMake(0, 50, SCRW, SCRH-NAVH-TabbarH-50) collectionViewLayout:flaw];
+    self.collectionView.backgroundColor=[UIColor whiteColor];
     [self.view addSubview:self.collectionView];
     self.collectionView.delegate=self;
     self.collectionView.dataSource=self;
+    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
 }
 -(void)btnTouch:(UIButton *)btn
 {
@@ -202,23 +348,52 @@
         case 100:
         {
             //全部车款
-            //创建控制器，直接传入mod数组
-            TSHalfController * half=[TSHalfController halfControllerWithArray:@[@"",@"在售车款",@"停售车款"] andTitleArray:@[@[@"全部车款"],self.onsaleArray,self.offsaleArray]];
+            TSCKModel * ckmod=[TSCKModel new];
+            ckmod.trimName=@"全部车型";
+            ckmod.trimId=[NSNumber numberWithInteger:-1];
+            TSHalfController * half=[TSHalfController halfControllerWithArray:@[@[ckmod],self.onsaleArray,self.offsaleArray] andTitleArray:@[@"",@"在售车款",@"停售车款"] andtitle:@"全部款式"];
+            [half setTSHalfControllerBlock:^(TSHalfController * h, TSCKModel *mod) {
+                self.trim=mod.trimId;
+                //设置按钮标题
+                
+                [btn setTitle:mod.trimName forState:UIControlStateNormal];
+                [self getColor];
+                self.collectionViewType=YES;
+                [self downLoadData];
+            }];
             [self presentViewController:half animated:YES completion:nil];
-            //回调
         }
             break;
         case 101:
         {
             //全部类型
-            TSHalfController * half=[TSHalfController halfControllerWithArray:@[@"",@""] andTitleArray:@[@[@"全部类型"],self.allTypeArray]];
+            TSHalfWithoutModController * half=[TSHalfWithoutModController halfControllerWithArray:@[self.allTypeArray] andTitleArray:@[@""] andtitle:@"全部类型"];
+            [half setTSHalfWithoutModControllerBlock:^(TSHalfWithoutModController *h, NSNumber *number,NSString * title) {
+                self.type=number;
+                self.collectionTitle=title;
+                [btn setTitle:title forState:UIControlStateNormal];
+                
+                self.collectionViewType=NO;
+                self.firstReq=YES;
+                [self downloadLXData];
+            }];
             [self presentViewController:half animated:YES completion:nil];
         }
             break;
         case 102:
         {
             //全部颜色
-            
+            TSHalfColorController * color=[TSHalfColorController halfControllerWithArray:@[self.outsideColor,self.insideColor] andTitleArray:@[@"外部颜色",@"内部颜色"]andtitle:@"全部颜色"];
+            [color setTSHalfColorControllerBlock:^(TSHalfColorController * h, TSColorMod * mod) {
+                self.color=mod.ID;
+                self.collectionTitle=mod.colorName;
+                [btn setTitle:mod.colorName forState:UIControlStateNormal];
+                //下载数据
+                self.collectionViewType=NO;
+                self.firstReq=YES;
+                [self downloadLXData];
+            }];
+            [self presentViewController:color animated:YES completion:nil];
         }
             break;
             
@@ -229,24 +404,43 @@
 #pragma mark collectionViewDelegate
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    NSArray * tempArray=self.dataArray[section];
-    return tempArray.count;
+    if (self.collectionViewType) {
+        NSArray * tempArray=self.dataArray[section];
+        return tempArray.count;
+    }
+    else
+    {
+        return self.bigDataArray.count;
+    }
+    return 0;
+
 }
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return self.dataArray.count;
-}
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    //选中后弹出Photo
+    if (self.collectionViewType) {
+        return self.dataArray.count;
+    }
+    else
+    {
+        return 1;
+    }
+    return 0;
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     //返回一个cell
-    NSArray * temp=self.dataArray[indexPath.section];
-    TSCarPicMod * mod=temp[indexPath.row];
     TSPhotoCell * cell=[TSPhotoCell cellWithCollectionView:collectionView andindexPath:indexPath];
-    [cell configWithUrl:mod.url];
+    if (self.collectionViewType)
+    {
+        NSArray * temp=self.dataArray[indexPath.section];
+        TSCarPicMod * mod=temp[indexPath.row];
+        [cell configWithUrl:mod.url];
+    }
+    else
+    {
+        TSLXModel * mod=self.bigDataArray[indexPath.row];
+        [cell configWithUrl:mod.PicUrl];
+    }
     return cell;
 }
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -257,14 +451,36 @@
 {
     return UIEdgeInsetsMake(10, 10, 10, 10);
 }
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    //http://autoapp.auto.sohu.com/api/pic/list/model_1992_trim_-1_type_2000_color_0_page_1_size_20
+    //http://autoapp.auto.sohu.com/api/pic/list/model_4905_trim_-1_type_9000_color_0_page_1_size_20
+    //http://autoapp.auto.sohu.com/api/pic/list/model_4905_trim_-1_type_9000_color_0_page_1_size_20
+    //http://autoapp.auto.sohu.com/api/pic/list/model_4905_trim_-1_type_9000_color_0_page_1_size_20
+    //弹出Photo
+}
+//1.要显示什么的头部视图
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionReusableView * reView ;
+    
+    if([kind isEqualToString:UICollectionElementKindSectionHeader])
+    {
+        TSPicReusableView * view=[TSPicReusableView cellWithTableView:collectionView andindexPath:indexPath];
+        if (self.collectionViewType) {
+            [view configWithString:self.titleArray[indexPath.section]];
+        }
+        else
+        {
+            [view configWithString:self.collectionTitle];
+        }
+        
+        return view;
+    }
+    return reView;
+}//end method
 
-
-
-
-
-
-
-
+//-(NSString *)
 
 
 

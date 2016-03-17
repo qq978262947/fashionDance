@@ -1,5 +1,5 @@
 //
-//  TSHalfController.h
+//  TSHalfColorController.h
 //  fashionDance
 //
 //  Created by Dylan on 3/17/16.
@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TSCKModel.h"
+#import "TSColorMod.h"
 
-@interface TSHalfController : UIViewController
+@interface TSHalfColorController : UIViewController
 @property (nonatomic,strong)NSArray * dataArray;
 @property (nonatomic,strong)NSArray * titleArray;
+@property (nonatomic,copy)void (^TSHalfColorControllerBlock)(TSHalfColorController * half,TSColorMod * trim);
 
-@property (nonatomic,copy)void (^TSHalfControllerBlock)(TSHalfController * half,TSCKModel * mod);
 
 +(instancetype)halfControllerWithArray:(NSArray *)dataArray andTitleArray:(NSArray *)titleArray andtitle:(NSString *)title;
 @end

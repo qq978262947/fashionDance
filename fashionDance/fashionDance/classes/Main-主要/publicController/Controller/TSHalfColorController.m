@@ -1,22 +1,23 @@
 //
-//  TSHalfController.m
+//  TSHalfColorController.m
 //  fashionDance
 //
 //  Created by Dylan on 3/17/16.
 //  Copyright © 2016 汪俊. All rights reserved.
 //
 
-#import "TSHalfController.h"
+#import "TSHalfColorController.h"
 
-@interface TSHalfController ()<UITableViewDataSource,UITableViewDelegate>
+@interface TSHalfColorController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView * tableView;
 @property (nonatomic,strong)NSString * titleStr;
 @end
 
-@implementation TSHalfController
+@implementation TSHalfColorController
+
 +(instancetype)halfControllerWithArray:(NSArray *)dataArray andTitleArray:(NSArray *)titleArray andtitle:(NSString *)title
 {
-    TSHalfController * half=[TSHalfController new];
+    TSHalfColorController * half=[TSHalfColorController new];
     half.dataArray=dataArray;
     half.titleArray=titleArray;
     half.titleStr=title;
@@ -107,18 +108,19 @@
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifity];
     }
     NSArray * seArray=self.dataArray[indexPath.section];
-    TSCKModel * mod=seArray[indexPath.row];
-    cell.textLabel.text=mod.trimName;
-
+    TSColorMod * mod=seArray[indexPath.row];
+    cell.textLabel.text=mod.colorName;
+    
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //回调
     NSArray * seArray=self.dataArray[indexPath.section];
-    TSCKModel * mod=seArray[indexPath.row];
-    self.TSHalfControllerBlock(self,mod);
+    TSColorMod * mod=seArray[indexPath.row];
+    self.TSHalfColorControllerBlock(self,mod);
     [self dismissViewControllerAnimated:YES completion:nil];
+    //self.TSHalfControllerBlock(self,mod.trimId);
 }
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
@@ -129,5 +131,4 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 @end

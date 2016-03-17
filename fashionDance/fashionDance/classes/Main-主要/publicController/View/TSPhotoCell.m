@@ -24,5 +24,6 @@
 -(void)configWithUrl:(NSString *)url
 {
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"error"]];
+    self.backgroundColor=[UIColor lightGrayColor];
 }
 @end
