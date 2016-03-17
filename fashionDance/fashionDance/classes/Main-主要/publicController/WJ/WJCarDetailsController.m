@@ -10,6 +10,7 @@
 #import "WJMoreAboutCarModel.h"
 #import "WJCarDetailHeaderView.h"
 #import "WJCarDetailPicCell.h"
+#import "WJCarDetailWordCell.h"
 
 //http://autoapp.auto.sohu.com/api/eval/16477
 
@@ -105,7 +106,8 @@
         }
         return cell;
     } else {
-        UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+        WJCarDetailWordCell *cell = [WJCarDetailWordCell carDetailWordCellWithTableView:tableView];
+        
         return cell;
     }
 }
