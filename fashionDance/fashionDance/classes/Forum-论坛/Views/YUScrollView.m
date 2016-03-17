@@ -13,13 +13,13 @@
 /**
  *  解决UIScrollview和cell的手势冲突问题
  */
-//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-//    if (gestureRecognizer.state != 0) {
-//        return YES;
-//    } else {
-//        return NO;
-//    }
-//}
-
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    if ([otherGestureRecognizer.view isKindOfClass:NSClassFromString(@"UITableViewCellContentView")] || [otherGestureRecognizer.view isKindOfClass:NSClassFromString(@"UITableViewWrapperView")]) {
+        
+        return YES;
+    }
+    return NO;
+//    return [super gestureRecognizer:gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:otherGestureRecognizer];
+}
 
 @end

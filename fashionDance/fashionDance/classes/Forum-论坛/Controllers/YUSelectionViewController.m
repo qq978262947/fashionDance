@@ -78,7 +78,7 @@ static NSString *Id = @"cell";
     collectionView.dataSource = self;
     collectionView.backgroundColor = [UIColor whiteColor];
     self.collectionView = collectionView;
-    collectionView.pagingEnabled = YES;
+    collectionView.pagingEnabled = NO;
     collectionView.showsHorizontalScrollIndicator = NO;
     
     [self.view addSubview:collectionView];
@@ -108,7 +108,7 @@ static NSString *Id = @"cell";
     YUHotTopicModel *listTopic = selectionTopic.list[indexPath.row];
     
     cell.topic = listTopic;
-  //  cell.backgroundColor = [UIColor greenColor];
+
     return cell;
 }
 - (UICollectionReusableView *) collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
