@@ -10,4 +10,6 @@
 
 @interface WJPraiseViewController : UIViewController
 
+@property (strong, nonatomic)NSString *modelId;
+
 @end

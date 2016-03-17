@@ -10,4 +10,6 @@
 
 @interface CCPicViewController : UIViewController
 
+@property (strong, nonatomic)NSString *modelId;
+
 @end

@@ -10,4 +10,7 @@
 
 @interface YuSummarizeController : UIViewController
 
+
+@property (strong, nonatomic)NSString *modelId;
+
 @end

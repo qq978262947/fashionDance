@@ -130,8 +130,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    WJCarModel *carModel = self.listArray[indexPath.row];
     WJPublicViewController *vc = [[WJPublicViewController alloc]init];
-    vc.view.backgroundColor = [UIColor redColor];
+    vc.modelId = carModel.modelId;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
