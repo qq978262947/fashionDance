@@ -46,6 +46,15 @@
 {
     if (self=[super initWithFrame:frame])
     {
+        UILabel * priceLabel=[[UILabel alloc]init];
+        
+        [self addSubview:priceLabel];
+        [priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(20);
+            make.top.equalTo(10);
+        }];
+        priceLabel.text = @"价格";
+        
         self.backgroundColor=[UIColor whiteColor];
         UIImageView * smallView=[[UIImageView alloc]initWithFrame:CGRectMake(TSChartX, TSChartY+10, 20, 20)];
         smallView.image=[UIImage imageNamed:@"left2"];
@@ -67,7 +76,7 @@
         [smallView addGestureRecognizer:smallPangesture];
         [bigView addGestureRecognizer:bigPangesture];
         
-        self.moneyLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 80, 15)];
+        self.moneyLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 65, 15)];
         [self addSubview:self.moneyLabel];
         self.moneyLabel.center=CGPointMake(SCRW/2, TSLableY);
         self.moneyLabel.backgroundColor=WJColor(217, 241, 251);

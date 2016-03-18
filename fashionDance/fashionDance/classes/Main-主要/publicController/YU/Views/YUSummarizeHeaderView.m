@@ -9,7 +9,7 @@
 #import "YUSummarizeHeaderView.h"
 #import "YUCarDetailModel.h"
 #import "UIImageView+downloadImage.h"
-#import "UICustomLineLabel.h"
+#import "YULineLabel.h"
 
 @interface YUSummarizeHeaderView ()
 @property (weak, nonatomic) IBOutlet UIImageView *carImageView;
@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *oldPrice;
 @property (weak, nonatomic) IBOutlet UILabel *onsellLabel;
 @property (weak, nonatomic) IBOutlet UILabel *picCount;
-@property (weak, nonatomic) IBOutlet UICustomLineLabel *priceLabel;
+@property (weak, nonatomic) IBOutlet YULineLabel *priceLabel;
 
 @end
 

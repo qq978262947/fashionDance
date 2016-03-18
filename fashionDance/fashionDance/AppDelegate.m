@@ -25,7 +25,7 @@
     self.window.frame = [UIScreen mainScreen].bounds;
 //    // 设置窗口的根控制器
     self.window.rootViewController = [[WJTabBarController alloc] init];
-    // 显示窗口
+
     [self.window makeKeyAndVisible];
 
     

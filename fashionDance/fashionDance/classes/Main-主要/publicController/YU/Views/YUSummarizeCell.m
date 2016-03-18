@@ -8,14 +8,14 @@
 
 #import "YUSummarizeCell.h"
 #import "YUCarCellModel.h"
-#import "UICustomLineLabel.h"
+#import "YULineLabel.h"
 
 @interface YUSummarizeCell ()
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *typeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *minDpriceLabel;
-@property (weak, nonatomic) IBOutlet UICustomLineLabel *priceGuideLabel;
+@property (weak, nonatomic) IBOutlet YULineLabel *priceGuideLabel;
 @property (weak, nonatomic) IBOutlet UILabel *trimTypeNameLabel;
 
 @end

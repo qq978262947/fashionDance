@@ -12,6 +12,7 @@
 #import "TSSpecificController.h"
 #import "ReactiveCocoa.h"
 #import "TSSXTableController.h"
+#import "UIImage+reSize.h"
 
 @interface TSTJZCController ()<UITableViewDelegate,UITableViewDataSource>
 //标题数组
@@ -175,7 +176,7 @@
                 NSString * str1=[weakSelf.selectString substringToIndex:8];
                 NSString * str2=[weakSelf.selectString substringFromIndex:9];
                 weakSelf.selectString=[NSString stringWithFormat:@"%@0%@",str1,str2];
-                                NSLog(@"%@,%@,%@",str1,str2,weakSelf.selectString);
+                             //   NSLog(@"%@,%@,%@",str1,str2,weakSelf.selectString);
             }
             else
             {
@@ -190,7 +191,6 @@
     
     RAC(resetBtn,enabled)=[RACSignal combineLatest:@[RACObserve(self, selectString)] reduce:^id(NSString * selectString)
                                 {
-                                    NSLog(@"%@", selectString);
                                     return @(![selectString isEqualToString:@"000000000"]);
                                 }];
 }
@@ -265,6 +265,9 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    UIImage *image = [UIImage captureWithView:[UIApplication sharedApplication].keyWindow];
+    [UIApplication sharedApplication].keyWindow.backgroundColor = [UIColor colorWithPatternImage:image];
     
     TSSpecificController * spec=[TSSpecificController specificControllerWithArray:self.specicsArray[indexPath.row] andTitle:self.titleArray[indexPath.row]];
     //返回传值
