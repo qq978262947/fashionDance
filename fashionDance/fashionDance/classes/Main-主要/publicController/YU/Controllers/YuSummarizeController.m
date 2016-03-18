@@ -32,6 +32,7 @@ static NSString *Id = @"cell";
     // Do any additional setup after loading the view.
     // http://autoapp.auto.sohu.com/api/model/info/4905
     // http://autoapp.auto.sohu.com/api/model/trimList/4905
+    // http://saa.auto.sohu.com/v5/mobileapp/club/modelClubInfo.do?modelId=1571
     
     [self setupTableView];
     [self loadHeaderData];
@@ -129,7 +130,7 @@ static NSString *Id = @"cell";
     YUSummarizeCell  *cell = [tableView dequeueReusableCellWithIdentifier:Id];
     
     cell.model = self.CarCellModels[indexPath.section];
-    
+       
     return cell;
 }
 

@@ -31,9 +31,10 @@
     _model = model;
     
     [self.carImageView setNormalImagewithURL:[NSURL URLWithString:model.picFocus] placeholderImage:[UIImage imageNamed:@"FollowBtnClickBg"] completed:nil];
-    self.hotPrice.text = [NSString stringWithFormat:@"%.2f-%.2f",model.minDprice,model.maxDprice];
+    self.hotPrice.text = [NSString stringWithFormat:@"%.2f-%.2f万",model.minDprice,model.maxDprice];
     self.oldPrice.text = [NSString stringWithFormat:@"%@ %@ %@",model.type1,model.engineSize1,model.engineSize2?model.engineSize2:@""];
     self.picCount.text = [NSString stringWithFormat:@"共%ld张图片",model.countPics];
+    self.onsellLabel.text = @"在售";
 }
 
 - (void)setFrame:(CGRect)frame

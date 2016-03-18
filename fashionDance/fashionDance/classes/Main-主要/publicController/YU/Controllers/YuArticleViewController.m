@@ -7,8 +7,6 @@
 //
 
 #import "YuArticleViewController.h"
-#import "YUArticleQuotationViewController.h"
-#import "YUArticleInformationViewController.h"
 #import "YUTitleNews.h"
 #import "YUArticleNewsCell.h"
 #import "SVProgressHUD.h"
@@ -97,17 +95,6 @@ static NSString *Id = @"YUArticleNewsCell";
     
 }
 
-/**
- * 初始化子控制器
- */
-- (void)setupChildVces
-{
-//    YUArticleQuotationViewController *quotationVC = [[YUArticleQuotationViewController alloc] init];
-//    [self addChildViewController:quotationVC];
-//    
-//    YUArticleInformationViewController *video = [[YUArticleInformationViewController alloc] init];
-//    [self addChildViewController:video];
-}
 
 /**
  *  设置顶部标签栏

@@ -21,6 +21,10 @@
 
 @property (nonatomic, copy) NSString *barName;
 
+@property (nonatomic, copy) NSString *barId;
+
+@property (nonatomic, copy) NSString *createTime;
+
 @property (nonatomic, copy) NSString *topicId;
 
 @property (nonatomic, copy) NSString *threadType;
