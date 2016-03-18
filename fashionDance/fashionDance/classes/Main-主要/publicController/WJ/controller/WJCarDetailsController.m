@@ -11,12 +11,15 @@
 #import "WJCarDetailHeaderView.h"
 #import "WJCarDetailPicCell.h"
 #import "WJCarDetailWordCell.h"
+#import "WJCarDetailNoImageCell.h"
 
 //http://autoapp.auto.sohu.com/api/eval/16477
 
 @interface WJCarDetailsController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) WJMoreAboutCarModel *appraiseModel;
+
+@property (weak, nonatomic) WJCarDetailHeaderView *headerView;
 
 @end
 
@@ -35,9 +38,11 @@
 
 - (void)setupHeaderView {
     self.tableView.bounces = NO;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // 设置headerview
-    WJCarDetailHeaderView *headerView = [WJCarDetailHeaderView carDetailHeaderViewViewWithFrame:CGRectMake(0, 0, WJScreenW, 270)];
+    WJCarDetailHeaderView *headerView = [WJCarDetailHeaderView carDetailHeaderViewWithFrame:CGRectMake(0, 0, WJScreenW, 270)];
     headerView.backgroundColor = [UIColor colorWithRed:235/255.0 green:235/255.0 blue:235/255.0 alpha:1.0];
+    self.headerView = headerView;
     self.tableView.tableHeaderView = headerView;
 }
 
@@ -46,6 +51,7 @@
     [[WJHttpTool httpTool]get:urlString params:nil success:^(id result) {
         WJMoreAboutCarModel *appraiseModel = [WJMoreAboutCarModel mj_objectWithKeyValues:result];
         self.appraiseModel = appraiseModel;
+        self.headerView.moreAboutCarModel = appraiseModel;
         [self.tableView reloadData];
     } failure:^(NSError *error) {
         
@@ -60,7 +66,11 @@
 
 #pragma mark - <UITableViewDelegate>
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 230;
+    if (indexPath.section == 0) {
+        return 200;
+    }else {
+        return [self.appraiseModel cellHeightWithIndex:indexPath.row];
+    }
 }
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -94,20 +104,20 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-//    WJMoreAboutCarModel *listModel = self.carDetailArray[indexPath.row];
-//    WJPraiseTableViewCell *cell = [WJPraiseTableViewCell praiseTableViewCellWithTableView:tableView];
-//    cell.appraiseList = listModel;
-//    return cell;
+
     if (indexPath.section == 0 && indexPath.row == 0) {
         WJCarDetailPicCell *cell = [WJCarDetailPicCell carDetailPicCellWithTableView:tableView];
         if (self.appraiseModel.carPhotoList.count) {
             cell.picUrlString = self.appraiseModel.carPhotoList[0];
         }
         return cell;
-    } else {
+    } else if(indexPath.section == 1 && indexPath.row < 2) {
         WJCarDetailWordCell *cell = [WJCarDetailWordCell carDetailWordCellWithTableView:tableView];
-        
+        [cell setAppraiseModel:self.appraiseModel WithIndex:indexPath.row];
+        return cell;
+    } else {
+        WJCarDetailNoImageCell *cell = [WJCarDetailNoImageCell carDetailWordCellWithTableView:tableView];
+        [cell setAppraiseModel:self.appraiseModel WithIndex:indexPath.row];
         return cell;
     }
 }

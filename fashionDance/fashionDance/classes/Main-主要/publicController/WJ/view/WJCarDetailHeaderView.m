@@ -9,6 +9,7 @@
 #import "WJCarDetailHeaderView.h"
 #import "WJStarView.h"
 #import "WJProgressesView.h"
+#import "WJHeaderAppraiseModel.h"
 #define WJImageW    18
 #define WJMarginX   0
 #define WJMaxScorel 5.0
@@ -27,11 +28,11 @@
 
 @implementation WJCarDetailHeaderView
 
-+ (instancetype)carDetailHeaderViewView {
++ (instancetype)carDetailHeaderView {
     return [[self alloc]initWithFrame:CGRectZero];
 }
 
-+ (instancetype)carDetailHeaderViewViewWithFrame:(CGRect)frame {
++ (instancetype)carDetailHeaderViewWithFrame:(CGRect)frame {
     return [[self alloc]initWithFrame:frame];
 }
 
@@ -81,5 +82,22 @@
 //    self.userYouLabel.text = [NSString stringWithFormat:@"%.2f~%.2fL", appraiseModel.fuelcost_min , appraiseModel.fuelcost_max];
 //    self.progressView.appraiseModel = appraiseModel;
 //}
+
+- (void)setMoreAboutCarModel:(WJMoreAboutCarModel *)moreAboutCarModel {
+    _moreAboutCarModel = moreAboutCarModel;
+    WJHeaderAppraiseModel *appraiseModel = [[WJHeaderAppraiseModel alloc]init];
+    appraiseModel.waiguan = moreAboutCarModel.waiguan;
+    appraiseModel.neishi = moreAboutCarModel.neishi;
+    appraiseModel.kongjian = moreAboutCarModel.kongjian;
+    appraiseModel.dongli = moreAboutCarModel.dongli;
+    appraiseModel.caokong = moreAboutCarModel.caokong;
+    appraiseModel.youhao = moreAboutCarModel.youhao;
+    appraiseModel.shushi = moreAboutCarModel.shushi;
+    appraiseModel.xingjia = moreAboutCarModel.xingjia;
+    self.progressView.appraiseModel = appraiseModel;
+    
+    self.starView.scorel = moreAboutCarModel.avgScore;
+    
+}
 
 @end

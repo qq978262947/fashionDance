@@ -54,6 +54,7 @@
     
     self.emptyStarView = [self buidlStarViewWithImageName:@"emptyStar"];
     self.redStarView = [self buidlStarViewWithImageName:@"Star"];
+    self.redStarView.hidden = YES;
     //分数 scoreLabel
     UILabel *scoreLabel = [[UILabel alloc]init];
     [self addSubview:scoreLabel];
@@ -80,6 +81,7 @@
     scorelString = [scorelString stringByReplacingOccurrencesOfString:@".00" withString:@""];
     self.scoreLabel.text = scorelString;
     self.redStarView.frame = CGRectMake(0, WJStarY, (WJMaxScorel * (WJImageW + WJMarginX) + WJMarginX) * (scorel / WJMaxScorel), self.height);
+    self.redStarView.hidden = NO;
     self.redStarView.clipsToBounds = YES;
 }
 

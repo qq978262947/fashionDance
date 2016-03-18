@@ -135,6 +135,8 @@
 		DAE9A5D91C9BCFF900ED8033 /* TSPicReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9A5D51C9BCFF900ED8033 /* TSPicReusableView.m */; };
 		DAE9A5DA1C9BCFF900ED8033 /* TSPicReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAE9A5D61C9BCFF900ED8033 /* TSPicReusableView.xib */; };
 		DAE9A5DD1C9BD02A00ED8033 /* WJCombinationProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9A5DC1C9BD02A00ED8033 /* WJCombinationProgressView.m */; };
+		DAE9A5EF1C9BD9BC00ED8033 /* WJCarDetailNoImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE9A5ED1C9BD9BC00ED8033 /* WJCarDetailNoImageCell.m */; };
+		DAE9A5F01C9BD9BC00ED8033 /* WJCarDetailNoImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAE9A5EE1C9BD9BC00ED8033 /* WJCarDetailNoImageCell.xib */; };
 		FC457DBD1C98064C00DDB531 /* TSDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC457DBC1C98064C00DDB531 /* TSDrawView.m */; };
 		FC457DC01C98162700DDB531 /* WJConsultingNoPicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC457DBF1C98162700DDB531 /* WJConsultingNoPicCell.m */; };
 		FC457DC21C98162D00DDB531 /* WJConsultingNoPicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC457DC11C98162D00DDB531 /* WJConsultingNoPicCell.xib */; };
@@ -418,6 +420,9 @@
 		DAE9A5D61C9BCFF900ED8033 /* TSPicReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSPicReusableView.xib; sourceTree = "<group>"; };
 		DAE9A5DB1C9BD02A00ED8033 /* WJCombinationProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJCombinationProgressView.h; sourceTree = "<group>"; };
 		DAE9A5DC1C9BD02A00ED8033 /* WJCombinationProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJCombinationProgressView.m; sourceTree = "<group>"; };
+		DAE9A5EC1C9BD9BC00ED8033 /* WJCarDetailNoImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJCarDetailNoImageCell.h; sourceTree = "<group>"; };
+		DAE9A5ED1C9BD9BC00ED8033 /* WJCarDetailNoImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJCarDetailNoImageCell.m; sourceTree = "<group>"; };
+		DAE9A5EE1C9BD9BC00ED8033 /* WJCarDetailNoImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WJCarDetailNoImageCell.xib; sourceTree = "<group>"; };
 		FC457DBB1C98064C00DDB531 /* TSDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDrawView.h; sourceTree = "<group>"; };
 		FC457DBC1C98064C00DDB531 /* TSDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDrawView.m; sourceTree = "<group>"; };
 		FC457DBE1C98162700DDB531 /* WJConsultingNoPicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJConsultingNoPicCell.h; sourceTree = "<group>"; };
@@ -1174,6 +1179,9 @@
 				DAE9A59D1C9BCE6500ED8033 /* WJCarDetailWordCell.h */,
 				DAE9A59E1C9BCE6500ED8033 /* WJCarDetailWordCell.m */,
 				DAE9A59F1C9BCE6500ED8033 /* WJCarDetailWordCell.xib */,
+				DAE9A5EC1C9BD9BC00ED8033 /* WJCarDetailNoImageCell.h */,
+				DAE9A5ED1C9BD9BC00ED8033 /* WJCarDetailNoImageCell.m */,
+				DAE9A5EE1C9BD9BC00ED8033 /* WJCarDetailNoImageCell.xib */,
 				DAE9A5981C9BCE5700ED8033 /* WJCarDetailPicCell.h */,
 				DAE9A5991C9BCE5700ED8033 /* WJCarDetailPicCell.m */,
 				DAE9A59A1C9BCE5700ED8033 /* WJCarDetailPicCell.xib */,
@@ -1418,6 +1426,7 @@
 				DAE9A59C1C9BCE5700ED8033 /* WJCarDetailPicCell.xib in Resources */,
 				FCCB846D1C970122005EA1AA /* CarData.plist in Resources */,
 				BC0F44F31C999EA800894419 /* YUMoreTopicCell.xib in Resources */,
+				DAE9A5F01C9BD9BC00ED8033 /* WJCarDetailNoImageCell.xib in Resources */,
 				FCCB845D1C96AF1A005EA1AA /* brand_list.json in Resources */,
 				BC59A65C1C9BD4700083C76E /* YUArticleNewsCell.xib in Resources */,
 				BC59A6601C9BD4700083C76E /* YUSummarizeCell.xib in Resources */,
@@ -1566,6 +1575,7 @@
 				DAE9A5C41C9BCFC300ED8033 /* TSColorMod.m in Sources */,
 				DAE9A55D1C9BCC1700ED8033 /* CCPicViewController.m in Sources */,
 				FCCF82771C99628100F12B8C /* TSSXCarModel.m in Sources */,
+				DAE9A5EF1C9BD9BC00ED8033 /* WJCarDetailNoImageCell.m in Sources */,
 				DAE9A5771C9BCCDB00ED8033 /* LLCarTypeDetailController.m in Sources */,
 				DAE9A5CE1C9BCFE700ED8033 /* TSHalfColorController.m in Sources */,
 				DA825C1D1C92E86B000C5EE4 /* WJContainerView.m in Sources */,
