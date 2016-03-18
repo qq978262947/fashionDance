@@ -8,6 +8,7 @@
 
 #import "LLDownView.h"
 #import "LLCanshuCollectionLayout.h"
+#import "LLParameterModel.h"
 
 @interface LLDownView ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate>
 
@@ -79,22 +80,60 @@
     return _rightCollectionView;
 }
 
+#pragma mark 外界数据赋进
+-(void)setData:(NSArray *)data
+{
+    _data = data;
+    
+    //准备工作
+    LLCanshuCollectionLayout * layout = (LLCanshuCollectionLayout*)self.rightCollectionView.collectionViewLayout;
+    layout.columnNumber = data.count;
+    [self.rightCollectionView reloadData];
+    [self.leftCollectionView reloadData];
+}
+
 #pragma mark 数据源
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     if ([collectionView isEqual:self.leftCollectionView]) {
-        return 20;
+        return 13;
     }
     else
     {
-        return 70;
+        return 13 * self.data.count;
     }
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"test" forIndexPath:indexPath];
-    cell.backgroundColor = WArcColor;
+    //取出数据源
+    //算出此indexpath对应model
+    LLParameterModel * model;
+    if (self.data.count != 0) {
+        NSInteger counter = indexPath.item%self.data.count;
+        model = self.data[counter];
+        
+        if (cell.subviews.count > 1) {
+            //有subview
+            UILabel * view = [[cell subviews] lastObject];
+            view.text = model.a102;
+        }
+        else
+        {
+            UILabel * view = [[UILabel alloc]initWithFrame:cell.bounds];
+            [cell addSubview:view];
+            view.text = model.a102;
+        }
+
+    }
+    else
+    {
+        cell.backgroundColor = WArcColor;
+    }
+ 
+    
+    
     
     return cell;
 }

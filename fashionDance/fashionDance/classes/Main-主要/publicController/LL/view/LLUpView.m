@@ -7,6 +7,7 @@
 //
 
 #import "LLUpView.h"
+#import "LLParameterModel.h"
 
 @interface LLUpView ()<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *upButtonX;
@@ -56,7 +57,7 @@
 {
     
     //测试用的content offset
-    self.scrollViewX.contentSize = CGSizeMake(500, self.scrollViewX.frame.size.height);
+    self.scrollViewX.contentSize = CGSizeMake(self.data.count * self.widthCell, self.scrollViewX.frame.size.height);
     CAGradientLayer * layer = [CAGradientLayer layer];
     [layer setFrame:self.scrollViewX.bounds];
     layer.locations = @[@0.25,@0.5,@0.75];

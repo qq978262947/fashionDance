@@ -14,4 +14,9 @@
 @property(nonatomic,assign)CGFloat cellHeight;
 @property(nonatomic,assign)CGFloat cellWidth;
 
+/*
+ *数据源，内存LLParameterModel
+ */
+@property(nonatomic,strong)NSArray * data;
+
 @end
