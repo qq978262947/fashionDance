@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A91FB1C1C9C065E002A65A2 /* LLCanshuCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A91FB161C9C065E002A65A2 /* LLCanshuCollectionLayout.m */; };
+		6A91FB1D1C9C065E002A65A2 /* LLDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A91FB181C9C065E002A65A2 /* LLDownView.m */; };
+		6A91FB1E1C9C065E002A65A2 /* LLUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A91FB1A1C9C065E002A65A2 /* LLUpView.m */; };
+		6A91FB1F1C9C065E002A65A2 /* LLUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A91FB1B1C9C065E002A65A2 /* LLUpView.xib */; };
 		AA8CD3949EC3EEF063A6DF4D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5B1CC05D418EEE11865769 /* Pods.framework */; };
 		BC0F44E01C999EA800894419 /* CarForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0F44AC1C999EA800894419 /* CarForumController.m */; };
 		BC0F44E11C999EA800894419 /* YUCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0F44AE1C999EA800894419 /* YUCategoryViewController.m */; };
@@ -181,6 +185,13 @@
 
 /* Begin PBXFileReference section */
 		5B5B1CC05D418EEE11865769 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A91FB151C9C065E002A65A2 /* LLCanshuCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLCanshuCollectionLayout.h; sourceTree = "<group>"; };
+		6A91FB161C9C065E002A65A2 /* LLCanshuCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCanshuCollectionLayout.m; sourceTree = "<group>"; };
+		6A91FB171C9C065E002A65A2 /* LLDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLDownView.h; sourceTree = "<group>"; };
+		6A91FB181C9C065E002A65A2 /* LLDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLDownView.m; sourceTree = "<group>"; };
+		6A91FB191C9C065E002A65A2 /* LLUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLUpView.h; sourceTree = "<group>"; };
+		6A91FB1A1C9C065E002A65A2 /* LLUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLUpView.m; sourceTree = "<group>"; };
+		6A91FB1B1C9C065E002A65A2 /* LLUpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLUpView.xib; sourceTree = "<group>"; };
 		6FB5973FF1B297B050B1A609 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7CF344E4DA0F93C7E0B1D029 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0F44AB1C999EA800894419 /* CarForumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarForumController.h; sourceTree = "<group>"; };
@@ -1109,6 +1120,13 @@
 		DAE9A54C1C9BCC1700ED8033 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				6A91FB151C9C065E002A65A2 /* LLCanshuCollectionLayout.h */,
+				6A91FB161C9C065E002A65A2 /* LLCanshuCollectionLayout.m */,
+				6A91FB171C9C065E002A65A2 /* LLDownView.h */,
+				6A91FB181C9C065E002A65A2 /* LLDownView.m */,
+				6A91FB191C9C065E002A65A2 /* LLUpView.h */,
+				6A91FB1A1C9C065E002A65A2 /* LLUpView.m */,
+				6A91FB1B1C9C065E002A65A2 /* LLUpView.xib */,
 				DAE9A5B51C9BCEE100ED8033 /* LLCollectionViewLayout.h */,
 				DAE9A5B61C9BCEE100ED8033 /* LLCollectionViewLayout.m */,
 				DAE9A5AB1C9BCECB00ED8033 /* LLPictureCollectionCell.h */,
@@ -1440,6 +1458,7 @@
 				FC457DC21C98162D00DDB531 /* WJConsultingNoPicCell.xib in Resources */,
 				BC59A6621C9BD4700083C76E /* YUSummarizeHeaderView.xib in Resources */,
 				FC457DD21C9816AF00DDB531 /* SWCarCell.xib in Resources */,
+				6A91FB1F1C9C065E002A65A2 /* LLUpView.xib in Resources */,
 				DAE9A5B21C9BCECB00ED8033 /* LLPictureCollectionCell.xib in Resources */,
 				DAE93A101C8E75B900F03A67 /* Main.storyboard in Resources */,
 				DAE9A5851C9BCDA300ED8033 /* WJPraiseTableViewCell.xib in Resources */,
@@ -1526,6 +1545,7 @@
 				DAE9A57A1C9BCCFA00ED8033 /* WJPraiseViewController.m in Sources */,
 				BC59A65F1C9BD4700083C76E /* YUSummarizeCell.m in Sources */,
 				FC54BCC51C9AFD72004D78BB /* NSString+Extension.m in Sources */,
+				6A91FB1E1C9C065E002A65A2 /* LLUpView.m in Sources */,
 				DAE93A5B1C8E77A600F03A67 /* WJConst.m in Sources */,
 				DA825C181C92E86B000C5EE4 /* WJSUVResult.m in Sources */,
 				DA89F35A1C9301B4003D5AF8 /* WJCollectionViewCell.m in Sources */,
@@ -1561,6 +1581,7 @@
 				BC0F44E21C999EA800894419 /* YUHotTopicViewController.m in Sources */,
 				DA2B4C371C99B203001DE451 /* WJConstraintModel.m in Sources */,
 				DA3B5CD61C93BF7A001997C8 /* UIImageView+downloadImage.m in Sources */,
+				6A91FB1D1C9C065E002A65A2 /* LLDownView.m in Sources */,
 				BC0F44EE1C999EA800894419 /* YUCollectionReusableView.m in Sources */,
 				FCCF827F1C997DE600F12B8C /* TSXCCell.m in Sources */,
 				DAE93A071C8E75B900F03A67 /* main.m in Sources */,
@@ -1628,6 +1649,7 @@
 				DAE9A5C31C9BCFC300ED8033 /* TSCKModel.m in Sources */,
 				BC0F44F51C999EA800894419 /* YUSelectionTopicCell.m in Sources */,
 				DAE9A5801C9BCD7D00ED8033 /* WJContentAppraiseModel.m in Sources */,
+				6A91FB1C1C9C065E002A65A2 /* LLCanshuCollectionLayout.m in Sources */,
 				DA89F3561C93009B003D5AF8 /* WJWaterFlowLayout.m in Sources */,
 				DA89F3521C92FE85003D5AF8 /* WJHotCarController.m in Sources */,
 				DA3B5CD11C93BF7A001997C8 /* NSDate+WJExtension.m in Sources */,
