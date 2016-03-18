@@ -51,7 +51,7 @@
     UIView * backView=[[UIView alloc]init];
     [self.view addSubview:backView];
     backView.backgroundColor=[UIColor darkGrayColor];
-    backView.alpha=0.5;
+    backView.alpha=0.3;
     [backView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.top.equalTo(0);
     }];
@@ -158,8 +158,7 @@
     self.selectNumber=[NSNumber numberWithInteger:(now+add)];
     //字符串数组的进出
     [self.selectArray addObject:self.specificArray[indexPath.row]];
-    NSLog(@"%@",self.selectNumber);
-    NSLog(@"%@",self.selectArray);
+
 
 }
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -178,8 +177,6 @@
     }
     self.selectNumber=[NSNumber numberWithInteger:(now-red)];
     [self.selectArray removeObject:self.specificArray[indexPath.row]];
-    NSLog(@"%@",self.selectNumber);
-    NSLog(@"%@",self.selectArray);
     
 }
 
