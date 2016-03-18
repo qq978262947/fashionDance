@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WJSUVResult.h"
 
 @interface WJPublicViewController : UIViewController
 
 @property (strong, nonatomic)NSString *modelId;
 
-+(instancetype)wjPublicViewControllerWithModID:(NSString *)modID;
+@property (nonatomic, strong)WJCarModel *carModel;
 
++(instancetype)wjPublicViewControllerWithModID:(NSString *)modId;
 @end

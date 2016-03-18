@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WJSUVResult.h"
 
 @interface YuForumViewController : UIViewController
 
+@property (nonatomic, strong)WJCarModel *carModel;
 
 @property (strong, nonatomic)NSString *modelId;
 

@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WJMoreAboutCarModel.h"
+
 
 @interface WJCarDetailHeaderView : UIView
 
-+ (instancetype)carDetailHeaderViewView;
++ (instancetype)carDetailHeaderView;
 
-+ (instancetype)carDetailHeaderViewViewWithFrame:(CGRect)frame;
++ (instancetype)carDetailHeaderViewWithFrame:(CGRect)frame;
+
+@property (weak, nonatomic)WJMoreAboutCarModel *moreAboutCarModel;
 
 @end

@@ -30,6 +30,20 @@
 #define WJScreenH [UIScreen mainScreen].bounds.size.height
 // 颜色
 #define WJColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+// 随机数
+#define WArcNum(x) arc4random_uniform(x)
+// 颜色
+#define WColorRGB(r, g, b) WColorRGBA(r, g, b, 1.000f)
+#define WColorRGBA(r, g, b, a) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:(a)]
+
+// 随机颜色
+#define WArcColor WColorRGB(WArcNum(128) + 128, WArcNum(128) + 128, WArcNum(128) + 128)
+
+#define WColorFromRGB(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 // name和日期的字体
 #define WJlabelFont [UIFont systemFontOfSize:14]
 

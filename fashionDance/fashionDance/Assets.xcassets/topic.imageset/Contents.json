@@ -7,11 +7,13 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "topic@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "topic@3x.png"
     }
   ],
   "info" : {

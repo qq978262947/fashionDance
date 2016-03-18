@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WJMoreAboutCarModel.h"
 
 @interface WJCarDetailWordCell : UITableViewCell
 
 + (id)carDetailWordCellWithTableView:(UITableView *)tableView;
+
+- (void)setAppraiseModel:(WJMoreAboutCarModel *)appraiseModel WithIndex:(long)index;
+
 
 @end

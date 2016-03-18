@@ -7,12 +7,11 @@
 //
 
 #import "YuArticleViewController.h"
-#import "YUArticleQuotationViewController.h"
-#import "YUArticleInformationViewController.h"
 #import "YUTitleNews.h"
 #import "YUArticleNewsCell.h"
 #import "SVProgressHUD.h"
 #import "MJRefresh.h"
+#import "YuForumWebViewController.h"
 
 static NSString *Id = @"YUArticleNewsCell";
 
@@ -86,7 +85,6 @@ static NSString *Id = @"YUArticleNewsCell";
     UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 40, WJScreenW, WJScreenH - 64 - 35 - 40) style:UITableViewStylePlain];
     [self.view addSubview:tableView];
     self.tableView = tableView;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // 设置inset
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
     
@@ -94,20 +92,9 @@ static NSString *Id = @"YUArticleNewsCell";
     self.tableView.dataSource = self;
     // 注册cell
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YUArticleNewsCell class]) bundle:nil] forCellReuseIdentifier:Id];
-    
+    tableView.tableFooterView = [[UIView alloc]init];
 }
 
-/**
- * 初始化子控制器
- */
-- (void)setupChildVces
-{
-//    YUArticleQuotationViewController *quotationVC = [[YUArticleQuotationViewController alloc] init];
-//    [self addChildViewController:quotationVC];
-//    
-//    YUArticleInformationViewController *video = [[YUArticleInformationViewController alloc] init];
-//    [self addChildViewController:video];
-}
 
 /**
  *  设置顶部标签栏
@@ -203,7 +190,17 @@ static NSString *Id = @"YUArticleNewsCell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 70;
+    return 90;//
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YuForumWebViewController *topicWebVc = [[YuForumWebViewController alloc]init];
+    YUTitleNews *news = self.titleNewsArray[indexPath.row];
+
+    topicWebVc.urlString = news.url;
+    
+    [self.navigationController pushViewController:topicWebVc animated:YES];
 }
 
 /*

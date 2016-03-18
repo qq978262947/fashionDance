@@ -9,6 +9,7 @@
 #import "WJCarDetailHeaderView.h"
 #import "WJStarView.h"
 #import "WJProgressesView.h"
+#import "WJHeaderAppraiseModel.h"
 #define WJImageW    18
 #define WJMarginX   0
 #define WJMaxScorel 5.0
@@ -27,11 +28,11 @@
 
 @implementation WJCarDetailHeaderView
 
-+ (instancetype)carDetailHeaderViewView {
++ (instancetype)carDetailHeaderView {
     return [[self alloc]initWithFrame:CGRectZero];
 }
 
-+ (instancetype)carDetailHeaderViewViewWithFrame:(CGRect)frame {
++ (instancetype)carDetailHeaderViewWithFrame:(CGRect)frame {
     return [[self alloc]initWithFrame:frame];
 }
 
@@ -60,7 +61,7 @@
     [self addSubview:priceLabel];
     self.priceLabel = priceLabel;
     
-    UILabel *youLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 90, (WJMaxScorel * (WJImageW + WJMarginX) + WJMarginX) + 20, 30)];
+    UILabel *youLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 90, (WJMaxScorel * (WJImageW + WJMarginX) + WJMarginX) , 30)];
     [self addSubview:youLabel];
     youLabel.text = @"行驶公里:";
     UILabel *userYouLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(youLabel.frame) + 10, 90, 120, 30)];
@@ -81,5 +82,25 @@
 //    self.userYouLabel.text = [NSString stringWithFormat:@"%.2f~%.2fL", appraiseModel.fuelcost_min , appraiseModel.fuelcost_max];
 //    self.progressView.appraiseModel = appraiseModel;
 //}
+
+- (void)setMoreAboutCarModel:(WJMoreAboutCarModel *)moreAboutCarModel {
+    _moreAboutCarModel = moreAboutCarModel;
+    WJHeaderAppraiseModel *appraiseModel = [[WJHeaderAppraiseModel alloc]init];
+    appraiseModel.waiguan = moreAboutCarModel.waiguan;
+    appraiseModel.neishi = moreAboutCarModel.neishi;
+    appraiseModel.kongjian = moreAboutCarModel.kongjian;
+    appraiseModel.dongli = moreAboutCarModel.dongli;
+    appraiseModel.caokong = moreAboutCarModel.caokong;
+    appraiseModel.youhao = moreAboutCarModel.youhao;
+    appraiseModel.shushi = moreAboutCarModel.shushi;
+    appraiseModel.xingjia = moreAboutCarModel.xingjia;
+    self.progressView.appraiseModel = appraiseModel;
+    
+    self.starView.scorel = moreAboutCarModel.avgScore;
+    
+    self.priceLabel.text = [NSString stringWithFormat:@"%.2f万" , moreAboutCarModel.price];
+    NSString *youhaoString = [NSString stringWithFormat:@"%ld公里" , (long)moreAboutCarModel.youhao];
+    self.userYouLabel.text = [youhaoString stringByReplacingOccurrencesOfString:@".00" withString:@""];
+}
 
 @end

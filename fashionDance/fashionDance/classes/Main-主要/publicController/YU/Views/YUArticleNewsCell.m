@@ -28,7 +28,7 @@
 - (void)setTitleNews:(YUTitleNews *)titleNews
 {
     _titleNews = titleNews;
-    self.titleLabelLeading.constant = 100;
+    self.titleLabelLeading.constant = 120;
     self.carImageView.hidden = NO;
     
     if (titleNews.picUrl.length > 1) {

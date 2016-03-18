@@ -32,6 +32,9 @@ static NSString *Id = @"cell";
     // Do any additional setup after loading the view.
     // http://autoapp.auto.sohu.com/api/model/info/4905
     // http://autoapp.auto.sohu.com/api/model/trimList/4905
+    // http://saa.auto.sohu.com/v5/mobileapp/club/modelClubInfo.do?modelId=1571
+    
+   
     
     [self setupTableView];
     [self loadHeaderData];
@@ -87,7 +90,7 @@ static NSString *Id = @"cell";
 {
     // 设置tableview
     self.automaticallyAdjustsScrollViewInsets = NO;
-    UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, WJScreenW, WJScreenH) style:UITableViewStyleGrouped];
+    UITableView *tableView = [[UITableView alloc]init];
     [self.view addSubview:tableView];
     self.tableView = tableView;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -95,9 +98,9 @@ static NSString *Id = @"cell";
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 64 + 35, 0);
     
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
+        make.edges.equalTo(0);
     }];
-  //  tableView.backgroundColor = [UIColor redColor];
+    tableView.backgroundColor = [UIColor colorWithWhite:0.929 alpha:1.000];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
@@ -109,7 +112,7 @@ static NSString *Id = @"cell";
     self.headerView = headerView;
     
     self.tableView.tableHeaderView = headerView;
-    tableView.rowHeight = 70;
+    tableView.rowHeight = 95;
 }
 
 #pragma mark -tableVew代理
@@ -129,24 +132,8 @@ static NSString *Id = @"cell";
     YUSummarizeCell  *cell = [tableView dequeueReusableCellWithIdentifier:Id];
     
     cell.model = self.CarCellModels[indexPath.section];
-    
+       
     return cell;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    YUCarCellModel *model = self.CarCellModels[section];
-    
-    return model.trimTypeName;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 30;
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 0.1;
-}
 @end

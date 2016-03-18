@@ -47,13 +47,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 添加子控制器
-    [self setupChildVc:[[CarConsultingController alloc]init] title:@"咨询" imageName:@"tab_forum_normal" selectedImageName:@"tab_forum_highlighted"];
+    [self setupChildVc:[[CarConsultingController alloc]init] title:@"资讯" imageName:@"tab_forum_normal" selectedImageName:@"tab_forum_highlighted"];
     
     [self setupChildVc:[[CarFindController alloc] init] title:@"找车" imageName:@"tab_selectCar_normal" selectedImageName:@"tab_selectCar_highlighted"];
     
     [self setupChildVc:[[CarPreferentialController alloc] init] title:@"特惠" imageName:@"tab_preferentialCar_normal" selectedImageName:@"tab_preferentialCar_highlighted"];
     
-    [self setupChildVc:[[CarFindController alloc] init] title:@"论坛" imageName:@"tab_news_normal" selectedImageName:@"tab_news_highlighted"];
+    [self setupChildVc:[[CarForumController alloc] init] title:@"论坛" imageName:@"tab_news_normal" selectedImageName:@"tab_news_highlighted"];
     
     
     UIView *whiteView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WJScreenW, WJTopicCellBottomBarH)];

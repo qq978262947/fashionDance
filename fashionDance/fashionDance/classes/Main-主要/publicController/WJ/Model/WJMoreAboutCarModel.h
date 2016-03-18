@@ -88,7 +88,7 @@
 
 @property (nonatomic, assign) NSInteger avgScore;
 
-
+- (CGFloat)cellHeightWithIndex:(long)index;
 
 @end
 @interface WJMoreAboutCarUser : NSObject
