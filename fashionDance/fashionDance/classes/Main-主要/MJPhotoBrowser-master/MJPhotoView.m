@@ -42,14 +42,14 @@
 		self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
         // 监听点击
-        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
-        singleTap.delaysTouchesBegan = YES;
-        singleTap.numberOfTapsRequired = 1;
-        [self addGestureRecognizer:singleTap];
-        
-        UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
-        doubleTap.numberOfTapsRequired = 2;
-        [self addGestureRecognizer:doubleTap];
+//        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+//        singleTap.delaysTouchesBegan = YES;
+//        singleTap.numberOfTapsRequired = 1;
+//        [self addGestureRecognizer:singleTap];
+//        
+//        UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
+//        doubleTap.numberOfTapsRequired = 2;
+//        [self addGestureRecognizer:doubleTap];
     }
     return self;
 }
