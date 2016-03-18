@@ -53,7 +53,7 @@
     
     [self setupChildVc:[[CarPreferentialController alloc] init] title:@"特惠" imageName:@"tab_preferentialCar_normal" selectedImageName:@"tab_preferentialCar_highlighted"];
     
-    [self setupChildVc:[[CarFindController alloc] init] title:@"论坛" imageName:@"tab_news_normal" selectedImageName:@"tab_news_highlighted"];
+    [self setupChildVc:[[CarForumController alloc] init] title:@"论坛" imageName:@"tab_news_normal" selectedImageName:@"tab_news_highlighted"];
     
     
     UIView *whiteView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WJScreenW, WJTopicCellBottomBarH)];

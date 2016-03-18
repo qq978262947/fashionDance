@@ -1,14 +1,14 @@
 //
-//  WJCarDetailWordCell.m
+//  WJCarDetailNoImageCell.m
 //  fashionDance
 //
-//  Created by 汪俊 on 16/3/17.
+//  Created by 汪俊 on 16/3/18.
 //  Copyright © 2016年 汪俊. All rights reserved.
 //
 
-#import "WJCarDetailWordCell.h"
+#import "WJCarDetailNoImageCell.h"
 
-@implementation WJCarDetailWordCell
+@implementation WJCarDetailNoImageCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -28,6 +28,5 @@
 - (void)setAppraiseModel:(WJMoreAboutCarModel *)appraiseModel {
     _appraiseModel = appraiseModel;
 }
-
 
 @end

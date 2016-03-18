@@ -24,23 +24,26 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zr9-pp-AkG">
-                        <rect key="frame" x="42" y="4" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zr9-pp-AkG">
+                        <rect key="frame" x="39" y="5" width="42" height="19"/>
+                        <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYX-fr-bpf">
-                        <rect key="frame" x="10" y="46" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYX-fr-bpf">
+                        <rect key="frame" x="10" y="29" width="42" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="fYX-fr-bpf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="6Pd-PM-eW4"/>
                     <constraint firstItem="Zr9-pp-AkG" firstAttribute="top" secondItem="un8-NT-iZZ" secondAttribute="top" id="DXh-3X-WEv"/>
                     <constraint firstItem="Zr9-pp-AkG" firstAttribute="width" secondItem="un8-NT-iZZ" secondAttribute="width" id="Fzi-iZ-otp"/>
                     <constraint firstItem="Zr9-pp-AkG" firstAttribute="height" secondItem="un8-NT-iZZ" secondAttribute="height" id="HhC-h8-20x"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fYX-fr-bpf" secondAttribute="trailing" constant="10" id="Lx3-YW-pgo"/>
+                    <constraint firstItem="fYX-fr-bpf" firstAttribute="top" secondItem="un8-NT-iZZ" secondAttribute="bottom" constant="5" id="P6Y-ol-EeO"/>
                     <constraint firstItem="un8-NT-iZZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="R81-wn-QC5"/>
                     <constraint firstItem="Zr9-pp-AkG" firstAttribute="leading" secondItem="un8-NT-iZZ" secondAttribute="trailing" constant="10" id="uco-uq-8pr"/>
                     <constraint firstItem="un8-NT-iZZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="y2c-Fu-9va"/>
