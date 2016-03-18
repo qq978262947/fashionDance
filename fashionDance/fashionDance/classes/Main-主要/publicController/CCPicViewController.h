@@ -11,5 +11,12 @@
 @interface CCPicViewController : UIViewController
 
 @property (strong, nonatomic)NSString *modelId;
+@property (nonatomic,strong)NSNumber * trim;
+@property (nonatomic,strong)NSNumber * color;
+@property (nonatomic,strong)NSNumber * type;
 
+@property (nonatomic,assign)NSInteger page;
+@property (nonatomic,assign)NSInteger size;
+
++(instancetype)ccpicviewcontrollerWithString:(NSString *)modid;
 @end

@@ -14,6 +14,8 @@
 #import "CarForumController.h"
 #import "UIImage+reSize.h"
 
+//测试llcartypedetailcontroll
+#import "LLCarTypeDetailController.h"
 //#define WJImageSize CGSizeMake(25, 25)
 
 
@@ -45,7 +47,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 添加子控制器
-    [self setupChildVc:[[CarConsultingController alloc] init] title:@"咨询" imageName:@"tab_forum_normal" selectedImageName:@"tab_forum_highlighted"];
+    [self setupChildVc:[[CarConsultingController alloc]init] title:@"咨询" imageName:@"tab_forum_normal" selectedImageName:@"tab_forum_highlighted"];
     
     [self setupChildVc:[[CarFindController alloc] init] title:@"找车" imageName:@"tab_selectCar_normal" selectedImageName:@"tab_selectCar_highlighted"];
     

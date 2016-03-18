@@ -12,7 +12,7 @@
 
 @interface LLCarOffSaleListModel : NSObject
 
-@property (nonatomic, strong) NSArray * _2013;
+@property (nonatomic, strong) NSArray * abc;
 
 @property (nonatomic, strong) NSArray * _2014;
 

@@ -8,6 +8,7 @@
 
 #import "WJPraiseHeaderView.h"
 #import "WJStarView.h"
+#import "WJProgressesView.h"
 #define WJImageW    18
 #define WJMarginX   0
 #define WJMaxScorel 5.0
@@ -20,6 +21,8 @@
 @property (weak, nonatomic) UILabel *priceLabel;
 
 @property (weak, nonatomic) UILabel *userYouLabel;
+
+@property (weak, nonatomic) WJProgressesView *progressView;
 @end
 
 @implementation WJPraiseHeaderView
@@ -64,8 +67,9 @@
     [self addSubview:userYouLabel];
     self.userYouLabel = userYouLabel;
     
-    
-    
+    WJProgressesView *progressView = [WJProgressesView progressesViewWithFrame:CGRectMake(10, 120, WJScreenW - 20, 120)];
+    [self addSubview:progressView];
+    self.progressView = progressView;
     
     
 }
@@ -75,6 +79,7 @@
     self.starView.scorel = appraiseModel.avgScore;
     self.priceLabel.text = [NSString stringWithFormat:@"%.2f~%.2f万", appraiseModel.price_min / 10000.0, appraiseModel.price_max / 10000.0];
     self.userYouLabel.text = [NSString stringWithFormat:@"%.2f~%.2fL", appraiseModel.fuelcost_min , appraiseModel.fuelcost_max];
+    self.progressView.appraiseModel = appraiseModel;
 }
 
 @end
