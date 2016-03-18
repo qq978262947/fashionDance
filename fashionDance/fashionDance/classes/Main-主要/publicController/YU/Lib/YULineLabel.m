@@ -1,39 +1,19 @@
 //
-//  UICustomLineLabel.m
-//  UILineLableDemo
+//  YULineLabel.m
+//  fashionDance
 //
-//  Created by myanycam on 2014/2/25.
-//  Copyright (c) 2014年 myanycam. All rights reserved.
+//  Created by qianfeng on 16/3/18.
+//  Copyright © 2016年 汪俊. All rights reserved.
 //
 
-#import "UICustomLineLabel.h"
+#import "YULineLabel.h"
 
-@implementation UICustomLineLabel
-
-
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
-
+@implementation YULineLabel
 
 - (void)drawTextInRect:(CGRect)rect{
     [super drawTextInRect:rect];
     
-    CGSize textSize = [[self text] sizeWithFont:[self font]];
+    CGSize textSize = [self.text sizeWithAttributes:@{NSFontAttributeName:self.font}];
     CGFloat strikeWidth = textSize.width;
     CGRect lineRect;
     CGFloat origin_x;
@@ -87,15 +67,11 @@
             B = components[2];
             A = components[3];
             
-            CGContextSetRGBFillColor(context, R, G, B, 1.0);
-
+            CGContextSetRGBFillColor(context, R, G, B, A);
+            
         }
         
         CGContextFillRect(context, lineRect);
     }
 }
-
-
-
-
 @end
