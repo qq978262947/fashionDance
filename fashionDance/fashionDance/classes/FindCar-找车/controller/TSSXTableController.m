@@ -55,7 +55,7 @@
 -(void)downLoadData
 {
     //分页请求，当前第几页，每页多少个
-    NSString * path=[NSString stringWithFormat:@"%@-%ld-%ld",self.resURL,self.pageNumber,self.pageCount];
+    NSString * path=[NSString stringWithFormat:@"%@-%d-%d",self.resURL,self.pageNumber,self.pageCount];
     [[WJHttpTool httpTool]get:path params:nil success:^(NSDictionary * result)
     {
         NSArray * items=[result objectForKey:@"items"];

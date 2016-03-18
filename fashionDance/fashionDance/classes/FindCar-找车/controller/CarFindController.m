@@ -80,6 +80,21 @@
     ctl.frame = CGRectMake(0, 0, 120, 35);
     self.navigationItem.titleView =ctl;
     self.seg=ctl;
+    ctl.tintColor=[UIColor clearColor];
+    NSDictionary* selectedTextAttributes = @{
+                                             
+                                             NSFontAttributeName:[UIFont boldSystemFontOfSize:17],NSForegroundColorAttributeName: [UIColor whiteColor],
+                                             };
+    //设置文字属性
+    [ctl setTitleTextAttributes:selectedTextAttributes forState:UIControlStateSelected];
+    
+    NSDictionary* unselectedTextAttributes = @{
+                                               NSFontAttributeName:
+                                                   [UIFont boldSystemFontOfSize:15],
+                                               NSForegroundColorAttributeName: [UIColor lightTextColor],
+                                               
+                                               };
+    [ctl setTitleTextAttributes:unselectedTextAttributes forState:UIControlStateNormal];
     ctl.selectedSegmentIndex = 0;//默认选中的按钮索引
     [ctl addTarget:self action:@selector(segAction:) forControlEvents:UIControlEventValueChanged];
 }

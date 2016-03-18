@@ -148,6 +148,16 @@
 		FC54BCC21C9AFD5C004D78BB /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54BCC11C9AFD5C004D78BB /* UIImage+Color.m */; };
 		FC54BCC51C9AFD72004D78BB /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54BCC41C9AFD72004D78BB /* NSString+Extension.m */; };
 		FC54BCCA1C9B0166004D78BB /* WJStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54BCC91C9B0166004D78BB /* WJStarView.m */; };
+		FCC7638A1C9B9D86006A726E /* MJPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC7637C1C9B9D86006A726E /* MJPhoto.m */; };
+		FCC7638B1C9B9D86006A726E /* MJPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCC7637D1C9B9D86006A726E /* MJPhotoBrowser.bundle */; };
+		FCC7638C1C9B9D86006A726E /* MJPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC7637F1C9B9D86006A726E /* MJPhotoBrowser.m */; };
+		FCC7638D1C9B9D86006A726E /* MJPhotoLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC763811C9B9D86006A726E /* MJPhotoLoadingView.m */; };
+		FCC7638E1C9B9D86006A726E /* MJPhotoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC763831C9B9D86006A726E /* MJPhotoProgressView.m */; };
+		FCC7638F1C9B9D86006A726E /* MJPhotoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC763851C9B9D86006A726E /* MJPhotoToolbar.m */; };
+		FCC763901C9B9D86006A726E /* MJPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC763871C9B9D86006A726E /* MJPhotoView.m */; };
+		FCC763911C9B9D86006A726E /* SDWebImageManager+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC763891C9B9D86006A726E /* SDWebImageManager+MJ.m */; };
+		FCC763941C9BB5CE006A726E /* left2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC763921C9BB5CE006A726E /* left2.png */; };
+		FCC763951C9BB5CE006A726E /* right2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC763931C9BB5CE006A726E /* right2.png */; };
 		FCCB845D1C96AF1A005EA1AA /* brand_list.json in Resources */ = {isa = PBXBuildFile; fileRef = FCCB845C1C96AF1A005EA1AA /* brand_list.json */; };
 		FCCB84651C96B0BB005EA1AA /* TSCarMod.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB84641C96B0BB005EA1AA /* TSCarMod.m */; };
 		FCCB84681C96B29E005EA1AA /* TSBrandCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB84671C96B29E005EA1AA /* TSBrandCarController.m */; };
@@ -439,6 +449,23 @@
 		FC54BCC41C9AFD72004D78BB /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		FC54BCC81C9B0166004D78BB /* WJStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WJStarView.h; path = "fashionDance/classes/Main-主要/model/WJStarView.h"; sourceTree = SOURCE_ROOT; };
 		FC54BCC91C9B0166004D78BB /* WJStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WJStarView.m; path = "fashionDance/classes/Main-主要/model/WJStarView.m"; sourceTree = SOURCE_ROOT; };
+		FCC7637B1C9B9D86006A726E /* MJPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhoto.h; sourceTree = "<group>"; };
+		FCC7637C1C9B9D86006A726E /* MJPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhoto.m; sourceTree = "<group>"; };
+		FCC7637D1C9B9D86006A726E /* MJPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJPhotoBrowser.bundle; sourceTree = "<group>"; };
+		FCC7637E1C9B9D86006A726E /* MJPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoBrowser.h; sourceTree = "<group>"; };
+		FCC7637F1C9B9D86006A726E /* MJPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoBrowser.m; sourceTree = "<group>"; };
+		FCC763801C9B9D86006A726E /* MJPhotoLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoLoadingView.h; sourceTree = "<group>"; };
+		FCC763811C9B9D86006A726E /* MJPhotoLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoLoadingView.m; sourceTree = "<group>"; };
+		FCC763821C9B9D86006A726E /* MJPhotoProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoProgressView.h; sourceTree = "<group>"; };
+		FCC763831C9B9D86006A726E /* MJPhotoProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoProgressView.m; sourceTree = "<group>"; };
+		FCC763841C9B9D86006A726E /* MJPhotoToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoToolbar.h; sourceTree = "<group>"; };
+		FCC763851C9B9D86006A726E /* MJPhotoToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoToolbar.m; sourceTree = "<group>"; };
+		FCC763861C9B9D86006A726E /* MJPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhotoView.h; sourceTree = "<group>"; };
+		FCC763871C9B9D86006A726E /* MJPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhotoView.m; sourceTree = "<group>"; };
+		FCC763881C9B9D86006A726E /* SDWebImageManager+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SDWebImageManager+MJ.h"; sourceTree = "<group>"; };
+		FCC763891C9B9D86006A726E /* SDWebImageManager+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDWebImageManager+MJ.m"; sourceTree = "<group>"; };
+		FCC763921C9BB5CE006A726E /* left2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left2.png; sourceTree = "<group>"; };
+		FCC763931C9BB5CE006A726E /* right2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right2.png; sourceTree = "<group>"; };
 		FCCB845C1C96AF1A005EA1AA /* brand_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brand_list.json; sourceTree = "<group>"; };
 		FCCB84631C96B0BB005EA1AA /* TSCarMod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCarMod.h; sourceTree = "<group>"; };
 		FCCB84641C96B0BB005EA1AA /* TSCarMod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCarMod.m; sourceTree = "<group>"; };
@@ -643,13 +670,13 @@
 		DA3B5CAB1C93BF7A001997C8 /* Main-主要 */ = {
 			isa = PBXGroup;
 			children = (
+				FCC763791C9B9D7F006A726E /* tool */,
 				DA2B4C1F1C99B12D001DE451 /* publicController */,
 				DA3B5CAC1C93BF7A001997C8 /* category */,
 				DA3B5CBC1C93BF7A001997C8 /* controller */,
 				DA3B5CC31C93BF7A001997C8 /* httptool */,
 				DA3B5CC61C93BF7A001997C8 /* MJExetensionTool */,
 				DA3B5CC71C93BF7A001997C8 /* model */,
-				DA3B5CCE1C93BF7A001997C8 /* tool */,
 				DA3B5CCF1C93BF7A001997C8 /* view */,
 			);
 			path = "Main-主要";
@@ -713,13 +740,6 @@
 			children = (
 			);
 			path = model;
-			sourceTree = "<group>";
-		};
-		DA3B5CCE1C93BF7A001997C8 /* tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = tool;
 			sourceTree = "<group>";
 		};
 		DA3B5CCF1C93BF7A001997C8 /* view */ = {
@@ -1226,6 +1246,36 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		FCC763791C9B9D7F006A726E /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				FCC7637A1C9B9D86006A726E /* MJPhotoBrowser-master */,
+			);
+			name = tool;
+			sourceTree = "<group>";
+		};
+		FCC7637A1C9B9D86006A726E /* MJPhotoBrowser-master */ = {
+			isa = PBXGroup;
+			children = (
+				FCC7637B1C9B9D86006A726E /* MJPhoto.h */,
+				FCC7637C1C9B9D86006A726E /* MJPhoto.m */,
+				FCC7637D1C9B9D86006A726E /* MJPhotoBrowser.bundle */,
+				FCC7637E1C9B9D86006A726E /* MJPhotoBrowser.h */,
+				FCC7637F1C9B9D86006A726E /* MJPhotoBrowser.m */,
+				FCC763801C9B9D86006A726E /* MJPhotoLoadingView.h */,
+				FCC763811C9B9D86006A726E /* MJPhotoLoadingView.m */,
+				FCC763821C9B9D86006A726E /* MJPhotoProgressView.h */,
+				FCC763831C9B9D86006A726E /* MJPhotoProgressView.m */,
+				FCC763841C9B9D86006A726E /* MJPhotoToolbar.h */,
+				FCC763851C9B9D86006A726E /* MJPhotoToolbar.m */,
+				FCC763861C9B9D86006A726E /* MJPhotoView.h */,
+				FCC763871C9B9D86006A726E /* MJPhotoView.m */,
+				FCC763881C9B9D86006A726E /* SDWebImageManager+MJ.h */,
+				FCC763891C9B9D86006A726E /* SDWebImageManager+MJ.m */,
+			);
+			path = "MJPhotoBrowser-master";
+			sourceTree = "<group>";
+		};
 		FCCB84611C96B0AA005EA1AA /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1245,6 +1295,8 @@
 		FCCB84621C96B0AA005EA1AA /* view */ = {
 			isa = PBXGroup;
 			children = (
+				FCC763921C9BB5CE006A726E /* left2.png */,
+				FCC763931C9BB5CE006A726E /* right2.png */,
 				FC457DCE1C9816AF00DDB531 /* SWCarCell.h */,
 				FC457DCF1C9816AF00DDB531 /* SWCarCell.m */,
 				FC457DD01C9816AF00DDB531 /* SWCarCell.xib */,
@@ -1375,6 +1427,7 @@
 				BC0F44F61C999EA800894419 /* YUSelectionTopicCell.xib in Resources */,
 				DA825C1A1C92E86B000C5EE4 /* WJConsultingCell.xib in Resources */,
 				FC54BCBF1C9AFCF6004D78BB /* LLTextCollectionCell.xib in Resources */,
+				FCC763951C9BB5CE006A726E /* right2.png in Resources */,
 				DA825C1C1C92E86B000C5EE4 /* WJFindHotCell.xib in Resources */,
 				FCCF82801C997DE600F12B8C /* TSXCCell.xib in Resources */,
 				FC457DD61C983D3800DDB531 /* TSConfigList.plist in Resources */,
@@ -1386,10 +1439,12 @@
 				FC54BC6E1C9AAB0C004D78BB /* TSPicReusableView.xib in Resources */,
 				DA89F35B1C9301B4003D5AF8 /* WJCollectionViewCell.xib in Resources */,
 				FC457DDB1C98413100DDB531 /* TSTitleCell.xib in Resources */,
+				FCC763941C9BB5CE006A726E /* left2.png in Resources */,
 				BC0F44F01C999EA800894419 /* YUHotTopicCell.xib in Resources */,
 				FC54BCA21C9AFCD3004D78BB /* YUSummarizeHeaderView.xib in Resources */,
 				DA2701E11C9A437200AC8205 /* MKVideoCell.xib in Resources */,
 				DAE93A121C8E75B900F03A67 /* Assets.xcassets in Resources */,
+				FCC7638B1C9B9D86006A726E /* MJPhotoBrowser.bundle in Resources */,
 				FC54BC9E1C9AFCD3004D78BB /* YUArticleNewsCell.xib in Resources */,
 				FC457DC21C98162D00DDB531 /* WJConsultingNoPicCell.xib in Resources */,
 				FC54BCBD1C9AFCF6004D78BB /* LLPictureCollectionCell.xib in Resources */,
@@ -1505,9 +1560,11 @@
 				BC0F44EB1C999EA800894419 /* YUBannerListModel.m in Sources */,
 				BC0F44F71C999EA800894419 /* YUTopicHeaderView.m in Sources */,
 				FC54BC611C9A3FBA004D78BB /* TSHalfController.m in Sources */,
+				FCC7638A1C9B9D86006A726E /* MJPhoto.m in Sources */,
 				DA2B4C311C99B12D001DE451 /* YuSummarizeController.m in Sources */,
 				DAE9A5291C9B064400ED8033 /* WJCarDetailWordCell.m in Sources */,
 				DA3B5CD51C93BF7A001997C8 /* UIImage+reSize.m in Sources */,
+				FCC7638C1C9B9D86006A726E /* MJPhotoBrowser.m in Sources */,
 				DA89F3511C92FE85003D5AF8 /* WJFindCarController.m in Sources */,
 				BC0F44E21C999EA800894419 /* YUHotTopicViewController.m in Sources */,
 				DA2B4C371C99B203001DE451 /* WJConstraintModel.m in Sources */,
@@ -1523,7 +1580,9 @@
 				DA3B5CDB1C93BF7A001997C8 /* WJHttpTool.m in Sources */,
 				DAE9A5321C9B06BD00ED8033 /* llParameterController.m in Sources */,
 				FC54BCBA1C9AFCF6004D78BB /* LLCarTypeVersionModel.m in Sources */,
+				FCC763901C9B9D86006A726E /* MJPhotoView.m in Sources */,
 				FC54BC741C9AD224004D78BB /* TSColorMod.m in Sources */,
+				FCC7638F1C9B9D86006A726E /* MJPhotoToolbar.m in Sources */,
 				FC54BC9D1C9AFCD3004D78BB /* YUArticleNewsCell.m in Sources */,
 				FC54BC7A1C9AE957004D78BB /* TSLXModel.m in Sources */,
 				DA825C1B1C92E86B000C5EE4 /* WJFindHotCell.m in Sources */,
@@ -1535,10 +1594,12 @@
 				FC54BCBC1C9AFCF6004D78BB /* LLPictureCollectionCell.m in Sources */,
 				DA825C9E1C92EB7E000C5EE4 /* WJArrangeController.m in Sources */,
 				DAE9A5381C9B074D00ED8033 /* WJCombinationProgressView.m in Sources */,
+				FCC7638D1C9B9D86006A726E /* MJPhotoLoadingView.m in Sources */,
 				DAE9A52F1C9B06A200ED8033 /* WJCarDetailsController.m in Sources */,
 				DA2701DA1C9A434300AC8205 /* MKVediosModel.m in Sources */,
 				FCCF82771C99628100F12B8C /* TSSXCarModel.m in Sources */,
 				DA825C1D1C92E86B000C5EE4 /* WJContainerView.m in Sources */,
+				FCC7638E1C9B9D86006A726E /* MJPhotoProgressView.m in Sources */,
 				FC457DD11C9816AF00DDB531 /* SWCarCell.m in Sources */,
 				FC54BC9B1C9AFCD3004D78BB /* YUCarDetailModel.m in Sources */,
 				FCCB84651C96B0BB005EA1AA /* TSCarMod.m in Sources */,
@@ -1570,6 +1631,7 @@
 				FC54BCB91C9AFCF6004D78BB /* LLCarTypeInfoModel.m in Sources */,
 				FCCB846B1C96F745005EA1AA /* TSTJZCController.m in Sources */,
 				BC0F44E11C999EA800894419 /* YUCategoryViewController.m in Sources */,
+				FCC763911C9B9D86006A726E /* SDWebImageManager+MJ.m in Sources */,
 				FC54BCC21C9AFD5C004D78BB /* UIImage+Color.m in Sources */,
 				FCCB84681C96B29E005EA1AA /* TSBrandCarController.m in Sources */,
 				BC0F44EC1C999EA800894419 /* YUHotTopicModel.m in Sources */,

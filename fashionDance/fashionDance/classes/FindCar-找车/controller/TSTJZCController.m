@@ -20,6 +20,7 @@
 @property (nonatomic,strong)NSArray * specicsArray;
 //已选择的选项数组
 @property (nonatomic,strong)NSMutableArray * selectArray;
+@property (nonatomic,strong)NSString * selectString;
 
 @property (nonatomic,strong)UITableView * tableView;
 @property (nonatomic,strong)TSDrawView * drawView;
@@ -27,11 +28,17 @@
 @property (nonatomic,strong)UIButton * resetBtn;
 //符合条件按钮
 @property (nonatomic,strong)UIButton * eligibleBtn;
-
-
 @end
 
 @implementation TSTJZCController
+-(NSString *)selectString
+{
+    if (_selectString==nil)
+    {
+        _selectString=@"000000000";
+    }
+    return _selectString;
+}
 -(NSMutableArray *)selectArray
 {
     if (_selectArray==nil)
@@ -82,29 +89,10 @@
     [self configSubviews];
     
     [self valueChangedForSearchBtn];
-    
-    [self configLogics];
-}
--(void)configLogics
-{
-
-        RAC(self.resetBtn,enabled)=[RACSignal combineLatest:@[RACObserve(self, number1),RACObserve(self, number2),RACObserve(self, number3),RACObserve(self, number4),RACObserve(self, number5),RACObserve(self, number6),RACObserve(self, number7)] reduce:^id(NSNumber * number1,NSNumber * number2,NSNumber * number3,NSNumber * number4,NSNumber * number5,NSNumber * number6,NSNumber * number7)
-        {
-            //&&number2.integerValue!=0&&number3.integerValue!=0&&number4.integerValue!=0&&number5.integerValue!=0&&number6.integerValue!=0&&number7.integerValue!=0
-            return @((number1.integerValue!=0)&&(number2.integerValue!=0)&&(number3.integerValue!=0)&&(number4.integerValue!=0)&&(number5.integerValue!=0)&&(number6.integerValue!=0)&&(number7.integerValue!=0));
-        }];
 }
 
 -(void)configSubviews
 {
-    self.number1=[NSNumber numberWithInteger:0];
-    self.number2=[NSNumber numberWithInteger:0];
-    self.number3=[NSNumber numberWithInteger:0];
-    self.number4=[NSNumber numberWithInteger:0];
-    self.number5=[NSNumber numberWithInteger:0];
-    self.number6=[NSNumber numberWithInteger:0];
-    self.number7=[NSNumber numberWithInteger:0];
-    
     //底部符合条件视图
     UIView * toolBarView=[[UIView alloc]init];
     [self.view addSubview:toolBarView];
@@ -118,6 +106,7 @@
     }];
     //重置按钮
     UIButton * resetBtn=[[UIButton alloc]init];
+    self.resetBtn=resetBtn;
     [resetBtn setTitle:@"重置" forState:UIControlStateNormal];
     [resetBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [resetBtn setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
@@ -132,6 +121,7 @@
     //符合条件按钮
     UIButton * eligibleBtn=[[UIButton alloc]init];
     [eligibleBtn setBackgroundColor:[UIColor redColor]];
+    eligibleBtn.layer.cornerRadius=5;
     [eligibleBtn addTarget:self action:@selector(searchAction) forControlEvents:UIControlEventTouchUpInside];
     [eligibleBtn setTitle:@"有0个车型符合条件" forState:UIControlStateNormal];
     [self.toolBarView addSubview:eligibleBtn];
@@ -158,24 +148,68 @@
     self.drawView=drawView;
     //拖动更新
     __weak typeof(self) weakSelf=self;
-    [self.drawView setTSDrawViewDragBlock:^(TSDrawView * draw) {
+    [self.drawView setTSDrawViewDragBlock:^(TSDrawView * draw,BOOL isSamll) {
         [weakSelf valueChangedForSearchBtn];
+        if (isSamll)
+        {
+            //判断是否修改
+            if (draw.smallNum.integerValue==0)
+            {
+                NSString * str1=[weakSelf.selectString substringToIndex:7];
+                NSString * str2=[weakSelf.selectString substringFromIndex:8];
+                weakSelf.selectString=[NSString stringWithFormat:@"%@0%@",str1,str2];
+
+            }
+            else
+            {
+                NSString * str1=[weakSelf.selectString substringToIndex:7];
+                NSString * str2=[weakSelf.selectString substringFromIndex:8];
+                weakSelf.selectString=[NSString stringWithFormat:@"%@1%@",str1,str2];
+            }
+        }
+        else
+        {
+            //判断是否修改
+            if (draw.bigNumber==101)
+            {
+                NSString * str1=[weakSelf.selectString substringToIndex:8];
+                NSString * str2=[weakSelf.selectString substringFromIndex:9];
+                weakSelf.selectString=[NSString stringWithFormat:@"%@0%@",str1,str2];
+                                NSLog(@"%@,%@,%@",str1,str2,weakSelf.selectString);
+            }
+            else
+            {
+                NSString * str1=[weakSelf.selectString substringToIndex:8];
+                NSString * str2=[weakSelf.selectString substringFromIndex:9];
+                weakSelf.selectString=[NSString stringWithFormat:@"%@1%@",str1,str2];
+            }
+        }
     }];
     self.tableView.delegate=self;
     self.tableView.dataSource=self;
     
-
+    RAC(resetBtn,enabled)=[RACSignal combineLatest:@[RACObserve(self, selectString)] reduce:^id(NSString * selectString)
+                                {
+                                    NSLog(@"%@", selectString);
+                                    return @(![selectString isEqualToString:@"000000000"]);
+                                }];
 }
 -(void)resetAction
 {
     //归零
+    self.numberArray=nil;
     //清除文字
+    self.selectArray=nil;
+    //清除标记
+    self.selectString=nil;
     //图标归位
-    NSLog(@"resetAction");
+    [self.drawView clears];
+    [self.tableView reloadData];
+    [self valueChangedForSearchBtn];
+
 }
 -(void)searchAction
 {
-    //http://autoapp.auto.sohu.com/api/search/result-1024-0-0-0-0-0-0-0-0-0-2-20
     NSString * path1=@"http://autoapp.auto.sohu.com/api/search/result";
     NSInteger bigNumber=self.drawView.bigNumber;
     if (bigNumber>100)
@@ -188,6 +222,7 @@
     [self.navigationController pushViewController:sxCtl animated:YES];
 
 }
+//数值改变进行请求
 -(void)valueChangedForSearchBtn
 {
     NSString * path1=@"http://autoapp.auto.sohu.com/api/search/count";
@@ -196,29 +231,19 @@
     {
         bigNumber=0;
     }
-    
     NSString * path2=[NSString stringWithFormat:@"-1024-%@-%@-%@-%@-%@-%@-%@-%ld-%ld",self.numberArray[0],self.numberArray[1],self.numberArray[2],self.numberArray[3],self.numberArray[4],self.numberArray[5],self.numberArray[6],self.drawView.smallNumber,bigNumber];
     NSString * path = [NSString stringWithFormat:@"%@%@",path1,path2];
-    
     [[WJHttpTool httpTool]get:path params:nil success:^(NSDictionary * result)
     {
         NSString * title=[NSString stringWithFormat:@"有%@个车型符合条件",result[@"count"]];
         [self.eligibleBtn setTitle:title forState:UIControlStateNormal];
         
-    } failure:^(NSError *error) {
+    } failure:^(NSError *error)
+    {
         NSLog(@"%@",error);
     }];
 }
-/*
- http://autoapp.auto.sohu.com/api/search/count-1024-0-3-0-0-0-0-0-0-0
- http://autoapp.auto.sohu.com/api/search/count-1024-0-7-0-0-0-0-0-0-0
- http://autoapp.auto.sohu.com/api/search/count-1024-0-7-0-0-0-0-0-0-25
- http://autoapp.auto.sohu.com/api/search/count-1024-0-7-0-0-0-0-0-11-25
- */
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
+
 #pragma mark delegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -229,7 +254,7 @@
     TSTitleCell * cell=[TSTitleCell cellWithTableView:tableView];
     cell.nameLabel.text=self.titleArray[indexPath.row];
     cell.dtLabel.text=self.selectArray[indexPath.row];
-    cell.dtLabel.textColor=[UIColor blueColor];
+    cell.dtLabel.textColor=WJColor(120, 220, 230);
     if (cell.dtLabel.text==nil||cell.dtLabel.text.length==0)
     {
         cell.dtLabel.text=@"不限";
@@ -249,8 +274,21 @@
         NSInteger selectInteger = [self.titleArray indexOfObject:sp.titleStr];
         self.numberArray[selectInteger]=number;
         
-        NSIndexPath * index=[NSIndexPath indexPathForRow:selectInteger inSection:0];
-        //TSTitleCell * cell = [tableView cellForRowAtIndexPath:index];
+        if (selectArray.count!=0)
+        {
+            //不为零，设置为1
+            NSString * str1=[self.selectString substringToIndex:selectInteger];
+            NSString * str2=[self.selectString substringFromIndex:selectInteger+1];
+            self.selectString=[NSString stringWithFormat:@"%@1%@",str1,str2];
+        }
+        else
+        {
+            //为0就不拼接设置0
+            NSString * str1=[self.selectString substringToIndex:selectInteger];
+            NSString * str2=[self.selectString substringFromIndex:selectInteger+1];
+            self.selectString=[NSString stringWithFormat:@"%@0%@",str1,str2];
+        }
+
         //改变cell字符串
         NSString * str=[NSString string];
         for (int i = 0 ; i<selectArray.count; i++)
@@ -262,27 +300,17 @@
             str=[str stringByAppendingString:selectArray[i]];
         }
         self.selectArray[selectInteger]=str;
-       // cell.dtLabel.text=str;
-        //if (number.integerValue==0)
-       // {
-        //    cell.dtLabel.text=@"不限";
-        //    [cell.dtLabel setTextColor:[UIColor grayColor]];
-       // }
-    
+
         //进行请求
         [self valueChangedForSearchBtn];
         [self.tableView reloadData];
     }];
     [self presentViewController:spec animated:YES completion:nil];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
 }
-*/
 
 @end

@@ -19,28 +19,46 @@
 //lable位置Y
 #define TSLableY (TSChartY-45)
 @interface TSDrawView()
-@property (nonatomic,strong)UIView * smallView;
-@property (nonatomic,strong)UIView * bigView;
+@property (nonatomic,strong)UIImageView * smallView;
+@property (nonatomic,strong)UIImageView * bigView;
 
 @property (nonatomic,strong)UILabel * moneyLabel;
 
 @end
 
 @implementation TSDrawView
-
+-(void)clears
+{
+    //归位
+    self.smallView.center=CGPointMake(TSChartX, TSChartY+20);
+    self.bigView.center=CGPointMake(TSChartX+TSChartW, TSChartY+20);
+    self.moneyLabel.center=CGPointMake(SCRW/2, TSLableY);
+    self.moneyLabel.text=@"1万-100+万";
+    //归零
+    self.bigNum=[NSNumber numberWithInteger:101];
+    self.smallNum=[NSNumber numberWithInteger:0];
+    self.bigNumber=101;
+    self.smallNumber=0;
+    //重新绘图
+    [self setNeedsDisplay];
+}
 -(instancetype)initWithFrame:(CGRect)frame
 {
     if (self=[super initWithFrame:frame])
     {
         self.backgroundColor=[UIColor whiteColor];
-        UIView * smallView=[[UIView alloc]initWithFrame:CGRectMake(TSChartX, TSChartY+10, 10, 10)];
+        UIImageView * smallView=[[UIImageView alloc]initWithFrame:CGRectMake(TSChartX, TSChartY+10, 20, 20)];
+        smallView.image=[UIImage imageNamed:@"left2"];
         self.smallView=smallView;
         smallView.center=CGPointMake(TSChartX, TSChartY+20);
-        UIView * bigView=[[UIView alloc]initWithFrame:CGRectMake(TSChartX+TSChartW, TSChartY+10, 10, 10)];
+        UIImageView * bigView=[[UIImageView alloc]initWithFrame:CGRectMake(TSChartX+TSChartW, TSChartY+10, 20, 20)];
         self.bigView=bigView;
+        bigView.image=[UIImage imageNamed:@"right2"];
          bigView.center=CGPointMake(TSChartX+TSChartW, TSChartY+20);
-        smallView.backgroundColor=[UIColor orangeColor];
-        bigView.backgroundColor=[UIColor greenColor];
+        bigView.userInteractionEnabled=YES;
+        smallView.userInteractionEnabled=YES;
+        //smallView.backgroundColor=[UIColor orangeColor];
+        //bigView.backgroundColor=[UIColor greenColor];
         [self addSubview:smallView];
         [self addSubview:bigView];
         
@@ -52,8 +70,8 @@
         self.moneyLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 80, 15)];
         [self addSubview:self.moneyLabel];
         self.moneyLabel.center=CGPointMake(SCRW/2, TSLableY);
-        self.moneyLabel.backgroundColor=[UIColor cyanColor];
-//        self.moneyLabel.layer.masksToBounds=YES;
+        self.moneyLabel.backgroundColor=WJColor(217, 241, 251);
+        self.moneyLabel.layer.cornerRadius=2;
         self.moneyLabel.font=[UIFont systemFontOfSize:10];
         self.moneyLabel.layer.cornerRadius=10;
         self.moneyLabel.textAlignment=NSTextAlignmentCenter;
@@ -144,7 +162,7 @@
     }
     self.moneyLabel.center=CGPointMake((self.smallView.center.x+self.bigView.center.x)/2, TSLableY);
     
-    self.TSDrawViewDragBlock(self);
+    self.TSDrawViewDragBlock(self,YES);
 }
 -(void)bigPanAction:(UIPanGestureRecognizer *)pan
 {
@@ -228,7 +246,7 @@
     self.moneyLabel.center=CGPointMake((self.smallView.center.x+self.bigView.center.x)/2, TSLableY);
     [self setNeedsDisplay];
     
-    self.TSDrawViewDragBlock(self);
+    self.TSDrawViewDragBlock(self,NO);
 }
 -(void)drawRect:(CGRect)rect
 {
@@ -241,7 +259,7 @@
     //一条线，获取一个path
     UIBezierPath * path=[UIBezierPath bezierPath];
     //把上下文渲染到视图
-    [[UIColor blueColor]set];
+    [WJColor(123, 200, 230) set];
     CGContextSetLineWidth(ctx, 5);
     //位置
     [path moveToPoint:CGPointMake(self.smallView.center.x, TSChartY)];
