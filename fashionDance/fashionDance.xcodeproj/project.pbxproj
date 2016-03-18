@@ -48,7 +48,9 @@
 		BC59A6601C9BD4700083C76E /* YUSummarizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC59A6501C9BD4700083C76E /* YUSummarizeCell.xib */; };
 		BC59A6611C9BD4700083C76E /* YUSummarizeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59A6521C9BD4700083C76E /* YUSummarizeHeaderView.m */; };
 		BC59A6621C9BD4700083C76E /* YUSummarizeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC59A6531C9BD4700083C76E /* YUSummarizeHeaderView.xib */; };
+		BC59A6671C9BE95C0083C76E /* UICustomLineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC59A6661C9BE95C0083C76E /* UICustomLineLabel.m */; };
 		BC623B9F1C99A1DE00098459 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC623B9E1C99A1DE00098459 /* libsqlite3.0.tbd */; };
+		BCD4F6B41C9BFD7A00F12A1B /* YuForumWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4F6B31C9BFD7A00F12A1B /* YuForumWebViewController.m */; };
 		DA2701D91C9A434300AC8205 /* MKVedioDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2701D21C9A434300AC8205 /* MKVedioDetailController.m */; };
 		DA2701DA1C9A434300AC8205 /* MKVediosModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2701D41C9A434300AC8205 /* MKVediosModel.m */; };
 		DA2701E01C9A437200AC8205 /* MKVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2701DE1C9A437200AC8205 /* MKVideoCell.m */; };
@@ -255,7 +257,11 @@
 		BC59A6511C9BD4700083C76E /* YUSummarizeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUSummarizeHeaderView.h; sourceTree = "<group>"; };
 		BC59A6521C9BD4700083C76E /* YUSummarizeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUSummarizeHeaderView.m; sourceTree = "<group>"; };
 		BC59A6531C9BD4700083C76E /* YUSummarizeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUSummarizeHeaderView.xib; sourceTree = "<group>"; };
+		BC59A6651C9BE95C0083C76E /* UICustomLineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomLineLabel.h; sourceTree = "<group>"; };
+		BC59A6661C9BE95C0083C76E /* UICustomLineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomLineLabel.m; sourceTree = "<group>"; };
 		BC623B9E1C99A1DE00098459 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		BCD4F6B21C9BFD7A00F12A1B /* YuForumWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YuForumWebViewController.h; sourceTree = "<group>"; };
+		BCD4F6B31C9BFD7A00F12A1B /* YuForumWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YuForumWebViewController.m; sourceTree = "<group>"; };
 		DA2701D11C9A434300AC8205 /* MKVedioDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKVedioDetailController.h; sourceTree = "<group>"; };
 		DA2701D21C9A434300AC8205 /* MKVedioDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKVedioDetailController.m; sourceTree = "<group>"; };
 		DA2701D31C9A434300AC8205 /* MKVediosModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKVediosModel.h; sourceTree = "<group>"; };
@@ -597,6 +603,8 @@
 				BC59A63B1C9BD4700083C76E /* YuForumViewController.m */,
 				BC59A63C1C9BD4700083C76E /* YuSummarizeController.h */,
 				BC59A63D1C9BD4700083C76E /* YuSummarizeController.m */,
+				BCD4F6B21C9BFD7A00F12A1B /* YuForumWebViewController.h */,
+				BCD4F6B31C9BFD7A00F12A1B /* YuForumWebViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -633,6 +641,15 @@
 				BC59A6531C9BD4700083C76E /* YUSummarizeHeaderView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BC59A6641C9BE9300083C76E /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				BC59A6651C9BE95C0083C76E /* UICustomLineLabel.h */,
+				BC59A6661C9BE95C0083C76E /* UICustomLineLabel.m */,
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 		D2848F50D929F27A8AF2F15B /* Frameworks */ = {
@@ -1195,6 +1212,7 @@
 		DAE9A5531C9BCC1700ED8033 /* YU */ = {
 			isa = PBXGroup;
 			children = (
+				BC59A6641C9BE9300083C76E /* Lib */,
 				BC59A6371C9BD4700083C76E /* Controllers */,
 				BC59A63E1C9BD4700083C76E /* Models */,
 				BC59A6471C9BD4700083C76E /* Views */,
@@ -1368,7 +1386,7 @@
 				TargetAttributes = {
 					DAE93A011C8E75B900F03A67 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 2VHMZAJUND;
+						DevelopmentTeam = BM238LXE9L;
 					};
 					DAE93A1A1C8E75B900F03A67 = {
 						CreatedOnToolsVersion = 7.2;
@@ -1555,6 +1573,7 @@
 				BC0F44EE1C999EA800894419 /* YUCollectionReusableView.m in Sources */,
 				FCCF827F1C997DE600F12B8C /* TSXCCell.m in Sources */,
 				DAE93A071C8E75B900F03A67 /* main.m in Sources */,
+				BCD4F6B41C9BFD7A00F12A1B /* YuForumWebViewController.m in Sources */,
 				DA3B5CD41C93BF7A001997C8 /* UIImage+cirlcle.m in Sources */,
 				DAE9A59B1C9BCE5700ED8033 /* WJCarDetailPicCell.m in Sources */,
 				DA3B5CDB1C93BF7A001997C8 /* WJHttpTool.m in Sources */,
@@ -1579,6 +1598,7 @@
 				BC0F44EF1C999EA800894419 /* YUHotTopicCell.m in Sources */,
 				DA825C201C92E86B000C5EE4 /* WJVerticalButton.m in Sources */,
 				DAE9A58E1C9BCDE900ED8033 /* WJMoreAboutCarModel.m in Sources */,
+				BC59A6671C9BE95C0083C76E /* UICustomLineLabel.m in Sources */,
 				DAE9A5B11C9BCECB00ED8033 /* LLPictureCollectionCell.m in Sources */,
 				DA89F3461C92FDCE003D5AF8 /* WJFindCarResult.m in Sources */,
 				BC59A6541C9BD4700083C76E /* YuArticleViewController.m in Sources */,
@@ -1771,7 +1791,7 @@
 				INFOPLIST_FILE = fashionDance/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.heartHope.fashionDance;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heartHope.fashionDance1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1787,7 +1807,7 @@
 				INFOPLIST_FILE = fashionDance/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.heartHope.fashionDance;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heartHope.fashionDance1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

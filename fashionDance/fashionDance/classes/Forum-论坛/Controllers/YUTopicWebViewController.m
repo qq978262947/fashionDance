@@ -87,7 +87,7 @@
     UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, WJScreenW, WJScreenH)];
     [self.view addSubview:webView];
     
-    NSString *urlString = [NSString stringWithFormat:@"http://saa.auto.sohu.com/v5/mobileapp/topic/folnote.do?bid=%ld&topicId=%@&pageSize=15&pic_type=0&page=1",_topicModel.bid,_topicModel.topicId];
+    NSString *urlString = [NSString stringWithFormat:@"http://saa.auto.sohu.com/v5/mobileapp/topic/folnote.do?bid=%ld&topicId=%@&pageSize=15&pic_type=0&page=1",_topicModel.bid?_topicModel.bid:self.bid,_topicModel.topicId];
     //加载网页数据
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];

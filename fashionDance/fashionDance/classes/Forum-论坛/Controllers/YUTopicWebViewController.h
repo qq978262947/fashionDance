@@ -14,4 +14,6 @@
 
 @property (nonatomic, strong) YUHotTopicModel *topicModel;
 
+@property (nonatomic,assign) NSInteger bid;
+
 @end

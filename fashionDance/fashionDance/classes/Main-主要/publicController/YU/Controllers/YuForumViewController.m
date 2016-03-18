@@ -13,7 +13,7 @@
 #import "YUForumHeaderView.h"
 #import "SVProgressHUD.h"
 #import "MJRefresh.h"
-#import "YUTopicWebViewController.h"
+#import "YuForumWebViewController.h"
 
 static NSString *Id = @"YUHotTopicCell";
 
@@ -44,14 +44,24 @@ static NSString *Id = @"YUHotTopicCell";
     
     [self setupTableView];
     
-    [self loadHeaderData];
+//    [self loadHeaderData];
+//    
+//    [self loadCellData];
     
-    [self loadCellData];
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self loadCarBid];
+}
+
 
 - (void)loadCarBid
 {
-    
+    // bid
+    // http://saa.auto.sohu.com/v5/mobileapp/club/modelClubInfo.do?modelId=1571
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     
     NSString *urlString = [NSString stringWithFormat:@"http://saa.auto.sohu.com/v5/mobileapp/club/modelClubInfo.do?modelId=%@",self.modelId];
@@ -59,11 +69,15 @@ static NSString *Id = @"YUHotTopicCell";
     __weak typeof (self) weakSelf = self;
     [[WJHttpTool httpTool] get:urlString params:nil success:^(id result) {
 
-        weakSelf.bid = (int)result[@"RESULT"];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            weakSelf.bid = [result[@"RESULT"] integerValue];
+            
+            [self loadHeaderData];
+            [self loadCellData];
+            
+        });
         
-        [SVProgressHUD dismiss];
-        
-        [self loadHeaderData];
         
     } failure:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:@"加载失败"];
@@ -74,12 +88,10 @@ static NSString *Id = @"YUHotTopicCell";
 {
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     
-    NSString *urlString = [NSString stringWithFormat:@"http://saa.auto.sohu.com/v5/mobileapp/club/clubInfo.do?bid=10454"];
+    NSString *urlString = [NSString stringWithFormat:@"http://saa.auto.sohu.com/v5/mobileapp/club/clubInfo.do?bid=%ld",self.bid];
     
     __weak typeof (self) weakSelf = self;
     [[WJHttpTool httpTool] get:urlString params:nil success:^(id result) {
-        
-        //   NSLog(@"%@",result);
         
         YUForumModel *forumModel = [YUForumModel mj_objectWithKeyValues:result[@"RESULT"]];
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -98,7 +110,7 @@ static NSString *Id = @"YUHotTopicCell";
 {
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     
-    NSString *urlString = [NSString stringWithFormat:@"http://saa.auto.sohu.com/v5/mobileapp/club/topicList.do?bid=10454&page=1&pageSize=20"];
+    NSString *urlString = [NSString stringWithFormat:@"http://saa.auto.sohu.com/v5/mobileapp/club/topicList.do?bid=%ld&page=1&pageSize=20",self.bid];
     
     __weak typeof (self) weakSelf = self;
     [[WJHttpTool httpTool] get:urlString params:nil success:^(id result) {
@@ -171,8 +183,12 @@ static NSString *Id = @"YUHotTopicCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    YUTopicWebViewController *topicWebVc = [[YUTopicWebViewController alloc]init];
-    topicWebVc.topicModel = self.topics[indexPath.row];
+    YuForumWebViewController *topicWebVc = [[YuForumWebViewController alloc]init];
+    YUHotTopicModel *model = self.topics[indexPath.row];
+    
+    NSString *urlString = [NSString stringWithFormat:@"http://saa.auto.sohu.com/v5/mobileapp/topic/folnote.do?bid=%ld&topicId=%@&pageSize=15&pic_type=0&page=1",self.bid, model.topicId];
+    topicWebVc.urlString = urlString;
+    
     [self.navigationController pushViewController:topicWebVc animated:YES];
 }
 
