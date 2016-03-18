@@ -11,6 +11,7 @@
 #import "YUDBManager.h"
 #import "YUHotTopicCell.h"
 #import "YUTopicWebViewController.h"
+#import "UIImage+reSize.h"
 
 static NSString *const hotTopicCellID = @"YUHotTopicCell";
 
@@ -55,7 +56,7 @@ static NSString *const hotTopicCellID = @"YUHotTopicCell";
 
 - (void)setbackgroundImage
 {
-    self.tableView.backgroundColor = self.collectArray.count > 0 ? WJColor(245, 245, 245) : [UIColor colorWithPatternImage:[UIImage imageNamed:@"topic"]];
+    self.tableView.backgroundColor = self.collectArray.count > 0 ? WJColor(245, 245, 245) : [UIColor colorWithPatternImage:[UIImage OriginImage:[UIImage imageNamed:@"topic"] scaleToSize:CGSizeMake(WJScreenW, WJScreenH)]];
 }
 
 #pragma mark UITableViewDelegate
