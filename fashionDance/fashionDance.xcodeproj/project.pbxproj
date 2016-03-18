@@ -1094,9 +1094,9 @@
 		DAE9A5501C9BCC1700ED8033 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				DAE9A5781C9BCCFA00ED8033 /* WJPraiseViewController.h */,
 				DAE9A5891C9BCDD500ED8033 /* WJCarDetailsController.h */,
 				DAE9A58A1C9BCDD500ED8033 /* WJCarDetailsController.m */,
+				DAE9A5781C9BCCFA00ED8033 /* WJPraiseViewController.h */,
 				DAE9A5791C9BCCFA00ED8033 /* WJPraiseViewController.m */,
 				DAE9A5721C9BCC9E00ED8033 /* WJPublicViewController.h */,
 				DAE9A5731C9BCC9E00ED8033 /* WJPublicViewController.m */,
