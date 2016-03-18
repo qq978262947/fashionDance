@@ -8,7 +8,7 @@
 
 #import "SWCarCell.h"
 #import "TSCarMod.h"
-#import "UIImageView+WebCache.h"
+#import "UIImageView+downloadImage.h"
 @interface SWCarCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -24,7 +24,7 @@
 }
 
 - (void)awakeFromNib {
-    // Initialization code
+    [super awakeFromNib];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -37,6 +37,9 @@
 {
     _model = model;
     self.nameLabel.text = model.nameZh;
-    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:model.logoUrl]];
+//    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:model.logoUrl]];
+    [self.iconImage setNormalImagewithURL:[NSURL URLWithString:model.logoUrl] placeholderImage:[UIImage imageNamed:@"FollowBtnClickBg"] completed:nil];
 }
+
+
 @end

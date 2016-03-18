@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -22,8 +22,8 @@
                             <constraint firstAttribute="height" constant="55" id="hW1-Qz-jFx"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gig-SW-Jv8">
-                        <rect key="frame" x="80" y="22" width="162" height="30.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gig-SW-Jv8">
+                        <rect key="frame" x="73" y="39.5" width="26.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -33,6 +33,7 @@
                     <constraint firstItem="gig-SW-Jv8" firstAttribute="centerY" secondItem="g5q-bU-4Nq" secondAttribute="centerY" id="67V-2d-cdX"/>
                     <constraint firstItem="g5q-bU-4Nq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9S4-ng-V6R"/>
                     <constraint firstItem="g5q-bU-4Nq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="uAV-27-MYY"/>
+                    <constraint firstItem="gig-SW-Jv8" firstAttribute="leading" secondItem="g5q-bU-4Nq" secondAttribute="trailing" constant="10" id="wHV-Ui-9MM"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

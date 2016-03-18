@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TSSXCarModel.h"
-#import "UIImageView+WebCache.h"
+#import "UIImageView+downloadImage.h"
 @interface TSXCCell : UITableViewCell
 
 +(TSXCCell *)cellWithTableView:(UITableView *)tableView;

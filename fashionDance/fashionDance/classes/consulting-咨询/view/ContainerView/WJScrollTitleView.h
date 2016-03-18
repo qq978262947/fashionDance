@@ -67,7 +67,7 @@
 ////////////////////////////////////////////////////////////////////////other
 
 /**
- *  指定存放内容的view数组
+ *  指定存放内容的viewControllers数组--数组存放的是控制器的地址－所以不会有循环引用的问题
  */
 @property (copy, nonatomic)NSArray *viewControllers;
 

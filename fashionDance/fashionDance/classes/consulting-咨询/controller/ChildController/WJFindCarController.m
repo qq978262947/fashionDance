@@ -79,6 +79,7 @@
 #pragma mark - <UICollectionViewDataSource>
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
+    self.collectionView.mj_footer.hidden = self.resultArray.count == 0;
     return self.resultArray.count;
 }
 
@@ -120,8 +121,9 @@
 
 #pragma mark - <UICollectionViewDelegate>
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    WJFindCarResult *carResult = self.resultArray[indexPath.row];
     WJPublicViewController *vc = [[WJPublicViewController alloc]init];
-    vc.view.backgroundColor = [UIColor redColor];
+    vc.modelId = [NSString stringWithFormat:@"%li", carResult.modelId];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

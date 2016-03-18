@@ -22,6 +22,8 @@
 
 @property (weak, nonatomic) WJCarDetailHeaderView *headerView;
 
+@property (weak, nonatomic) UIToolbar *toolBar;
+
 @end
 
 @implementation WJCarDetailsController
@@ -45,11 +47,13 @@
     headerView.backgroundColor = [UIColor colorWithRed:235/255.0 green:235/255.0 blue:235/255.0 alpha:1.0];
     self.headerView = headerView;
     self.tableView.tableHeaderView = headerView;
+    
+    UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:toolBar];
+    self.toolBar = toolBar;
 }
 
 - (void)loadData {
-    UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:self.view.bounds];
-    [self.view addSubview:toolBar];
     [SVProgressHUD show];
     NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/eval/%@",self.modelId];
     [[WJHttpTool httpTool]get:urlString params:nil success:^(id result) {
@@ -58,10 +62,10 @@
         self.headerView.moreAboutCarModel = appraiseModel;
         [self.tableView reloadData];
         [SVProgressHUD dismiss];
-        [toolBar removeFromSuperview];
+        [self.toolBar removeFromSuperview];
     } failure:^(NSError *error) {
         [SVProgressHUD dismiss];
-        [toolBar removeFromSuperview];
+        [self.toolBar removeFromSuperview];
     }];
 }
 
