@@ -12,6 +12,7 @@
 #import "MJRefresh.h"
 #import "SVProgressHUD.h"
 #import "UIImageView+WebCache.h"
+#import "WJPublicViewController.h"
 //#import "<#header#>"
 
 @interface TSSXTableController ()
@@ -104,6 +105,13 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TSSXCarModel * mod=self.dataArray[indexPath.row];
+    NSString * modid=[NSString stringWithFormat:@"%@",mod.modelId];
+    WJPublicViewController * pub=[WJPublicViewController wjPublicViewControllerWithModID:modid];
+    [self.navigationController pushViewController:pub animated:YES];
 }
 
 

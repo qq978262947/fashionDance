@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic)NSString *modelId;
 
++(instancetype)wjPublicViewControllerWithModID:(NSString *)modID;
 
 @end

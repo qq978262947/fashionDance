@@ -27,7 +27,12 @@
 @end
 
 @implementation WJPublicViewController
-
++(instancetype)wjPublicViewControllerWithModID:(NSString *)modID
+{
+    WJPublicViewController * public=[WJPublicViewController new];
+    public.modelId=modID;
+    return public;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 
