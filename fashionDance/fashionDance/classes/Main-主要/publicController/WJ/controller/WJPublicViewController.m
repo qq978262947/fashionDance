@@ -41,7 +41,7 @@
     WJScrollTitleView *tv = [WJScrollTitleView scrollTitleView];
     self.tv = tv;
     tv.backgroundColor = [UIColor whiteColor];
-    
+    tv.contentBackgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
     
     // 可抽公共代码啊
     YuSummarizeController *vc1 = [[YuSummarizeController alloc]init];
@@ -70,7 +70,7 @@
 //    vc4.view.backgroundColor = [UIColor yellowColor];
 //    vc5.view.backgroundColor = [UIColor greenColor];
     
-    tv.views = @[vc1.view,vc2.view,vc3.view,vc4.view,vc5.view,vc6.view];
+    tv.viewControllers = @[vc1,vc2,vc3,vc4,vc5,vc6];
     tv.titles = @[@"综述",@"图片",@"口碑",@"文章",@"论坛",@"参数"];
     
     [self.view addSubview:tv];
@@ -79,7 +79,6 @@
     
     //设置标题的最大偏移
     tv.titlesScrollWidth = WJScreenW;
-    [tv setContentBackgroundColor:[UIColor yellowColor]];
 }
 
 // 约束WJScrollTitleView控制器视图的位置

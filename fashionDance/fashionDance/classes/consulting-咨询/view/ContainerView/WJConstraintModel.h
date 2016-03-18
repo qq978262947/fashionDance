@@ -15,7 +15,7 @@
 /**
  *  对应的视图
  */
-@property (weak, nonatomic)UIView *view;
+@property (weak, nonatomic)UIViewController *viewController;
 /**
  *  是否已约束的标记
  */

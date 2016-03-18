@@ -69,7 +69,7 @@
 /**
  *  指定存放内容的view数组
  */
-@property (copy, nonatomic)NSArray *views;
+@property (copy, nonatomic)NSArray *viewControllers;
 
 
 @end

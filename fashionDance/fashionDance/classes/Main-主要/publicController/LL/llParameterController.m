@@ -7,6 +7,14 @@
 //
 
 #import "llParameterController.h"
+#import "LLDownView.h"
+#import "LLUpView.h"
+
+
+#define left_width 100
+#define down_cell_height 200
+#define down_up_cell_width 100
+#define up_cell_height 150
 
 @interface llParameterController ()
 
@@ -16,22 +24,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self setupUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)setupUI
+{
+    //加载上 view
+    UINib * nib = [UINib nibWithNibName:NSStringFromClass([LLUpView class]) bundle:nil];
+    
+    LLUpView * upView = [nib instantiateWithOwner:nil options:nil].lastObject;
+    [upView setFrame:CGRectMake(0, 0, WJScreenW, up_cell_height)];
+    upView.leftWidth = left_width;
+    //    upView.scrollViewDidScrollBlock = ^(UIScrollView * scrollView){
+    //
+    //    };
+    [self.view addSubview:upView];
+    
+    //加载下 view
+    LLDownView * downView = [[LLDownView alloc]init];
+    [downView setFrame:CGRectMake(0, up_cell_height, WJScreenW, WJScreenH - up_cell_height)];
+    downView.leftWidth = left_width;
+    downView.cellHeight = down_cell_height;
+    downView.cellWidth = down_up_cell_width;
+    [self.view addSubview:downView];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+/**
+ * 一个view（内含tableview左，collection view右），一个view（内含scroll view）组成
+ * 上下结构，联动效果
+ */
 
 @end
