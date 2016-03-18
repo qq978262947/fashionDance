@@ -48,6 +48,8 @@
 }
 
 - (void)loadData {
+    UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:toolBar];
     [SVProgressHUD show];
     NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/eval/%@",self.modelId];
     [[WJHttpTool httpTool]get:urlString params:nil success:^(id result) {
@@ -56,8 +58,10 @@
         self.headerView.moreAboutCarModel = appraiseModel;
         [self.tableView reloadData];
         [SVProgressHUD dismiss];
+        [toolBar removeFromSuperview];
     } failure:^(NSError *error) {
         [SVProgressHUD dismiss];
+        [toolBar removeFromSuperview];
     }];
 }
 

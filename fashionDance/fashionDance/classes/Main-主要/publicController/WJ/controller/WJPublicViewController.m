@@ -70,7 +70,7 @@
 //    vc4.view.backgroundColor = [UIColor yellowColor];
 //    vc5.view.backgroundColor = [UIColor greenColor];
     
-    tv.views = @[vc1.view,vc2.view,vc3.view,vc4.view,vc5.view,vc6.view];
+    tv.viewControllers = @[vc1,vc2,vc3,vc4,vc5,vc6];
     tv.titles = @[@"综述",@"图片",@"口碑",@"文章",@"论坛",@"参数"];
     
     [self.view addSubview:tv];

@@ -108,7 +108,7 @@
     self.contentView = contentView;
     
     
-    if (self.views.count > 0) {
+    if (self.viewControllers.count > 0) {
         [self configChildViewWithIndex:0];
     }
     
@@ -171,9 +171,9 @@
     WJConstraintModel *constraintModel = self.constraintModelArray[index];
     // 如果是第一次调用,配置约束
     if (constraintModel.isConfigConstraint == NO) {
-        [self.contentView addSubview:constraintModel.view];
+        [self.contentView addSubview:constraintModel.viewController.view];
         __weak typeof(self)weakSelf = self;
-        [constraintModel.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        [constraintModel.viewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.equalTo(weakSelf.contentView);
             make.top.equalTo(weakSelf.contentView).offset(WJTitleH);
             make.left.equalTo(weakSelf.contentView).offset(index * weakSelf.contentView.width);
@@ -202,10 +202,10 @@
         }
     }
     
-    if (index > self.views.count - 1) return;
+    if (index > self.viewControllers.count - 1) return;
     // 取出子控制器
 //    WJArrangeController *vc = self.childViewControllers[index];
-    if (self.views.count > index){
+    if (self.viewControllers.count > index){
         [self configChildViewWithIndex:index];
     }
 }
@@ -234,14 +234,14 @@
 
 #pragma mark - privateMethod
 
-- (void)setViews:(NSArray *)views {
-    _views = [views copy];
-    for (UIView *subView in views) {
+- (void)setViewControllers:(NSArray *)viewControllers {
+    _viewControllers = [viewControllers copy];
+    for (UIViewController *subViewController in viewControllers) {
         WJConstraintModel *constraintModel = [WJConstraintModel constraintModel];
-        constraintModel.view = subView;
+        constraintModel.viewController = subViewController;
         [self.constraintModelArray addObject:constraintModel];
     }
-    if (self.views.count > 0) {
+    if (self.viewControllers.count > 0) {
         [self configChildViewWithIndex:0];
     }
 }

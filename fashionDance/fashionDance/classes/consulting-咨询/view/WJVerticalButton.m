@@ -40,7 +40,7 @@
     self.imageView.height = self.height - 2 * WJImageViewMargin - WJTitleH;
     self.imageView.width = self.imageView.height;
     self.imageView.x = (self.width - self.imageView.width) / 2;
-    self.imageView.y = self.imageView.x / 2;
+    self.imageView.y = self.imageView.x;
     
     // 调整文字
     self.titleLabel.x = 0;
