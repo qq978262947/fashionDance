@@ -1465,7 +1465,7 @@
 				TargetAttributes = {
 					DAE93A011C8E75B900F03A67 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = BM238LXE9L;
+						DevelopmentTeam = 2VHMZAJUND;
 					};
 					DAE93A1A1C8E75B900F03A67 = {
 						CreatedOnToolsVersion = 7.2;
@@ -1886,7 +1886,7 @@
 				INFOPLIST_FILE = fashionDance/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.heartHope.fashionDance1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heartHope.fashionDance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1902,7 +1902,7 @@
 				INFOPLIST_FILE = fashionDance/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.heartHope.fashionDance1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heartHope.fashionDance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

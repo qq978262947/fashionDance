@@ -137,6 +137,7 @@ static NSString *cellId = @"MKVideoCell";
         self.dataArray = self.dict[@"all"];
     }
     [self.tableView reloadData];
+    if (self.dataArray.count) return;
     __weak typeof(self) weakSelf = self;
     [[WJHttpTool httpTool]get:_path params:nil success:^(id result) {
         
