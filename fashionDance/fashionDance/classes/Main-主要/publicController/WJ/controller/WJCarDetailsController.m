@@ -12,6 +12,7 @@
 #import "WJCarDetailPicCell.h"
 #import "WJCarDetailWordCell.h"
 #import "WJCarDetailNoImageCell.h"
+#import "SVProgressHUD.h"
 
 //http://autoapp.auto.sohu.com/api/eval/16477
 
@@ -47,14 +48,16 @@
 }
 
 - (void)loadData {
+    [SVProgressHUD show];
     NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/eval/%@",self.modelId];
     [[WJHttpTool httpTool]get:urlString params:nil success:^(id result) {
         WJMoreAboutCarModel *appraiseModel = [WJMoreAboutCarModel mj_objectWithKeyValues:result];
         self.appraiseModel = appraiseModel;
         self.headerView.moreAboutCarModel = appraiseModel;
         [self.tableView reloadData];
+        [SVProgressHUD dismiss];
     } failure:^(NSError *error) {
-        
+        [SVProgressHUD dismiss];
     }];
 }
 

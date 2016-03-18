@@ -141,7 +141,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     WJCarDetailsController *carDetailsController = [[WJCarDetailsController alloc]init];
-    carDetailsController.modelId = self.modelId;
+    WJContentAppraiseModel *listModel = self.listArray[indexPath.row];
+    carDetailsController.modelId = [NSString stringWithFormat:@"%li", (long)listModel.ID];
     [self.navigationController pushViewController:carDetailsController animated:YES];
 }
 

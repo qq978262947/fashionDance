@@ -61,7 +61,7 @@
     [self addSubview:priceLabel];
     self.priceLabel = priceLabel;
     
-    UILabel *youLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 90, (WJMaxScorel * (WJImageW + WJMarginX) + WJMarginX) + 20, 30)];
+    UILabel *youLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 90, (WJMaxScorel * (WJImageW + WJMarginX) + WJMarginX) , 30)];
     [self addSubview:youLabel];
     youLabel.text = @"行驶公里:";
     UILabel *userYouLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(youLabel.frame) + 10, 90, 120, 30)];
@@ -98,6 +98,9 @@
     
     self.starView.scorel = moreAboutCarModel.avgScore;
     
+    self.priceLabel.text = [NSString stringWithFormat:@"%.2f万" , moreAboutCarModel.price];
+    NSString *youhaoString = [NSString stringWithFormat:@"%ld公里" , (long)moreAboutCarModel.youhao];
+    self.userYouLabel.text = [youhaoString stringByReplacingOccurrencesOfString:@".00" withString:@""];
 }
 
 @end

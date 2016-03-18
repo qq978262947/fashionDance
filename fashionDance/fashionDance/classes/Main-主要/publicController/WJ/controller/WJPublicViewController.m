@@ -41,7 +41,7 @@
     WJScrollTitleView *tv = [WJScrollTitleView scrollTitleView];
     self.tv = tv;
     tv.backgroundColor = [UIColor whiteColor];
-    
+    tv.contentBackgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
     
     // 可抽公共代码啊
     YuSummarizeController *vc1 = [[YuSummarizeController alloc]init];
@@ -79,7 +79,6 @@
     
     //设置标题的最大偏移
     tv.titlesScrollWidth = WJScreenW;
-    [tv setContentBackgroundColor:[UIColor yellowColor]];
 }
 
 // 约束WJScrollTitleView控制器视图的位置
