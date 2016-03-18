@@ -58,7 +58,7 @@
     vc3.modelId = self.modelId;
     vc4.modelId = self.modelId;
     vc5.modelId = self.modelId;
-    
+    vc5.carModel = self.carModel;
 //    vc1.view.backgroundColor = [UIColor whiteColor];
 //    vc2.view.backgroundColor = [UIColor redColor];
 //    vc3.view.backgroundColor = [UIColor blackColor];

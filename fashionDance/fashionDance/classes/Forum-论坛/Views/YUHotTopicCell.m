@@ -41,6 +41,10 @@
     [self.imageView2 setNormalImagewithURL:[NSURL URLWithString:topicModel.pic2] placeholderImage:[UIImage imageNamed:@"FollowBtnClickBg"] completed:nil];
     
     [self.imageView3 setNormalImagewithURL:[NSURL URLWithString:topicModel.pic3] placeholderImage:[UIImage imageNamed:@"FollowBtnClickBg"] completed:nil];
+    } else if (topicModel.pic1){
+        [self.imageView1 setNormalImagewithURL:[NSURL URLWithString:topicModel.pic1] placeholderImage:[UIImage imageNamed:@"FollowBtnClickBg"] completed:nil];
+        self.imageView2.hidden = YES;
+        self.imageView3.hidden = YES;
     } else if (topicModel.imgUrl){
         [self.imageView1 setNormalImagewithURL:[NSURL URLWithString:topicModel.imgUrl] placeholderImage:[UIImage imageNamed:@"FollowBtnClickBg"] completed:nil];
         self.imageView2.hidden = YES;

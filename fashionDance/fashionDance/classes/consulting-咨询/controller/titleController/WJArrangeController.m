@@ -133,6 +133,7 @@
     WJCarModel *carModel = self.listArray[indexPath.row];
     WJPublicViewController *vc = [[WJPublicViewController alloc]init];
     vc.modelId = carModel.modelId;
+    vc.carModel = carModel;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
