@@ -15,4 +15,5 @@
 
 @property (nonatomic, strong)WJCarModel *carModel;
 
++(instancetype)wjPublicViewControllerWithModID:(NSString *)modId;
 @end

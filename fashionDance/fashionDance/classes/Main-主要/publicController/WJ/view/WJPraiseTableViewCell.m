@@ -41,10 +41,10 @@
 - (void)setAppraiseList:(WJContentAppraiseModel *)appraiseList {
     _appraiseList = appraiseList;
     self.carNameLabel.text = appraiseList.carName;
-    self.avgScoreLabel.text = [NSString stringWithFormat:@"%ld", (long)appraiseList.avgScore];
-    self.priceLabel.text = [NSString stringWithFormat:@"%ld", (long)appraiseList.price];
-    self.fuelLabel.text = [NSString stringWithFormat:@"%ld", (long)appraiseList.fuel];
-    self.distanceLabel.text = appraiseList.distance;
+    self.avgScoreLabel.text = [NSString stringWithFormat:@"%ld星", (long)appraiseList.avgScore];
+    self.priceLabel.text = [NSString stringWithFormat:@"%ld万", (long)appraiseList.price];
+    self.fuelLabel.text = [NSString stringWithFormat:@"%ldL", (long)appraiseList.fuel];
+    self.distanceLabel.text = [NSString stringWithFormat:@"%@公里", appraiseList.distance];
     self.satisfyLabel.text = appraiseList.satisfy;
     self.dissatisfyLabel.text = appraiseList.dissatisfy;
     

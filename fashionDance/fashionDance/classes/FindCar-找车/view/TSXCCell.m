@@ -23,7 +23,7 @@
 }
 -(void)configWithMod:(TSSXCarModel *)mod
 {
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:mod.modelUrl] placeholderImage:[UIImage imageNamed:@"error"]];
+    [self.iconImage setNormalImagewithURL:[NSURL URLWithString:mod.modelUrl] placeholderImage:[UIImage imageNamed:@"FollowBtnClickBg"] completed:nil];
     self.nameLabel.text=mod.modelName;
     NSString * price=[NSString stringWithFormat:@"%@万~%@万",mod.minPrice,mod.maxPrice];
     self.priceLabel.text=price;

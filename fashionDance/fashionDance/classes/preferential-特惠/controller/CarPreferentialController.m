@@ -23,9 +23,18 @@ static NSString *cellId = @"MKVideoCell";
 @property (nonatomic,strong)MKVediosModel *model;
 
 @property (nonatomic,strong)NSString *path;
+
+@property (strong, nonatomic)NSMutableDictionary *dict;
 @end
 
 @implementation CarPreferentialController
+
+- (NSMutableDictionary *)dict {
+    if (nil == _dict) {
+        _dict = [NSMutableDictionary dictionary];
+    }
+    return _dict;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,12 +44,12 @@ static NSString *cellId = @"MKVideoCell";
     // 设置tableview
     //[self setupView];
     //
-     [self setupRefresh];
+    [self setupRefresh];
     
 }
 - (void)setupRefresh
 {    // 设置tableview
-     [self setupView];
+    [self setupView];
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(downloadData)];
     [self.tableView.mj_header beginRefreshing];
     
@@ -87,7 +96,7 @@ static NSString *cellId = @"MKVideoCell";
             btn.selected = YES;
             [btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
             self.lastButton = btn;
-             self.path = @"http://autoapp.auto.sohu.com/api/columnnews/list_5_0_20";
+            self.path = @"http://autoapp.auto.sohu.com/api/columnnews/list_5_0_20";
         }
     }
 }
@@ -116,17 +125,42 @@ static NSString *cellId = @"MKVideoCell";
 
 - (void)downloadData
 {
+    if ([self.path isEqualToString:@"http://autoapp.auto.sohu.com/api/columnnews/list_6_0_20"]) {
+        self.dataArray = self.dict[@"yuanchuang"];
+    } else if ([self.path isEqualToString:@"http://autoapp.auto.sohu.com/api/columnnews/list_7_0_20"]) {
+        self.dataArray = self.dict[@"jijing"];
+    } else if ([self.path isEqualToString:@"http://autoapp.auto.sohu.com/api/columnnews/list_8_0_20"]) {
+        self.dataArray = self.dict[@"haiwai"];
+    } else if ([self.path isEqualToString:@"http://autoapp.auto.sohu.com/api/columnnews/list_9_0_20"]) {
+        self.dataArray = self.dict[@"shijia"];
+    } else if ([self.path isEqualToString:@"http://autoapp.auto.sohu.com/api/columnnews/list_5_0_20"]) {
+        self.dataArray = self.dict[@"all"];
+    }
+    [self.tableView reloadData];
+    if (self.dataArray.count) return;
     __weak typeof(self) weakSelf = self;
     [[WJHttpTool httpTool]get:_path params:nil success:^(id result) {
         
-      //  NSLog(@"%@",result);
-         NSError *error;
+        //  NSLog(@"%@",result);
+        NSError *error;
         weakSelf.model = [[MKVediosModel alloc]initWithDictionary:result error:&error];
         weakSelf.dataArray = [NSMutableArray arrayWithArray:weakSelf.model.result.newsList];
-        NSLog(@"%@",weakSelf.dataArray);
+        //        NSLog(@"%@",weakSelf.dataArray);
         [weakSelf.tableView reloadData];
-
-         [weakSelf.tableView.mj_header endRefreshing];
+        
+        [weakSelf.tableView.mj_header endRefreshing];
+        if ([weakSelf.path isEqualToString:@"http://autoapp.auto.sohu.com/api/columnnews/list_6_0_20"]) {
+            weakSelf.dict[@"yuanchuang"] = weakSelf.dataArray;
+        } else if ([weakSelf.path isEqualToString:@"http://autoapp.auto.sohu.com/api/columnnews/list_7_0_20"]) {
+            self.dict[@"jijing"] = weakSelf.dataArray;
+        } else if ([weakSelf.path isEqualToString:@"http://autoapp.auto.sohu.com/api/columnnews/list_8_0_20"]) {
+            self.dict[@"haiwai"] = weakSelf.dataArray;
+        } else if ([weakSelf.path isEqualToString:@"http://autoapp.auto.sohu.com/api/columnnews/list_9_0_20"]) {
+            self.dict[@"shijia"] = weakSelf.dataArray;
+        } else if ([weakSelf.path isEqualToString:@"http://autoapp.auto.sohu.com/api/columnnews/list_5_0_20"]) {
+            weakSelf.dict[@"all"] = weakSelf.dataArray;
+        }
+        
     } failure:^(NSError *error) {
         
     }];
@@ -166,13 +200,13 @@ static NSString *cellId = @"MKVideoCell";
     vdVC.view.backgroundColor = [UIColor colorWithRed:1.000 green:0.400 blue:0.400 alpha:1.000];
     VedioResultList *list = self.dataArray[indexPath.row];
     
-
+    
     NSString *str1 = @"http://autoapp.auto.sohu.com/auto-app/news2/";
     NSString *str2 = [NSString stringWithFormat:@"%@",list.cmsId];
     NSString *str3 = @".html?src=11640001";
     NSString *path = [NSString stringWithFormat:@"%@%@%@",str1,str2,str3];
     vdVC.path = path;
-   // NSLog(@"cmsID:%@",vdVC.path);
+    // NSLog(@"cmsID:%@",vdVC.path);
     [self.navigationController pushViewController:vdVC animated:YES];
 }
 

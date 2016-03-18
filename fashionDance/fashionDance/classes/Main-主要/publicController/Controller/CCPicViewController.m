@@ -7,6 +7,8 @@
 //
 
 #import "CCPicViewController.h"
+#import "MJPhoto.h"
+#import "MJPhotoBrowser.h"
 #import "TSCKModel.h"
 #import "TSCarPicMod.h"
 #import "TSLXModel.h"
@@ -17,6 +19,8 @@
 #import "TSPhotoCell.h"
 #import "TSPicReusableView.h"
 #import "TSColorMod.h"
+#import "MJRefresh.h"
+
 @interface CCPicViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 //按钮数组
 @property (nonatomic,strong)NSMutableArray * btnArray;
@@ -43,6 +47,7 @@
 @property (nonatomic,strong)NSMutableArray * dataArray;
 //tpye2
 @property (nonatomic,strong)NSMutableArray * bigDataArray;
+@property (nonatomic,assign)NSInteger start;
 @property (nonatomic,assign)BOOL firstReq;
 @property (nonatomic,strong)NSString * collectionTitle;
 @end
@@ -146,7 +151,6 @@
     self.collectionViewType=YES;
     self.firstReq=YES;
     
-    
     self.view.backgroundColor=[UIColor whiteColor];
     [self downLoadListData];
     [self downLoadData];
@@ -216,13 +220,14 @@
             [self.dataArray addObject:tempArray];
             [self.titleArray addObject:@"其他"];
         }
-        
+
         [self.collectionView reloadData];
         
     }
     failure:^(NSError *error)
     {
         NSLog(@"%@",error);
+
     }];
 }
 -(void)downLoadListData
@@ -244,8 +249,11 @@
             TSCKModel * mod= [TSCKModel modWithDictionary:dict];
             [self.offsaleArray addObject:mod];
         }
-    } failure:^(NSError *error) {
+       // [self.collectionView.mj_footer endRefreshing];
+    } failure:^(NSError *error)
+    {
         NSLog(@"%@",error);
+        //[self.collectionView.mj_footer endRefreshing];
     }];
 }
 -(void)downloadLXData
@@ -268,11 +276,9 @@
     {
         self.bigDataArray=nil;
     }
-    NSString * path=[NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/pic/list/model_%@_trim_%@_type_%@000_color_%@_page_%ld_size_%ld",self.modelId,self.trim,self.type,self.color,self.page,self.size];
-    NSLog(@"%@",path);
+    NSString * path=[NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/pic/list/model_%@_trim_%@_type_%@000_color_%@_page_%d_size_%d",self.modelId,self.trim,self.type,self.color,self.page,self.size];
     [[WJHttpTool httpTool]get:path params:nil success:^(NSDictionary * result)
     {
-
         NSDictionary * res=result[@"result"];
         NSArray * items=res[@"PicItems"];
         for (NSDictionary * dict in items)
@@ -280,12 +286,20 @@
             TSLXModel * mod=[TSLXModel modWithDict:dict];
             [self.bigDataArray addObject:mod];
         }
-        NSLog(@"%ld",self.bigDataArray.count);
-        
+
         self.firstReq=NO;
+        if (self.start==self.bigDataArray.count) {
+            [self.collectionView.mj_footer endRefreshingWithNoMoreData];
+        }
+        else
+        {
+            self.start=self.bigDataArray.count;
+            [self.collectionView.mj_footer endRefreshing];
+        }
         [self.collectionView reloadData];
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
+        [self.collectionView.mj_footer endRefreshing];
     }];
     
 }
@@ -328,10 +342,15 @@
     for (int i = 0;i<3;i++)
     {
         UIButton * btn=[[UIButton alloc]init];
-        [btn setBackgroundColor:[UIColor darkGrayColor]];
+        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [btn setBackgroundColor:[UIColor redColor]];
         btn.frame=CGRectMake(SCRW/3*i,0 , SCRW/3,50);
         [btn setTitle:titleArray[i] forState:UIControlStateNormal];
+        btn.titleLabel.font=[UIFont systemFontOfSize:15];
+        //btn.titleEdgeInsets=UIEdgeInsetsMake(0, 0, 0, SCRW/3);
+        //btn.imageEdgeInsets=UIEdgeInsetsMake(0, (SCRW/3), 0, 0);
         [self.view addSubview:btn];
+        //[btn setImage:[UIImage imageNamed:@"left2"] forState:UIControlStateNormal];
         btn.tag=100+i;
         [btn addTarget:self action:@selector(btnTouch:) forControlEvents:UIControlEventTouchUpInside];
         [self.btnArray addObject:btn];
@@ -380,6 +399,9 @@
                 
                 self.collectionViewType=NO;
                 self.firstReq=YES;
+                self.collectionView.mj_footer=[MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+                    [self downloadLXData];
+                }];
                 [self downloadLXData];
             }];
             [self presentViewController:half animated:YES completion:nil];
@@ -396,6 +418,9 @@
                 //下载数据
                 self.collectionViewType=NO;
                 self.firstReq=YES;
+                self.collectionView.mj_footer=[MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+                    [self downloadLXData];
+                }];
                 [self downloadLXData];
             }];
             [self presentViewController:color animated:YES completion:nil];
@@ -418,7 +443,6 @@
         return self.bigDataArray.count;
     }
     return 0;
-
 }
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
@@ -450,18 +474,33 @@
 }
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(100, 60);
+    return CGSizeMake(SCRW/3-15, 66);
 }
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(10, 10, 10, 10);
+    return UIEdgeInsetsMake(5, 5, 5, 5);
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    //http://autoapp.auto.sohu.com/api/pic/list/model_1992_trim_-1_type_2000_color_0_page_1_size_20
-    //http://autoapp.auto.sohu.com/api/pic/list/model_4905_trim_-1_type_9000_color_0_page_1_size_20
-    //http://autoapp.auto.sohu.com/api/pic/list/model_4905_trim_-1_type_9000_color_0_page_1_size_20
-    //http://autoapp.auto.sohu.com/api/pic/list/model_4905_trim_-1_type_9000_color_0_page_1_size_20
+    if (self.collectionViewType)
+    {
+        NSArray * temp=self.dataArray[indexPath.section];
+        TSCarPicMod * mod=temp[indexPath.row];
+        MJPhotoBrowser * browser=[[MJPhotoBrowser alloc]init];
+        MJPhoto * photo=[[MJPhoto alloc]init];
+        browser.photos=@[photo];
+        photo.url = [NSURL URLWithString:mod.url];
+        [self.navigationController pushViewController:browser animated:YES];
+    }
+    else
+    {
+        TSLXModel * mod=self.bigDataArray[indexPath.row];
+        MJPhotoBrowser * browser=[[MJPhotoBrowser alloc]init];
+        MJPhoto * photo=[[MJPhoto alloc]init];
+        photo.url = [NSURL URLWithString:mod.PicUrl];
+        browser.photos=@[photo];
+        [self.navigationController pushViewController:browser animated:YES];
+    }
     //弹出Photo
 }
 //1.要显示什么的头部视图
@@ -485,26 +524,11 @@
     return reView;
 }//end method
 
-//-(NSString *)
-
-
-
-
-
-
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

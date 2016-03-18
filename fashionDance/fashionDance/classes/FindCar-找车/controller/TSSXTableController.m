@@ -12,6 +12,7 @@
 #import "MJRefresh.h"
 #import "SVProgressHUD.h"
 #import "UIImageView+WebCache.h"
+#import "WJPublicViewController.h"
 //#import "<#header#>"
 
 @interface TSSXTableController ()
@@ -54,7 +55,7 @@
 -(void)downLoadData
 {
     //分页请求，当前第几页，每页多少个
-    NSString * path=[NSString stringWithFormat:@"%@-%ld-%ld",self.resURL,self.pageNumber,self.pageCount];
+    NSString * path=[NSString stringWithFormat:@"%@-%d-%d",self.resURL,self.pageNumber,self.pageCount];
     [[WJHttpTool httpTool]get:path params:nil success:^(NSDictionary * result)
     {
         NSArray * items=[result objectForKey:@"items"];
@@ -104,6 +105,13 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TSSXCarModel * mod=self.dataArray[indexPath.row];
+    NSString * modid=[NSString stringWithFormat:@"%@",mod.modelId];
+    WJPublicViewController * pub=[WJPublicViewController wjPublicViewControllerWithModID:modid];
+    [self.navigationController pushViewController:pub animated:YES];
 }
 
 

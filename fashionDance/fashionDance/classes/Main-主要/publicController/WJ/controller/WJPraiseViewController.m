@@ -12,6 +12,7 @@
 #import "WJPraiseTableViewCell.h"
 #import "WJPraiseHeaderView.h"
 #import "WJCarDetailsController.h"
+#import "MJRefresh.h"
 
 @interface WJPraiseViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -49,8 +50,20 @@
     // 加载头部数据
     [self loadHeaderData];
     // 加载身体数据
-    [self loadContentData];
+    [self setupRefresh];
 }
+
+
+// 集成刷新控件,并加载最新数据
+- (void)setupRefresh
+{
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadContentData)];
+    // 自动改变透明度
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    [self.tableView.mj_header beginRefreshing];
+    
+}
+
 
 - (void)loadHeaderData {
     NSString *urlString = [NSString stringWithFormat:@"http://autoapp.auto.sohu.com/api/eval/stat/model_%@",self.modelId];
@@ -68,8 +81,9 @@
     [[WJHttpTool httpTool]get:urlString params:nil success:^(id result) {
         _listArray = [WJContentAppraiseModel mj_objectArrayWithKeyValuesArray:result];
         [self.tableView reloadData];
+        [self.tableView.mj_header endRefreshing];
     } failure:^(NSError *error) {
-        
+        [self.tableView.mj_header endRefreshing];
     }];
 }
 
