@@ -47,11 +47,15 @@
 /**
  *  按钮背景图片
  */
-@property (strong, nonatomic)UIColor *buttonBackgroundImage;
+@property (strong, nonatomic)UIImage *buttonBackgroundImage;
 /**
  *  指示器颜色
  */
 @property (strong, nonatomic)UIColor *indicatorViewColor;
+/**
+ *  标题的背景色
+ */
+@property (strong, nonatomic)UIColor *titlesBackgroundColor;
 /**
  *  切换title的动画时间
  */
@@ -67,9 +71,9 @@
 ////////////////////////////////////////////////////////////////////////other
 
 /**
- *  指定存放内容的viewControllers数组--数组存放的是控制器的地址－所以不会有循环引用的问题
+ *  指定存放内容的viewControllers数组--注意－此处没有循环引用的问题
  */
-@property (copy, nonatomic)NSArray *viewControllers;
+@property (strong, nonatomic)NSArray *viewControllers;
 
 
 @end
