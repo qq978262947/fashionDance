@@ -44,7 +44,7 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // 设置headerview
     WJCarDetailHeaderView *headerView = [WJCarDetailHeaderView carDetailHeaderViewWithFrame:CGRectMake(0, 0, WJScreenW, 270)];
-    headerView.backgroundColor = [UIColor colorWithRed:235/255.0 green:235/255.0 blue:235/255.0 alpha:1.0];
+    headerView.backgroundColor = [UIColor redColor];
     self.headerView = headerView;
     self.tableView.tableHeaderView = headerView;
     
@@ -60,12 +60,12 @@
         WJMoreAboutCarModel *appraiseModel = [WJMoreAboutCarModel mj_objectWithKeyValues:result];
         self.appraiseModel = appraiseModel;
         self.headerView.moreAboutCarModel = appraiseModel;
-        [self.tableView reloadData];
         [SVProgressHUD dismiss];
+        self.headerView.backgroundColor = [UIColor colorWithRed:235/255.0 green:235/255.0 blue:235/255.0 alpha:1.0];
         [self.toolBar removeFromSuperview];
+        [self.tableView reloadData];
     } failure:^(NSError *error) {
         [SVProgressHUD dismiss];
-        [self.toolBar removeFromSuperview];
     }];
 }
 
@@ -89,9 +89,9 @@
     UILabel *titleView = [[UILabel alloc]init];
     titleView.size = CGSizeMake(WJScreenW, 30);
     if (section == 0) {
-       titleView.text = @"  实拍图片";
+        titleView.text = @"  实拍图片";
     } else if (section == 1) {
-       titleView.text = @"  车主评价";
+        titleView.text = @"  车主评价";
     }
     titleView.textColor = [UIColor colorWithWhite:0.1 alpha:1.0];
     titleView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
@@ -99,7 +99,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    return self.appraiseModel ? 2 : 0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -115,7 +115,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     if (indexPath.section == 0 && indexPath.row == 0) {
         WJCarDetailPicCell *cell = [WJCarDetailPicCell carDetailPicCellWithTableView:tableView];
         if (self.appraiseModel.carPhotoList.count) {

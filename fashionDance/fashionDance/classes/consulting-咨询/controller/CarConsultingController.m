@@ -84,7 +84,7 @@
     // 创建header
     WJHeaderView *header = [[WJHeaderView alloc] init];
     header.backgroundColor = [UIColor colorWithRed:235/255.0 green:235/255.0  blue:235/255.0  alpha:1.0];
-    header.size = CGSizeMake(WJScreenW, 120);
+    header.size = CGSizeMake(WJScreenW, WJScreenW / 4 + 35);
     // 设置header
     header.delegate = self;
     self.tableView.tableHeaderView = header;

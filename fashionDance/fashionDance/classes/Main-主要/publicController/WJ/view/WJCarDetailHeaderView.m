@@ -63,7 +63,7 @@
     
     UILabel *youLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 90, (WJMaxScorel * (WJImageW + WJMarginX) + WJMarginX) , 30)];
     [self addSubview:youLabel];
-    youLabel.text = @"行驶公里:";
+    youLabel.text = @"平均油耗:";
     UILabel *userYouLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(youLabel.frame) + 10, 90, 120, 30)];
     [self addSubview:userYouLabel];
     self.userYouLabel = userYouLabel;
@@ -99,7 +99,7 @@
     self.starView.scorel = moreAboutCarModel.avgScore;
     
     self.priceLabel.text = [NSString stringWithFormat:@"%.2f万" , moreAboutCarModel.price];
-    NSString *youhaoString = [NSString stringWithFormat:@"%ld公里" , (long)moreAboutCarModel.youhao];
+    NSString *youhaoString = [NSString stringWithFormat:@"%.2fL/100km" , moreAboutCarModel.fuel];
     self.userYouLabel.text = [youhaoString stringByReplacingOccurrencesOfString:@".00" withString:@""];
 }
 
