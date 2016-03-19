@@ -88,8 +88,8 @@
 
 -(CGSize)collectionViewContentSize
 {
-    CGFloat width = self.columnNumber * self.sizeOfItem.width;
-    CGFloat height = self.heightColumn + self.sizeOfItem.height;
+    CGFloat width = self.columnNumber * (self.sizeOfItem.width + self.minimumInteritemSpacing) + self.minimumInteritemSpacing;
+    CGFloat height = self.heightColumn + (self.sizeOfItem.height + self.minimumLineSpacing);
     return CGSizeMake(width, height);
 }
 

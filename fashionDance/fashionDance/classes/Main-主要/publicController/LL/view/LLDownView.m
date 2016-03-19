@@ -14,10 +14,27 @@
 
 @property(nonatomic,weak)UICollectionView * leftCollectionView;
 @property(nonatomic,weak)UICollectionView * rightCollectionView;
-
+@property(nonatomic,strong)NSArray * leftTitle;
+@property(nonatomic,strong)NSArray * leftTilteKey;
 @end
 
 @implementation LLDownView
+
+-(NSArray *)leftTitle
+{
+    if (!_leftTitle) {
+        _leftTitle = @[@"厂商指导价",@"经销商最低报价",@"车厂",@"级别",@"车体结构",@"发动机",@"变速箱",@"工信部油耗",@"官方0-100加速",@"保养周期",@"保养政策",@"动力类型",@"长宽高"];
+    }
+    return _leftTitle;
+}
+
+-(NSArray *)leftTilteKey
+{
+    if (!_leftTilteKey) {
+        _leftTilteKey = @[@"102",@"103",@"104",@"105",@"106",@"107",@"108",@"294",@"113",@"114",@"115",@"303",@"293"];
+    }
+    return _leftTilteKey;
+}
 
 -(void)dealloc
 {
@@ -65,7 +82,6 @@
 {
     if (!_rightCollectionView) {
         LLCanshuCollectionLayout * flowLayout = [[LLCanshuCollectionLayout alloc]init];
-        flowLayout.columnNumber = 10;
         flowLayout.sizeOfItem = CGSizeMake(self.cellWidth, self.cellHeight);
         UICollectionView * view = [[UICollectionView alloc]initWithFrame:CGRectMake(self.leftWidth, 0, WJScreenW - self.leftWidth, self.frame.size.height) collectionViewLayout:flowLayout];
         [view registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"test"];
@@ -107,31 +123,63 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"test" forIndexPath:indexPath];
-    //取出数据源
-    //算出此indexpath对应model
-    LLParameterModel * model;
-    if (self.data.count != 0) {
-        NSInteger counter = indexPath.item%self.data.count;
-        model = self.data[counter];
-        
+    if ([collectionView isEqual:self.leftCollectionView]) {
+        NSString * title = self.leftTitle[indexPath.item];
         if (cell.subviews.count > 1) {
             //有subview
             UILabel * view = [[cell subviews] lastObject];
-            view.text = model.a102;
+            view.text = title;
         }
         else
         {
             UILabel * view = [[UILabel alloc]initWithFrame:cell.bounds];
             [cell addSubview:view];
-            view.text = model.a102;
+            view.text = title;
         }
+        cell.backgroundColor = [UIColor whiteColor];
 
     }
     else
     {
-        cell.backgroundColor = WArcColor;
+        //取出数据源
+        //算出此indexpath对应model
+        LLParameterModel * model;
+        if (self.data.count != 0) {
+            NSInteger counter = indexPath.item%self.data.count;
+            model = self.data[counter];
+            //获得数据名
+            NSString * getSelectName = self.leftTilteKey[indexPath.item/self.data.count];
+            getSelectName = [NSString stringWithFormat:@"a%@",getSelectName];
+            SEL getSelect = NSSelectorFromString(getSelectName);
+            
+            if (cell.subviews.count > 1) {
+                //有subview
+                UILabel * view = [[cell subviews] lastObject];
+                if ([model respondsToSelector:getSelect]) {
+                    view.text = [model performSelector:getSelect];
+                }
+            }
+            else
+            {
+                UILabel * view = [[UILabel alloc]initWithFrame:cell.bounds];
+                [cell addSubview:view];
+                if ([model respondsToSelector:getSelect]) {
+                    view.text = [model performSelector:getSelect];
+                }
+            }
+            
+            cell.backgroundColor = [UIColor whiteColor];
+            
+        }
+        else
+        {
+            cell.backgroundColor = WArcColor;
+        }
+
     }
  
+    cell.layer.borderWidth = 1.5;
+    cell.layer.borderColor = [UIColor grayColor].CGColor;
     
     
     
@@ -157,10 +205,8 @@
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGPoint offSet = scrollView.contentOffset;
-    if (offSet.x == 0) {
-        self.leftCollectionView.contentOffset = offSet;
-        self.rightCollectionView.contentOffset = offSet;
-    }
+    self.leftCollectionView.contentOffset = CGPointMake(0, offSet.y);
+    self.rightCollectionView.contentOffset = CGPointMake(self.rightCollectionView.contentOffset.x, offSet.y);
     if ([scrollView isEqual:self.rightCollectionView]) {
         NSNotificationCenter * defualtCenter = [NSNotificationCenter defaultCenter];
         [defualtCenter postNotificationName:@"LLScroll" object:self userInfo:@{@"scrollView":scrollView}];

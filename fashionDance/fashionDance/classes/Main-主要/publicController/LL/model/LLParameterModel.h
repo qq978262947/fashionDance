@@ -35,4 +35,9 @@
 @property(nonatomic,strong)NSString * a303;
 //长宽高
 @property(nonatomic,strong)NSString * a293;
+
+//upview组标
+@property(nonatomic,strong)NSString * MODELNAME;
+@property(nonatomic,strong)NSString * NAME;
+@property(nonatomic,strong)NSNumber * YEAR;
 @end

@@ -12,8 +12,8 @@
 #import "LLParameterModel.h"
 
 #define left_width 100
-#define down_cell_height 100
-#define down_up_cell_width 200
+#define down_cell_height 80
+#define down_up_cell_width 150
 #define up_cell_height 150
 
 @interface llParameterController ()

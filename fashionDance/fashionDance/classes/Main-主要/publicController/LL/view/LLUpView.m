@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollViewX;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftWidthCon;
 
+
+@property(strong,nonatomic)NSArray * lableArray;
 //@property(nonatomic,weak)UIButton * upButton;
 //@property(nonatomic,weak)UIButton * downButton;
 //@property(nonatomic,weak)UIScrollView * scrollView;
@@ -22,6 +24,45 @@
 @end
 
 @implementation LLUpView
+
+-(void)setData:(NSArray *)data
+{
+    _data = data;
+    
+    for (UIView * view in self.lableArray) {
+        [view removeFromSuperview];
+    }
+    self.lableArray = nil;
+    
+    int i = 0;
+    UILabel * lastButton;
+    for (LLParameterModel * model in data) {
+        UILabel * view = [[UILabel alloc]init];
+        [self.scrollViewX addSubview:view];
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            if (i == 0) {
+                make.left.equalTo(self.scrollViewX.mas_left).offset(0);
+            }
+            else
+            {
+                make.left.equalTo(lastButton.mas_right).offset(0);
+            }
+            make.bottom.equalTo(self.scrollViewX).offset(0);
+            make.top.equalTo(self.scrollViewX).offset(0);
+            make.height.width.equalTo(@(self.widthCell));
+            
+            if (i == self.data.count - 1) {
+                make.trailing.equalTo(self.scrollViewX).offset(-0);
+            }
+        }];
+        view.numberOfLines = 0;
+        view.text = [NSString stringWithFormat:@"%@ %@款 %@",model.MODELNAME,model.YEAR,model.NAME];
+        view.layer.borderColor = [UIColor blackColor].CGColor;
+        view.layer.borderWidth = 2.0;
+        lastButton = view;
+        i++;
+    }//end forin
+}
 
 -(void)setLeftWidth:(CGFloat)leftWidth
 {
@@ -53,17 +94,12 @@
     [defualtCenter postNotificationName:@"LLScroll" object:self userInfo:@{@"scrollView":scrollView}];
 }
 
--(void)willMoveToSuperview:(UIView *)newSuperview
-{
-    
-    //测试用的content offset
-    self.scrollViewX.contentSize = CGSizeMake(self.data.count * self.widthCell, self.scrollViewX.frame.size.height);
-    CAGradientLayer * layer = [CAGradientLayer layer];
-    [layer setFrame:self.scrollViewX.bounds];
-    layer.locations = @[@0.25,@0.5,@0.75];
-    layer.colors = @[(id)WArcColor.CGColor,(id)WArcColor.CGColor,(id)WArcColor.CGColor,(id)WArcColor.CGColor];
-    [self.scrollViewX.layer addSublayer:layer];
-}
+//-(void)willMoveToSuperview:(UIView *)newSuperview
+//{
+//    
+//    //测试用的content offset
+//    self.scrollViewX.contentSize = CGSizeMake(self.data.count * self.widthCell, self.scrollViewX.frame.size.height);
+//}
 
 -(void)dealloc
 {
