@@ -74,7 +74,7 @@
         self.widthRow = -1;
         //转入下一行
         //从始至终返回的size height都一样
-        self.heightColumn = indexPath.item/self.columnNumber * frame.size.height;
+        self.heightColumn = indexPath.item/  self.columnNumber * frame.size.height;
     }
     
     frame.origin = CGPointMake(self.widthRow + self.minimumInteritemSpacing, self.heightColumn + self.minimumLineSpacing);

@@ -1,22 +1,22 @@
 //
-//  CarMineController.m
+//  LLPeccancyController.m
 //  fashionDance
 //
-//  Created by 汪俊 on 16/3/20.
+//  Created by 李璐 on 16/3/24.
 //  Copyright © 2016年 汪俊. All rights reserved.
 //
 
-#import "CarMineController.h"
+#import "LLPeccancyController.h"
 
-@interface CarMineController ()
+@interface LLPeccancyController ()
 
 @end
 
-@implementation CarMineController
+@implementation LLPeccancyController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = WJGlobalBg;
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
