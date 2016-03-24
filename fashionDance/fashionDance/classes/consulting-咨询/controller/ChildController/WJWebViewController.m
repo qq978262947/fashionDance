@@ -23,31 +23,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //从数据库里查找是不是收藏过
-#warning 待完善
-    self.isFavorite = NO;
     //nav bar上的收藏和分享按钮
-    UIBarButtonItem * itemFavorite = [UIBarButtonItem itemWithImage:@"emptyStar" highImage:@"like_selected" target:self action:@selector(favoriteItemTouch)];
+    UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+    UIBarButtonItem *itemFavorite = [[UIBarButtonItem alloc]initWithCustomView:btn];
+    [btn setBackgroundImage:[UIImage imageNamed:@"new_collectBtn_normal"] forState:UIControlStateNormal];
+    [btn setBackgroundImage:[UIImage imageNamed:@"new_collect_selected"] forState:UIControlStateSelected];
+    [btn addTarget:self action:@selector(favoriteItemTouch:) forControlEvents:UIControlEventTouchUpInside];
     self.itemFavorite = itemFavorite;
     UIBarButtonItem * itemShare = [UIBarButtonItem itemWithImage:@"tab_mySpace_normal" highImage:nil target:self action:@selector(shareItemTouch)];
     self.navigationItem.rightBarButtonItems = @[itemShare,itemFavorite];
-    
+    //从数据库里查找是不是收藏过
+    self.isFavorite = NO;
+    NSArray * array = [[LLDBArticleManager sharedManager] searchAllArticle];
+    for (WJList * list in array) {
+        if ([list.url isEqualToString:self.urlString]) {
+            self.isFavorite = YES;
+            btn.selected = YES;
+        }
+    }
+
     [self setupWebView];
 }
 
--(void)favoriteItemTouch
+-(void)favoriteItemTouch:(UIButton *)sender
 {
     //change favorite state
     self.isFavorite = !self.isFavorite;
+    sender.selected = self.isFavorite;
     //与数据库沟通
     if (self.isFavorite) {
         [[LLDBArticleManager sharedManager] insertArticle:self.articleModel];
-        [self.itemFavorite setImage:[UIImage imageNamed:@"like_selected"]];
     }
     else
     {
         [[LLDBArticleManager sharedManager] deleteArticleWithID:self.articleModel.ID];
-        [self.itemFavorite setImage:[UIImage imageNamed:@"emptyStar"]];
     }
 }
 

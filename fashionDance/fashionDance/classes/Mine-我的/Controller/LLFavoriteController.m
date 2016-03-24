@@ -11,7 +11,7 @@
  */
 
 #import "LLFavoriteController.h"
-#import "WJContainerView.h"
+#import "WJScrollTitleView.h"
 //论坛收藏
 #import "YUDBManager.h"
 #import "YUHotTopicModel.h"
@@ -23,215 +23,65 @@
 #import "WJConsultingCell.h"
 #import "WJConsultingNoPicCell.h"
 
-@interface LLFavoriteController ()<UITableViewDataSource,UITableViewDelegate>
+//第三方尝试
+#import "LLFavoriteArticleController.h"
+#import "LLFavoriteCarController.h"
+#import "LLFavoriteTopicController.h"
 
-//一共三个view 都是tableview
-@property(nonatomic,weak)UITableView * tableView;//汽车
-@property(nonatomic,weak)UITableView * articleTableView;//文章
-@property(nonatomic,weak)UITableView * forumTableView;//论坛
-
-//头顶的横条
-@property(nonatomic,weak)UIView * headView;
-//记录选中的button
-@property(nonatomic,weak)UIButton * defaultButton;
-
-//数据
-@property(nonatomic,strong)NSArray * forumData;
-@property(nonatomic,strong)NSArray * articleData;
+@interface LLFavoriteController ()<WJScrollTitleViewDelegate>
+@property(nonatomic,weak)LLFavoriteArticleController * articleContrl;
+@property(nonatomic,weak)LLFavoriteCarController * carContrl;
+@property(nonatomic,weak)LLFavoriteTopicController * topicContrl;
 @end
 
 @implementation LLFavoriteController
-
--(UIView *)headView
+- (void)scrollTitleView:(WJScrollTitleView *)containerView NumberOfRow:(NSInteger)index
 {
-    if (!_headView) {
-        UIView * view = [[UIScrollView alloc]initWithFrame:CGRectMake(0, WTopHeight, WJScreenW, 50)];
-        [view setBackgroundColor:[UIColor orangeColor]];
-        CGFloat buttonWidth = view.frame.size.width/3;
-        NSArray * array = @[@"车型",@"文章",@"帖子"];
-        for (int i = 0; i < 3; i++) {
-            //三个button
-            UIButton * button = [[UIButton alloc]initWithFrame:CGRectMake(i * buttonWidth, 0, buttonWidth, view.size.height)];
-            button.tag = 100 + i;
-            [button setTitle:array[i] forState:UIControlStateNormal];
-            [button addTarget:self action:@selector(buttonSelected:) forControlEvents:UIControlEventTouchUpInside];
-            [button setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-            button.contentMode = UIViewContentModeCenter;
-            [view addSubview:button];
-            //默认显示的页
-            if (i == 1) {
-                self.defaultButton = button;
-            }
-        }
-        [self.view addSubview:view];
-        _headView = view;
-    }
-    return _headView;
-}
-
-#pragma mark 展示哪条数据
--(void)buttonSelected:(UIButton *)sender
-{
-    //这个是forum
-    NSArray * topicArray = [[YUDBManager sharedManager] searchAllTopic];
-    self.forumData = topicArray;
-    //article
-    self.articleData = [[LLDBArticleManager sharedManager] searchAllArticle];
-
-    if (![sender isEqual:self.defaultButton]) {
-        self.defaultButton.selected = NO;
-        sender.selected = YES;
-        //取出tag，展示相应数据
-        switch (sender.tag) {
-            case 100:
-                //车
-                [self.view bringSubviewToFront:self.tableView];
-                break;
-            case 101:
-                //文章
-                [self.view bringSubviewToFront:self.articleTableView];
-                break;
-            case 102:
-                //帖子
-                [self.view bringSubviewToFront:self.forumTableView];
-                break;
-                
-            default:
-                break;
-        }//end switch
-    }//end fi
-    else
-    {
-        [self articleTableView];
-    }
-    [self.view bringSubviewToFront:self.headView];
-
+    
+    switch (index) {
+        case 0:
+            //车
+            break;
+        case 1:
+            //文章
+            break;
+        case 2:
+            //帖子
+            break;
+            
+        default:
+            break;
+    }//end switch
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    WJContainerView * scrollTitleView = [WJContainerView containerView];
-//    [scrollTitleView setFrame:CGRectMake(0, WTopHeight, WJScreenW, WJScreenH - WTopHeight)];
-//    [self.view addSubview:scrollTitleView];
-//    scrollTitleView.
-    [self articleTableView];
+    self.automaticallyAdjustsScrollViewInsets = NO;
 
-    //默认数据呈现出来
-    [self headView];//为了获得defaultButton
-    [self buttonSelected:self.defaultButton];//为了展示数据
-}
-
-#pragma mark UITableViewDataSource
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    if ([tableView isEqual:_forumTableView]) {
-        return self.forumData.count;
-    }
-    else if ([tableView isEqual:_articleTableView])
-    {
-        return self.articleData.count;
-    }
+    WJScrollTitleView * view = [WJScrollTitleView scrollTitleViewWithFrame:CGRectMake(0, 0, WJScreenW, WJScreenH)];
+    LLFavoriteArticleController * article = [[LLFavoriteArticleController alloc]init];
+    article.articleData = [[LLDBArticleManager sharedManager] searchAllArticle];
+    [self addChildViewController:article];
+    self.articleContrl = article;
     
-    return 0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell * cell;
-    if ([tableView isEqual:_forumTableView]) {
-        YUHotTopicCell * cellTmp = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([YUHotTopicCell class]) forIndexPath:indexPath];
-        cellTmp.topicModel = self.forumData[indexPath.row];
-        
-        cell = cellTmp;
-    }
-    else if ([tableView isEqual:_articleTableView])
-    {
-        WJList *list = self.articleData[indexPath.row];
-        if (list.picUrl == nil || [list.picUrl isEqualToString:@""]) {
-            WJConsultingNoPicCell *cellTmp = [WJConsultingNoPicCell consultingCellWithTableView:tableView];
-            cellTmp.list = list;
-            
-            cell = cellTmp;
-        }else {
-            WJConsultingCell *cellTmp  = [WJConsultingCell consultingCellWithTableView:tableView];
-            cellTmp.list = list;
-            
-            cell = cellTmp;
-        }
-
-    }
+    LLFavoriteTopicController * topic = [[LLFavoriteTopicController alloc]init];
+    topic.forumData = [[YUDBManager sharedManager] searchAllTopic];
+    [self addChildViewController:topic];
+    self.topicContrl = topic;
     
-    return cell;
+    view.viewControllers = @[topic,article];
+    view.titles = @[@"论坛",@"文章"];
+    view.titlesScrollWidth = WJScreenW;
+    view.delegate = self;
+    [self.view addSubview:view];
+    
 }
 
-#pragma mark cellHeight
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)viewWillAppear:(BOOL)animated
 {
-    if ([tableView isEqual:_forumTableView]) {
-        YUHotTopicModel *topic = self.forumData[indexPath.row];
-        if (topic.pic1 || topic.imgUrl) {
-            
-            return  140;
-        } else {
-            return 60;
-        }
-    }
-    else if([tableView isEqual:_articleTableView])
-    {
-        WJList *list = self.articleData[indexPath.row];
-        if (list.picUrl == nil || [list.picUrl isEqualToString:@""]) {
-            // 文字的最大尺寸
-            CGSize maxSize = CGSizeMake(WJScreenW - 2 * 10, MAXFLOAT);
-            // 计算文字的高度
-            CGFloat height = [list.title boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:17]} context:nil].size.height;
-            return height + 20 + 20 + 5;
-        }
-        return 90;
-    }
-    return 200;
-}
-
-#pragma mark tableview的设置
--(UITableView *)articleTableView
-{
-    if (!_articleTableView) {
-        UITableView * view = [[UITableView alloc]initWithFrame:self.view.bounds];
-        [self.view addSubview:view];
-        view.dataSource = self;
-        view.delegate = self;
-        
-        _articleTableView = view;
-    }
-    return _articleTableView;
-}
-
--(UITableView *)forumTableView
-{
-    if (!_forumTableView) {
-        UITableView * view = [[UITableView alloc]initWithFrame:self.view.bounds];
-        [self.view addSubview:view];
-        view.dataSource = self;
-        view.delegate = self;
-        [view registerNib:[UINib nibWithNibName:NSStringFromClass([YUHotTopicCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([YUHotTopicCell class])];
-        
-        _forumTableView = view;
-    }
-    return _forumTableView;
-}
-
--(UITableView *)tableView
-{
-    if (!_tableView) {
-        UITableView * view = [[UITableView alloc]initWithFrame:self.view.bounds];
-        [self.view addSubview:view];
-        view.dataSource = self;
-        view.delegate = self;
-        
-        _tableView = view;
-    }
-    return _tableView;
+    self.articleContrl.articleData = [[LLDBArticleManager sharedManager] searchAllArticle];
+    self.topicContrl.forumData = [[YUDBManager sharedManager] searchAllTopic];
 }
 
 @end
