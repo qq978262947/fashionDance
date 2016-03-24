@@ -188,6 +188,7 @@
     WJList *list = self.listArray[indexPath.row];
     WJWebViewController *webViewController = [[WJWebViewController alloc]init];
     webViewController.urlString = list.url;
+    webViewController.articleModel = list;
     [self.navigationController pushViewController:webViewController animated:YES];
 }
 

@@ -68,4 +68,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define BTNH 48
 #define NAVH 44
 #define TabbarH 49
+
+// 状态栏高度
+#define WStatusBarHeight (20.0)
+// 顶部高度
+#define WTopHeight (NAVH + WStatusBarHeight)
+
 #endif

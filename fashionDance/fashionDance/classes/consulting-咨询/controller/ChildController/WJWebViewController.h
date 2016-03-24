@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class WJList;
 @interface WJWebViewController : UIViewController
 
 
 @property (strong, nonatomic)NSString *urlString;
 
-
+//收藏需要
+@property (strong,nonatomic)WJList * articleModel;
 @end

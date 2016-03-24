@@ -7,8 +7,22 @@
 //
 
 #import "CarMineController.h"
+#import "LLLocationController.h"
+#import "LLFavoriteController.h"
+#import "LLBuyCarCaculateController.h"
+#import "LLFeedBackController.h"
+#import "LLPeccancyController.h"
+
 
 @interface CarMineController ()<UITableViewDataSource,UITableViewDelegate>
+
+{
+    LLLocationController * locationCtrl;
+    LLFavoriteController * favoriteCtrl;
+    LLBuyCarCaculateController * caculateCtrl;
+    LLPeccancyController * peccancyCtrl;
+    LLFeedBackController * feedBackCtrl;
+}
 
 @property(nonatomic,weak)UITableView * tableView;
 
@@ -170,7 +184,37 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //进入相应页面
-    
+    if (indexPath.section == 0) {
+    }
+    else if (indexPath.section == 1&&indexPath.row == 0)
+    {
+        //所在城市
+        if (!locationCtrl) {
+            locationCtrl = [[LLLocationController alloc]init];
+        }
+        [self.navigationController pushViewController:locationCtrl animated:YES];
+    }
+    else if (indexPath.section == 1 && indexPath.row == 1)
+    {
+        //收藏夹
+        if (!favoriteCtrl) {
+            favoriteCtrl = [[LLFavoriteController alloc]init];
+        }
+        [self.navigationController pushViewController:favoriteCtrl animated:YES];
+    }
+    else if (indexPath.section == 2 && indexPath.row == 0)
+    {
+        //违规查询
+    }
+    else if (indexPath.section == 2 && indexPath.row == 1)
+    {
+        //购车计算
+    }
+    else
+    {
+        //意见反馈
+    }
+
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
