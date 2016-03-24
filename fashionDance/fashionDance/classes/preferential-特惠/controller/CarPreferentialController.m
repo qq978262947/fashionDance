@@ -168,7 +168,7 @@ static NSString *cellId = @"MKVideoCell";
         }
         
     } failure:^(NSError *error) {
-        
+        [weakSelf.tableView.mj_header endRefreshing];
     }];
     
 }
