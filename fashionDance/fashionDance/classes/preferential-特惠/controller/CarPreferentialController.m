@@ -120,11 +120,10 @@ static NSString *cellId = @"MKVideoCell";
     }else{
         self.path = @"http://autoapp.auto.sohu.com/api/columnnews/list_5_0_20";
     }
-    [self downloadData];
+    [self downLoad];
 }
 
-- (void)downloadData
-{
+- (void)downLoad {
     if ([self.path isEqualToString:@"http://autoapp.auto.sohu.com/api/columnnews/list_6_0_20"]) {
         self.dataArray = self.dict[@"yuanchuang"];
     } else if ([self.path isEqualToString:@"http://autoapp.auto.sohu.com/api/columnnews/list_7_0_20"]) {
@@ -138,6 +137,13 @@ static NSString *cellId = @"MKVideoCell";
     }
     [self.tableView reloadData];
     if (self.dataArray.count) return;
+    [self.tableView.mj_header beginRefreshing];
+}
+
+
+
+- (void)downloadData
+{
     __weak typeof(self) weakSelf = self;
     [[WJHttpTool httpTool]get:_path params:nil success:^(id result) {
         

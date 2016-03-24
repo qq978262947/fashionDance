@@ -1485,7 +1485,7 @@
 				TargetAttributes = {
 					DAE93A011C8E75B900F03A67 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 2VHMZAJUND;
+						DevelopmentTeam = W272WDFC9W;
 					};
 					DAE93A1A1C8E75B900F03A67 = {
 						CreatedOnToolsVersion = 7.2;
@@ -1857,7 +1857,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1894,7 +1894,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1910,7 +1910,7 @@
 				INFOPLIST_FILE = fashionDance/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.heartHope.fashionDance;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fashionCar-wj";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1926,7 +1926,7 @@
 				INFOPLIST_FILE = fashionDance/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.heartHope.fashionDance;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fashionCar-wj";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
