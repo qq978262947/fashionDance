@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A85DA3A1CA3C3F6005D2D48 /* CarMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A85DA371CA3C3F6005D2D48 /* CarMineController.m */; };
 		6A91FB1C1C9C065E002A65A2 /* LLCanshuCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A91FB161C9C065E002A65A2 /* LLCanshuCollectionLayout.m */; };
 		6A91FB1D1C9C065E002A65A2 /* LLDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A91FB181C9C065E002A65A2 /* LLDownView.m */; };
 		6A91FB1E1C9C065E002A65A2 /* LLUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A91FB1A1C9C065E002A65A2 /* LLUpView.m */; };
@@ -146,7 +147,6 @@
 		DAF0D36B1C9D8FAF00091AE5 /* WJContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF0D3651C9D8FAE00091AE5 /* WJContainerView.m */; };
 		DAF0D36C1C9D8FAF00091AE5 /* WJScrollTitleView+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF0D3671C9D8FAE00091AE5 /* WJScrollTitleView+AOP.m */; };
 		DAF0D36F1C9D8FE600091AE5 /* WJScrollTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF0D36E1C9D8FE600091AE5 /* WJScrollTitleView.m */; };
-		DAF0D3721C9DBCBA00091AE5 /* CarMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF0D3711C9DBCBA00091AE5 /* CarMineController.m */; };
 		FC0C6F0D1C9C2BBA00229F2D /* MJPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0C6EFF1C9C2BBA00229F2D /* MJPhoto.m */; };
 		FC0C6F0E1C9C2BBA00229F2D /* MJPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC0C6F001C9C2BBA00229F2D /* MJPhotoBrowser.bundle */; };
 		FC0C6F0F1C9C2BBA00229F2D /* MJPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0C6F021C9C2BBA00229F2D /* MJPhotoBrowser.m */; };
@@ -201,6 +201,8 @@
 
 /* Begin PBXFileReference section */
 		5B5B1CC05D418EEE11865769 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A85DA361CA3C3F6005D2D48 /* CarMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarMineController.h; sourceTree = "<group>"; };
+		6A85DA371CA3C3F6005D2D48 /* CarMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarMineController.m; sourceTree = "<group>"; };
 		6A91FB151C9C065E002A65A2 /* LLCanshuCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLCanshuCollectionLayout.h; sourceTree = "<group>"; };
 		6A91FB161C9C065E002A65A2 /* LLCanshuCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLCanshuCollectionLayout.m; sourceTree = "<group>"; };
 		6A91FB171C9C065E002A65A2 /* LLDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLDownView.h; sourceTree = "<group>"; };
@@ -460,8 +462,6 @@
 		DAF0D3671C9D8FAE00091AE5 /* WJScrollTitleView+AOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WJScrollTitleView+AOP.m"; sourceTree = "<group>"; };
 		DAF0D36D1C9D8FE600091AE5 /* WJScrollTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJScrollTitleView.h; sourceTree = "<group>"; };
 		DAF0D36E1C9D8FE600091AE5 /* WJScrollTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJScrollTitleView.m; sourceTree = "<group>"; };
-		DAF0D3701C9DBCBA00091AE5 /* CarMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarMineController.h; path = "fashionDance/classes/Main-主要/publicController/WJ/view/WJModel/WJModel/WJModel_code/CarMineController.h"; sourceTree = SOURCE_ROOT; };
-		DAF0D3711C9DBCBA00091AE5 /* CarMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarMineController.m; path = "fashionDance/classes/Main-主要/publicController/WJ/view/WJModel/WJModel/WJModel_code/CarMineController.m"; sourceTree = SOURCE_ROOT; };
 		FC0C6EFE1C9C2BBA00229F2D /* MJPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhoto.h; sourceTree = "<group>"; };
 		FC0C6EFF1C9C2BBA00229F2D /* MJPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPhoto.m; sourceTree = "<group>"; };
 		FC0C6F001C9C2BBA00229F2D /* MJPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJPhotoBrowser.bundle; sourceTree = "<group>"; };
@@ -546,6 +546,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A85DA341CA3C3F6005D2D48 /* Mine-我的 */ = {
+			isa = PBXGroup;
+			children = (
+				6A85DA351CA3C3F6005D2D48 /* Controller */,
+				6A85DA381CA3C3F6005D2D48 /* Model */,
+				6A85DA391CA3C3F6005D2D48 /* View */,
+			);
+			path = "Mine-我的";
+			sourceTree = "<group>";
+		};
+		6A85DA351CA3C3F6005D2D48 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6A85DA361CA3C3F6005D2D48 /* CarMineController.h */,
+				6A85DA371CA3C3F6005D2D48 /* CarMineController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6A85DA381CA3C3F6005D2D48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6A85DA391CA3C3F6005D2D48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BC0F44A91C999EA800894419 /* forum-论坛 */ = {
 			isa = PBXGroup;
 			children = (
@@ -831,13 +864,13 @@
 		DA825BBF1C92E86B000C5EE4 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				6A85DA341CA3C3F6005D2D48 /* Mine-我的 */,
 				DAE9A5431C9BCC1700ED8033 /* publicController */,
 				DA2701CD1C9A434300AC8205 /* preferential-特惠 */,
 				BC0F44A91C999EA800894419 /* forum-论坛 */,
 				DA3B5CAB1C93BF7A001997C8 /* Main-主要 */,
 				DA825BC01C92E86B000C5EE4 /* consulting-咨询 */,
 				DA825BEF1C92E86B000C5EE4 /* FindCar-找车 */,
-				DA825C031C92E86B000C5EE4 /* Mine-我的 */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -1006,39 +1039,6 @@
 				FCCF82731C995DC300F12B8C /* TSSXTableController.m */,
 			);
 			path = controller;
-			sourceTree = "<group>";
-		};
-		DA825C031C92E86B000C5EE4 /* Mine-我的 */ = {
-			isa = PBXGroup;
-			children = (
-				DA825C041C92E86B000C5EE4 /* controller */,
-				DA825C071C92E86B000C5EE4 /* model */,
-				DA825C081C92E86B000C5EE4 /* view */,
-			);
-			path = "Mine-我的";
-			sourceTree = "<group>";
-		};
-		DA825C041C92E86B000C5EE4 /* controller */ = {
-			isa = PBXGroup;
-			children = (
-				DAF0D3701C9DBCBA00091AE5 /* CarMineController.h */,
-				DAF0D3711C9DBCBA00091AE5 /* CarMineController.m */,
-			);
-			path = controller;
-			sourceTree = "<group>";
-		};
-		DA825C071C92E86B000C5EE4 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		DA825C081C92E86B000C5EE4 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 		DA89F34A1C92FE85003D5AF8 /* ChildController */ = {
@@ -1743,7 +1743,7 @@
 				BC0F44EC1C999EA800894419 /* YUHotTopicModel.m in Sources */,
 				DAE9A5A41C9BCE7B00ED8033 /* LLCarTypeInfoModel.m in Sources */,
 				DAE9A5B71C9BCEE100ED8033 /* LLCollectionViewLayout.m in Sources */,
-				DAF0D3721C9DBCBA00091AE5 /* CarMineController.m in Sources */,
+				6A85DA3A1CA3C3F6005D2D48 /* CarMineController.m in Sources */,
 				DAE9A5A71C9BCE8B00ED8033 /* LLCarTypeVersionModel.m in Sources */,
 				FC457DCA1C98168700DDB531 /* SWBrandHeadView.m in Sources */,
 				DA3B5CD91C93BF7A001997C8 /* WJNavgationController.m in Sources */,
