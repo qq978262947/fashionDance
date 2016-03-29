@@ -8,17 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@class WJList;
+@class YUCarCellModel;
 @interface LLDBCarManager : NSObject
 
 + (LLDBCarManager *)sharedManager;
 
 - (void)createDatabase;
 
-- (void)insertTopic:(WJList *)carU;
+- (void)insertCar:(YUCarCellModel *)carModel;
 
-- (NSArray *)searchAllTopic;
+- (NSArray *)searchAllCar;
 
-- (void)deleteTopicWithID:(NSInteger)bid;
+- (void)deleteTopicWithTrimID:(NSInteger)trimId;
 
 @end

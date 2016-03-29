@@ -12,6 +12,7 @@
 
 #import "LLFavoriteController.h"
 #import "WJScrollTitleView.h"
+#import "LLDBCarManager.h"
 //论坛收藏
 #import "YUDBManager.h"
 #import "YUHotTopicModel.h"
@@ -70,18 +71,23 @@
     [self addChildViewController:topic];
     self.topicContrl = topic;
     
-    view.viewControllers = @[topic,article];
-    view.titles = @[@"论坛",@"文章"];
+    LLFavoriteCarController * car = [[LLFavoriteCarController alloc]init];
+    car.carData = [[LLDBCarManager sharedManager] searchAllCar];
+    [self addChildViewController:car];
+    
+    
+    view.viewControllers = @[topic,article,car];
+    view.titles = @[@"论坛",@"文章",@"汽车"];
     view.titlesScrollWidth = WJScreenW;
     view.delegate = self;
     [self.view addSubview:view];
     
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-    self.articleContrl.articleData = [[LLDBArticleManager sharedManager] searchAllArticle];
-    self.topicContrl.forumData = [[YUDBManager sharedManager] searchAllTopic];
-}
+//-(void)viewWillAppear:(BOOL)animated
+//{
+//    self.articleContrl.articleData = [[LLDBArticleManager sharedManager] searchAllArticle];
+//    self.topicContrl.forumData = [[YUDBManager sharedManager] searchAllTopic];
+//}
 
 @end

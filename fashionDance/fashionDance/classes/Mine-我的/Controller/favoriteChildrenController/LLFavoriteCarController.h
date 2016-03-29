@@ -10,4 +10,6 @@
 
 @interface LLFavoriteCarController : UITableViewController
 
+@property(nonatomic,strong)NSArray * carData;
+
 @end

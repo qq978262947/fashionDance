@@ -13,6 +13,7 @@
 #import "YUSummarizeHeaderView.h"
 #import "YUCarCellModel.h"
 #import "YUCarDetailModel.h"
+#import "LLDBCarManager.h"
 
 static NSString *Id = @"cell";
 
@@ -23,6 +24,8 @@ static NSString *Id = @"cell";
 
 @property (nonatomic, strong) NSArray *CarCellModels;
 
+@property(nonatomic,weak)UIView * footerView;
+@property(nonatomic,assign)BOOL isSelected;
 @end
 
 @implementation YuSummarizeController
@@ -34,11 +37,73 @@ static NSString *Id = @"cell";
     // http://autoapp.auto.sohu.com/api/model/trimList/4905
     // http://saa.auto.sohu.com/v5/mobileapp/club/modelClubInfo.do?modelId=1571
     
-   
     
     [self setupTableView];
     [self loadHeaderData];
     [self loadCellData];
+}
+
+-(UIView *)footerView
+{
+    if (!_footerView) {
+        CGFloat heigthFooter = 60;
+        UIView * view = [[UIView alloc]init];
+        [self.view addSubview:view];
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.equalTo(0);
+            make.trailing.equalTo(0);
+            make.baseline.equalTo(self.view).offset(-95);
+            make.height.equalTo(@(heigthFooter));
+        }];
+        
+        UIImageView * imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"emptyStar"]];
+        [imageView setFrame:CGRectMake((WJScreenW - 25)/2, (heigthFooter - 25)/2, 25, 25)];
+        [view addSubview:imageView];
+        
+        //为footer view 添加手势
+        UITapGestureRecognizer * gestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleFavorite)];
+        [view addGestureRecognizer:gestureRecognizer];
+        //判断有没有收藏
+        self.isSelected = NO;
+        NSArray * array = [[LLDBCarManager sharedManager] searchAllCar];
+        YUCarCellModel * selfModel=[self.CarCellModels firstObject];
+        for (YUCarCellModel * model in array) {
+            if ([model.nameZh isEqualToString:selfModel.nameZh]) {
+                self.isSelected = YES;
+            }
+        }
+        
+        
+        _footerView = view;
+    }
+    return _footerView;
+}
+
+-(void)handleFavorite
+{
+    YUCarCellModel * selfModel=[self.CarCellModels firstObject];
+    if (!self.isSelected) {
+        //收藏
+        [[LLDBCarManager sharedManager] insertCar:selfModel];
+        
+        self.isSelected = YES;
+        UIImageView * imageView = [self.footerView.subviews lastObject];
+        [imageView setImage:[UIImage imageNamed:@"like_selected"]];
+    }
+    else
+    {
+        [[LLDBCarManager sharedManager] deleteTopicWithTrimID:selfModel.trimId];
+        self.isSelected = NO;
+        UIImageView * imageView = [self.footerView.subviews lastObject];
+        [imageView setImage:[UIImage imageNamed:@"emptyStar"]];
+    }
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self.view bringSubviewToFront:self.footerView];
 }
 
 - (void)loadHeaderData
@@ -80,6 +145,9 @@ static NSString *Id = @"cell";
         [weakSelf.tableView reloadData];
         [SVProgressHUD dismiss];
         
+        //后期添加的收藏
+        [self footerView];
+
     } failure:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:@"加载失败"];
     }];
