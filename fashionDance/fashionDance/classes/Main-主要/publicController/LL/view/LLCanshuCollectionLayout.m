@@ -29,7 +29,7 @@
 -(CGFloat)minimumInteritemSpacing
 {
     if (!_minimumInteritemSpacing) {
-        _minimumInteritemSpacing = 1;
+        _minimumInteritemSpacing = 0;
     }
     return _minimumInteritemSpacing;
 }
@@ -47,6 +47,7 @@
     [super prepareLayout];
     
     self.attriArray = nil;
+    self.heightColumn = 0;
     
     NSInteger sectionNumber = [self.collectionView numberOfSections];
     NSMutableArray * arrayTmp = [NSMutableArray array];
@@ -74,7 +75,10 @@
         self.widthRow = -1;
         //转入下一行
         //从始至终返回的size height都一样
-        self.heightColumn = indexPath.item/  self.columnNumber * frame.size.height;
+        self.heightColumn += frame.size.height;
+        if (indexPath.section == 0 && indexPath.item == 0) {
+            self.heightColumn = 0;
+        }
     }
     
     frame.origin = CGPointMake(self.widthRow + self.minimumInteritemSpacing, self.heightColumn + self.minimumLineSpacing);

@@ -79,9 +79,9 @@
 -(UICollectionView *)leftCollectionView
 {
     if (!_leftCollectionView) {
-        CGRect frame = CGRectMake(0, 0, self.leftWidth, self.frame.size.height);
+        CGRect frame = CGRectMake(0, 1, self.leftWidth, self.frame.size.height);
         UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc]init];
-        layout.minimumLineSpacing = 1;
+        layout.minimumLineSpacing = 0;
         UICollectionView * view = [[UICollectionView alloc]initWithFrame:frame collectionViewLayout:layout];
         [view registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"test"];
         view.dataSource = self;
@@ -140,13 +140,11 @@
 {
     if ([collectionView isEqual:self.leftCollectionView]) {
         NSArray * array = self.leftTilteKey[section];
-        WJLog(@"leftCollectionView section%ld--%lu",(long)section,(unsigned long)array.count);
         return array.count;
     }
     else
     {
         NSArray * array = self.leftTitle[section];
-        WJLog(@"rightCollectionView section%ld--%lu",(long)section,(unsigned long)array.count);
         return array.count * self.data.count;
     }
 }
@@ -168,7 +166,7 @@
             [cell addSubview:view];
             view.text = title;
         }
-        cell.backgroundColor = [UIColor whiteColor];
+        cell.backgroundColor = [UIColor grayColor];
 
     }
     else

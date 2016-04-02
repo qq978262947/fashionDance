@@ -11,14 +11,6 @@
             <rect key="frame" x="0.0" y="0.0" width="439" height="119"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNP-HK-sI4">
-                    <rect key="frame" x="27" y="22" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne9-Jf-nKC">
-                    <rect key="frame" x="27" y="69" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
-                </button>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59E-lR-XNa">
                     <rect key="frame" x="92" y="0.0" width="347" height="119"/>
                     <connections>
@@ -29,20 +21,14 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="59E-lR-XNa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GzK-Ih-Qu6"/>
-                <constraint firstItem="Ne9-Jf-nKC" firstAttribute="top" secondItem="oNP-HK-sI4" secondAttribute="bottom" constant="17" id="HTJ-yt-ofi"/>
                 <constraint firstItem="59E-lR-XNa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="92" id="JSe-Cq-L9b"/>
-                <constraint firstItem="oNP-HK-sI4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="22" id="NGf-FY-pZO"/>
-                <constraint firstItem="oNP-HK-sI4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="27" id="Pk0-lB-bCh"/>
                 <constraint firstAttribute="bottom" secondItem="59E-lR-XNa" secondAttribute="bottom" id="Wka-HN-l5M"/>
                 <constraint firstAttribute="trailing" secondItem="59E-lR-XNa" secondAttribute="trailing" id="heX-xF-FFm"/>
-                <constraint firstItem="Ne9-Jf-nKC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="27" id="s4T-w6-I4J"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="downButtonX" destination="Ne9-Jf-nKC" id="cDT-gW-rT8"/>
                 <outlet property="leftWidthCon" destination="JSe-Cq-L9b" id="2rS-k2-5uG"/>
                 <outlet property="scrollViewX" destination="59E-lR-XNa" id="6Hp-l8-TI9"/>
-                <outlet property="upButtonX" destination="oNP-HK-sI4" id="yPQ-xi-ecN"/>
             </connections>
             <point key="canvasLocation" x="425.5" y="-38.5"/>
         </view>

@@ -10,8 +10,6 @@
 #import "LLParameterModel.h"
 
 @interface LLUpView ()<UIScrollViewDelegate>
-@property (weak, nonatomic) IBOutlet UIButton *upButtonX;
-@property (weak, nonatomic) IBOutlet UIButton *downButtonX;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollViewX;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftWidthCon;
 
@@ -57,8 +55,9 @@
         }];
         view.numberOfLines = 0;
         view.text = [NSString stringWithFormat:@"%@ %@款 %@",model.MODELNAME,model.YEAR,model.NAME];
-        view.layer.borderColor = [UIColor blackColor].CGColor;
-        view.layer.borderWidth = 2.0;
+        view.layer.borderColor = [UIColor grayColor].CGColor;
+        view.layer.borderWidth = 1.5;
+        view.textAlignment = NSTextAlignmentCenter;
         lastButton = view;
         i++;
     }//end forin
@@ -68,7 +67,7 @@
 {
     _leftWidth = leftWidth;
     
-    [self.leftWidthCon setConstant:100];
+    [self.leftWidthCon setConstant:(leftWidth-1)];
 }
 
 -(void)awakeFromNib
@@ -83,7 +82,7 @@
 {
     if (![notification.object isEqual:self]) {
         UIScrollView * view = [notification.userInfo objectForKey:@"scrollView"];
-        self.scrollViewX.contentOffset = CGPointMake(view.contentOffset.x, 0);
+        self.scrollViewX.contentOffset = CGPointMake(view.contentOffset.x, self.scrollViewX.contentOffset.y);
     }
 }
 
@@ -106,69 +105,4 @@
     NSNotificationCenter * defualtCenter = [NSNotificationCenter defaultCenter];
     [defualtCenter removeObserver:self];
 }
-/**
- * 含有两个button，一个scroll view
- */
-
-//-(UIButton *)upButton
-//{
-//    if (!_upButton) {
-//        UIButton * view = [[UIButton alloc]init];
-//        [self addSubview:view];
-//        _upButton = view;
-//
-//        [view mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.top.equalTo(0).offset(16);
-//            make.leading.equalTo(0).offset(16);
-//            make.width.equalTo(@(self.leftWidth));
-//            make.bottom.equalTo(self.downButton).offset(16);
-//            make.right.equalTo(self.scrollView).offset(16);
-//        }];
-//        [view setBackgroundColor:WArcColor];
-//
-//    }
-//    return _upButton;
-//}
-//
-//-(UIButton *)downButton
-//{
-//    if (!_downButton) {
-//        UIButton * view = [[UIButton alloc]init];
-//        [self addSubview:view];
-//        _downButton = view;
-//
-//        [view mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.width.equalTo(@(self.leftWidth));
-//            make.leading.equalTo(0).offset(16);
-//            make.bottom.equalTo(0).offset(16);
-//            make.right.equalTo(self.scrollView).offset(16);
-//        }];
-//        [view setBackgroundColor:WArcColor];
-//
-//    }
-//    return _downButton;
-//}
-//
-//-(UIScrollView *)scrollView
-//{
-//    if (!_scrollView) {
-//        UIScrollView * view = [[UIScrollView alloc]init];
-//        _scrollView = view;
-//        [self addSubview:view];
-//        [view mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.trailing.equalTo(0);
-//            make.top.equalTo(0);
-//            make.bottom.equalTo(0);
-//        }];
-//        [view setBackgroundColor:WArcColor];
-//    }
-//    return _scrollView;
-//}
-//
-//-(void)willMoveToSuperview:(UIView *)newSuperview
-//{
-//    [self upButton];
-//    [self downButton];
-//    [self scrollView];
-//}
 @end

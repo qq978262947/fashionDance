@@ -11,10 +11,11 @@
 #import "LLUpView.h"
 #import "LLParameterModel.h"
 
+#import "NSObject+Property.h"
 #define left_width 100
-#define down_cell_height 80
+#define down_cell_height WJScreenH/12
 #define down_up_cell_width 150
-#define up_cell_height 150
+#define up_cell_height WJScreenH/6
 
 @interface llParameterController ()
 
@@ -51,6 +52,7 @@ static NSString * const baseUrl = @"http://autoapp.auto.sohu.com/api/model/para"
         //封装数据
         WJLog(@"llParameterController网络请求成功");
         self.dataArray = [LLParameterModel mj_objectArrayWithKeyValuesArray:result];
+//        WJLog(@"%@",[[self.dataArray lastObject] dictionaryValue]);
         //给两个字 view复之
         self.upView.data = self.dataArray;
         self.downView.data = self.dataArray;
@@ -74,7 +76,7 @@ static NSString * const baseUrl = @"http://autoapp.auto.sohu.com/api/model/para"
     
     //加载下 view
     LLDownView * downView = [[LLDownView alloc]init];
-    [downView setFrame:CGRectMake(0, up_cell_height, WJScreenW, WJScreenH - up_cell_height)];
+    [downView setFrame:CGRectMake(0, up_cell_height, WJScreenW, WJScreenH - up_cell_height - 103)];
     downView.leftWidth = left_width;
     downView.cellHeight = down_cell_height;
     downView.cellWidth = down_up_cell_width;

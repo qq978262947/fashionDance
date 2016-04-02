@@ -24,6 +24,7 @@
 		6A91FB1F1C9C065E002A65A2 /* LLUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A91FB1B1C9C065E002A65A2 /* LLUpView.xib */; };
 		6A91FB221C9C3C89002A65A2 /* llParameterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A91FB211C9C3C89002A65A2 /* llParameterController.m */; };
 		6A91FB251C9C502F002A65A2 /* LLParameterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A91FB241C9C502F002A65A2 /* LLParameterModel.m */; };
+		6AAF22391CAFA8B300F8DE9A /* NSObject+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAF22381CAFA8B300F8DE9A /* NSObject+Property.m */; };
 		AA8CD3949EC3EEF063A6DF4D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5B1CC05D418EEE11865769 /* Pods.framework */; };
 		BC0F44E01C999EA800894419 /* CarForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0F44AC1C999EA800894419 /* CarForumController.m */; };
 		BC0F44E11C999EA800894419 /* YUCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0F44AE1C999EA800894419 /* YUCategoryViewController.m */; };
@@ -244,6 +245,8 @@
 		6A91FB211C9C3C89002A65A2 /* llParameterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = llParameterController.m; sourceTree = "<group>"; };
 		6A91FB231C9C502F002A65A2 /* LLParameterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLParameterModel.h; sourceTree = "<group>"; };
 		6A91FB241C9C502F002A65A2 /* LLParameterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLParameterModel.m; sourceTree = "<group>"; };
+		6AAF22371CAFA8B300F8DE9A /* NSObject+Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Property.h"; sourceTree = "<group>"; };
+		6AAF22381CAFA8B300F8DE9A /* NSObject+Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Property.m"; sourceTree = "<group>"; };
 		6FB5973FF1B297B050B1A609 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7CF344E4DA0F93C7E0B1D029 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0F44AB1C999EA800894419 /* CarForumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarForumController.h; sourceTree = "<group>"; };
@@ -908,6 +911,8 @@
 		DA3B5CCE1C93BF7A001997C8 /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				6AAF22371CAFA8B300F8DE9A /* NSObject+Property.h */,
+				6AAF22381CAFA8B300F8DE9A /* NSObject+Property.m */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -1828,6 +1833,7 @@
 				DA89F3561C93009B003D5AF8 /* WJWaterFlowLayout.m in Sources */,
 				DA89F3521C92FE85003D5AF8 /* WJHotCarController.m in Sources */,
 				DA3B5CD11C93BF7A001997C8 /* NSDate+WJExtension.m in Sources */,
+				6AAF22391CAFA8B300F8DE9A /* NSObject+Property.m in Sources */,
 				DA89F3531C92FE85003D5AF8 /* WJWebViewController.m in Sources */,
 				DA3B5CDA1C93BF7A001997C8 /* WJTabBarController.m in Sources */,
 				DA3B5CD01C93BF7A001997C8 /* Foundation+Log.m in Sources */,

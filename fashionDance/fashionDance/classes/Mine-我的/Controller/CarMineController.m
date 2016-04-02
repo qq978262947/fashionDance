@@ -62,7 +62,7 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -74,7 +74,7 @@
             break;
             
             case 1:
-            rows = 2;
+            rows = 1;
             break;
 
             case 2:
@@ -99,13 +99,14 @@
     }
     else if (indexPath.section == 1&&indexPath.row == 0)
     {
-        //所在城市
-         cell.textLabel.text = @"所在城市";
+        //收藏夹
+        cell.textLabel.text = @"收藏夹";
+
     }
     else if (indexPath.section == 1 && indexPath.row == 1)
     {
-        //收藏夹
-        cell.textLabel.text = @"收藏夹";
+        //所在城市
+        cell.textLabel.text = @"所在城市";
     }
     else if (indexPath.section == 2 && indexPath.row == 0)
     {
@@ -188,19 +189,20 @@
     }
     else if (indexPath.section == 1&&indexPath.row == 0)
     {
-        //所在城市
-        if (!locationCtrl) {
-            locationCtrl = [[LLLocationController alloc]init];
-        }
-        [self.navigationController pushViewController:locationCtrl animated:YES];
-    }
-    else if (indexPath.section == 1 && indexPath.row == 1)
-    {
         //收藏夹
         if (!favoriteCtrl) {
             favoriteCtrl = [[LLFavoriteController alloc]init];
         }
         [self.navigationController pushViewController:favoriteCtrl animated:YES];
+    }
+    else if (indexPath.section == 1 && indexPath.row == 1)
+    {
+        //所在城市
+        if (!locationCtrl) {
+            locationCtrl = [[LLLocationController alloc]init];
+        }
+        [self.navigationController pushViewController:locationCtrl animated:YES];
+
     }
     else if (indexPath.section == 2 && indexPath.row == 0)
     {
