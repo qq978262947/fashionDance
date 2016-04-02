@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class YUCarCellModel;
+@class YUCarDetailModel;
 @interface LLDBCarManager : NSObject
 
 //收藏车
@@ -16,12 +16,14 @@
 
 - (void)createDatabase;
 
-- (void)insertCar:(YUCarCellModel *)carModel;
+- (void)insertCar:(YUCarDetailModel *)carModel;
 
 - (NSArray *)searchAllCar;
 
-- (void)deleteTopicWithTrimID:(NSInteger)trimId;
+- (void)deleteCarWithmodelId:(NSInteger)modelId;
 
 //车浏览记录
+-(void)insertCarfootmark:(YUCarDetailModel *)carModel;
 
+-(NSArray *)searchAllfootmark;
 @end

@@ -17,7 +17,7 @@
 
 
 #import "LLDBCarManager.h"
-#import "YUCarCellModel.h"
+#import "YUCarDetailModel.h"
 #import "UIImageView+downloadImage.h"
 
 #define height_dbview WJScreenH/4
@@ -146,12 +146,13 @@
         if ([senderNomalTitle isEqualToString:@"我的收藏"]) {
             //导出我的收藏car数据
             self.dbViewDataArray = [[LLDBCarManager sharedManager] searchAllCar];
-            [self.dbView reloadData];
         }
         else if ([senderNomalTitle isEqualToString:@"浏览历史"])
         {
-            
+            //导入我的浏览car数据
+            self.dbViewDataArray = [[LLDBCarManager sharedManager] searchAllfootmark];
         }
+        [self.dbView reloadData];
     }];
     redView.backgroundColor = [UIColor grayColor];
     self.tableView.tableHeaderView = redView;
@@ -200,8 +201,8 @@
     {
         //是dbview
         UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"lldbcell" forIndexPath:indexPath];
-        YUCarCellModel * model = self.dbViewDataArray[indexPath.row];
-        [cell.imageView setNormalImagewithURL:[NSURL URLWithString:model.picUrl] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        YUCarDetailModel * model = self.dbViewDataArray[indexPath.row];
+        [cell.imageView setNormalImagewithURL:[NSURL URLWithString:model.picFocus] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
             //
         }];
         [cell.textLabel setText:model.nameZh];

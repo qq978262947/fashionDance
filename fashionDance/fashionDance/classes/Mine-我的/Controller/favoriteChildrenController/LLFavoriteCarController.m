@@ -11,7 +11,7 @@
 
 #import "LLDBCarManager.h"
 
-#import "YUCarCellModel.h"
+#import "YUCarDetailModel.h"
 
 #import "UIImageView+downloadImage.h"
 @interface LLFavoriteCarController ()
@@ -57,8 +57,8 @@
 {
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"LLCell" forIndexPath:indexPath];
     
-    YUCarCellModel * model = self.carData[indexPath.row];
-    [cell.imageView setNormalImagewithURL:[NSURL URLWithString:model.picUrl] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    YUCarDetailModel * model = self.carData[indexPath.row];
+    [cell.imageView setNormalImagewithURL:[NSURL URLWithString:model.picFocus] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         //
     }];
     [cell.textLabel setText:model.nameZh];

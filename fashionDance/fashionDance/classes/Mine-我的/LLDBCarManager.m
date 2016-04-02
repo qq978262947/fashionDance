@@ -11,7 +11,7 @@
 #import "SVProgressHUD.h"
 
 #import "YUCarCellModel.h"
-
+#import "YUCarDetailModel.h"
 @implementation LLDBCarManager
 
 {
@@ -53,86 +53,45 @@
     
     BOOL ret  = [_myDatabase open];
      if (ret) {
-        NSString *createSql = @"create table if not exists car(trimId integer primary key, picUrl varchar, priceGuide double, nameZh varchar(50), drvType varchar, year integer, transType varchar(50), maxDprice double,minDprice double,trimTypeName varchar)";
-        
+         NSString *createSql;
+         //offSaleYearList指向nsarray，是一个nsdata
+        createSql = @"create table if not exists car1(modelId integer primary key,avgScore integer,minDprice double,picFocus varchar,barId varchar,nameZh varchar,type1 varchar,rootBrandNameZh varchar,max double,offSaleYearList blob,maxDprice double,countPics integer,rootBrandId integer,engineSize1 varchar,engineSize2 varchar,min double)";
         BOOL flag = [_myDatabase executeUpdate:createSql];
-        
+         if (flag == NO) {
+             
+               NSLog(@"%@",_myDatabase.lastErrorMessage);
+         }
+
+         createSql = @"create table if not exists footmark(modelId integer primary key,avgScore integer,minDprice double,picFocus varchar,barId varchar,nameZh varchar,type1 varchar,rootBrandNameZh varchar,max double,offSaleYearList blob,maxDprice double,countPics integer,rootBrandId integer,engineSize1 varchar,engineSize2 varchar,min double)";
+         
+         flag = [_myDatabase executeUpdate:createSql];
+         
         if (flag == NO) {
             
-            //  NSLog(@"%@",_myDatabase.lastErrorMessage);
+              NSLog(@"%@",_myDatabase.lastErrorMessage);
         }
-        
+         
     }else
     {
-        // NSLog(@"%@",_myDatabase.lastErrorMessage);
+         NSLog(@"%@",_myDatabase.lastErrorMessage);
     }
     
     
 }
-- (void)insertCar:(YUCarCellModel *)carModel
+- (void)insertCar:(YUCarDetailModel *)carModel
 {
-    NSString *insertSql = @"insert into car (trimId,picUrl,priceGuide,nameZh,drvType,year,transType,maxDprice,minDprice,trimTypeName) values(?,?,?,?,?,?,?,?,?,?)";
-    
-    BOOL flag = [_myDatabase executeUpdate:insertSql,@(carModel.trimId),carModel.picUrl,@(carModel.priceGuide),carModel.nameZh,carModel.drvType,@(carModel.year),carModel.transType,@(carModel.maxDprice),@(carModel.minDprice),carModel.trimTypeName];
-    
-    if (flag)
-    {
-        [SVProgressHUD setBackgroundColor:[UIColor grayColor]];
-        
-        [SVProgressHUD showImage:[UIImage imageNamed:@"new_collect_selected-1"] status:@"收藏成功"];
-    }
-    else
-    {
-        //  NSLog(@"%@",_myDatabase.lastErrorMessage);
-    }
-
+    [self insertCar:carModel toTable:@"car1"];
 }
-/*
- gn) NSInteger trimId;
- ) NSString *picUrl;
- ) NSString *nameZh;
- gn) CGFloat priceGuide;
- ) NSString *drvType;
- gn) NSInteger year;
- gn) CGFloat maxDprice;
- ) NSString *transType;
- gn) CGFloat minDprice;
- ) NSString *trimTypeName;
- */
-
 - (NSArray *)searchAllCar
 {
-    NSString *selectSql = @"select * from car";
-    FMResultSet *rs =[_myDatabase executeQuery:selectSql];
-    NSMutableArray *arrayM = [NSMutableArray array];
-    
-    while ([rs next]) {
-        YUCarCellModel * list = [[YUCarCellModel alloc]init];
-        
-        list.trimId = [rs intForColumn:@"trimId"];
-        list.picUrl = [rs stringForColumn:@"picUrl"];
-        list.nameZh = [rs stringForColumn:@"nameZh"];
-        list.priceGuide = [rs doubleForColumn:@"priceGuide"];
-        list.drvType = [rs stringForColumn:@"drvType"];
-        list.year = [rs intForColumn:@"year"];
-        list.maxDprice = [rs doubleForColumn:@"maxDprice"];
-        list.minDprice = [rs doubleForColumn:@"minDprice"];
-        list.transType = [rs stringForColumn:@"transType"];
-        list.trimTypeName = [rs stringForColumn:@"trimTypeName"];
-        
-        [arrayM addObject:list];
-        
-    }
-    
-    return arrayM;
-
+    return [self searchCarInTable:@"car1"];
 }
 
-- (void)deleteTopicWithTrimID:(NSInteger)trimId
+- (void)deleteTopicWithmodelId:(NSInteger)modelId
 {
-    NSString *delectSql = @"delete from car where trimId =?";
+    NSString *delectSql = @"delete from car1 where modelId =?";
     
-    BOOL flag = [_myDatabase executeUpdate:delectSql,trimId];
+    BOOL flag = [_myDatabase executeUpdate:delectSql,modelId];
     if (flag) {
         [SVProgressHUD setBackgroundColor:[UIColor grayColor]];
         [SVProgressHUD showImage:[UIImage imageNamed:@"new_collectBtn_normal"] status:@"取消收藏成功"];
@@ -141,4 +100,68 @@
 
 }
 
+
+//车浏览记录
+-(void)insertCarfootmark:(YUCarDetailModel *)carModel
+{
+    [self insertCar:carModel toTable:@"footmark"];
+}
+
+-(NSArray *)searchAllfootmark
+{
+    return [self searchCarInTable:@"footmark"];
+}
+
+#pragma mark 私有方法
+-(NSArray *)searchCarInTable:(NSString*)tableName
+{
+    NSString *selectSql = [NSString stringWithFormat:@"select * from %@",tableName];
+    FMResultSet *rs =[_myDatabase executeQuery:selectSql];
+    NSMutableArray *arrayM = [NSMutableArray array];
+    
+    while ([rs next]) {
+        YUCarDetailModel * list = [[YUCarDetailModel alloc]init];
+        list.modelId = [rs intForColumn:@"modelId"];
+        list.avgScore = [rs intForColumn:@"avgScore"];
+        list.minDprice = [rs doubleForColumn:@"minDprice"];
+        list.picFocus = [rs stringForColumn:@"picFocus"];
+        list.barId = [rs stringForColumn:@"barId"];
+        list.nameZh = [rs stringForColumn:@"nameZh"];
+        list.type1 = [rs stringForColumn:@"type1"];
+        list.rootBrandNameZh = [rs stringForColumn:@"rootBrandNameZh"];
+        list.max = [rs doubleForColumn:@"max"];
+        list.offSaleYearList = [NSKeyedUnarchiver unarchiveObjectWithData:[rs dataForColumn:@"offSaleYearList"]];
+        list.maxDprice = [rs doubleForColumn:@"maxDprice"];
+        list.countPics = [rs intForColumn:@"countPics"];
+        list.rootBrandId = [rs intForColumn:@"rootBrandId"];
+        list.engineSize1 = [rs stringForColumn:@"engineSize1"];
+        list.engineSize2 = [rs stringForColumn:@"engineSize2"];
+        list.min = [rs doubleForColumn:@"min"];
+        
+        [arrayM addObject:list];
+        
+    }
+    
+    return arrayM;
+}
+
+-(void)insertCar:(YUCarDetailModel*)carModel toTable:(NSString*)tableName
+{
+
+    NSString *insertSql = [NSString stringWithFormat:@"insert into %@ (avgScore,minDprice,picFocus,barId,nameZh,type1,rootBrandNameZh,max,offSaleYearList,maxDprice,countPics,rootBrandId,engineSize1,engineSize2,modelId,min) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",tableName];
+     BOOL flag;
+    //得出offSaleYearList data
+    NSData * offSaleYearListData = [NSKeyedArchiver archivedDataWithRootObject:carModel.offSaleYearList];
+    flag = [_myDatabase executeUpdate:insertSql,carModel.avgScore,carModel.minDprice,carModel.picFocus,carModel.barId,carModel.nameZh,carModel.type1,carModel.rootBrandNameZh,carModel.max,offSaleYearListData,carModel.maxDprice,carModel.countPics,carModel.rootBrandId,carModel.engineSize1,carModel.engineSize2,carModel.modelId,carModel.min];
+    if (flag && [tableName isEqualToString:@"car1"])
+    {
+        [SVProgressHUD setBackgroundColor:[UIColor grayColor]];
+        
+        [SVProgressHUD showImage:[UIImage imageNamed:@"new_collect_selected-1"] status:@"收藏成功"];
+    }
+    else
+    {
+          NSLog(@"%@",_myDatabase.lastErrorMessage);
+    }
+}
 @end

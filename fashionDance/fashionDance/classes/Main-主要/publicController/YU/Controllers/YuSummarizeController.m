@@ -24,6 +24,8 @@ static NSString *Id = @"cell";
 
 @property (nonatomic, strong) NSArray *CarCellModels;
 
+@property(nonatomic,strong)YUCarDetailModel * headModel;
+
 @property(nonatomic,weak)UIView * footerView;
 @property(nonatomic,assign)BOOL isSelected;
 @end
@@ -41,8 +43,6 @@ static NSString *Id = @"cell";
     [self setupTableView];
     [self loadHeaderData];
     [self loadCellData];
-    
-    //浏览记录
     
 }
 
@@ -69,9 +69,8 @@ static NSString *Id = @"cell";
         //判断有没有收藏
         self.isSelected = NO;
         NSArray * array = [[LLDBCarManager sharedManager] searchAllCar];
-        YUCarCellModel * selfModel=[self.CarCellModels firstObject];
-        for (YUCarCellModel * model in array) {
-            if ([model.nameZh isEqualToString:selfModel.nameZh]) {
+        for (YUCarDetailModel * model in array) {
+            if (model.modelId == self.modelId.integerValue) {
                 self.isSelected = YES;
             }
         }
@@ -84,10 +83,9 @@ static NSString *Id = @"cell";
 
 -(void)handleFavorite
 {
-    YUCarCellModel * selfModel=[self.CarCellModels firstObject];
     if (!self.isSelected) {
         //收藏
-        [[LLDBCarManager sharedManager] insertCar:selfModel];
+        [[LLDBCarManager sharedManager] insertCar:self.headModel];
         
         self.isSelected = YES;
         UIImageView * imageView = [self.footerView.subviews lastObject];
@@ -95,7 +93,7 @@ static NSString *Id = @"cell";
     }
     else
     {
-        [[LLDBCarManager sharedManager] deleteTopicWithTrimID:selfModel.trimId];
+        [[LLDBCarManager sharedManager] deleteCarWithmodelId:[self.modelId integerValue]];
         self.isSelected = NO;
         UIImageView * imageView = [self.footerView.subviews lastObject];
         [imageView setImage:[UIImage imageNamed:@"emptyStar"]];
@@ -127,6 +125,10 @@ static NSString *Id = @"cell";
         
         [SVProgressHUD dismiss];
         
+        self.headModel = detailModel;
+        //浏览记录
+        [[LLDBCarManager sharedManager] insertCarfootmark:detailModel];
+
     } failure:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:@"加载失败"];
     }];
@@ -150,6 +152,7 @@ static NSString *Id = @"cell";
         
         //后期添加的收藏
         [self footerView];
+
 
     } failure:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:@"加载失败"];
