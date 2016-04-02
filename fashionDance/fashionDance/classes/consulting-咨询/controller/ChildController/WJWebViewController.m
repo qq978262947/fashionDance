@@ -23,22 +23,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //nav bar上的收藏和分享按钮
-    UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
-    UIBarButtonItem *itemFavorite = [[UIBarButtonItem alloc]initWithCustomView:btn];
-    [btn setBackgroundImage:[UIImage imageNamed:@"new_collectBtn_normal"] forState:UIControlStateNormal];
-    [btn setBackgroundImage:[UIImage imageNamed:@"new_collect_selected"] forState:UIControlStateSelected];
-    [btn addTarget:self action:@selector(favoriteItemTouch:) forControlEvents:UIControlEventTouchUpInside];
-    self.itemFavorite = itemFavorite;
-    UIBarButtonItem * itemShare = [UIBarButtonItem itemWithImage:@"tab_mySpace_normal" highImage:nil target:self action:@selector(shareItemTouch)];
-    self.navigationItem.rightBarButtonItems = @[itemShare,itemFavorite];
-    //从数据库里查找是不是收藏过
-    self.isFavorite = NO;
-    NSArray * array = [[LLDBArticleManager sharedManager] searchAllArticle];
-    for (WJList * list in array) {
-        if ([list.url isEqualToString:self.urlString]) {
-            self.isFavorite = YES;
-            btn.selected = YES;
+    if (![self.urlString isEqualToString:@"http://mobile.auto.sohu.com/wzcx/weixin.at"]) {
+        //nav bar上的收藏和分享按钮
+        UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
+        UIBarButtonItem *itemFavorite = [[UIBarButtonItem alloc]initWithCustomView:btn];
+        [btn setBackgroundImage:[UIImage imageNamed:@"new_collectBtn_normal"] forState:UIControlStateNormal];
+        [btn setBackgroundImage:[UIImage imageNamed:@"new_collect_selected"] forState:UIControlStateSelected];
+        [btn addTarget:self action:@selector(favoriteItemTouch:) forControlEvents:UIControlEventTouchUpInside];
+        self.itemFavorite = itemFavorite;
+        UIBarButtonItem * itemShare = [UIBarButtonItem itemWithImage:@"tab_mySpace_normal" highImage:nil target:self action:@selector(shareItemTouch)];
+        self.navigationItem.rightBarButtonItems = @[itemShare,itemFavorite];
+        //从数据库里查找是不是收藏过
+        self.isFavorite = NO;
+        NSArray * array = [[LLDBArticleManager sharedManager] searchAllArticle];
+        for (WJList * list in array) {
+            if ([list.url isEqualToString:self.urlString]) {
+                self.isFavorite = YES;
+                btn.selected = YES;
+            }
         }
     }
 

@@ -11,7 +11,6 @@
 		6A85DA3D1CA3C4AD005D2D48 /* LLLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A85DA3C1CA3C4AD005D2D48 /* LLLocationController.m */; };
 		6A85DA401CA3C4E9005D2D48 /* LLFavoriteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A85DA3F1CA3C4E9005D2D48 /* LLFavoriteController.m */; };
 		6A85DA431CA3C510005D2D48 /* LLBuyCarCaculateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A85DA421CA3C510005D2D48 /* LLBuyCarCaculateController.m */; };
-		6A85DA461CA3C537005D2D48 /* LLFeedBackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A85DA451CA3C537005D2D48 /* LLFeedBackController.m */; };
 		6A85DA491CA3C5B2005D2D48 /* LLPeccancyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A85DA481CA3C5B2005D2D48 /* LLPeccancyController.m */; };
 		6A85DA4C1CA3D82D005D2D48 /* LLDBCarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A85DA4B1CA3D82D005D2D48 /* LLDBCarManager.m */; };
 		6A85DA4F1CA3D9DE005D2D48 /* LLDBArticleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A85DA4E1CA3D9DE005D2D48 /* LLDBArticleManager.m */; };
@@ -25,6 +24,8 @@
 		6A91FB221C9C3C89002A65A2 /* llParameterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A91FB211C9C3C89002A65A2 /* llParameterController.m */; };
 		6A91FB251C9C502F002A65A2 /* LLParameterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A91FB241C9C502F002A65A2 /* LLParameterModel.m */; };
 		6AAF22391CAFA8B300F8DE9A /* NSObject+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAF22381CAFA8B300F8DE9A /* NSObject+Property.m */; };
+		6AAF223D1CAFC16100F8DE9A /* CQFeedbackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAF223B1CAFC16100F8DE9A /* CQFeedbackController.m */; };
+		6AAF223E1CAFC16100F8DE9A /* CQFeedbackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AAF223C1CAFC16100F8DE9A /* CQFeedbackController.xib */; };
 		AA8CD3949EC3EEF063A6DF4D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5B1CC05D418EEE11865769 /* Pods.framework */; };
 		BC0F44E01C999EA800894419 /* CarForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0F44AC1C999EA800894419 /* CarForumController.m */; };
 		BC0F44E11C999EA800894419 /* YUCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0F44AE1C999EA800894419 /* YUCategoryViewController.m */; };
@@ -220,8 +221,6 @@
 		6A85DA3F1CA3C4E9005D2D48 /* LLFavoriteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLFavoriteController.m; sourceTree = "<group>"; };
 		6A85DA411CA3C510005D2D48 /* LLBuyCarCaculateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLBuyCarCaculateController.h; sourceTree = "<group>"; };
 		6A85DA421CA3C510005D2D48 /* LLBuyCarCaculateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLBuyCarCaculateController.m; sourceTree = "<group>"; };
-		6A85DA441CA3C537005D2D48 /* LLFeedBackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLFeedBackController.h; sourceTree = "<group>"; };
-		6A85DA451CA3C537005D2D48 /* LLFeedBackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLFeedBackController.m; sourceTree = "<group>"; };
 		6A85DA471CA3C5B2005D2D48 /* LLPeccancyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLPeccancyController.h; sourceTree = "<group>"; };
 		6A85DA481CA3C5B2005D2D48 /* LLPeccancyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLPeccancyController.m; sourceTree = "<group>"; };
 		6A85DA4A1CA3D82D005D2D48 /* LLDBCarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLDBCarManager.h; sourceTree = "<group>"; };
@@ -247,6 +246,9 @@
 		6A91FB241C9C502F002A65A2 /* LLParameterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLParameterModel.m; sourceTree = "<group>"; };
 		6AAF22371CAFA8B300F8DE9A /* NSObject+Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Property.h"; sourceTree = "<group>"; };
 		6AAF22381CAFA8B300F8DE9A /* NSObject+Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Property.m"; sourceTree = "<group>"; };
+		6AAF223A1CAFC16100F8DE9A /* CQFeedbackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CQFeedbackController.h; sourceTree = "<group>"; };
+		6AAF223B1CAFC16100F8DE9A /* CQFeedbackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQFeedbackController.m; sourceTree = "<group>"; };
+		6AAF223C1CAFC16100F8DE9A /* CQFeedbackController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CQFeedbackController.xib; sourceTree = "<group>"; };
 		6FB5973FF1B297B050B1A609 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7CF344E4DA0F93C7E0B1D029 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0F44AB1C999EA800894419 /* CarForumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarForumController.h; sourceTree = "<group>"; };
@@ -605,10 +607,11 @@
 				6A85DA3F1CA3C4E9005D2D48 /* LLFavoriteController.m */,
 				6A85DA411CA3C510005D2D48 /* LLBuyCarCaculateController.h */,
 				6A85DA421CA3C510005D2D48 /* LLBuyCarCaculateController.m */,
-				6A85DA441CA3C537005D2D48 /* LLFeedBackController.h */,
-				6A85DA451CA3C537005D2D48 /* LLFeedBackController.m */,
 				6A85DA471CA3C5B2005D2D48 /* LLPeccancyController.h */,
 				6A85DA481CA3C5B2005D2D48 /* LLPeccancyController.m */,
+				6AAF223A1CAFC16100F8DE9A /* CQFeedbackController.h */,
+				6AAF223B1CAFC16100F8DE9A /* CQFeedbackController.m */,
+				6AAF223C1CAFC16100F8DE9A /* CQFeedbackController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1590,6 +1593,7 @@
 				FC0C6F0E1C9C2BBA00229F2D /* MJPhotoBrowser.bundle in Resources */,
 				DAE9A5A11C9BCE6500ED8033 /* WJCarDetailWordCell.xib in Resources */,
 				BC59A65E1C9BD4700083C76E /* YUForumHeaderView.xib in Resources */,
+				6AAF223E1CAFC16100F8DE9A /* CQFeedbackController.xib in Resources */,
 				DAE9A5B41C9BCECB00ED8033 /* LLTextCollectionCell.xib in Resources */,
 				DA825C1A1C92E86B000C5EE4 /* WJConsultingCell.xib in Resources */,
 				DA825C1C1C92E86B000C5EE4 /* WJFindHotCell.xib in Resources */,
@@ -1767,7 +1771,6 @@
 				DAE9A5EF1C9BD9BC00ED8033 /* WJCarDetailNoImageCell.m in Sources */,
 				DAE9A5771C9BCCDB00ED8033 /* LLCarTypeDetailController.m in Sources */,
 				DAE9A5CE1C9BCFE700ED8033 /* TSHalfColorController.m in Sources */,
-				6A85DA461CA3C537005D2D48 /* LLFeedBackController.m in Sources */,
 				FC457DD11C9816AF00DDB531 /* SWCarCell.m in Sources */,
 				FCCB84651C96B0BB005EA1AA /* TSCarMod.m in Sources */,
 				BC0F44E91C999EA800894419 /* FMDatabaseQueue.m in Sources */,
@@ -1783,6 +1786,7 @@
 				DA89F3461C92FDCE003D5AF8 /* WJFindCarResult.m in Sources */,
 				BC59A6541C9BD4700083C76E /* YuArticleViewController.m in Sources */,
 				DAE9A5911C9BCE0300ED8033 /* WJCarDetailHeaderView.m in Sources */,
+				6AAF223D1CAFC16100F8DE9A /* CQFeedbackController.m in Sources */,
 				BC0F44F21C999EA800894419 /* YUMoreTopicCell.m in Sources */,
 				BC0F44EA1C999EA800894419 /* FMResultSet.m in Sources */,
 				BC59A65A1C9BD4700083C76E /* YUTitleNews.m in Sources */,

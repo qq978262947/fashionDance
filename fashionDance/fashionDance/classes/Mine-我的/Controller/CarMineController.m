@@ -10,9 +10,10 @@
 #import "LLLocationController.h"
 #import "LLFavoriteController.h"
 #import "LLBuyCarCaculateController.h"
-#import "LLFeedBackController.h"
+#import "CQFeedbackController.h"
 #import "LLPeccancyController.h"
 
+#import "WJWebViewController.h"
 
 @interface CarMineController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -21,7 +22,7 @@
     LLFavoriteController * favoriteCtrl;
     LLBuyCarCaculateController * caculateCtrl;
     LLPeccancyController * peccancyCtrl;
-    LLFeedBackController * feedBackCtrl;
+    CQFeedbackController * feedBackCtrl;
 }
 
 @property(nonatomic,weak)UITableView * tableView;
@@ -40,8 +41,9 @@
 -(UITableView *)tableView
 {
     if (!_tableView) {
-        UITableView * tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        UITableView * tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, WJScreenW, 350)];
         [self.view addSubview:tableView];
+        tableView.tableFooterView = nil;
         tableView.delegate = self;
         tableView.dataSource = self;
         [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"test"];
@@ -62,7 +64,7 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -70,7 +72,7 @@
     int rows;
     switch (section) {
         case 0:
-            rows = 1;
+            rows = 3;
             break;
             
             case 1:
@@ -95,13 +97,26 @@
     UITableViewCell * cell;
     cell = [tableView dequeueReusableCellWithIdentifier:@"test" forIndexPath:indexPath];
     if (indexPath.section == 0) {
-        cell.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"mine_head"]];
+        switch (indexPath.row) {
+            case 0:
+                //收藏夹
+                cell.textLabel.text = @"收藏夹";
+                break;
+            case 1:
+                //违规查询
+                cell.textLabel.text = @"违规查询";
+                break;
+            case 2:
+                //意见反馈
+                cell.textLabel.text = @"意见反馈";
+                break;
+            default:
+                break;
+        }
+
     }
     else if (indexPath.section == 1&&indexPath.row == 0)
     {
-        //收藏夹
-        cell.textLabel.text = @"收藏夹";
-
     }
     else if (indexPath.section == 1 && indexPath.row == 1)
     {
@@ -110,8 +125,6 @@
     }
     else if (indexPath.section == 2 && indexPath.row == 0)
     {
-        //违规查询
-        cell.textLabel.text = @"违规查询";
     }
     else if (indexPath.section == 2 && indexPath.row == 1)
     {
@@ -120,8 +133,6 @@
     }
     else
     {
-        //意见反馈
-        cell.textLabel.text = @"意见反馈";
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
@@ -134,7 +145,7 @@
     int rows;
     switch (indexPath.section) {
         case 0:
-            rows = 150;
+            rows = 80;
             break;
             
         case 1:
@@ -160,7 +171,7 @@
     int rows;
     switch (section) {
         case 0:
-            rows = 0;
+            rows = 20;
             break;
             
         case 1:
@@ -186,14 +197,38 @@
 {
     //进入相应页面
     if (indexPath.section == 0) {
+        switch (indexPath.row) {
+            case 0:
+            {
+                //收藏夹
+                if (!favoriteCtrl) {
+                    favoriteCtrl = [[LLFavoriteController alloc]init];
+                }
+                [self.navigationController pushViewController:favoriteCtrl animated:YES];
+            }
+                break;
+            case 1:
+                //违规查询
+            {
+                WJWebViewController * checkBreakRulesVC = [[WJWebViewController alloc]init];
+                checkBreakRulesVC.urlString = @"http://mobile.auto.sohu.com/wzcx/weixin.at";
+                [self.navigationController pushViewController:checkBreakRulesVC animated:YES];
+            }
+                break;
+            case 2:
+            {
+                //意见反馈
+                CQFeedbackController *fbCtrl = [[CQFeedbackController alloc] init];
+                [self.navigationController pushViewController:fbCtrl animated:YES];
+            }
+                 break;
+            default:
+                break;
+        }
+
     }
     else if (indexPath.section == 1&&indexPath.row == 0)
     {
-        //收藏夹
-        if (!favoriteCtrl) {
-            favoriteCtrl = [[LLFavoriteController alloc]init];
-        }
-        [self.navigationController pushViewController:favoriteCtrl animated:YES];
     }
     else if (indexPath.section == 1 && indexPath.row == 1)
     {
