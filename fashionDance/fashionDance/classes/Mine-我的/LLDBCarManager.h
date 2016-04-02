@@ -11,6 +11,7 @@
 @class YUCarCellModel;
 @interface LLDBCarManager : NSObject
 
+//收藏车
 + (LLDBCarManager *)sharedManager;
 
 - (void)createDatabase;
@@ -20,5 +21,7 @@
 - (NSArray *)searchAllCar;
 
 - (void)deleteTopicWithTrimID:(NSInteger)trimId;
+
+//车浏览记录
 
 @end

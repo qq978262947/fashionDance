@@ -41,6 +41,9 @@ static NSString *Id = @"cell";
     [self setupTableView];
     [self loadHeaderData];
     [self loadCellData];
+    
+    //浏览记录
+    
 }
 
 -(UIView *)footerView
@@ -73,7 +76,7 @@ static NSString *Id = @"cell";
             }
         }
         
-        
+        [view setBackgroundColor:[UIColor grayColor]];
         _footerView = view;
     }
     return _footerView;

@@ -48,7 +48,7 @@
         make.left.equalTo(0);
         make.right.equalTo(0);
         make.top.equalTo(NAVH+20);
-        make.bottom.equalTo(-TabbarH);
+        make.bottom.equalTo(0);
     }];
     
     //scrollView子视图

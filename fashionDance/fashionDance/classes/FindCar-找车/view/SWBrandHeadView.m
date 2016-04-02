@@ -24,7 +24,7 @@
          *  初始化子控件
          */
         [self setupButtonWithNormal:@"like_selected" title:@"我的收藏"];
-        [self setupButtonWithNormal:@"like_selected" title:@"游览历史"];
+        [self setupButtonWithNormal:@"like_selected" title:@"浏览历史"];
         [self setupButtonWithNormal:@"like_selected" title:@"热门排行"];
         
     }
@@ -36,8 +36,16 @@
     UIButton *collBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [collBtn setImage:[UIImage imageNamed:normal] forState:UIControlStateNormal];
     [collBtn setTitle:title forState:UIControlStateNormal];
+    [collBtn addTarget:self action:@selector(dbComplete:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:collBtn];
 
+}
+
+-(void)dbComplete:(UIButton *)sender
+{
+    if (self.buttonClickBlock) {
+        self.buttonClickBlock(sender);
+    }
 }
 
 -(void)layoutSubviews

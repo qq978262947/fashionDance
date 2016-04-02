@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
+typedef void(^ButtonClickBlock)(UIButton * sender);
 @interface SWBrandHeadView : UIView
+
+@property(nonatomic,copy)ButtonClickBlock buttonClickBlock;
 
 @end
