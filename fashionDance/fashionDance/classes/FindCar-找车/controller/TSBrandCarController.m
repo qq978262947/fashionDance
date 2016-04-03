@@ -206,6 +206,8 @@
             //
         }];
         [cell.textLabel setText:model.nameZh];
+        [cell.detailTextLabel setText:[NSString stringWithFormat:@"%f~%f",model.min,model.max]];
+        [cell.detailTextLabel setTextColor:[UIColor redColor]];
         return cell;
     }
 

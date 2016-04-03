@@ -152,7 +152,24 @@
      BOOL flag;
     //得出offSaleYearList data
     NSData * offSaleYearListData = [NSKeyedArchiver archivedDataWithRootObject:carModel.offSaleYearList];
-    flag = [_myDatabase executeUpdate:insertSql,carModel.avgScore,carModel.minDprice,carModel.picFocus,carModel.barId,carModel.nameZh,carModel.type1,carModel.rootBrandNameZh,carModel.max,offSaleYearListData,carModel.maxDprice,carModel.countPics,carModel.rootBrandId,carModel.engineSize1,carModel.engineSize2,carModel.modelId,carModel.min];
+    //可能是有些属性是空的导致存储出错
+    /*n) NSInteger avgScore;
+     n) CGFloat minDprice;
+     NSString *picFocus;
+     NSString *barId;
+     NSString *nameZh;
+     NSString *type1;
+     NSString *rootBrandNameZh;
+     n) CGFloat max;
+     g) NSArray *offSaleYearList;
+     n) CGFloat maxDprice;
+     n) NSInteger countPics;
+     n) NSInteger rootBrandId;
+     NSString *engineSize1;
+     NSString *engineSize2;
+     n) NSInteger modelId;
+     n) CGFloat min;*/
+    flag = [_myDatabase executeUpdate:insertSql,@(carModel.avgScore),@(carModel.minDprice),carModel.picFocus,carModel.barId,carModel.nameZh,carModel.type1,carModel.rootBrandNameZh,@(carModel.max),offSaleYearListData,@(carModel.maxDprice),@(carModel.countPics),@(carModel.rootBrandId),carModel.engineSize1,carModel.engineSize2,@(carModel.modelId),@(carModel.min)];
     if (flag && [tableName isEqualToString:@"car1"])
     {
         [SVProgressHUD setBackgroundColor:[UIColor grayColor]];
