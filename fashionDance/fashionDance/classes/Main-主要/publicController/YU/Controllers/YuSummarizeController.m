@@ -55,7 +55,15 @@ static NSString *Id = @"cell";
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.equalTo(0);
             make.trailing.equalTo(0);
-            make.baseline.equalTo(self.view).offset(-95);
+            int offSet = -95;
+            if (self.view.frame.size.height + self.view.frame.origin.y > WJScreenH) {
+                
+            }
+            else
+            {
+                offSet = 0;
+            }
+            make.baseline.equalTo(self.view).offset(offSet);
             make.height.equalTo(@(heigthFooter));
         }];
         
@@ -163,7 +171,7 @@ static NSString *Id = @"cell";
 - (void)setupTableView
 {
     // 设置tableview
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.automaticallyAdjustsScrollViewInsets = YES;
     UITableView *tableView = [[UITableView alloc]init];
     [self.view addSubview:tableView];
     self.tableView = tableView;

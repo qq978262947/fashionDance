@@ -26,6 +26,7 @@
 		6AAF22391CAFA8B300F8DE9A /* NSObject+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAF22381CAFA8B300F8DE9A /* NSObject+Property.m */; };
 		6AAF223D1CAFC16100F8DE9A /* CQFeedbackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AAF223B1CAFC16100F8DE9A /* CQFeedbackController.m */; };
 		6AAF223E1CAFC16100F8DE9A /* CQFeedbackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AAF223C1CAFC16100F8DE9A /* CQFeedbackController.xib */; };
+		6AE43FB71CB10B110053CD56 /* TSHotlistManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE43FB61CB10B110053CD56 /* TSHotlistManagerModel.m */; };
 		AA8CD3949EC3EEF063A6DF4D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5B1CC05D418EEE11865769 /* Pods.framework */; };
 		BC0F44E01C999EA800894419 /* CarForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0F44AC1C999EA800894419 /* CarForumController.m */; };
 		BC0F44E11C999EA800894419 /* YUCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0F44AE1C999EA800894419 /* YUCategoryViewController.m */; };
@@ -249,6 +250,8 @@
 		6AAF223A1CAFC16100F8DE9A /* CQFeedbackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CQFeedbackController.h; sourceTree = "<group>"; };
 		6AAF223B1CAFC16100F8DE9A /* CQFeedbackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQFeedbackController.m; sourceTree = "<group>"; };
 		6AAF223C1CAFC16100F8DE9A /* CQFeedbackController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CQFeedbackController.xib; sourceTree = "<group>"; };
+		6AE43FB51CB10B110053CD56 /* TSHotlistManagerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHotlistManagerModel.h; sourceTree = "<group>"; };
+		6AE43FB61CB10B110053CD56 /* TSHotlistManagerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHotlistManagerModel.m; sourceTree = "<group>"; };
 		6FB5973FF1B297B050B1A609 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7CF344E4DA0F93C7E0B1D029 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BC0F44AB1C999EA800894419 /* CarForumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarForumController.h; sourceTree = "<group>"; };
@@ -1455,6 +1458,8 @@
 				FC457DD51C983D3800DDB531 /* TSConfigList.plist */,
 				FCCF82751C99628100F12B8C /* TSSXCarModel.h */,
 				FCCF82761C99628100F12B8C /* TSSXCarModel.m */,
+				6AE43FB51CB10B110053CD56 /* TSHotlistManagerModel.h */,
+				6AE43FB61CB10B110053CD56 /* TSHotlistManagerModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1766,6 +1771,7 @@
 				DAE9A5C41C9BCFC300ED8033 /* TSColorMod.m in Sources */,
 				FC0C6F0D1C9C2BBA00229F2D /* MJPhoto.m in Sources */,
 				DAE9A55D1C9BCC1700ED8033 /* CCPicViewController.m in Sources */,
+				6AE43FB71CB10B110053CD56 /* TSHotlistManagerModel.m in Sources */,
 				FCCF82771C99628100F12B8C /* TSSXCarModel.m in Sources */,
 				FC0C6F111C9C2BBA00229F2D /* MJPhotoProgressView.m in Sources */,
 				DAE9A5EF1C9BD9BC00ED8033 /* WJCarDetailNoImageCell.m in Sources */,
