@@ -80,6 +80,7 @@ static NSString *Id = @"cell";
         for (YUCarDetailModel * model in array) {
             if (model.modelId == self.modelId.integerValue) {
                 self.isSelected = YES;
+                [imageView setImage:[UIImage imageNamed:@"like_selected"]];
             }
         }
         

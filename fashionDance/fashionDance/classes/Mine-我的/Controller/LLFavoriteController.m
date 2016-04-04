@@ -58,7 +58,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.automaticallyAdjustsScrollViewInsets = NO;
+//    self.automaticallyAdjustsScrollViewInsets = NO;
 
     WJScrollTitleView * view = [WJScrollTitleView scrollTitleViewWithFrame:CGRectMake(0, 0, WJScreenW, WJScreenH)];
     LLFavoriteArticleController * article = [[LLFavoriteArticleController alloc]init];

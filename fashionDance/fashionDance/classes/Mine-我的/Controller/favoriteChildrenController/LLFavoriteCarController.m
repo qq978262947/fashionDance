@@ -14,6 +14,8 @@
 #import "YUCarDetailModel.h"
 
 #import "UIImageView+downloadImage.h"
+
+#import "YuSummarizeController.h"
 @interface LLFavoriteCarController ()
 
 @end
@@ -24,23 +26,6 @@
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"LLCell"];
-    
-    self.tableView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
-        self.carData = [[LLDBCarManager sharedManager] searchAllCar];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.tableView.mj_header endRefreshing];
-        });
-        [self.tableView reloadData];
-    }];
-    
-    self.tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
-        self.carData = [[LLDBCarManager sharedManager] searchAllCar];
-        [self.tableView reloadData];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.tableView.mj_footer endRefreshing];
-        });
-    }];
-
 }
 
 #pragma mark - Table view data source
@@ -69,5 +54,36 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //push到相应界面
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    YUCarDetailModel * model = self.carData[indexPath.row];
+    YuSummarizeController * control = [[YuSummarizeController alloc]init];
+    control.modelId = [NSString stringWithFormat:@"%ld",(long)model.modelId];
+    [self.navigationController pushViewController:control animated:YES];
+}
+#pragma mark 尺寸相关
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 0.0001;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0.0001;
+}
+
+
+#pragma mark 刷新
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    
+    self.carData = [[LLDBCarManager sharedManager] searchAllCar];
+    [self.tableView reloadData];
 }
 @end

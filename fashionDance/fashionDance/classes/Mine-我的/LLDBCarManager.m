@@ -87,11 +87,11 @@
     return [self searchCarInTable:@"car1"];
 }
 
-- (void)deleteTopicWithmodelId:(NSInteger)modelId
+- (void)deleteCarWithmodelId:(NSInteger)modelId
 {
     NSString *delectSql = @"delete from car1 where modelId =?";
     
-    BOOL flag = [_myDatabase executeUpdate:delectSql,modelId];
+    BOOL flag = [_myDatabase executeUpdate:delectSql,@(modelId)];
     if (flag) {
         [SVProgressHUD setBackgroundColor:[UIColor grayColor]];
         [SVProgressHUD showImage:[UIImage imageNamed:@"new_collectBtn_normal"] status:@"取消收藏成功"];

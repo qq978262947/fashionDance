@@ -28,28 +28,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.tableView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
-        self.forumData = [[YUDBManager sharedManager] searchAllTopic];
-        self.tableView.mj_footer.state = MJRefreshStateIdle;
-
-        [self.tableView reloadData];
-    }];
-    self.tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
-        self.forumData = [[YUDBManager sharedManager] searchAllTopic];
-        self.tableView.mj_footer.state = MJRefreshStateIdle;
-
-        [self.tableView reloadData];
-    }];
-    
-    
+        
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([YUHotTopicCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([YUHotTopicCell class])];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Table view data source
 
@@ -117,6 +99,16 @@
     topicWebVc.topicModel = self.forumData[indexPath.row];
     [self.navigationController pushViewController:topicWebVc animated:YES];
     
+}
+
+
+#pragma mark 刷新
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    
+    self.forumData = [[YUDBManager sharedManager] searchAllTopic];
+    [self.tableView reloadData];
 }
 
 @end

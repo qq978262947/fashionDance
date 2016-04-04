@@ -52,7 +52,7 @@
     BOOL ret  = [_myDatabase open];
     
     if (ret) {
-        NSString *createSql = @"create table if not exists article(ID varchar(50) primary key, picUrl varchar, author varchar, pubtime long, brandId integer,title varchar(50),subbrandId integer, modelId integer,url varchar)";
+        NSString *createSql = @"create table if not exists article(ID varchar primary key, picUrl varchar, author varchar, pubtime long, brandId integer,title varchar(50),subbrandId integer, modelId integer,url varchar)";
         
         BOOL flag = [_myDatabase executeUpdate:createSql];
         
@@ -71,8 +71,8 @@
 
 - (void)insertArticle:(WJList *)articleModel
 {
-    NSString *insertSql = @"insert into article (ID,picUrl,author,title,pubtime,brandId,subbrandId,modelId,url) values(?,?,?,?,?,?,?,?,?)";
     
+    NSString *insertSql = @"insert into article (ID,picUrl,author,title,pubtime,brandId,subbrandId,modelId,url) values(?,?,?,?,?,?,?,?,?)";
     BOOL flag = [_myDatabase executeUpdate:insertSql,articleModel.ID,articleModel.picUrl,articleModel.author,articleModel.title,@(articleModel.pubtime),@(articleModel.brandId),@(articleModel.subbrandId),@(articleModel.modelId),articleModel.url];
     
     if (flag)
@@ -97,7 +97,7 @@
         [SVProgressHUD setBackgroundColor:[UIColor grayColor]];
         [SVProgressHUD showImage:[UIImage imageNamed:@"new_collectBtn_normal"] status:@"取消收藏成功"];
     }
-
+    
 }
 
 - (NSArray *)searchAllArticle

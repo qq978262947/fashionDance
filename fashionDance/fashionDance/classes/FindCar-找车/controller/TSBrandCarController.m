@@ -47,6 +47,7 @@
 {
     if (!_dbView) {
         UITableView * view = [[UITableView alloc]initWithFrame:CGRectMake(0, 40, WJScreenW, height_dbview) style:UITableViewStylePlain];
+        view.rowHeight = 70;
         view.dataSource = self;
         view.delegate = self;
         [view registerClass:[UITableViewCell class] forCellReuseIdentifier:@"lldbcell"];

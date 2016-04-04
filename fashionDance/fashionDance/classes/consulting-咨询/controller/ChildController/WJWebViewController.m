@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (![self.urlString isEqualToString:@"http://mobile.auto.sohu.com/wzcx/weixin.at"]) {
+    if ([self.urlString hasPrefix:@"http://autoapp.auto.sohu.com/auto-app/news/"]) {
         //nav bar上的收藏和分享按钮
         UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 25, 25)];
         UIBarButtonItem *itemFavorite = [[UIBarButtonItem alloc]initWithCustomView:btn];
@@ -31,8 +31,7 @@
         [btn setBackgroundImage:[UIImage imageNamed:@"new_collect_selected"] forState:UIControlStateSelected];
         [btn addTarget:self action:@selector(favoriteItemTouch:) forControlEvents:UIControlEventTouchUpInside];
         self.itemFavorite = itemFavorite;
-        UIBarButtonItem * itemShare = [UIBarButtonItem itemWithImage:@"tab_mySpace_normal" highImage:nil target:self action:@selector(shareItemTouch)];
-        self.navigationItem.rightBarButtonItems = @[itemShare,itemFavorite];
+        self.navigationItem.rightBarButtonItems = @[itemFavorite];
         //从数据库里查找是不是收藏过
         self.isFavorite = NO;
         NSArray * array = [[LLDBArticleManager sharedManager] searchAllArticle];

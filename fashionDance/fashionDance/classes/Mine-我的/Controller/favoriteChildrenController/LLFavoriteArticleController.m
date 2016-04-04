@@ -29,21 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
-        self.articleData = [[LLDBArticleManager sharedManager] searchAllArticle];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.tableView.mj_header endRefreshing];
-        });
-        [self.tableView reloadData];
-    }];
-    
-    self.tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
-        self.articleData = [[LLDBArticleManager sharedManager] searchAllArticle];
-        [self.tableView reloadData];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.tableView.mj_footer endRefreshing];
-        });
-    }];
+    [self tableView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -130,6 +116,15 @@
     webControl.articleModel = list;
     //跳转到相应界面
     [self.navigationController pushViewController:webControl animated:YES];
+}
+
+#pragma mark 刷新
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    
+    self.articleData = [[LLDBArticleManager sharedManager] searchAllArticle];
+    [self.tableView reloadData];
 }
 
 @end
