@@ -24,6 +24,7 @@
     if (nil == _manager) {
         //1.获得请求管理者
         _manager = [[AFHTTPSessionManager alloc]init];
+        
     }
     return _manager;
 }
@@ -32,7 +33,15 @@
 
 - (void)get:(NSString *)url params:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-
+    //缓存
+    if (_manager.reachabilityManager.reachable) {
+        _manager.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringCacheData;
+    }
+    else
+    {
+        _manager.requestSerializer.cachePolicy = NSURLRequestReturnCacheDataElseLoad;
+    }
+    
     //2.发送get请求
     [self.manager GET:url parameters:params progress:nil  success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
@@ -47,6 +56,8 @@
 
 - (void)post:(NSString *)url params:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
+    _manager.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringCacheData;
+
     //2.发送post请求
     [self.manager POST:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
