@@ -15,5 +15,9 @@
 @property (nonatomic,strong)NSString *minPrice;
 @property (nonatomic,strong)NSString *maxPrice;
 
+//后期加入
+@property(nonatomic,strong)NSString * rootBrandNameZh;
+@property(nonatomic,strong)NSString * brandNameZh;
+
 +(instancetype)modWithDict:(NSDictionary *)dict;
 @end

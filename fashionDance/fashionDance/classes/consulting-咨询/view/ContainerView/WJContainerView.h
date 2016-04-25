@@ -1,6 +1,5 @@
 //
-//  WJButtonContainerView.h
-//  百思不得姐
+//  舞吧
 //
 //  Created by 汪俊 on 16/2/23.
 //  Copyright © 2016年 汪俊. All rights reserved.
@@ -29,7 +28,7 @@
 
 
 
-@property (copy, nonatomic) NSArray *titles;
+@property (strong, nonatomic) NSArray *titles;
 /**
  *  初始化方法
  *
@@ -55,7 +54,7 @@
 /**
  *  按钮背景图片
  */
-@property (strong, nonatomic)UIColor *buttonBackgroundImage;
+@property (strong, nonatomic)UIImage *buttonBackgroundImage;
 /**
  *  指示器颜色
  */

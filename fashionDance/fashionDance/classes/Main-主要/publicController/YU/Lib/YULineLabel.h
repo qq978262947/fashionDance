@@ -1,9 +1,9 @@
 //
-//  UICustomLineLabel.h
-//  UILineLableDemo
+//  YULineLabel.h
+//  fashionDance
 //
-//  Created by myanycam on 2014/2/25.
-//  Copyright (c) 2014年 myanycam. All rights reserved.
+//  Created by qianfeng on 16/3/18.
+//  Copyright © 2016年 汪俊. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -17,10 +17,9 @@ typedef enum{
     
 } LineType ;
 
-@interface UICustomLineLabel : UILabel
+@interface YULineLabel : UILabel
 
 @property (assign, nonatomic) LineType lineType;
 @property (assign, nonatomic) UIColor * lineColor;
-
 
 @end

@@ -23,18 +23,10 @@
 
 @property (weak, nonatomic) UIScrollView *scrollView;
 
-@property (strong, nonatomic)NSMutableArray *constraintModelArray;
 
 @end
 
 @implementation WJScrollTitleView
-
-- (NSMutableArray *)constraintModelArray {
-    if (nil == _constraintModelArray) {
-        _constraintModelArray = [NSMutableArray array];
-    }
-    return _constraintModelArray;
-}
 
 
 + (instancetype)scrollTitleView {
@@ -72,7 +64,7 @@
     
     // 1 添加存放按钮点scrollview
     UIScrollView *scrollView = [[UIScrollView alloc]init];
-    scrollView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.0];
+    scrollView.backgroundColor = [UIColor clearColor];
     self.scrollView = scrollView;
     [self addSubview:scrollView];
     
@@ -85,8 +77,7 @@
     
     [scrollView addSubview:containerView];
     
-    [containerView setBackgroundColor:[UIColor whiteColor]];
-    containerView.buttonBackgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.5];
+    [containerView setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.9]];
     containerView.indicatorViewColor = [UIColor redColor];
     containerView.delegate = self;
 }
@@ -168,10 +159,25 @@
  */
 - (void)configChildViewWithIndex:(NSInteger)index {
     
-    WJConstraintModel *constraintModel = self.constraintModelArray[index];
+    WJConstraintModel *constraintModel = self.viewControllers[index];
     // 如果是第一次调用,配置约束
     if (constraintModel.isConfigConstraint == NO) {
         [self.contentView addSubview:constraintModel.viewController.view];
+        
+        if (constraintModel.viewControllerClass == WJControllerClassTableView) {
+            UITableView *tableview = (UITableView *)constraintModel.viewController.view;
+            CGFloat top = WJTitleH + WJStatusAndBarHeight;
+            tableview.contentInset = UIEdgeInsetsMake(top, 0, WJStatusAndBarHeight, 0);
+            tableview.scrollIndicatorInsets = tableview.contentInset;
+            tableview.contentOffset = CGPointMake(0, - WJStatusAndBarHeight);
+        } else if (constraintModel.viewControllerClass == WJControllerClassCollectionView) {
+            UICollectionView *collectionView = (UICollectionView *)constraintModel.viewController.view;
+            CGFloat top = self.containerView.height;
+            collectionView.contentInset = UIEdgeInsetsMake(top, 0, WJStatusAndBarHeight, 0);
+            collectionView.scrollIndicatorInsets = collectionView.contentInset;
+            collectionView.contentOffset = CGPointMake(0, - WJStatusAndBarHeight);
+        }
+        
         __weak typeof(self)weakSelf = self;
         [constraintModel.viewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.equalTo(weakSelf.contentView);
@@ -236,11 +242,6 @@
 
 - (void)setViewControllers:(NSArray *)viewControllers {
     _viewControllers = [viewControllers copy];
-    for (UIViewController *subViewController in viewControllers) {
-        WJConstraintModel *constraintModel = [WJConstraintModel constraintModel];
-        constraintModel.viewController = subViewController;
-        [self.constraintModelArray addObject:constraintModel];
-    }
     if (self.viewControllers.count > 0) {
         [self configChildViewWithIndex:0];
     }
@@ -283,7 +284,7 @@
     self.containerView.buttonBackgroundColor = buttonBackgroundColor;
 }
 
-- (void)setButtonBackgroundImage:(UIColor *)buttonBackgroundImage {
+- (void)setButtonBackgroundImage:(UIImage *)buttonBackgroundImage {
     _buttonBackgroundImage = buttonBackgroundImage;
     self.containerView.buttonBackgroundImage = buttonBackgroundImage;
 }
@@ -291,6 +292,11 @@
 - (void)setIndicatorViewColor:(UIColor *)indicatorViewColor{
     indicatorViewColor = indicatorViewColor;
     self.containerView.indicatorViewColor = indicatorViewColor;
+}
+
+- (void)setTitlesBackgroundColor:(UIColor *)titlesBackgroundColor {
+    _titlesBackgroundColor = titlesBackgroundColor;
+    self.containerView.backgroundColor = titlesBackgroundColor;
 }
 
 - (void)setAnimationTime:(NSTimeInterval)animationTime{

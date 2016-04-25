@@ -1,6 +1,6 @@
 //
 //  WJButtonContainerView.m
-//  百思不得姐
+//  舞吧
 //
 //  Created by 汪俊 on 16/2/23.
 //  Copyright © 2016年 汪俊. All rights reserved.
@@ -8,7 +8,6 @@
 
 #import "WJContainerView.h"
 
-const float indicatorViewH = 3;
 // 按钮的高度
 const float buttonHeight = 30;
 
@@ -97,7 +96,7 @@ const float buttonHeight = 30;
         make.centerX.equalTo(btn);
         make.top.equalTo(weakSelf.buttonsView.mas_bottom);
         make.width.equalTo(btn.titleLabel);
-        make.height.equalTo(@(indicatorViewH));
+        make.height.equalTo(@5);
     }];
 }
 
@@ -207,7 +206,7 @@ const float buttonHeight = 30;
         make.centerX.equalTo(btn);
         make.top.equalTo(weakSelf.buttonsView.mas_bottom);
         make.width.equalTo(btn.titleLabel);
-        make.height.equalTo(@(indicatorViewH));
+        make.height.equalTo(@5);
     }];
     //必须调用此方法，才能出动画效果
     [self layoutIfNeeded];
@@ -254,10 +253,10 @@ const float buttonHeight = 30;
  *
  *  @param titleColor titleColor
  */
-- (void)setButtonBackgroundImage:(UIColor *)buttonBackgroundImage{
+- (void)setButtonBackgroundImage:(UIImage *)buttonBackgroundImage{
     _buttonBackgroundImage = buttonBackgroundImage;
     for (UIButton *btn in self.btnsArray) {
-        [btn setBackgroundColor:buttonBackgroundImage];
+        [btn setBackgroundImage:buttonBackgroundImage forState:UIControlStateNormal];
     }
     
 }

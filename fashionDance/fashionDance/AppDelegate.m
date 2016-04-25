@@ -25,7 +25,7 @@
     self.window.frame = [UIScreen mainScreen].bounds;
 //    // 设置窗口的根控制器
     self.window.rootViewController = [[WJTabBarController alloc] init];
-    // 显示窗口
+
     [self.window makeKeyAndVisible];
 
     
@@ -53,6 +53,14 @@
     }];
     // 开始监控
     [mgr startMonitoring];
+    
+    //使用缓存策略，我们需要缓存路径
+    NSString * pathRaw = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject;
+    //拼接路径
+    NSString * path = [pathRaw stringByAppendingPathComponent:@"lCreateCache"];
+    NSURLCache * cache = [[NSURLCache alloc]initWithMemoryCapacity:2 * 1024 * 1024 diskCapacity:100 * 1024 * 1024 diskPath:path];
+    [NSURLCache setSharedURLCache:cache];
+
     return YES;
 }
 

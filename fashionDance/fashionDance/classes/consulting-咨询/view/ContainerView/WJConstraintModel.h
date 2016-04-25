@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+
+typedef enum {
+    WJControllerClassTableView, // tableviewcontroller
+    WJControllerClassCollectionView, // CollectionViewcontroller
+    WJControllerClassView, // ViewCollectionView
+} WJControllerClass;
+
+
 @interface WJConstraintModel : NSObject
 
 + (instancetype)constraintModel;
@@ -20,5 +28,7 @@
  *  是否已约束的标记
  */
 @property (assign, nonatomic, getter=isConfigConstraint)BOOL configConstraint;
+
+@property (assign, nonatomic) WJControllerClass viewControllerClass;
 
 @end

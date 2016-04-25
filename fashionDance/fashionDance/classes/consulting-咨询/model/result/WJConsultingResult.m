@@ -10,12 +10,6 @@
 
 @implementation WJConsultingResult
 
-+ (NSDictionary *)replacedKeyFromPropertyName
-{
-    return @{
-             @"ID" : @"id"
-             };
-}
 
 @end
 
@@ -31,6 +25,14 @@
 
 
 @implementation WJList
+
++ (NSString *)mj_replacedKeyFromPropertyName121:(NSString *)propertyName;
+{
+    if ([propertyName isEqualToString:@"ID"]) {
+        return @"id";
+    }
+    return propertyName;
+}
 
 @end
 

@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^ScrollViewDidScrollBlock)(UIScrollView * scrollView);
 @interface LLUpView : UIView
 
 @property(nonatomic,assign)CGFloat leftWidth;
 
-@property(nonatomic,copy)ScrollViewDidScrollBlock scrollViewDidScrollBlock;
+@property(nonatomic,assign)CGFloat widthCell;
+
+/*
+ *数据源，内存LLParameterModel
+ */
+@property(nonatomic,strong)NSArray * data;
 
 @end
