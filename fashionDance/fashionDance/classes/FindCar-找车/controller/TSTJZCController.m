@@ -102,7 +102,7 @@
     [toolBarView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(0);
         make.right.equalTo(0);
-        make.bottom.equalTo(0);
+        make.bottom.equalTo(-TabbarH);
         make.height.equalTo(80);
     }];
     //重置按钮

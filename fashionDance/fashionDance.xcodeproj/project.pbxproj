@@ -816,7 +816,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DA2701CD1C9A434300AC8205 /* preferential-特惠 */ = {
+		DA2701CD1C9A434300AC8205 /* preferential-视频 */ = {
 			isa = PBXGroup;
 			children = (
 				DA2701CE1C9A434300AC8205 /* controller */,
@@ -826,6 +826,7 @@
 				DA2701DE1C9A437200AC8205 /* MKVideoCell.m */,
 				DA2701DF1C9A437200AC8205 /* MKVideoCell.xib */,
 			);
+			name = "preferential-视频";
 			path = "preferential-特惠";
 			sourceTree = "<group>";
 		};
@@ -935,7 +936,7 @@
 			children = (
 				6A85DA341CA3C3F6005D2D48 /* Mine-我的 */,
 				DAE9A5431C9BCC1700ED8033 /* publicController */,
-				DA2701CD1C9A434300AC8205 /* preferential-特惠 */,
+				DA2701CD1C9A434300AC8205 /* preferential-视频 */,
 				BC0F44A91C999EA800894419 /* forum-论坛 */,
 				DA3B5CAB1C93BF7A001997C8 /* Main-主要 */,
 				DA825BC01C92E86B000C5EE4 /* consulting-咨询 */,

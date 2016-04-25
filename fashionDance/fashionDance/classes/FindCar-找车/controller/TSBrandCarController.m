@@ -15,7 +15,6 @@
 
 #import "SWCarCell.h"
 
-
 #import "LLDBCarManager.h"
 #import "YUCarDetailModel.h"
 #import "UIImageView+downloadImage.h"
